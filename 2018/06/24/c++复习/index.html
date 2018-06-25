@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符：  1、插入器（&amp;lt;&amp;lt;）：向流输入数据。2、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作都是一个个分开的函数">
+<meta name="description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++复习！！！">
+<meta property="og:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta property="og:url" content="http://yoursite.com/2018/06/24/c++复习/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符：  1、插入器（&amp;lt;&amp;lt;）：向流输入数据。2、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作都是一个个分开的函数">
+<meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-24T09:30:20.749Z">
+<meta property="og:updated_time" content="2018-06-25T11:33:23.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++复习！！！">
-<meta name="twitter:description" content="C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符：  1、插入器（&amp;lt;&amp;lt;）：向流输入数据。2、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作都是一个个分开的函数">
+<meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
+<meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title>C++复习！！！ | AbelChe's Blog</title>
+  <title>C++复习！！！（课本：谭老爷爷版） | AbelChe's Blog</title>
   
 
 
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++复习！！！</h1>
+          <h1 class="post-title" itemprop="name headline">C++复习！！！（课本：谭老爷爷版）</h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-24T17:30:20+08:00">
-                2018-06-24
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-25T19:33:23+08:00">
+                2018-06-25
               </time>
             
           </span>
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  771 字
+                  3,111 字
                 </span>
               
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  11 分钟
                 </span>
               
             </div>
@@ -408,12 +408,14 @@
       
 
       
-        <h4 id="C-如何实现I-O？它的优势在哪里？"><a href="#C-如何实现I-O？它的优势在哪里？" class="headerlink" title="C++如何实现I/O？它的优势在哪里？"></a>C++如何实现I/O？它的优势在哪里？</h4><ul>
+        <h3 id="一、从C到C"><a href="#一、从C到C" class="headerlink" title="一、从C到C++"></a><font color="DarkViolet"><center>一、从C到C++</center></font></h3><hr>
+<h4 id="C-如何实现I-O？它的优势在哪里？"><a href="#C-如何实现I-O？它的优势在哪里？" class="headerlink" title="C++如何实现I/O？它的优势在哪里？"></a>C++如何实现I/O？它的优势在哪里？</h4><ul>
 <li>1、c++中I/O的概念<blockquote>
-<p>在c++中有一个<strong>stream</strong>，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符：</p>
-<blockquote>
-<p>1、<strong>插入器（&lt;&lt;）</strong>：向流输入数据。<br>2、<strong>析取器（&gt;&gt;）</strong>：从流中读取数据。</p>
-</blockquote>
+<p>在c++中有一个<strong>stream</strong>，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:</p>
+<ul>
+<li>a、<strong>插入器（&lt;&lt;）</strong>：向流输入数据。</li>
+<li>b、<strong>析取器（&gt;&gt;）</strong>：从流中读取数据。</li>
+</ul>
 </blockquote>
 </li>
 <li>2、与c语言相比之下的优势<blockquote>
@@ -441,7 +443,14 @@
 <hr>
 <h4 id="什么是函数模板？为什么要使用函数模板？"><a href="#什么是函数模板？为什么要使用函数模板？" class="headerlink" title="什么是函数模板？为什么要使用函数模板？"></a>什么是函数模板？为什么要使用函数模板？</h4><ul>
 <li>1、什么是函数模板？<blockquote>
-<p>建立一个通用函数，其函数类型和形参不具体指定，用一个虚函数的类型来代表，这个通用的函数就称为<strong>函数模板</strong>。<br>例：max函数模板<br><code>template&lt;typename T&gt;T max(T a, T b, T c) {}</code></p>
+<p>建立一个通用函数，其函数类型和形参不具体指定，用一个虚函数的类型来代表，这个通用的函数就称为<strong>函数模板</strong>。</p>
+<blockquote>
+<p>例：max函数模板<br> <code>template&lt;typename T&gt;T max(T a, T b, T c) {}</code></p>
+</blockquote>
+</blockquote>
+</li>
+<li>2、为什么要使用函数模板？<blockquote>
+<p><strong>简化</strong>对同名的知识形参类型不同的函数的定义。</p>
 </blockquote>
 </li>
 </ul>
@@ -453,15 +462,126 @@
 </ul>
 </blockquote>
 <hr>
-<h4 id="为什么要使用inline函数？"><a href="#为什么要使用inline函数？" class="headerlink" title="为什么要使用inline函数？"></a>为什么要使用inline函数？</h4><hr>
-<h4 id="作用域限定符“-”的作用是什么"><a href="#作用域限定符“-”的作用是什么" class="headerlink" title="作用域限定符“::”的作用是什么"></a>作用域限定符“::”的作用是什么</h4><hr>
-<h4 id="引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？"><a href="#引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？" class="headerlink" title="引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？"></a>引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？</h4><hr>
-<h4 id="什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"><a href="#什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？" class="headerlink" title="什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"></a>什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？</h4><hr>
-<h4 id="c-中有哪些权限限定符？各起什么作用？"><a href="#c-中有哪些权限限定符？各起什么作用？" class="headerlink" title="c++中有哪些权限限定符？各起什么作用？"></a>c++中有哪些权限限定符？各起什么作用？</h4><hr>
-<h4 id="什么是类的封装？封装的原则是什么？"><a href="#什么是类的封装？封装的原则是什么？" class="headerlink" title="什么是类的封装？封装的原则是什么？"></a>什么是类的封装？封装的原则是什么？</h4><hr>
-<h4 id="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"><a href="#同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？" class="headerlink" title="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"></a>同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？</h4><hr>
-<h4 id="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"><a href="#类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？" class="headerlink" title="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"></a>类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？</h4><hr>
-
+<h4 id="什么是变量的引用？要注意什么？"><a href="#什么是变量的引用？要注意什么？" class="headerlink" title="什么是变量的引用？要注意什么？"></a>什么是变量的引用？要注意什么？</h4><blockquote>
+<p>在c++中，变量的“引用”就是变量的别名，因此，<strong>引用</strong>又称<strong>别名</strong>。<br>建立“引用”的作用是为一个变量再起另一个名字，一边在需要时可以方便、间接地引用该变量。<br>对一个变量的“引用”的所有的操作，实际上都是对其所代表的（原来的）变量的操作。<br>ATTENTION:由于引用不是独立的变量，编译系统给它单独分配储存单元，因此，在建立引用时只有声明没有定义，只是声明它和原有某一变量的关系。</p>
+<blockquote>
+<p>例：有一个变量a，想给他起一个别名b<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">int &amp;b = a;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<hr>
+<h4 id="为什么要使用inline函数？"><a href="#为什么要使用inline函数？" class="headerlink" title="为什么要使用inline函数？"></a>为什么要使用inline函数？</h4><blockquote>
+<p>为了<strong>提高效率</strong>。<br>调用函数时需要一定的时间，如果有些函数需要频繁使用，则累计所用时间会很长，从而降低程序的执行效率。<br>c++提供一种提高效率的方法，即在编译时，将所调用函数的代码嵌入到主调函数中。这种嵌入到主调函数中的函数称为<strong>内联函数</strong>。</p>
+</blockquote>
+<hr>
+<h4 id="作用域限定符“-”的作用是什么"><a href="#作用域限定符“-”的作用是什么" class="headerlink" title="作用域限定符“::”的作用是什么"></a>作用域限定符“::”的作用是什么</h4><blockquote>
+<p>在c++中，不同作用域内声明的变量可以同名，当局部变量和全局变量同名时，在局部变量中引用全局变量用到作用域限定符“<strong>::</strong>”。<br>当全局变量和局部变量名字相同，重载时，就规定：<br>用 “<strong>:: + 全局变量名</strong>” 来称呼全局变量。</p>
+</blockquote>
+<hr>
+<h3 id="二、类和对象"><a href="#二、类和对象" class="headerlink" title="二、类和对象"></a><font color="DarkViolet"><center>二、类和对象</center></font></h3><hr>
+<p><strong><font size="6" color="OrangeRed"><center>程序 = 对象 + 对象</center></font></strong><br><strong><font size="6" color="OrangeRed"><center>对象 = 算法 + 数据结构</center></font></strong></p>
+<h4 id="什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"><a href="#什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？" class="headerlink" title="什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"></a>什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？</h4><ul>
+<li><strong>对象</strong>：客观世界中任何一个事物都可以看成一个<strong>对象</strong>（object）。</li>
+<li><strong>类</strong>：类是所有面向对象语言的共同特征，所有面向对象的语言都提供了这种类型。</li>
+<li><strong>抽象</strong>：<strong>类</strong>是<strong>对象</strong>的抽象，而对象是类的具体实例。</li>
+<li><strong>数据抽象</strong>: 只向外界提供关键信息，并隐藏其后台的实现细节，即只表现必要的信息而不呈现细节。数据抽象是一种依赖于接口和实现分离的编程（设计）技术。</li>
+<li><strong>类的声明</strong>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class 类名 &#123;</span><br><span class="line">private:</span><br><span class="line">	私有的数据和成员函数;</span><br><span class="line">public:</span><br><span class="line">	公用的数据和成员函数;</span><br><span class="line">protected:</span><br><span class="line">	受保护的数据和成员函数;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>类的定义</strong>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//1、先声明，后定义：</span><br><span class="line">//(1)、</span><br><span class="line">class 类名 对象名1,对象名2,...;</span><br><span class="line">//(2)、</span><br><span class="line">类名 对象名1,对象名2,...;</span><br><span class="line"></span><br><span class="line">//2、声明同时定义：</span><br><span class="line">class 类名 &#123;</span><br><span class="line">private:</span><br><span class="line">	私有的数据和成员函数;</span><br><span class="line">public:</span><br><span class="line">	公用的数据和成员函数;</span><br><span class="line">protected:</span><br><span class="line">	受保护的数据和成员函数;</span><br><span class="line">&#125;对象名1,对象名2,...;</span><br><span class="line"></span><br><span class="line">//3、不出现类名直接定义对象（非常 不建议 使用）：</span><br><span class="line">class &#123;</span><br><span class="line">private:</span><br><span class="line">	私有的数据和成员函数;</span><br><span class="line">public:</span><br><span class="line">	公用的数据和成员函数;</span><br><span class="line">protected:</span><br><span class="line">	受保护的数据和成员函数;</span><br><span class="line">&#125;对象名1,对象名2,...;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="c-中有哪些权限限定符？各起什么作用？"><a href="#c-中有哪些权限限定符？各起什么作用？" class="headerlink" title="c++中有哪些权限限定符？各起什么作用？"></a>c++中有哪些权限限定符？各起什么作用？</h4><ul>
+<li><strong>private</strong><blockquote>
+<p>private将成员声明为<strong>私有成员</strong>，只能被<strong>本类中的成员函数</strong>引用，类外不能调用（友元类除外）。</p>
+</blockquote>
+</li>
+<li><strong>public</strong><blockquote>
+<p>public将成员声明为<strong>公有成员</strong>，既可以被<strong>本类成员函数</strong>所引用，也可以被<strong>类的作用域内的其他函数</strong>所引用。</p>
+</blockquote>
+</li>
+<li><strong>protected</strong><blockquote>
+<p>protected将成员声明为<strong>受保护成员</strong>，不能被类外访问，但是可以被<strong>派生类的成员函数</strong>访问。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="什么是类的封装？封装的原则是什么？"><a href="#什么是类的封装？封装的原则是什么？" class="headerlink" title="什么是类的封装？封装的原则是什么？"></a>什么是类的封装？封装的原则是什么？</h4><ul>
+<li><strong>1、什么是封装？</strong><blockquote>
+<p><strong>封装</strong>可以隐藏实现细节，使代码模块化。<br><strong>封装</strong>是把过程和数据包围起来，对数据的访问只能通过已定义的界面。<br>在面向对象编程上可理解为：把客观事物封装成抽象的类，并且类可以把自己的数据和方法只让可信的类或者对象操作，对不可信的进行信息隐藏。</p>
+</blockquote>
+</li>
+<li><strong>2、封装的原则是什么？</strong><blockquote>
+<p><strong>简化用户接口，隐藏实现细节，这个是封装的根本目的。</strong><br>封装的难点在于如何设计接口。<br><strong>其一</strong>：必须保证接口是功能的全集，即接口能够覆盖所有需求。不能完成必要功能的封装是没有意义的。<br><strong>其二</strong>：尽量使接口是最小冗余的。这是为了简化类使用者的学习和使用，难用的接口是最容易让人遗忘的。冗余接口的存在是被允许的，但必须保证冗余接口是有效的。也就是说，增加冗余接口会带来很大的好处，比如性能的飞升。<br><strong>其三</strong>：要保证接口是稳定的，将接口和实现分离，并将实现隐藏，就是为了能保护类使用者在类的实现细节改变的情况下，不必随时修改。一旦接口被公布，永远也不要改变它。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"><a href="#同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？" class="headerlink" title="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"></a>同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？</h4><blockquote>
+<p>是同一段代码<br>通过this指针</p>
+</blockquote>
+<hr>
+<h4 id="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"><a href="#类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？" class="headerlink" title="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"></a>类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？</h4><blockquote>
+<p><strong>区别</strong>1：静态成员函数实际上是一个全局函数,不依赖一个类的对象. 而属于类，不创建对象也可调用，静态成员函数没有this指针。普通成员函数依赖一个类的对象,也就是它有一个隐藏的调用参数（this）指针,必须指向一个类的对象。<br><strong>区别2</strong>：静态函数只能访问类中的静态成员变量；<br><strong>区别3</strong>：如果成员函数想作为回调函数来使用，如创建线程等，一般只能将它定义为静态成员函数才行。</p>
+</blockquote>
+<hr>
+<h3 id="三、类和对象的进一步讨论"><a href="#三、类和对象的进一步讨论" class="headerlink" title="三、类和对象的进一步讨论"></a><font color="DarkViolet"><center>三、类和对象的进一步讨论</center></font></h3><hr>
+<h4 id="构造函数、析构函数的英文单词是什么？"><a href="#构造函数、析构函数的英文单词是什么？" class="headerlink" title="构造函数、析构函数的英文单词是什么？"></a>构造函数、析构函数的英文单词是什么？</h4><blockquote>
+<ul>
+<li><strong>构造函数——constructor</strong></li>
+<li><strong>析构函数——destructor</strong></li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="构造函数的特点是什么？析构函数的特点是什么？"><a href="#构造函数的特点是什么？析构函数的特点是什么？" class="headerlink" title="构造函数的特点是什么？析构函数的特点是什么？"></a>构造函数的特点是什么？析构函数的特点是什么？</h4><hr>
+<h4 id="构造函数、析构函数的执行顺序是什么？"><a href="#构造函数、析构函数的执行顺序是什么？" class="headerlink" title="构造函数、析构函数的执行顺序是什么？"></a>构造函数、析构函数的执行顺序是什么？</h4><blockquote>
+<p><strong>先构造的先执行析构</strong>。</p>
+</blockquote>
+<hr>
+<h4 id="在C语言中，我们说main-函数是程序的入口，是最先被调用的函数，在C-中情况是这样吗？如果不是请说明原因，并举出实例。"><a href="#在C语言中，我们说main-函数是程序的入口，是最先被调用的函数，在C-中情况是这样吗？如果不是请说明原因，并举出实例。" class="headerlink" title="在C语言中，我们说main()函数是程序的入口，是最先被调用的函数，在C++中情况是这样吗？如果不是请说明原因，并举出实例。"></a>在C语言中，我们说main()函数是程序的入口，是最先被调用的函数，在C++中情况是这样吗？如果不是请说明原因，并举出实例。</h4><hr>
+<h4 id="const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？"><a href="#const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？" class="headerlink" title="const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？"></a>const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？</h4><hr>
+<h4 id="初始化列表的语法是怎样的？"><a href="#初始化列表的语法是怎样的？" class="headerlink" title="初始化列表的语法是怎样的？"></a>初始化列表的语法是怎样的？</h4><blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">类名::构造函数名([参数表])[:成员初始化表]&#123;</span><br><span class="line">[构造函数体]</span><br><span class="line">&#125;</span><br><span class="line">//例：</span><br><span class="line">class Student&#123;</span><br><span class="line">public:</span><br><span class="line">	Student(int n, char s, nam[]):num(n), sex(s)&#123;</span><br><span class="line">    	strcpy(name, nam);</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">	int num;</span><br><span class="line">    char sex;</span><br><span class="line">    int name[20];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="在C-中为什么使用new-delete，而不是malloc-free-来来动态创建对象？如何使用new-delete来动态创建数组？"><a href="#在C-中为什么使用new-delete，而不是malloc-free-来来动态创建对象？如何使用new-delete来动态创建数组？" class="headerlink" title="在C++中为什么使用new/delete，而不是malloc()/free()来来动态创建对象？如何使用new/delete来动态创建数组？"></a>在C++中为什么使用new/delete，而不是malloc()/free()来来动态创建对象？如何使用new/delete来动态创建数组？</h4><hr>
+<h4 id="什么是对象的复制？什么是对象的赋值？"><a href="#什么是对象的复制？什么是对象的赋值？" class="headerlink" title="什么是对象的复制？什么是对象的赋值？"></a>什么是对象的复制？什么是对象的赋值？</h4><hr>
+<h4 id="什么是深拷贝-浅拷贝？-拷贝构造函数的语法如何？"><a href="#什么是深拷贝-浅拷贝？-拷贝构造函数的语法如何？" class="headerlink" title="什么是深拷贝/浅拷贝？ 拷贝构造函数的语法如何？"></a>什么是深拷贝/浅拷贝？ 拷贝构造函数的语法如何？</h4><hr>
+<h4 id="static数据成员和static成员函数的特点是什么？-static数据成员如何初始化？static成员函数有什么限制？"><a href="#static数据成员和static成员函数的特点是什么？-static数据成员如何初始化？static成员函数有什么限制？" class="headerlink" title="static数据成员和static成员函数的特点是什么？ static数据成员如何初始化？static成员函数有什么限制？"></a>static数据成员和static成员函数的特点是什么？ static数据成员如何初始化？static成员函数有什么限制？</h4><hr>
+<h4 id="为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？"><a href="#为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？" class="headerlink" title="为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？"></a>为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？</h4><hr>
+<h3 id="四、运算符重载"><a href="#四、运算符重载" class="headerlink" title="四、运算符重载"></a><font color="DarkViolet"><center>四、运算符重载</center></font></h3><hr>
+<h4 id="在C-中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？"><a href="#在C-中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？" class="headerlink" title="在C++中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？"></a>在C++中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？</h4><hr>
+<h4 id="运算符重载一般以哪两种方式出现？该如何选择？"><a href="#运算符重载一般以哪两种方式出现？该如何选择？" class="headerlink" title="运算符重载一般以哪两种方式出现？该如何选择？"></a>运算符重载一般以哪两种方式出现？该如何选择？</h4><hr>
+<h3 id="五、继承和派生"><a href="#五、继承和派生" class="headerlink" title="五、继承和派生"></a><font color="DarkViolet"><center>五、继承和派生</center></font></h3><hr>
+<h4 id="继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？"><a href="#继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？" class="headerlink" title="继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？"></a>继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？</h4><blockquote>
+<ul>
+<li><strong>继承——inheritance</strong></li>
+<li><strong>语法</strong>：</li>
+<li><strong>继承方式限定符</strong>：<strong>private</strong>，<strong>public</strong>，<strong>protected</strong>。</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"><a href="#继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？" class="headerlink" title="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"></a>继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？</h4><hr>
+<h4 id="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"><a href="#继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。" class="headerlink" title="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"></a>继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。</h4><hr>
+<h4 id="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"><a href="#组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？" class="headerlink" title="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"></a>组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？</h4><hr>
+<h4 id="当继承和组合都存在时，构造和析构的顺序如何？"><a href="#当继承和组合都存在时，构造和析构的顺序如何？" class="headerlink" title="当继承和组合都存在时，构造和析构的顺序如何？"></a>当继承和组合都存在时，构造和析构的顺序如何？</h4><hr>
+<h4 id="哪些地方必须使用初始化列表？"><a href="#哪些地方必须使用初始化列表？" class="headerlink" title="哪些地方必须使用初始化列表？"></a>哪些地方必须使用初始化列表？</h4><hr>
+<h4 id="什么是overriding、overload？什么是upcasting？"><a href="#什么是overriding、overload？什么是upcasting？" class="headerlink" title="什么是overriding、overload？什么是upcasting？"></a>什么是overriding、overload？什么是upcasting？</h4><hr>
+<h4 id="多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？"><a href="#多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？" class="headerlink" title="多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？"></a>多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？</h4><hr>
+<h3 id="六、多态性和虚函数"><a href="#六、多态性和虚函数" class="headerlink" title="六、多态性和虚函数"></a><font color="DarkViolet"><center>六、多态性和虚函数</center></font></h3><hr>
+<h4 id="什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？"><a href="#什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？" class="headerlink" title="什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？"></a>什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？</h4><hr>
+<h4 id="如何实现多态性？"><a href="#如何实现多态性？" class="headerlink" title="如何实现多态性？"></a>如何实现多态性？</h4><hr>
+<h4 id="虚函数是如何实现的（考试不会考）？"><a href="#虚函数是如何实现的（考试不会考）？" class="headerlink" title="虚函数是如何实现的（考试不会考）？"></a>虚函数是如何实现的（考试不会考）？</h4><hr>
+<h4 id="动态-静态绑定（binding、联编）的优缺点各是什么？"><a href="#动态-静态绑定（binding、联编）的优缺点各是什么？" class="headerlink" title="动态/静态绑定（binding、联编）的优缺点各是什么？"></a>动态/静态绑定（binding、联编）的优缺点各是什么？</h4><hr>
+<h4 id="什么是纯虚函数？什么是抽象类？其意义各自是什么？"><a href="#什么是纯虚函数？什么是抽象类？其意义各自是什么？" class="headerlink" title="什么是纯虚函数？什么是抽象类？其意义各自是什么？"></a>什么是纯虚函数？什么是抽象类？其意义各自是什么？</h4><hr>
+<h3 id="七、输入输出流"><a href="#七、输入输出流" class="headerlink" title="七、输入输出流"></a><font color="DarkViolet"><center>七、输入输出流</center></font></h3><hr>
+<h4 id="C-I-O的优势在哪（和前面第一章的类似）？"><a href="#C-I-O的优势在哪（和前面第一章的类似）？" class="headerlink" title="C++I/O的优势在哪（和前面第一章的类似）？"></a>C++I/O的优势在哪（和前面第一章的类似）？</h4><hr>
+<h4 id="标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？"><a href="#标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？" class="headerlink" title="标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？"></a>标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？</h4><hr>
+<h4 id="如何使用文件流进行输入-输出（步骤）？"><a href="#如何使用文件流进行输入-输出（步骤）？" class="headerlink" title="如何使用文件流进行输入/输出（步骤）？"></a>如何使用文件流进行输入/输出（步骤）？</h4><hr>
+<h4 id="什么是字符串流？它有什么用好处？"><a href="#什么是字符串流？它有什么用好处？" class="headerlink" title="什么是字符串流？它有什么用好处？"></a>什么是字符串流？它有什么用好处？</h4><hr>
+<h3 id="八、C-工具"><a href="#八、C-工具" class="headerlink" title="八、C++工具"></a><font color="DarkViolet"><center>八、C++工具</center></font></h3><hr>
+<h4 id="实现异常的三个关键字是什么？大致的作用是什么？"><a href="#实现异常的三个关键字是什么？大致的作用是什么？" class="headerlink" title="实现异常的三个关键字是什么？大致的作用是什么？"></a>实现异常的三个关键字是什么？大致的作用是什么？</h4>
       
     </div>
     
@@ -510,7 +630,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2018/06/24/c++复习/" title="C++复习！！！">http://yoursite.com/2018/06/24/c++复习/</a>
+    <a href="http://yoursite.com/2018/06/24/c++复习/" title="C++复习！！！（课本：谭老爷爷版）">http://yoursite.com/2018/06/24/c++复习/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -528,22 +648,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/06/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -623,7 +727,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -708,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-如何实现I-O？它的优势在哪里？"><span class="nav-number">1.</span> <span class="nav-text">C++如何实现I/O？它的优势在哪里？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是重载函数？如何区分重载函数？"><span class="nav-number">2.</span> <span class="nav-text">什么是重载函数？如何区分重载函数？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是函数模板？为什么要使用函数模板？"><span class="nav-number">3.</span> <span class="nav-text">什么是函数模板？为什么要使用函数模板？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用带有默认参数的函数时，要注意些什么？"><span class="nav-number">4.</span> <span class="nav-text">使用带有默认参数的函数时，要注意些什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要使用inline函数？"><span class="nav-number">5.</span> <span class="nav-text">为什么要使用inline函数？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域限定符“-”的作用是什么"><span class="nav-number">6.</span> <span class="nav-text">作用域限定符“::”的作用是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？"><span class="nav-number">7.</span> <span class="nav-text">引用是什么，引用在使用时应该注意哪些问题？为什么要使用引用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"><span class="nav-number">8.</span> <span class="nav-text">什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c-中有哪些权限限定符？各起什么作用？"><span class="nav-number">9.</span> <span class="nav-text">c++中有哪些权限限定符？各起什么作用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是类的封装？封装的原则是什么？"><span class="nav-number">10.</span> <span class="nav-text">什么是类的封装？封装的原则是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"><span class="nav-number">11.</span> <span class="nav-text">同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"><span class="nav-number">12.</span> <span class="nav-text">类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、从C到C"><span class="nav-number">1.</span> <span class="nav-text">一、从C到C++</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-如何实现I-O？它的优势在哪里？"><span class="nav-number">1.1.</span> <span class="nav-text">C++如何实现I/O？它的优势在哪里？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是重载函数？如何区分重载函数？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是重载函数？如何区分重载函数？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是函数模板？为什么要使用函数模板？"><span class="nav-number">1.3.</span> <span class="nav-text">什么是函数模板？为什么要使用函数模板？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用带有默认参数的函数时，要注意些什么？"><span class="nav-number">1.4.</span> <span class="nav-text">使用带有默认参数的函数时，要注意些什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是变量的引用？要注意什么？"><span class="nav-number">1.5.</span> <span class="nav-text">什么是变量的引用？要注意什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要使用inline函数？"><span class="nav-number">1.6.</span> <span class="nav-text">为什么要使用inline函数？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域限定符“-”的作用是什么"><span class="nav-number">1.7.</span> <span class="nav-text">作用域限定符“::”的作用是什么</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、类和对象"><span class="nav-number">2.</span> <span class="nav-text">二、类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是类？什么是对象？什么是抽象？什么是类的声明、类的定义？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c-中有哪些权限限定符？各起什么作用？"><span class="nav-number">2.2.</span> <span class="nav-text">c++中有哪些权限限定符？各起什么作用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是类的封装？封装的原则是什么？"><span class="nav-number">2.3.</span> <span class="nav-text">什么是类的封装？封装的原则是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"><span class="nav-number">2.4.</span> <span class="nav-text">同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"><span class="nav-number">2.5.</span> <span class="nav-text">类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、类和对象的进一步讨论"><span class="nav-number">3.</span> <span class="nav-text">三、类和对象的进一步讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数、析构函数的英文单词是什么？"><span class="nav-number">3.1.</span> <span class="nav-text">构造函数、析构函数的英文单词是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数的特点是什么？析构函数的特点是什么？"><span class="nav-number">3.2.</span> <span class="nav-text">构造函数的特点是什么？析构函数的特点是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造函数、析构函数的执行顺序是什么？"><span class="nav-number">3.3.</span> <span class="nav-text">构造函数、析构函数的执行顺序是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在C语言中，我们说main-函数是程序的入口，是最先被调用的函数，在C-中情况是这样吗？如果不是请说明原因，并举出实例。"><span class="nav-number">3.4.</span> <span class="nav-text">在C语言中，我们说main()函数是程序的入口，是最先被调用的函数，在C++中情况是这样吗？如果不是请说明原因，并举出实例。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？"><span class="nav-number">3.5.</span> <span class="nav-text">const关键字的作用是什么？const成员函数的语法是什么？它有什么作用。const数据成员如何完成初始化？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化列表的语法是怎样的？"><span class="nav-number">3.6.</span> <span class="nav-text">初始化列表的语法是怎样的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在C-中为什么使用new-delete，而不是malloc-free-来来动态创建对象？如何使用new-delete来动态创建数组？"><span class="nav-number">3.7.</span> <span class="nav-text">在C++中为什么使用new/delete，而不是malloc()/free()来来动态创建对象？如何使用new/delete来动态创建数组？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是对象的复制？什么是对象的赋值？"><span class="nav-number">3.8.</span> <span class="nav-text">什么是对象的复制？什么是对象的赋值？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是深拷贝-浅拷贝？-拷贝构造函数的语法如何？"><span class="nav-number">3.9.</span> <span class="nav-text">什么是深拷贝/浅拷贝？ 拷贝构造函数的语法如何？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#static数据成员和static成员函数的特点是什么？-static数据成员如何初始化？static成员函数有什么限制？"><span class="nav-number">3.10.</span> <span class="nav-text">static数据成员和static成员函数的特点是什么？ static数据成员如何初始化？static成员函数有什么限制？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？"><span class="nav-number">3.11.</span> <span class="nav-text">为什么要使用友元？哪些内容可以作为类的友元？我们对友元的态度是什么？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、运算符重载"><span class="nav-number">4.</span> <span class="nav-text">四、运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在C-中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？"><span class="nav-number">4.1.</span> <span class="nav-text">在C++中运算符被当作什么处理？如何重载运算符？重载运算符有什么好处？需要注意哪些问题？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符重载一般以哪两种方式出现？该如何选择？"><span class="nav-number">4.2.</span> <span class="nav-text">运算符重载一般以哪两种方式出现？该如何选择？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、继承和派生"><span class="nav-number">5.</span> <span class="nav-text">五、继承和派生</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？"><span class="nav-number">5.1.</span> <span class="nav-text">继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"><span class="nav-number">5.2.</span> <span class="nav-text">继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"><span class="nav-number">5.3.</span> <span class="nav-text">继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"><span class="nav-number">5.4.</span> <span class="nav-text">组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#当继承和组合都存在时，构造和析构的顺序如何？"><span class="nav-number">5.5.</span> <span class="nav-text">当继承和组合都存在时，构造和析构的顺序如何？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哪些地方必须使用初始化列表？"><span class="nav-number">5.6.</span> <span class="nav-text">哪些地方必须使用初始化列表？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是overriding、overload？什么是upcasting？"><span class="nav-number">5.7.</span> <span class="nav-text">什么是overriding、overload？什么是upcasting？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？"><span class="nav-number">5.8.</span> <span class="nav-text">多继承会带来什么问题？如何解决这个问题？对待多继承的态度是什么？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、多态性和虚函数"><span class="nav-number">6.</span> <span class="nav-text">六、多态性和虚函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？"><span class="nav-number">6.1.</span> <span class="nav-text">什么是多态性？英文单词是什么？它能给我们程序设计带来什么好处？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何实现多态性？"><span class="nav-number">6.2.</span> <span class="nav-text">如何实现多态性？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚函数是如何实现的（考试不会考）？"><span class="nav-number">6.3.</span> <span class="nav-text">虚函数是如何实现的（考试不会考）？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态-静态绑定（binding、联编）的优缺点各是什么？"><span class="nav-number">6.4.</span> <span class="nav-text">动态/静态绑定（binding、联编）的优缺点各是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是纯虚函数？什么是抽象类？其意义各自是什么？"><span class="nav-number">6.5.</span> <span class="nav-text">什么是纯虚函数？什么是抽象类？其意义各自是什么？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、输入输出流"><span class="nav-number">7.</span> <span class="nav-text">七、输入输出流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-I-O的优势在哪（和前面第一章的类似）？"><span class="nav-number">7.1.</span> <span class="nav-text">C++I/O的优势在哪（和前面第一章的类似）？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？"><span class="nav-number">7.2.</span> <span class="nav-text">标准输出流有哪些？它们之间的区别是什么？如何控制格式的输出？标准的输入流是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用文件流进行输入-输出（步骤）？"><span class="nav-number">7.3.</span> <span class="nav-text">如何使用文件流进行输入/输出（步骤）？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是字符串流？它有什么用好处？"><span class="nav-number">7.4.</span> <span class="nav-text">什么是字符串流？它有什么用好处？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、C-工具"><span class="nav-number">8.</span> <span class="nav-text">八、C++工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现异常的三个关键字是什么？大致的作用是什么？"><span class="nav-number">8.1.</span> <span class="nav-text">实现异常的三个关键字是什么？大致的作用是什么？</span></a></li></ol></li></ol></div>
             
 
           </div>
