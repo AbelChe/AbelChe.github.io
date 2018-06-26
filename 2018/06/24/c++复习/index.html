@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-26T06:09:25.547Z">
+<meta property="og:updated_time" content="2018-06-26T06:42:03.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
@@ -343,7 +343,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-26T14:09:25+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-26T14:42:03+08:00">
                 2018-06-26
               </time>
             
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,176 字
+                  3,267 字
                 </span>
               
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11 分钟
+                  12 分钟
                 </span>
               
             </div>
@@ -519,7 +519,7 @@
 </ul>
 <hr>
 <h4 id="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"><a href="#同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？" class="headerlink" title="同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？"></a>同一个类所定义的不同对象在调用同一个成员函数时，调用的是同一段代码吗？通过什么来区分各自的数据？</h4><blockquote>
-<p>是同一段代码<br>通过this指针</p>
+<p><strong>是同一段代码</strong>。<br><strong>通过this指针</strong>：每一个成员函数中都包括这个指针的名字是固定的，称为this。<strong>它是指向对象的指针，他的值是当前被调用的成员函数所在的对象的起始地址</strong>。<br>例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int Box::volume()&#123;</span><br><span class="line">	return (height * width * length);</span><br><span class="line">&#125;</span><br><span class="line">//C++把它处理为:</span><br><span class="line">int Box::volume(Box * this)&#123;</span><br><span class="line">	return (this-&gt;height * this-&gt;width * this-&gt;length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
 <h4 id="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"><a href="#类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？" class="headerlink" title="类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？"></a>类的成员函数和普通全局函数在形式上有什么区别？在本质上有什么区别？</h4><blockquote>
@@ -539,7 +539,7 @@
 </blockquote>
 <hr>
 <h4 id="构造函数、析构函数的执行顺序是什么？"><a href="#构造函数、析构函数的执行顺序是什么？" class="headerlink" title="构造函数、析构函数的执行顺序是什么？"></a>构造函数、析构函数的执行顺序是什么？</h4><blockquote>
-<p><strong>先构造的先执行析构</strong>。。。。。。。。</p>
+<p><strong>先构造的先执行析构</strong>。</p>
 </blockquote>
 <hr>
 <h4 id="在C语言中，我们说main-函数是程序的入口，是最先被调用的函数，在C-中情况是这样吗？如果不是请说明原因，并举出实例。"><a href="#在C语言中，我们说main-函数是程序的入口，是最先被调用的函数，在C-中情况是这样吗？如果不是请说明原因，并举出实例。" class="headerlink" title="在C语言中，我们说main()函数是程序的入口，是最先被调用的函数，在C++中情况是这样吗？如果不是请说明原因，并举出实例。"></a>在C语言中，我们说main()函数是程序的入口，是最先被调用的函数，在C++中情况是这样吗？如果不是请说明原因，并举出实例。</h4><hr>
