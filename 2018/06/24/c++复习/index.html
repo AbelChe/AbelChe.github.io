@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-27T08:07:56.791Z">
+<meta property="og:updated_time" content="2018-06-27T10:06:19.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T16:07:56+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T18:06:19+08:00">
                 2018-06-27
               </time>
             
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,023 字
+                  5,224 字
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  18 分钟
+                  19 分钟
                 </span>
               
             </div>
@@ -797,16 +797,16 @@ width:30%;
 <h3 id="五、继承和派生"><a href="#五、继承和派生" class="headerlink" title="五、继承和派生"></a><font color="DarkViolet"><center>五、继承和派生</center></font></h3><hr>
 <h4 id="继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？"><a href="#继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？" class="headerlink" title="继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？"></a>继承的单词是什么？语法如何？继承方式限定符有哪些？作用分别是什么？</h4><ul>
 <li><blockquote>
-<p><strong>继承——inheritance</strong></p>
+<p><strong>继承——inheritance</strong>。继承就是在已有类的基础上建立一个新类的过程。其中已经存在的类称为基类（base class），新建立的类称为派生类（derived class），从基类产生派生类的过程称为派生。</p>
 </blockquote>
 </li>
 <li><blockquote>
-<p><strong>语法</strong>：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int</span><br></pre></td></tr></table></figure>
+<p><strong>继承的语法</strong>：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  class 派生类名: [继承方式] 基类名 &#123;</span><br><span class="line">//继承方式不写默认是private。</span><br><span class="line">      派生类新增加的成员</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><blockquote>
-<p><strong>继承方式限定符</strong>：<strong>private</strong>，<strong>public</strong>，<strong>protected</strong>。</p>
+<p><strong>继承方式限定</strong>：<br>  <strong>private</strong>：基类的公有成员和保护成员在派生类中保持原有访问属性，其私有成员仍为基类私有。<br>  <strong>public</strong>：积累的公有成员和保护成员在派生类中成了私有成员，其私有成员仍为基类私有。<br>  <strong>protected</strong>：积累的公有成员和保护成员在派生类中成了保护成员，其私有成员仍为基类私有。</p>
 </blockquote>
 </li>
 </ul>
