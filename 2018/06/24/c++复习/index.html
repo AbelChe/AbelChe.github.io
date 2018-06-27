@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-26T18:03:32.274Z">
+<meta property="og:updated_time" content="2018-06-27T08:07:56.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
@@ -369,7 +369,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T02:03:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T16:07:56+08:00">
                 2018-06-27
               </time>
             
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,879 字
+                  5,023 字
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  17 分钟
+                  18 分钟
                 </span>
               
             </div>
@@ -651,7 +651,44 @@
 </li>
 </ul>
 <hr>
-<h4 id="const关键字"><a href="#const关键字" class="headerlink" title="const关键字"></a>const关键字</h4><p><center><strong><font color="Crimson" size="6">const在c++中要尽可能的使用</font></strong></center></p>
+<h4 id="const关键字"><a href="#const关键字" class="headerlink" title="const关键字"></a>const关键字</h4><center><strong><font color="Crimson" size="6">const在c++中要尽可能的使用</font></strong></center>
+
+<style>
+table th:first-of-type {
+width:30%;
+}
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">形式</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Time const t1;</code></td>
+<td style="text-align:center">t1是常对象，其值在任何情况下都不能改变</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>void Time::fun()const;</code></td>
+<td style="text-align:center">fun是Time类中的成员函数，可以引用，但不能修改本类中的成员数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Time * const p;</code></td>
+<td style="text-align:center">p是指向time类对象的常指针变量，p的值（p的指向）不能改变</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>const Time * p;</code></td>
+<td style="text-align:center">p是指向Time类常对象的指针变量，p指向的类对象的值不能通过p来改变</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>const Time &amp;t1 = t;</code></td>
+<td style="text-align:center">t1是Time类对象t的引用，二者指向同一储存空间，t的值不能改变</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><blockquote>
 <p>const的作用是：<strong>数据的保护</strong></p>
@@ -749,7 +786,10 @@
 <p>友元可以实现在类的外部访问一个类的<strong>private成员</strong></p>
 </blockquote>
 </li>
-<li>友元机制虽然可以带来一些便利，但是它严重破坏了程序的封装性，也有影响程序的可读性，所以要<strong>慎重使用友元</strong>。</li>
+<li><blockquote>
+<p>友元机制虽然可以带来一些便利，但是它严重破坏了程序的封装性，也有影响程序的可读性，所以要<strong>慎重使用友元</strong>。</p>
+</blockquote>
+</li>
 </ul>
 <hr>
 <h3 id="四、运算符重载"><a href="#四、运算符重载" class="headerlink" title="四、运算符重载"></a><font color="DarkViolet"><center>四、运算符重载</center></font></h3><hr>
@@ -762,6 +802,7 @@
 </li>
 <li><blockquote>
 <p><strong>语法</strong>：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><blockquote>
