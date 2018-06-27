@@ -114,10 +114,12 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-27T10:06:19.804Z">
+<meta property="og:image" content="http://yoursite.com/uploads/images/c++复习/派生类.png">
+<meta property="og:updated_time" content="2018-06-27T15:54:54.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
+<meta name="twitter:image" content="http://yoursite.com/uploads/images/c++复习/派生类.png">
 
 
 
@@ -369,7 +371,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T18:06:19+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-27T23:54:54+08:00">
                 2018-06-27
               </time>
             
@@ -397,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,224 字
+                  5,298 字
                 </span>
               
 
@@ -811,8 +813,27 @@ width:30%;
 </li>
 </ul>
 <hr>
-<h4 id="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"><a href="#继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？" class="headerlink" title="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"></a>继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？</h4><hr>
-<h4 id="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"><a href="#继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。" class="headerlink" title="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"></a>继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。</h4><hr>
+<h4 id="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"><a href="#继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？" class="headerlink" title="继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？"></a>继承发生时，在派生类的对象内部会有一个基类的对象，这个基类对象的初始化是由基类的构造函数完成的，那么如何在派生类中有选择的调用基类的非默认构造函数呢？</h4><ul>
+<li><blockquote>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"><a href="#继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。" class="headerlink" title="继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。"></a>继承发生时，派生类是否全部接收基类的成员？如果不是哪些成员不被继承。</h4><ul>
+<li><blockquote>
+<p><strong>派生类要无条件的接收基类中的全部成员</strong>。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>派生类尽管拥有基类的所有的成员，但是<strong>派生类不能访问基类private的成员</strong>。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p><font size="5" color="Orangered"><strong><center>派生类从基类中继承的成员在不同的继承方式下的访问权限</center></strong></font></p>
+<center><img src="/uploads/images/c++复习/派生类.png"></center>
+
+<hr>
 <h4 id="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"><a href="#组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？" class="headerlink" title="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"></a>组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？</h4><hr>
 <h4 id="当继承和组合都存在时，构造和析构的顺序如何？"><a href="#当继承和组合都存在时，构造和析构的顺序如何？" class="headerlink" title="当继承和组合都存在时，构造和析构的顺序如何？"></a>当继承和组合都存在时，构造和析构的顺序如何？</h4><hr>
 <h4 id="哪些地方必须使用初始化列表？"><a href="#哪些地方必须使用初始化列表？" class="headerlink" title="哪些地方必须使用初始化列表？"></a>哪些地方必须使用初始化列表？</h4><hr>
