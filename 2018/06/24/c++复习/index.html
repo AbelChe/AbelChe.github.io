@@ -115,7 +115,7 @@
 <meta property="og:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/uploads/images/c++复习/派生类.png">
-<meta property="og:updated_time" content="2018-06-27T16:40:45.265Z">
+<meta property="og:updated_time" content="2018-06-28T05:04:49.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++复习！！！（课本：谭老爷爷版）">
 <meta name="twitter:description" content="一、从C到C++ C++如何实现I/O？它的优势在哪里？ 1、c++中I/O的概念 在c++中有一个stream，这个类，所有的I/O都以这个“流”为基础，包括我们认识的文件I/O。stream有两个重要的运算符:  a、插入器（&amp;lt;&amp;lt;）：向流输入数据。 b、析取器（&amp;gt;&amp;gt;）：从流中读取数据。    2、与c语言相比之下的优势 1、最大的好处时完成了对流操作的封装。原来文件操作">
@@ -371,7 +371,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-28T00:40:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-28T13:04:49+08:00">
                 2018-06-28
               </time>
             
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5,337 字
+                  5,394 字
                 </span>
               
 
@@ -592,7 +592,7 @@
 </li>
 <li><blockquote>
 <p><strong>通过this指针</strong>：每一个成员函数中都包括这个指针的名字是固定的，称为this。<strong>它是指向对象的指针，他的值是当前被调用的成员函数所在的对象的起始地址</strong>。<br>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int Box::volume()&#123;</span><br><span class="line">	return (height * width * length);</span><br><span class="line">&#125;</span><br><span class="line">//C++把它处理为:</span><br><span class="line">int Box::volume(Box * this)&#123;</span><br><span class="line">	return (this-&gt;height * this-&gt;width * this-&gt;length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int Box::volume()&#123;</span><br><span class="line">    return (height * width * length);</span><br><span class="line">&#125;</span><br><span class="line">//C++把它处理为:</span><br><span class="line">int Box::volume(Box * this)&#123;</span><br><span class="line">    return (this-&gt;height * this-&gt;width * this-&gt;length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -723,7 +723,7 @@ width:30%;
 </ul>
 <hr>
 <h4 id="初始化列表的语法是怎样的？"><a href="#初始化列表的语法是怎样的？" class="headerlink" title="初始化列表的语法是怎样的？"></a>初始化列表的语法是怎样的？</h4><ul>
-<li>如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">类名::构造函数名([参数表])[:成员初始化表]&#123;</span><br><span class="line">[构造函数体]</span><br><span class="line">&#125;</span><br><span class="line">//例：</span><br><span class="line">class Student&#123;</span><br><span class="line">public:</span><br><span class="line">	Student(int n, char s, nam[]):num(n), sex(s)&#123;</span><br><span class="line">    	strcpy(name, nam);</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">	int num;</span><br><span class="line">    char sex;</span><br><span class="line">    int name[20];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li>如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">类名::构造函数名([参数表])[:成员初始化表]&#123;</span><br><span class="line">[构造函数体]</span><br><span class="line">&#125;</span><br><span class="line">//例：</span><br><span class="line">class Student&#123;</span><br><span class="line">public:</span><br><span class="line">    Student(int n, char s, nam[]):num(n), sex(s)&#123;</span><br><span class="line">        strcpy(name, nam);</span><br><span class="line">    &#125;</span><br><span class="line">private:</span><br><span class="line">    int num;</span><br><span class="line">    char sex;</span><br><span class="line">    int name[20];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
@@ -743,7 +743,7 @@ width:30%;
 </li>
 <li>对象的复制<blockquote>
 <p>一般形式：<code>类名 对象2(对象1)；</code> 或 `类名 对象2 = 对象1;<br>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">pubilc:</span><br><span class="line"> Student ()&#123;m_strName=&quot;Jim&quot;;&#125;</span><br><span class="line">    /*</span><br><span class="line">    默认的拷贝构造函数：</span><br><span class="line">    Student (const Student &amp;stu)&#123;&#125;</span><br><span class="line">    */</span><br><span class="line">    Student(const Student &amp;stu)&#123;m_strName = stu.m_strName;&#125;</span><br><span class="line">    //显性定义的拷贝构造函数</span><br><span class="line">private:</span><br><span class="line"> string m_strName;</span><br><span class="line">&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line"> Student stu1;</span><br><span class="line"> Student stu2 = stu1;</span><br><span class="line"> Student stu3(stu1);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">pubilc:</span><br><span class="line">    Student ()&#123;m_strName=&quot;Jim&quot;;&#125;</span><br><span class="line">    /*</span><br><span class="line">    默认的拷贝构造函数：</span><br><span class="line">    Student (const Student &amp;stu)&#123;&#125;</span><br><span class="line">    */</span><br><span class="line">    Student(const Student &amp;stu)&#123;m_strName = stu.m_strName;&#125;</span><br><span class="line">    //显性定义的拷贝构造函数</span><br><span class="line">private:</span><br><span class="line">    string m_strName;</span><br><span class="line">&#125;;</span><br><span class="line">int main()&#123;</span><br><span class="line">    Student stu1;</span><br><span class="line">    Student stu2 = stu1;</span><br><span class="line">    Student stu3(stu1);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -759,7 +759,7 @@ width:30%;
 </li>
 <li><strong>拷贝构造函数</strong><blockquote>
 <p>拷贝构造函数中只有哟个参数，为本类对象的一个引用，并通常使用const修饰。<br>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj(const obj &amp;o)&#123;</span><br><span class="line"> no = o.no;</span><br><span class="line">    cout &lt;&lt; &quot;copy constructor&quot; &lt;&lt; no &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">obj(const obj &amp;o)&#123;</span><br><span class="line">    no = o.no;</span><br><span class="line">    cout &lt;&lt; &quot;copy constructor&quot; &lt;&lt; no &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -804,7 +804,7 @@ width:30%;
 </li>
 <li><blockquote>
 <p><strong>继承的语法</strong>：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  class 派生类名: [继承方式] 基类名 &#123;</span><br><span class="line">//继承方式不写默认是private。</span><br><span class="line">      派生类新增加的成员</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class 派生类名: [继承方式] 基类名 &#123;</span><br><span class="line">    //继承方式不写默认是private。</span><br><span class="line">    派生类新增加的成员</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><blockquote>
@@ -836,7 +836,7 @@ width:30%;
 <hr>
 <h4 id="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"><a href="#组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？" class="headerlink" title="组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？"></a>组合（子对象）的作用是什么？如何有选择的调用对象成员的非默认构造函数？组合和继承都可以实现代码重用，那么什么时候选择组合，什么时候选择继承？</h4><ul>
 <li><blockquote>
-<p>子对象就是类对象中内嵌的对象。当派生类中存在子对象时，派生类的构造函数需要依次完成</p>
+<p>子对象就是类对象中内嵌的对象。当派生类中存在子对象时，派生类的构造函数需要依次完成以下3部分：<br>1、先调用基类构造函数初始化基类数据。<br>2、再调用子对象的构造函数初始化子对象中的数据。<br>3、最后初始化自己的数据成员。</p>
 </blockquote>
 </li>
 </ul>
