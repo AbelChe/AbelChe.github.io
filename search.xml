@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SQL常用语句--增删改查]]></title>
+    <url>%2F2018%2F07%2F02%2FSQL%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%2F</url>
+    <content type="text"><![CDATA[查 查全部： select * from &lt;tablename&gt;;条件查询：select &lt;filed&gt; from &lt;tablename&gt; where &lt;field&gt;=&lt;key&gt;;带有函数查询： select count(*) from &lt;tablename&gt;;模糊查询： select &lt;field&gt; from &lt;tablename&gt; where &lt;field&gt; like ‘%value%’; 增 添加库： create database &lt;databasename&gt;;创建新表： create table &lt;tablename&gt; (col1 type1, col2, ...);插入数据： insert into &lt;tablename&gt;(field1,field2……) values(value1,value2………);增加一列： alter table &lt;tablename&gt; add column &lt;colname&gt; &lt;coltype&gt;;添加主键： alter table &lt;tablename&gt; add primary key(col); 改 更新： update &lt;tablename&gt; set &lt;field&gt;=&lt;value&gt; where &lt;条件&gt;; 删 删除库： drop database &lt;databasename&gt;;删除表： delete from &lt;tablename&gt; where &lt;条件&gt;;（会留下日志文件，能被还原修复）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;truncate table &lt;tablename&gt;;（不会留下日志文件，不能被还原修复） 子句： where子句：= , &gt; , &lt; , &lt;&gt;(不等于) , &gt;= , &lt;=order by子句：asc (升序) , desc(降序)]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[网页返回上一页的几种方法]]></title>
+    <url>%2F2018%2F07%2F01%2F%E9%A1%B5%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%2F</url>
+    <content type="text"><![CDATA[以按钮点击的方式实现 &lt;input type=&quot;button&quot; name=&quot;Submit&quot; value=&quot;返回上一页&quot; onclick=&quot;javascript:window.history.back(-1);&quot;&gt;或者&lt;input type=&quot;button&quot; name=&quot;Submit&quot; value=&quot;返回上一页&quot; onclick=&quot;javascript:history.back(-1);&quot;&gt; 一点击图片的方式实现 &lt;img src=&quot;图片的路径&quot; onclick=&quot;javascript:window.history.back(-1);&quot; title=&quot;返回上一页&quot; alt=&quot;返回点击图片&quot; /&gt;或者&lt;img src=&quot;图片的路径&quot; onclick=&quot;javascript:history.back(-1);&quot; title=&quot;返回上一页&quot; alt=&quot;返回点击图片&quot; /&gt; 文字点击的方式实现 &lt;a href=&quot;javascript:history.back(-1)&quot;&gt;返回上一页&lt;/a&gt;或者&lt;a href=&quot;#&quot; onClick=&quot;javascript:history.back(-1);&quot;&gt;返回上一页&lt;/a&gt; 图片链接的方式实现 &lt;a href=&quot;javascript:window.history.back(-1)&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;图片的路径&quot; /&gt;&lt;/a&gt;或者&lt;a href=&quot;javascript:history.back(-1)&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;图片的路径&quot; /&gt;&lt;/a&gt; 过几秒钟后返回上一页 &lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;window.history.go(-1)&quot;,3000)&lt;/script&gt;或者&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;history.go(-1)&quot;,3000)&lt;/script&gt;]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo常用命令]]></title>
     <url>%2F2018%2F06%2F29%2FHexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[hexo s hexo shexo s 是 hexo serve 的缩写，用于本地预览： http://localhost:4000/ hexo new hexo new 笔记名称新建一篇标题为“笔记名称”的文章 hexo d hexo dhexo d 是 hexo deploy 的缩写。用于自动生成静态文件，并部署到仓库。 hexo g hexo ghexo g 是 hexo generate 的缩写。用于生成网站静态文件到默认的 public 文件夹。 hexo new page hexo new page name新建一个标题为 name 的页面，默认链接地址为/name/页面不会出现在首页文章列表和归档中，也不支持分类和标签。]]></content>
@@ -9,17 +31,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[js中实现返回上一页的几种方法]]></title>
-    <url>%2F2018%2F06%2F29%2Fjs%E9%A1%B5%E9%9D%A2%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E9%A1%B5%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Learning</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>

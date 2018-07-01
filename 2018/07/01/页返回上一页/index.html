@@ -107,18 +107,18 @@
 
 
 
-<meta name="description" content="Something interesting Here!">
+<meta name="description" content="以按钮点击的方式实现 &amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;Submit&amp;quot; value=&amp;quot;返回上一页&amp;quot; onclick=&amp;quot;javascript:window.history.back(-1);&amp;quot;&amp;gt;或者&amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;S">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js中实现返回上一页的几种方法">
-<meta property="og:url" content="http://AbelChe.com/2018/06/29/js页面返回上一页/index.html">
+<meta property="og:title" content="网页返回上一页的几种方法">
+<meta property="og:url" content="http://AbelChe.com/2018/07/01/页返回上一页/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="Something interesting Here!">
+<meta property="og:description" content="以按钮点击的方式实现 &amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;Submit&amp;quot; value=&amp;quot;返回上一页&amp;quot; onclick=&amp;quot;javascript:window.history.back(-1);&amp;quot;&amp;gt;或者&amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;S">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-29T13:14:41.421Z">
+<meta property="og:updated_time" content="2018-07-01T17:11:48.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js中实现返回上一页的几种方法">
-<meta name="twitter:description" content="Something interesting Here!">
+<meta name="twitter:title" content="网页返回上一页的几种方法">
+<meta name="twitter:description" content="以按钮点击的方式实现 &amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;Submit&amp;quot; value=&amp;quot;返回上一页&amp;quot; onclick=&amp;quot;javascript:window.history.back(-1);&amp;quot;&amp;gt;或者&amp;lt;input type=&amp;quot;button&amp;quot; name=&amp;quot;S">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/2018/06/29/js页面返回上一页/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/07/01/页返回上一页/"/>
 
 
 
 
 
-  <title>js中实现返回上一页的几种方法 | AbelChe's Blog</title>
+  <title>网页返回上一页的几种方法 | AbelChe's Blog</title>
   
 
 
@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2018/06/29/js页面返回上一页/">
+    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2018/07/01/页返回上一页/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AbelChe">
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js中实现返回上一页的几种方法</h1>
+          <h1 class="post-title" itemprop="name headline">网页返回上一页的几种方法</h1>
         
 
         <div class="post-meta">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T19:10:38+08:00">
-                2018-06-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T22:44:00+08:00">
+                2018-07-01
               </time>
             
 
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-29T21:14:41+08:00">
-                2018-06-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-02T01:11:48+08:00">
+                2018-07-02
               </time>
             
           </span>
@@ -425,7 +425,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  219 字
                 </span>
               
 
@@ -462,13 +462,41 @@
       
 
       
-        
+        <h2 id="以按钮点击的方式实现"><a href="#以按钮点击的方式实现" class="headerlink" title="以按钮点击的方式实现"></a>以按钮点击的方式实现</h2><blockquote>
+<p><code>&lt;input type=&quot;button&quot; name=&quot;Submit&quot; value=&quot;返回上一页&quot; onclick=&quot;javascript:window.history.back(-1);&quot;&gt;</code><br>或者<br><code>&lt;input type=&quot;button&quot; name=&quot;Submit&quot; value=&quot;返回上一页&quot; onclick=&quot;javascript:history.back(-1);&quot;&gt;</code></p>
+</blockquote>
+<hr>
+<h2 id="一点击图片的方式实现"><a href="#一点击图片的方式实现" class="headerlink" title="一点击图片的方式实现"></a>一点击图片的方式实现</h2><blockquote>
+<p><code>&lt;img src=&quot;图片的路径&quot; onclick=&quot;javascript:window.history.back(-1);&quot; title=&quot;返回上一页&quot; alt=&quot;返回点击图片&quot; /&gt;</code><br>或者<br><code>&lt;img src=&quot;图片的路径&quot; onclick=&quot;javascript:history.back(-1);&quot; title=&quot;返回上一页&quot; alt=&quot;返回点击图片&quot; /&gt;</code></p>
+</blockquote>
+<hr>
+<h2 id="文字点击的方式实现"><a href="#文字点击的方式实现" class="headerlink" title="文字点击的方式实现"></a>文字点击的方式实现</h2><blockquote>
+<p><code>&lt;a href=&quot;javascript:history.back(-1)&quot;&gt;返回上一页&lt;/a&gt;</code><br>或者<br><code>&lt;a href=&quot;#&quot; onClick=&quot;javascript:history.back(-1);&quot;&gt;返回上一页&lt;/a&gt;</code></p>
+</blockquote>
+<hr>
+<h2 id="图片链接的方式实现"><a href="#图片链接的方式实现" class="headerlink" title="图片链接的方式实现"></a>图片链接的方式实现</h2><blockquote>
+<p><code>&lt;a href=&quot;javascript:window.history.back(-1)&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;图片的路径&quot; /&gt;&lt;/a&gt;</code><br>或者<br><code>&lt;a href=&quot;javascript:history.back(-1)&quot; target=&quot;_self&quot;&gt;&lt;img src=&quot;图片的路径&quot; /&gt;&lt;/a&gt;</code></p>
+</blockquote>
+<hr>
+<h2 id="过几秒钟后返回上一页"><a href="#过几秒钟后返回上一页" class="headerlink" title="过几秒钟后返回上一页"></a>过几秒钟后返回上一页</h2><blockquote>
+<p><code>&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;window.history.go(-1)&quot;,3000)&lt;/script&gt;</code><br>或者<br><code>&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;history.go(-1)&quot;,3000)&lt;/script&gt;</code></p>
+</blockquote>
+<hr>
+
       
     </div>
     
     
     
 
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫码加微信</div>
+</div>
+
+      </div>
     
 
     
@@ -511,7 +539,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://AbelChe.com/2018/06/29/js页面返回上一页/" title="js中实现返回上一页的几种方法">http://AbelChe.com/2018/06/29/js页面返回上一页/</a>
+    <a href="http://AbelChe.com/2018/07/01/页返回上一页/" title="网页返回上一页的几种方法">http://AbelChe.com/2018/07/01/页返回上一页/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -554,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/24/c++复习/" rel="next" title="C++复习！！！（课本：谭老爷爷版）">
-                <i class="fa fa-chevron-left"></i> C++复习！！！（课本：谭老爷爷版）
+              <a href="/2018/06/29/Hexo常用命令/" rel="next" title="Hexo常用命令">
+                <i class="fa fa-chevron-left"></i> Hexo常用命令
               </a>
             
           </div>
@@ -564,8 +592,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/29/Hexo常用命令/" rel="prev" title="Hexo常用命令">
-                Hexo常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/02/SQL常用语句-增删改查/" rel="prev" title="SQL常用语句--增删改查">
+                SQL常用语句--增删改查 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,8 +648,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -630,7 +667,7 @@
                 alt="AbelChe" />
             
               <p class="site-author-name" itemprop="name">AbelChe</p>
-              <p class="site-description motion-element" itemprop="description">Something interesting Here!</p>
+              <p class="site-description motion-element" itemprop="description">Youth means limitless possibilities.</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -640,7 +677,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -662,7 +699,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -746,6 +783,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#以按钮点击的方式实现"><span class="nav-number">1.</span> <span class="nav-text">以按钮点击的方式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一点击图片的方式实现"><span class="nav-number">2.</span> <span class="nav-text">一点击图片的方式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字点击的方式实现"><span class="nav-number">3.</span> <span class="nav-text">文字点击的方式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片链接的方式实现"><span class="nav-number">4.</span> <span class="nav-text">图片链接的方式实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过几秒钟后返回上一页"><span class="nav-number">5.</span> <span class="nav-text">过几秒钟后返回上一页</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -766,18 +819,25 @@
   <span class="author" itemprop="copyrightHolder">AbelChe</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">5.9k</span>
+  
 </div>
 
 
+<!--
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+-->
 
 
 
-  <span class="post-meta-divider">|</span>
 
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
