@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://AbelChe.com/schedule/index.html</loc>
+    
+    <lastmod>2018-07-01T07:32:03.977Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://AbelChe.com/2018/06/29/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2018-06-29T13:15:10.324Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://AbelChe.com/categories/index.html</loc>
     
     <lastmod>2018-06-29T13:12:16.199Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://AbelChe.com/schedule/index.html</loc>
-    
-    <lastmod>2018-06-29T13:11:09.171Z</lastmod>
     
   </url>
   
