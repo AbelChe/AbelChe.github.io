@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于本Blog使用的图片库]]></title>
+    <url>%2F2018%2F07%2F12%2F%E5%85%B3%E4%BA%8E%E6%9C%ACBlog%E4%BD%BF%E7%94%A8%E7%9A%84%E5%9B%BE%E7%89%87%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[关于本博客使用的图片库的说明 本博客网站使用贴图库作为图片储存仓库 传送门：| 贴图库 |]]></content>
+      <tags>
+        <tag>说明</tag>
+        <tag>图片库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[web基础知识]]></title>
     <url>%2F2018%2F07%2F11%2Fweb%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[Url]]></content>
+    <content type="text"><![CDATA[Url组成]]></content>
       <categories>
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -53,8 +62,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>C/C++</tag>
         <tag>笔记</tag>
+        <tag>C/C++</tag>
       </tags>
   </entry>
 </search>
