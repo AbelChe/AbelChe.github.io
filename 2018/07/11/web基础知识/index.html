@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,6 +13,13 @@
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -116,7 +123,7 @@
 <meta property="og:description" content="Url组成   HTTP请求方式HTTP协议中共定义了八种方法或者叫“动作”来表明对Request-URL制定的资源的不同操作方式，具体介绍如下：  1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。 2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i4.bvimg.com/653429/bd60e5a92973a559.png">
-<meta property="og:updated_time" content="2018-07-13T09:07:06.531Z">
+<meta property="og:updated_time" content="2018-07-15T03:18:10.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web基础知识">
 <meta name="twitter:description" content="Url组成   HTTP请求方式HTTP协议中共定义了八种方法或者叫“动作”来表明对Request-URL制定的资源的不同操作方式，具体介绍如下：  1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。 2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况">
@@ -128,12 +135,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"slideLeftIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"slideDownIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -372,8 +379,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-13T17:07:06+08:00">
-                2018-07-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-15T11:18:10+08:00">
+                2018-07-15
               </time>
             
           </span>
@@ -427,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  320 字
+                  744 字
                 </span>
               
 
@@ -443,7 +450,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -472,13 +479,44 @@
 <li>1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。</li>
 <li>2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况下，就可以获取包含在响应消息头中的<a href="https://baike.baidu.com/item/%E5%85%83%E4%BF%A1%E6%81%AF/7554993" target="_blank" rel="noopener">元信息</a>。</li>
 <li>3、GET: 向特定的资源发出请求。</li>
-<li>4、</li>
-<li>POST: 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的创建和/或已有资源的修改。</li>
+<li>4、POST: 向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的创建和/或已有资源的修改。</li>
 <li>5、PUT: 向指定资源位置上传其最新内容。</li>
 <li>6、DELETE: 请求服务器删除Request-URL所标识的资源。</li>
 <li>7、TRACE: 回显服务器收到的请求，主要用于测试或诊断。</li>
 <li>8、CONNECT: HTTP/1.1协议中预留给能够将连接改为管道的代理服务器。</li>
 </ul>
+<hr>
+<h1 id="Javascript由哪几部分组成"><a href="#Javascript由哪几部分组成" class="headerlink" title="Javascript由哪几部分组成"></a>Javascript由哪几部分组成</h1><p>参考来源：<a href="https://www.jianshu.com/p/f6c94cfa3139" target="_blank" rel="noopener">https://www.jianshu.com/p/f6c94cfa3139</a></p>
+<p>虽然JavaScript和ECMAScript通常被人用来表达相同的意思，但JavaScript的含义去比ECMA-262中规定的多得多。一个完整的JavaScript实现应由三个部分组成：</p>
+<ul>
+<li><p>1.<strong>核心（ECMAScript）</strong></p>
+</li>
+<li><p>2.<strong>文档对象模型（DOM）</strong></p>
+</li>
+<li><p>3.<strong>浏览器对象模型（BOM）</strong></p>
+</li>
+</ul>
+<p><strong>核心（ECMAScript）</strong></p>
+<p>由ECMA-262定义的ECMAScript是一种在国际认可的标准的脚本语言规范，与Web浏览器没有依赖关系。ECMA-262标准主要规定了这门语言由以下组成部分：</p>
+<ul>
+<li><p>1.语法</p>
+</li>
+<li><p>2.变量和数据类型</p>
+</li>
+<li><p>3.关键字和保留字</p>
+</li>
+<li><p>4.操作符</p>
+</li>
+<li><p>5.控制语句</p>
+</li>
+<li><p>6.对象</p>
+</li>
+</ul>
+<p>2009年ECMAScript 5.0版正式发布。在很长一段时间，使用javaScript都是按照5.0的标准。2015年ECMAScript 6发布正式版本，官方称为ECMAScript 2015。ECMAScript定义了脚本语言的所有属性、方法和对象。因此抵用web客户端脚本编码时一定要遵循ECMAScript标准。</p>
+<p><strong>文档对象模型（DOM）</strong></p>
+<p>DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）。DOM 将把整个页面规划成由节点层级构成的文档。HTML或XML页面中的每个组成部分都是某种类型的节点，这些节点又包含着不同类型的数据。</p>
+<p><strong>浏览器对象模型（BOM）</strong></p>
+<p>IE 3.0 和 Netscape Navigator 3.0 提供了一种特性 - BOM（浏览器对象模型），可以对浏览器窗口进行访问和操作。使用 BOM，开发者可以移动窗口、改变状态栏中的文本以及执行其他与页面内容不直接相关的操作。</p>
 <hr>
 
       
@@ -806,7 +844,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Url组成"><span class="nav-number">1.</span> <span class="nav-text">Url组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">2.</span> <span class="nav-text">HTTP请求方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Url组成"><span class="nav-number">1.</span> <span class="nav-text">Url组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">2.</span> <span class="nav-text">HTTP请求方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript由哪几部分组成"><span class="nav-number">3.</span> <span class="nav-text">Javascript由哪几部分组成</span></a></li></ol></div>
             
 
           </div>
@@ -840,7 +878,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.5k</span>
+    <span title="Site words total count">6.9k</span>
   
 </div>
 
@@ -920,6 +958,8 @@
   
 
 
+  
+
 
 
 
@@ -960,6 +1000,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -972,6 +1017,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>

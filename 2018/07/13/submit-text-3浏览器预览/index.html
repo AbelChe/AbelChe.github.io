@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,6 +13,13 @@
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -126,12 +133,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"slideLeftIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"slideDownIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -450,19 +457,19 @@
 <h1 id="submit-text-3在指定路径下在浏览器中预览"><a href="#submit-text-3在指定路径下在浏览器中预览" class="headerlink" title="submit text 3在指定路径下在浏览器中预览"></a>submit text 3在指定路径下在浏览器中预览</h1><blockquote>
 <ul>
 <li>1、安装插件：“SideBarEnhancements”</li>
-<li>2、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;Settings User-User”，添加如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;default_browser&quot;: &quot;chrome&quot; //one of this list: firefox, aurora, chrome, canary, chromium, opera, safari</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>2、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;Settings User-User”，添加如下：<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"default_browser"</span>: <span class="string">"chrome"</span> <span class="regexp">//</span>one <span class="keyword">of</span> <span class="keyword">this</span> list: firefox, aurora, chrome, canary, chromium, opera, safari</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 <blockquote>
 <ul>
-<li>3、在侧边栏右键，找到“Project-&gt;Edit Preview URLs”，添加如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;项目路径&quot;:&#123;</span><br><span class="line">        &quot;url_testing&quot;: &quot;localhost地址&quot;,</span><br><span class="line">        &quot;url_production&quot;: &quot;线上地址&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>3、在侧边栏右键，找到“Project-&gt;Edit Preview URLs”，添加如下：<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"项目路径"</span>:&#123;</span><br><span class="line">        <span class="attr">"url_testing"</span>: <span class="string">"localhost地址"</span>,</span><br><span class="line">        <span class="attr">"url_production"</span>: <span class="string">"线上地址"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 <blockquote>
 <ul>
-<li>4、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;key Bindings-User”，添加如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">        &quot;keys&quot;: [&quot;ctrl+shift+f&quot;],</span><br><span class="line">        &quot;command&quot;: &quot;side_bar_open_in_browser&quot;,</span><br><span class="line">        &quot;args&quot;: &#123;</span><br><span class="line">                    &quot;paths&quot;: [],</span><br><span class="line">                    &quot;type&quot;: &quot;testing&quot;,</span><br><span class="line">                    &quot;browser&quot;: &quot;&quot;</span><br><span class="line">                &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
+<li>4、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;key Bindings-User”，添加如下：<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">        <span class="attr">"keys"</span>: [<span class="string">"ctrl+shift+f"</span>],</span><br><span class="line">        <span class="attr">"command"</span>: <span class="string">"side_bar_open_in_browser"</span>,</span><br><span class="line">        <span class="attr">"args"</span>: &#123;</span><br><span class="line">                    <span class="attr">"paths"</span>: [],</span><br><span class="line">                    <span class="attr">"type"</span>: <span class="string">"testing"</span>,</span><br><span class="line">                    <span class="attr">"browser"</span>: <span class="string">""</span></span><br><span class="line">                &#125;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
 </ul>
 </blockquote>
 
@@ -819,7 +826,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.5k</span>
+    <span title="Site words total count">6.9k</span>
   
 </div>
 
@@ -899,6 +906,8 @@
   
 
 
+  
+
 
 
 
@@ -939,6 +948,11 @@
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
 
   
 
@@ -951,6 +965,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
