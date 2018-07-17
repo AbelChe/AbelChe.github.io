@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/06/29/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-07-17T07:16:26.031Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo常用命令</title>
+        <pubTime>2018-06-29T11:11:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="http://AbelChe.com/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/07/11/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2018-07-15T03:18:10.720Z</lastmod>
     <data>
@@ -56,26 +76,6 @@
            
              
               <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://AbelChe.com/2018/06/29/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-07-13T09:36:44.384Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo常用命令</title>
-        <pubTime>2018-06-29T11:11:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://AbelChe.com/categories/Hexo/"/>
           
         </display>
     </data>

@@ -54,7 +54,7 @@
   <entry>
     <title><![CDATA[Hexo常用命令]]></title>
     <url>%2F2018%2F06%2F29%2FHexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[hexo s hexo shexo s 是 hexo serve 的缩写，用于本地预览： http://localhost:4000/ hexo new hexo new 笔记名称新建一篇标题为“笔记名称”的文章 hexo d hexo dhexo d 是 hexo deploy 的缩写。用于自动生成静态文件，并部署到仓库。 hexo g hexo ghexo g 是 hexo generate 的缩写。用于生成网站静态文件到默认的 public 文件夹。 hexo new page hexo new page name新建一个标题为 name 的页面，默认链接地址为/name/页面不会出现在首页文章列表和归档中，也不支持分类和标签。]]></content>
+    <content type="text"><![CDATA[hexo s hexo shexo s 是 hexo serve 的缩写，用于本地预览： http://localhost:4000/ hexo clean 清除缓存文件 db.json 和已生成的静态文件 public网页异常清除缓存 hexo new hexo new 笔记名称新建一篇标题为“笔记名称”的文章 hexo d hexo dhexo d 是 hexo deploy 的缩写。用于自动生成静态文件，并部署到仓库。 hexo g hexo ghexo g 是 hexo generate 的缩写。用于生成网站静态文件到默认的 public 文件夹。 hexo new page hexo new page name新建一个标题为 name 的页面，默认链接地址为/name/页面不会出现在首页文章列表和归档中，也不支持分类和标签。]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
