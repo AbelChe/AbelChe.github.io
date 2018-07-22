@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[submit text 3浏览器预览]]></title>
-    <url>%2F2018%2F07%2F13%2Fsubmit-text-3%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A2%84%E8%A7%88%2F</url>
-    <content type="text"><![CDATA[submit text 3在浏览器中预览html等文件 1、安装插件：“view in browser” 2、打开：“Preferences-&gt;Key Bindings-User”，输入如下内容：[ { &quot;keys&quot;: [&quot;ctrl+alt+f&quot;], &quot;command&quot;: &quot;open_in_browser&quot; },] submit text 3在指定路径下在浏览器中预览 1、安装插件：“SideBarEnhancements” 2、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;Settings User-User”，添加如下：123&#123; "default_browser": "chrome" //one of this list: firefox, aurora, chrome, canary, chromium, opera, safari&#125; 3、在侧边栏右键，找到“Project-&gt;Edit Preview URLs”，添加如下：123456&#123; "项目路径":&#123; "url_testing": "localhost地址", "url_production": "线上地址" &#125;&#125; 4、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;key Bindings-User”，添加如下：1234567891011[&#123; "keys": ["ctrl+shift+f"], "command": "side_bar_open_in_browser", "args": &#123; "paths": [], "type": "testing", "browser": "" &#125; &#125;]]]></content>
+    <title><![CDATA[submit text 3初始配置]]></title>
+    <url>%2F2018%2F07%2F13%2Fsubmit-text-3%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[submit text 3安装PyV8有时下载 Emmet 后，使用会报出关于 PyV8 的错误这时需要我们手动去安装 PyV8 1、在github上下载需要的包：传送门 2、把下载的压缩包解压到如下路径： 3、重启submit text 3即可 submit text 3在浏览器中预览html等文件 1、安装插件：“view in browser” 2、打开：“Preferences-&gt;Key Bindings-User”，输入如下内容：[ { &quot;keys&quot;: [&quot;ctrl+alt+f&quot;], &quot;command&quot;: &quot;open_in_browser&quot; },] submit text 3在指定路径下在浏览器中预览 1、安装插件：“SideBarEnhancements” 2、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;Settings User-User”，添加如下：123&#123; "default_browser": "chrome" //one of this list: firefox, aurora, chrome, canary, chromium, opera, safari&#125; 3、在侧边栏右键，找到“Project-&gt;Edit Preview URLs”，添加如下：123456&#123; "项目路径":&#123; "url_testing": "localhost地址", "url_production": "线上地址" &#125;&#125; 4、打开：“Preference-&gt;Package Settings-&gt;Side Bar-&gt;key Bindings-User”，添加如下：1234567891011[&#123; "keys": ["ctrl+shift+f"], "command": "side_bar_open_in_browser", "args": &#123; "paths": [], "type": "testing", "browser": "" &#125; &#125;]]]></content>
       <tags>
         <tag>submit text 3</tag>
       </tags>
