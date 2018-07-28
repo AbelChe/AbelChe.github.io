@@ -4,14 +4,33 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/07/27/%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E6%8E%A2%E6%B5%8B/</loc>
+    <lastmod>2018-07-27T11:21:45.365Z</lastmod>
+    <data>
+        <display>
+        <title>敏感文件探测</title>
+        <pubTime>2018-07-27T09:44:34.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/07/25/%E5%B8%B8%E8%A7%84SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-07-26T03:25:53.213Z</lastmod>
+    <lastmod>2018-07-27T09:45:22.809Z</lastmod>
     <data>
         <display>
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
         <tag>SQL</tag>
+         
+        <tag>Web</tag>
          
         <tag>笔记</tag>
          

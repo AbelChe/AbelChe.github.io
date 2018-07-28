@@ -2117,7 +2117,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #919582;
+  background: #bfffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3333,4 +3333,25 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("https://source.unsplash.com/1920x1080/?sexy,girl,dark");
+  background-color: #ccc;
+  opacity: 0.86;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
+  -o-background-size: cover; /* 兼容Opera */
+  zoom: 1;
+}
+.main-inner {
+  opacity: 0.88;
 }
