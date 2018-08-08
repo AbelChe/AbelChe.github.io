@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[WP-Bugku-flag在index里]]></title>
     <url>%2F2018%2F08%2F08%2FWP-Bugku-flag%E5%9C%A8index%E9%87%8C%2F</url>
-    <content type="text"><![CDATA[title: WP-Bugku-flag在index里date: 8/8/2018 10:37:38 AMtags: Bugku Webcategories: WriteUp 题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php得到了一串base64加密的字符串base64解密得到包含flag的代码得到flag{edulcni_elif_lacol_si_siht}]]></content>
+    <content type="text"><![CDATA[题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php得到了一串base64加密的字符串base64解密得到包含flag的代码得到flag{edulcni_elif_lacol_si_siht}]]></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Bugku</tag>
+        <tag>Web</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[sqlmap常规使用]]></title>
