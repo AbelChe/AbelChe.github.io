@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/07/11/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2018-08-09T05:22:50.282Z</lastmod>
+    <data>
+        <display>
+        <title>web基础知识</title>
+        <pubTime>2018-07-11T10:55:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>url</tag>
+         
+        <tag>HTTP</tag>
+         
+        <tag>Javascript</tag>
+         
+        <tag>OSI模型</tag>
+         
+        <tag>TCP三次握手，四次挥手</tag>
+         
+         
+           
+             
+              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
     <lastmod>2018-08-08T14:31:06.708Z</lastmod>
     <data>
@@ -314,28 +346,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://AbelChe.com/2018/07/11/web%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2018-07-22T02:46:05.351Z</lastmod>
-    <data>
-        <display>
-        <title>web基础知识</title>
-        <pubTime>2018-07-11T10:55:00.000Z</pubTime>
-        
-        <tag>笔记</tag>
-         
-        <tag>Web</tag>
-         
-         
-           
-             
-              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
-          
         </display>
     </data>
     </url>

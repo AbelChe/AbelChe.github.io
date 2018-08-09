@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="笔记,Web," />
+  <meta name="keywords" content="笔记,Web,url,HTTP,Javascript,OSI模型,TCP三次握手，四次挥手," />
 
 
 
@@ -115,7 +115,7 @@
 
 
 <meta name="description" content="Url组成   HTTP请求方式HTTP协议中共定义了八种方法或者叫“动作”来表明对Request-URL制定的资源的不同操作方式，具体介绍如下：  1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。 2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况">
-<meta name="keywords" content="笔记,Web">
+<meta name="keywords" content="笔记,Web,url,HTTP,Javascript,OSI模型,TCP三次握手，四次挥手">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web基础知识">
 <meta property="og:url" content="http://AbelChe.com/2018/07/11/web基础知识/index.html">
@@ -123,7 +123,8 @@
 <meta property="og:description" content="Url组成   HTTP请求方式HTTP协议中共定义了八种方法或者叫“动作”来表明对Request-URL制定的资源的不同操作方式，具体介绍如下：  1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。 2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/WJ0UKcd.png">
-<meta property="og:updated_time" content="2018-07-22T02:46:05.351Z">
+<meta property="og:image" content="https://i.imgur.com/KUMYzwx.png">
+<meta property="og:updated_time" content="2018-08-09T05:22:50.282Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web基础知识">
 <meta name="twitter:description" content="Url组成   HTTP请求方式HTTP协议中共定义了八种方法或者叫“动作”来表明对Request-URL制定的资源的不同操作方式，具体介绍如下：  1、OPTIONS: 返回服务器针对特定资源所支持的HTTP请求方法。也可以利用向Web服务器发送”*”的请求来测试服务器的功能性。 2、HEAD: 向服务器索要与个体请求相一致的响应，只不过响应将不会被返回。这一方法可以在不必传输整个响应内容的情况">
@@ -379,8 +380,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-22T10:46:05+08:00">
-                2018-07-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T13:22:50+08:00">
+                2018-08-09
               </time>
             
           </span>
@@ -434,7 +435,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  744 字
+                  2,306 字
                 </span>
               
 
@@ -450,7 +451,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -485,6 +486,69 @@
 <li>7、TRACE: 回显服务器收到的请求，主要用于测试或诊断。</li>
 <li>8、CONNECT: HTTP/1.1协议中预留给能够将连接改为管道的代理服务器。</li>
 </ul>
+<p><font color="darkviolet" size="4"><center><strong>GET和POST的区别</strong></center></font></p>
+<style>
+table th:first-of-type {
+width:10%;
+}
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">GET</th>
+<th style="text-align:center">POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">后退/刷新</td>
+<td style="text-align:center">无害</td>
+<td style="text-align:center">数据会被重新提交</td>
+</tr>
+<tr>
+<td style="text-align:center">书签</td>
+<td style="text-align:center">可收藏为书签</td>
+<td style="text-align:center">不可收藏为书签</td>
+</tr>
+<tr>
+<td style="text-align:center">缓存</td>
+<td style="text-align:center">能被缓存</td>
+<td style="text-align:center">不能缓存</td>
+</tr>
+<tr>
+<td style="text-align:center">编码类型</td>
+<td style="text-align:center">Application/x-www-form-urlencoded</td>
+<td style="text-align:center">Application/x-www-form-urlencoded或multiparty/form-data。为二进制数据使用多重编码</td>
+</tr>
+<tr>
+<td style="text-align:center">历史</td>
+<td style="text-align:center">参数保存在浏览器历史中</td>
+<td style="text-align:center">参数不会保存在浏览器历史中</td>
+</tr>
+<tr>
+<td style="text-align:center">对数据长度的限制</td>
+<td style="text-align:center">当发送数据时，GET方法向URL添加数据；URL的长度是受限制的（URL的最大长度是2048个字符）</td>
+<td style="text-align:center">无限制</td>
+</tr>
+<tr>
+<td style="text-align:center">对数据类型的限制</td>
+<td style="text-align:center">只允许ASCII字符</td>
+<td style="text-align:center">没有限制。也允许二进制数据</td>
+</tr>
+<tr>
+<td style="text-align:center">安全性</td>
+<td style="text-align:center">与POST相比，GET的安全性较差，因为所发送的数据是URL的一部分。所以在发送密码等                   敏感信息时绝不要使用GET。</td>
+<td style="text-align:center">POST比GET更加安全，因为参数不会被保存在浏览器历史或web服务器日志中。</td>
+</tr>
+<tr>
+<td style="text-align:center">可见性</td>
+<td style="text-align:center">数据在URL中对所有人都都是可见的</td>
+<td style="text-align:center">数据不会显示在URL中</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h1 id="Javascript由哪几部分组成"><a href="#Javascript由哪几部分组成" class="headerlink" title="Javascript由哪几部分组成"></a>Javascript由哪几部分组成</h1><p>参考来源：<a href="https://www.jianshu.com/p/f6c94cfa3139" target="_blank" rel="noopener">https://www.jianshu.com/p/f6c94cfa3139</a></p>
 <p>虽然JavaScript和ECMAScript通常被人用来表达相同的意思，但JavaScript的含义去比ECMA-262中规定的多得多。一个完整的JavaScript实现应由三个部分组成：</p>
@@ -517,6 +581,34 @@
 <p>DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）。DOM 将把整个页面规划成由节点层级构成的文档。HTML或XML页面中的每个组成部分都是某种类型的节点，这些节点又包含着不同类型的数据。</p>
 <p><strong>浏览器对象模型（BOM）</strong></p>
 <p>IE 3.0 和 Netscape Navigator 3.0 提供了一种特性 - BOM（浏览器对象模型），可以对浏览器窗口进行访问和操作。使用 BOM，开发者可以移动窗口、改变状态栏中的文本以及执行其他与页面内容不直接相关的操作。</p>
+<hr>
+<h1 id="OSI模型：（即开放式通信系统互联参考模型）"><a href="#OSI模型：（即开放式通信系统互联参考模型）" class="headerlink" title="OSI模型：（即开放式通信系统互联参考模型）"></a>OSI模型：（即开放式通信系统互联参考模型）</h1><p>OSI/RM协议是由IOS（国际标准化组织）制定的，他有三个基本功能：<strong>提供给开发者一个必须的、通用的概念以便开发完善、可以用来解释不同系统的框架</strong>。</p>
+<p>OSI将计算机网络体结构划分为<strong>七层</strong>：</p>
+<ol>
+<li><p><strong>物理层</strong>：将数据转化为可通过物理介质传送的电子信号。相当于有剧中的搬运工人。<br>物理层规定了激活、维持、关闭通信端点之间的机械性、电气特性、功能特性以及过程特性。该层为上层协议提供了一个传输数据的物理媒体。<br>在这一层，数据单位为比特（bit）。<br>属于物理层定义的典范规范代表包括：EIA/TIA RS-232、EIA/TIA RS-449、V.35、RJ-45等。</p>
+</li>
+<li><p><strong>数据链路层</strong>：决定访问网络介质的方式。在此层将数据分帧，并处理流控制。本层指定拓补结构并提供硬件寻址。相当于邮局中的拆装箱工人。<br>数据链路层在不可靠的物理介质上提供可靠的传输。<br>该层的作用包括：物理地址寻址、数据的成帧、流量控制、数据的检错、重发等。<br>在这一层，数据的单位成为帧。<br>数据链路层协议的代表包括：SDLC、HDLC、PPP、STP、帧中继等。</p>
+</li>
+<li><p><strong>网络层</strong>：使用权数据路由经过大型网络。相当于邮局中的排序工人。<br>网络层负责对子网间的数据包进行路由选择。网络层还可以实现拥塞控制、网际互联等功能。<br>在这一层数据的单位成为数据包。<br>网络层协议的代表包括：IP、PX、IP、SPF、RP、ARP、CMP、MP等。</p>
+</li>
+<li><p><strong>传输层</strong>：提供终端到终端的可靠连接。相当于公司中跑邮局的送信职员。<br>传输层是第一个端到端，即主机到主机的层次。传输层负责将数据分段并提供端到端的、可靠的或不可靠的传输。此外，传输层还要处理端到端的差错控制和流量控制问题。<br>在这一层输局的单位称为数据端。<br>传输层协议的代表包括：TCP、UDP、SPX等。</p>
+</li>
+<li><p><strong>会话层</strong>：允许用户使用简单易记的名称建立连接。相当于公司中收寄信、写信封与拆信封的秘书。<br>会话层管理主机之间的会话进程即负责建立、管理、终止进程之间的会话。会话层还利用在数据中插入校验点来实现数据的同步。</p>
+</li>
+<li><p><strong>表示层</strong>：协商数据交换格式。相当于公司中简报老板、替老板写信的助理。<br>表示层对上层数据或信息进行变换以保证一个主机应用层的信息可以被另一个主机的应用程序理解。表示层的数据转换包括输局的加密、压缩、格式转换等。</p>
+</li>
+<li><p><strong>应用层</strong>：用户的应用程序和网络之间的接口老板。<br>应用层为操作系统或网络应用程序提供访问网络服务的接口。<br>应用层协议的代表包括：Telnet、FTP、HTTP、SNMP等。</p>
+</li>
+</ol>
+<hr>
+<h1 id="TCP三次握手，四次挥手"><a href="#TCP三次握手，四次挥手" class="headerlink" title="TCP三次握手，四次挥手"></a>TCP三次握手，四次挥手</h1><h2 id="TCP三次握手："><a href="#TCP三次握手：" class="headerlink" title="TCP三次握手："></a>TCP三次握手：</h2><p>第一次握手：客户端发送syn包（syn=x）到服务器，并进入到SYN_SEND状态，等待服务器确认。</p>
+<p>第二次握手：服务器收到syn包，必须确认客户端的SYN（ack=x+1），同时自己也发送一个SYN包，即SYN+ACK包，此时服务器进入SYN_RECV状态。</p>
+<p>第三次握手：客户端收到服务区的SYN+ACK包，向服务器发送确认包ACK（ack=y+1），此包发送完毕，客户端进入ESTABLISHED状态，完成三次握手。</p>
+<p>握手构成中传送的包里不含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。理想状态下，TCP连接一旦建立，在通信双方的任何一方主动关闭连接前，TCP链接都将被一直保持下去。<br>确认号：其数值等于发送方的发送序号+1（即接收方期望接受的下一个序列号）。</p>
+<h2 id="TCP四次挥手："><a href="#TCP四次挥手：" class="headerlink" title="TCP四次挥手："></a>TCP四次挥手：</h2><p>第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送。</p>
+<p>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN展映一个序号）。</p>
+<p>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发送数据。</p>
+<p>第四次挥手：主动关闭方收到一个FIN包后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。<br><img src="https://i.imgur.com/KUMYzwx.png" alt=""></p>
 <hr>
 
       
@@ -593,6 +685,16 @@
             <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
             <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/url/" rel="tag"># url</a>
+          
+            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+            <a href="/tags/OSI模型/" rel="tag"># OSI模型</a>
+          
+            <a href="/tags/TCP三次握手，四次挥手/" rel="tag"># TCP三次握手，四次挥手</a>
           
         </div>
       
@@ -737,7 +839,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -838,7 +940,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Url组成"><span class="nav-number">1.</span> <span class="nav-text">Url组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">2.</span> <span class="nav-text">HTTP请求方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript由哪几部分组成"><span class="nav-number">3.</span> <span class="nav-text">Javascript由哪几部分组成</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Url组成"><span class="nav-number">1.</span> <span class="nav-text">Url组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP请求方式"><span class="nav-number">2.</span> <span class="nav-text">HTTP请求方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript由哪几部分组成"><span class="nav-number">3.</span> <span class="nav-text">Javascript由哪几部分组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OSI模型：（即开放式通信系统互联参考模型）"><span class="nav-number">4.</span> <span class="nav-text">OSI模型：（即开放式通信系统互联参考模型）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP三次握手，四次挥手"><span class="nav-number">5.</span> <span class="nav-text">TCP三次握手，四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP三次握手："><span class="nav-number">5.1.</span> <span class="nav-text">TCP三次握手：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP四次挥手："><span class="nav-number">5.2.</span> <span class="nav-text">TCP四次挥手：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -872,7 +974,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.5k</span>
+    <span title="Site words total count">14.0k</span>
   
 </div>
 
