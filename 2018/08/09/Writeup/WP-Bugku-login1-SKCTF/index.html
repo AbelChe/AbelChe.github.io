@@ -114,18 +114,18 @@
 
 
 
-<meta name="description" content="Youth means limitless possibilities.">
+<meta name="description" content="题目地址：http://118.89.219.210:49163/ 本文转载自：https://delcoding.github.io/2018/03/bugku-writeup4/ 这道题用的是sql约束攻击，利用的是数据库字段定义时产生的漏洞。如：1234mysql&amp;gt; CREATE TABLE users (    -&amp;gt;   username varchar(25),    -&amp;g">
 <meta name="keywords" content="Web,Bugku,SQL约束攻击">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-Bugku-login1(SKCTF)">
 <meta property="og:url" content="http://AbelChe.com/2018/08/09/Writeup/WP-Bugku-login1-SKCTF/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="Youth means limitless possibilities.">
+<meta property="og:description" content="题目地址：http://118.89.219.210:49163/ 本文转载自：https://delcoding.github.io/2018/03/bugku-writeup4/ 这道题用的是sql约束攻击，利用的是数据库字段定义时产生的漏洞。如：1234mysql&amp;gt; CREATE TABLE users (    -&amp;gt;   username varchar(25),    -&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-09T08:14:03.166Z">
+<meta property="og:updated_time" content="2018-08-09T08:43:13.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-login1(SKCTF)">
-<meta name="twitter:description" content="Youth means limitless possibilities.">
+<meta name="twitter:description" content="题目地址：http://118.89.219.210:49163/ 本文转载自：https://delcoding.github.io/2018/03/bugku-writeup4/ 这道题用的是sql约束攻击，利用的是数据库字段定义时产生的漏洞。如：1234mysql&amp;gt; CREATE TABLE users (    -&amp;gt;   username varchar(25),    -&amp;g">
 
 
 
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T16:14:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T16:43:13+08:00">
                 2018-08-09
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  206 字
                 </span>
               
 
@@ -469,7 +469,12 @@
       
 
       
-        
+        <p>题目地址：<a href="http://118.89.219.210:49163/" target="_blank" rel="noopener">http://118.89.219.210:49163/</a></p>
+<p>本文转载自：<a href="https://delcoding.github.io/2018/03/bugku-writeup4/" target="_blank" rel="noopener">https://delcoding.github.io/2018/03/bugku-writeup4/</a></p>
+<p>这道题用的是sql约束攻击，利用的是数据库字段定义时产生的漏洞。如：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE TABLE<span class="built_in"> users </span>(</span><br><span class="line">    -&gt;   username varchar(25),</span><br><span class="line">    -&gt;   password varchar(25)</span><br><span class="line">    -&gt; );</span><br></pre></td></tr></table></figure></p>
+<p>这里的username只允许25个字符，超过后就舍去25字符以后的，然后在mysql中，admin跟admin [很多空格]在查询的时候是一样的。因为admin用户已经存在，但我们不知道他的密码，所以我们自己注册一个admin然后替换掉密码。所以我们可以注册一个admin[很多个空格]1的用户名，只要总字符数超过25，然后密码设成你的。注册成功后使用admin加你的密码去登陆即可得到flag。</p>
+<p>SKCTF{4Dm1n_HaV3_GreAt_p0w3R} </p>
+
       
     </div>
     
@@ -583,6 +588,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/08/09/Writeup/WP-Bugku-这是一个神奇的登陆框/" rel="prev" title="WP-Bugku-这是一个神奇的登陆框">
+                WP-Bugku-这是一个神奇的登陆框 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -655,7 +664,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -796,7 +805,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.4k</span>
+    <span title="Site words total count">14.7k</span>
   
 </div>
 
