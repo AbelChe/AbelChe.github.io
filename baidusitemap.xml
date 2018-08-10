@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://AbelChe.com/2018/08/09/Writeup/WP-Bugku-%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86/</loc>
-    <lastmod>2018-08-09T10:01:46.434Z</lastmod>
+    <lastmod>2018-08-09T11:48:03.625Z</lastmod>
     <data>
         <display>
         <title>WP-Bugku-这是一个神奇的登陆框</title>
@@ -379,11 +379,11 @@
         <title>SQL手工注入常用语句</title>
         <pubTime>2018-08-07T08:12:24.000Z</pubTime>
         
+        <tag>SQL</tag>
+         
         <tag>Web</tag>
          
         <tag>笔记</tag>
-         
-        <tag>SQL</tag>
          
          
            
@@ -403,11 +403,11 @@
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
+        <tag>SQL</tag>
+         
         <tag>Web</tag>
          
         <tag>笔记</tag>
-         
-        <tag>SQL</tag>
          
          
            
