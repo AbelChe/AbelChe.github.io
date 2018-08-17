@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/08/17/Writeup/WP-Bugku-login3-SKCTF/</loc>
+    <lastmod>2018-08-17T04:23:59.964Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-login3(SKCTF)</title>
+        <pubTime>2018-08-17T03:01:27.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+        <tag>基于布尔的SQL盲注</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/08/16/Writeup/WP-Bugku-%E7%BB%86%E5%BF%83/</loc>
     <lastmod>2018-08-16T08:08:28.692Z</lastmod>
     <data>
@@ -528,11 +552,11 @@
         <title>SQL手工注入常用语句</title>
         <pubTime>2018-08-07T08:12:24.000Z</pubTime>
         
+        <tag>SQL</tag>
+         
         <tag>Web</tag>
          
         <tag>笔记</tag>
-         
-        <tag>SQL</tag>
          
          
            
@@ -552,11 +576,11 @@
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
+        <tag>SQL</tag>
+         
         <tag>Web</tag>
          
         <tag>笔记</tag>
-         
-        <tag>SQL</tag>
          
          
            
