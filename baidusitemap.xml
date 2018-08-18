@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
-    <lastmod>2018-08-18T09:16:14.825Z</lastmod>
+    <lastmod>2018-08-18T09:16:51.303Z</lastmod>
     <data>
         <display>
         <title>WP-Bugku-前女友(SKCTF)</title>
@@ -648,9 +648,9 @@
         <title>SQL手工注入常用语句</title>
         <pubTime>2018-08-07T08:12:24.000Z</pubTime>
         
-        <tag>SQL</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>SQL</tag>
          
         <tag>Web</tag>
          
@@ -672,9 +672,9 @@
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
-        <tag>SQL</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>SQL</tag>
          
         <tag>Web</tag>
          
