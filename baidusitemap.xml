@@ -3,6 +3,56 @@
 
 
     
+    
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/17/Writeup/WP-Bugku-%E6%B1%82getshell/</loc>
+    <lastmod>2018-08-18T05:54:50.830Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-求getshell</title>
+        <pubTime>2018-08-17T10:02:08.000Z</pubTime>
+        
+        <tag>Bugku</tag>
+         
+        <tag>web</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/17/Writeup/WP-Bugku-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB2/</loc>
+    <lastmod>2018-08-17T07:08:18.814Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-文件包含2</title>
+        <pubTime>2018-08-17T06:32:54.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+        <tag>文件包含</tag>
+         
+        <tag>图片马</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://AbelChe.com/2018/08/17/Writeup/WP-Bugku-login3-SKCTF/</loc>
     <lastmod>2018-08-17T04:23:59.964Z</lastmod>
@@ -293,9 +343,9 @@
         <title>web基础知识</title>
         <pubTime>2018-07-11T10:55:00.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>Web</tag>
          
         <tag>url</tag>
          
@@ -528,9 +578,9 @@
         <title>sqlmap常规使用</title>
         <pubTime>2018-08-08T02:21:09.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>Web</tag>
          
         <tag>sqlmap</tag>
          
@@ -554,9 +604,9 @@
         
         <tag>SQL</tag>
          
-        <tag>Web</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>Web</tag>
          
          
            
@@ -578,9 +628,9 @@
         
         <tag>SQL</tag>
          
-        <tag>Web</tag>
-         
         <tag>笔记</tag>
+         
+        <tag>Web</tag>
          
          
            
@@ -617,9 +667,9 @@
         <title>C++复习！！！（课本：谭老爷爷版）</title>
         <pubTime>2018-06-24T07:33:00.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>C/C++</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -690,7 +740,6 @@
     </data>
     </url>
 
-    
     
     
     
