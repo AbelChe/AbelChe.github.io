@@ -3,6 +3,54 @@
   
     
     <entry>
+      <title>WP-Bugku-各种绕过</title>
+      <link href="/2018/08/18/Writeup/WP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87/"/>
+      <url>/2018/08/18/Writeup/WP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87/</url>
+      <content type="html"><![CDATA[<p>题目地址<a href="http://120.24.86.145:8002/web7/" target="_blank" rel="noopener">http://120.24.86.145:8002/web7/</a></p><p>源码<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">highlight_file(<span class="string">'flag.php'</span>);</span></span><br><span class="line"><span class="php">$_GET[<span class="string">'id'</span>] = urldecode($_GET[<span class="string">'id'</span>]);</span></span><br><span class="line"><span class="php">$flag = <span class="string">'flag&#123;xxxxxxxxxxxxxxxxxx&#125;'</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_GET[<span class="string">'uname'</span>]) <span class="keyword">and</span> <span class="keyword">isset</span>($_POST[<span class="string">'passwd'</span>])) &#123;</span></span><br><span class="line"><span class="php">    <span class="keyword">if</span> ($_GET[<span class="string">'uname'</span>] == $_POST[<span class="string">'passwd'</span>])</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">        <span class="keyword">print</span> <span class="string">'passwd can not be uname.'</span>;</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">    <span class="keyword">else</span> <span class="keyword">if</span> (sha1($_GET[<span class="string">'uname'</span>]) === sha1($_POST[<span class="string">'passwd'</span>])&amp;($_GET[<span class="string">'id'</span>]==<span class="string">'margin'</span>))</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">        <span class="keyword">die</span>(<span class="string">'Flag: '</span>.$flag);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">    <span class="keyword">else</span></span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">        <span class="keyword">print</span> <span class="string">'sorry!'</span>;</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p><p>分析后发现，只要使uname的sha1和值与passwd的sha1的值相等即可，</p><p>但是同时他们两个的值又不能相等</p><p>那么构造数组<br>get传参：<br>?uname[]=1&amp;id=margin<br>同时post传参：<br>passwd[]=2<br><img src="https://i.imgur.com/upNrZlL.png" alt=""></p><p>得到 flag{HACK_45hhs_213sDD}</p><blockquote><p><a href="http://abelche.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/">这个和之前的前女友有点像，都是利用数组</a></p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> WriteUp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+            <tag> Bugku </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>WP-Bugku-文件上传2(湖湘杯)</title>
+      <link href="/2018/08/18/Writeup/WP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF/"/>
+      <url>/2018/08/18/Writeup/WP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF/</url>
+      <content type="html"><![CDATA[<p>题目地址<a href="http://120.24.86.145:9011/" target="_blank" rel="noopener">http://120.24.86.145:9011/</a></p><p>看大佬博客，直接构造的url，直接读取文件？？？？？？？</p><p><a href="http://120.24.86.145:9011/?op=php://filter/read=convert.base64-encode/resource=flag" target="_blank" rel="noopener">http://120.24.86.145:9011/?op=php://filter/read=convert.base64-encode/resource=flag</a></p><p><img src="https://i.imgur.com/Cza1zbe.png" alt=""></p><p>然后base64解码</p><p>得到flag{e00f8931037cbdb25f6b1d82dfe5552f}</p>]]></content>
+      
+      <categories>
+          
+          <category> WriteUp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web </tag>
+            
+            <tag> Bugku </tag>
+            
+            <tag> 文件上传 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>WP-Bugku-求getshell</title>
       <link href="/2018/08/17/Writeup/WP-Bugku-%E6%B1%82getshell/"/>
       <url>/2018/08/17/Writeup/WP-Bugku-%E6%B1%82getshell/</url>
@@ -325,7 +373,7 @@
       <title>WP-Bugku-前女友(SKCTF)</title>
       <link href="/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/"/>
       <url>/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</url>
-      <content type="html"><![CDATA[<p>题目链接：<a href="http://118.89.219.210:49162/" target="_blank" rel="noopener">http://118.89.219.210:49162/</a></p><p>打开题目后有一堆文字，查看源码，有一个链接，点进去后得到源码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'v1'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'v2'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'v3'</span>]))&#123;</span></span><br><span class="line"><span class="php">    $v1 = $_GET[<span class="string">'v1'</span>];</span></span><br><span class="line"><span class="php">    $v2 = $_GET[<span class="string">'v2'</span>];</span></span><br><span class="line"><span class="php">    $v3 = $_GET[<span class="string">'v3'</span>];</span></span><br><span class="line"><span class="php">    <span class="keyword">if</span>($v1 != $v2 &amp;&amp; md5($v1) == md5($v2))&#123;</span></span><br><span class="line"><span class="php">        <span class="keyword">if</span>(!strcmp($v3, $flag))&#123;</span></span><br><span class="line"><span class="php">            <span class="keyword">echo</span> $flag;</span></span><br><span class="line"><span class="php">        &#125;</span></span><br><span class="line"><span class="php">    &#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p><p><font color="red">在PHP中，MD5是不能处理数组的，md5(数组)会返回null，所以md5(a[])==null,md5(b[])==null，md5(a[])=md5(b[])=null</font>,这样就得到答案了。</p><p>所以构造出参数：<br><code>?v1[]=1&amp;v2[]=2&amp;v3[]=3</code><br>url:<br><a href="http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3" target="_blank" rel="noopener">http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3</a></p><p>得到SKCTF{Php_1s_tH3_B3St_L4NgUag3}</p><hr>]]></content>
+      <content type="html"><![CDATA[<p>题目链接：<a href="http://118.89.219.210:49162/" target="_blank" rel="noopener">http://118.89.219.210:49162/</a></p><p>打开题目后有一堆文字，查看源码，有一个链接，点进去后得到源码：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'v1'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'v2'</span>]) &amp;&amp; <span class="keyword">isset</span>($_GET[<span class="string">'v3'</span>]))&#123;</span></span><br><span class="line"><span class="php">    $v1 = $_GET[<span class="string">'v1'</span>];</span></span><br><span class="line"><span class="php">    $v2 = $_GET[<span class="string">'v2'</span>];</span></span><br><span class="line"><span class="php">    $v3 = $_GET[<span class="string">'v3'</span>];</span></span><br><span class="line"><span class="php">    <span class="keyword">if</span>($v1 != $v2 &amp;&amp; md5($v1) == md5($v2))&#123;</span></span><br><span class="line"><span class="php">        <span class="keyword">if</span>(!strcmp($v3, $flag))&#123;</span></span><br><span class="line"><span class="php">            <span class="keyword">echo</span> $flag;</span></span><br><span class="line"><span class="php">        &#125;</span></span><br><span class="line"><span class="php">    &#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p><p><font color="red">在PHP中，MD5是不能处理数组的，md5(数组)会返回null，所以md5(a[])==null,md5(b[])==null，md5(a[])=md5(b[])=null</font>,这样就得到答案了。</p><p>所以构造出参数：<br><code>?v1[]=1&amp;v2[]=2&amp;v3[]=3</code><br>url:<br><a href="http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3" target="_blank" rel="noopener">http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3</a></p><p>得到SKCTF{Php_1s_tH3_B3St_L4NgUag3}</p><blockquote><p><a href="http://abelche.com/2018/08/18/Writeup/WP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87/">这里链接一道也是利用数组的题</a></p></blockquote><hr>]]></content>
       
       <categories>
           
@@ -549,9 +597,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> SQL </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -599,9 +647,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> SQL </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             

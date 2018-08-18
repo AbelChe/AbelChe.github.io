@@ -3,6 +3,76 @@
 
 
     
+  <url>
+    <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
+    <lastmod>2018-08-18T09:16:14.825Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-前女友(SKCTF)</title>
+        <pubTime>2018-08-08T14:14:11.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>Bugku</tag>
+         
+        <tag>正则表达式</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/18/Writeup/WP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87/</loc>
+    <lastmod>2018-08-18T09:14:28.130Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-各种绕过</title>
+        <pubTime>2018-08-18T08:56:10.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/18/Writeup/WP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF/</loc>
+    <lastmod>2018-08-18T08:39:11.672Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-文件上传2(湖湘杯)</title>
+        <pubTime>2018-08-18T08:14:32.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+        <tag>文件上传</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -368,30 +438,6 @@
 
     
   <url>
-    <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
-    <lastmod>2018-08-08T14:31:06.708Z</lastmod>
-    <data>
-        <display>
-        <title>WP-Bugku-前女友(SKCTF)</title>
-        <pubTime>2018-08-08T14:14:11.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-        <tag>Bugku</tag>
-         
-        <tag>正则表达式</tag>
-         
-         
-           
-             
-              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%AD%97%E7%AC%A6-%E6%AD%A3%E5%88%99/</loc>
     <lastmod>2018-08-08T13:36:51.836Z</lastmod>
     <data>
@@ -602,9 +648,9 @@
         <title>SQL手工注入常用语句</title>
         <pubTime>2018-08-07T08:12:24.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>笔记</tag>
          
         <tag>Web</tag>
          
@@ -626,9 +672,9 @@
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>笔记</tag>
          
         <tag>Web</tag>
          
