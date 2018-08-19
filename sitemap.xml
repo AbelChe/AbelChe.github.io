@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://AbelChe.com/runcode/index.html</loc>
+    
+    <lastmod>2018-08-19T08:08:08.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5/</loc>
+    
+    <lastmod>2018-08-19T08:02:58.798Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
     
     <lastmod>2018-08-18T09:16:51.303Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://AbelChe.com/2018/08/18/Writeup/WP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF/</loc>
     
     <lastmod>2018-08-18T08:39:11.672Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://AbelChe.com/runcode/index.html</loc>
-    
-    <lastmod>2018-08-18T07:20:02.467Z</lastmod>
     
   </url>
   

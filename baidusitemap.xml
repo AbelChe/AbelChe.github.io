@@ -3,6 +3,31 @@
 
 
     
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2018-08-19T08:02:58.798Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-INSERT INTO注入</title>
+        <pubTime>2018-08-19T06:07:46.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+        <tag>X_FORWARDED_FOR注入</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://AbelChe.com/2018/08/08/Writeup/WP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)/</loc>
     <lastmod>2018-08-18T09:16:51.303Z</lastmod>
@@ -72,7 +97,6 @@
     </data>
     </url>
 
-    
     
     
   <url>
@@ -626,9 +650,9 @@
         
         <tag>笔记</tag>
          
-        <tag>Web</tag>
-         
         <tag>sqlmap</tag>
+         
+        <tag>Web</tag>
          
          
            
@@ -650,9 +674,9 @@
         
         <tag>笔记</tag>
          
-        <tag>SQL</tag>
-         
         <tag>Web</tag>
+         
+        <tag>SQL</tag>
          
          
            
@@ -674,9 +698,9 @@
         
         <tag>笔记</tag>
          
-        <tag>SQL</tag>
-         
         <tag>Web</tag>
+         
+        <tag>SQL</tag>
          
          
            
