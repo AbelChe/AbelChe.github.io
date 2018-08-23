@@ -3,6 +3,76 @@
 
 
     
+  <url>
+    <loc>http://AbelChe.com/2018/08/23/kali%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2018-08-23T10:49:15.856Z</lastmod>
+    <data>
+        <display>
+        <title>kali渗透常用工具</title>
+        <pubTime>2018-08-23T07:47:09.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>kali</tag>
+         
+         
+           
+             
+              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/21/Writeup/WP-Bugku-login2-SKCTF/</loc>
+    <lastmod>2018-08-21T09:19:35.574Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-login2(SKCTF)</title>
+        <pubTime>2018-08-21T06:02:09.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2018/08/21/Writeup/WP-Bugku-PHP-encrypt-1-ISCCCTF/</loc>
+    <lastmod>2018-08-21T09:19:30.873Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-PHP_encrypt_1(ISCCCTF)</title>
+        <pubTime>2018-08-21T09:05:56.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>Bugku</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://AbelChe.com/2018/08/19/Writeup/WP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5/</loc>
@@ -650,9 +720,9 @@
         
         <tag>笔记</tag>
          
-        <tag>sqlmap</tag>
-         
         <tag>Web</tag>
+         
+        <tag>sqlmap</tag>
          
          
            
@@ -674,9 +744,9 @@
         
         <tag>笔记</tag>
          
-        <tag>Web</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>Web</tag>
          
          
            
@@ -698,9 +768,9 @@
         
         <tag>笔记</tag>
          
-        <tag>Web</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>Web</tag>
          
          
            
