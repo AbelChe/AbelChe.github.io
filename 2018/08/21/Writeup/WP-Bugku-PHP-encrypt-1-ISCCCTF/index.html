@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="php,Web,Bugku," />
+  <meta name="keywords" content="Web,php,Bugku," />
 
 
 
@@ -115,7 +115,7 @@
 
 
 <meta name="description" content="题目直接给出了加密源码123456789101112131415161718192021&amp;lt;?phpfunction encrypt($data,$key)&amp;#123;    $key = md5(&apos;ISCC&apos;);    $x = 0;    $len = strlen($data);    $klen = strlen($key);    for ($i=0; $i &amp;lt; $len; $">
-<meta name="keywords" content="php,Web,Bugku">
+<meta name="keywords" content="Web,php,Bugku">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-Bugku-PHP_encrypt_1(ISCCCTF)">
 <meta property="og:url" content="http://AbelChe.com/2018/08/21/Writeup/WP-Bugku-PHP-encrypt-1-ISCCCTF/index.html">
@@ -555,9 +555,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/php/" rel="tag"># php</a>
-          
             <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/php/" rel="tag"># php</a>
           
             <a href="/tags/Bugku/" rel="tag"># Bugku</a>
           
@@ -565,21 +565,6 @@
       
 
       
-      
-        <div class="post-widgets">
-        
-
-        
-
-        
-          
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-          </div>
-        
-        </div>
       
       
 
@@ -883,6 +868,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -1374,18 +1365,18 @@
 
   <script>
     
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "box";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
     
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
     
   </script>
 
