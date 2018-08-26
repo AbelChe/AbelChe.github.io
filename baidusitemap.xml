@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/08/26/Writeup/WP-Bugku-Web%E8%BF%9B%E9%98%B6%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2018-08-26T02:19:07.488Z</lastmod>
+    <data>
+        <display>
+        <title>WP-Bugku-Web进阶系列</title>
+        <pubTime>2018-08-26T01:57:22.000Z</pubTime>
+        
+        <tag>Web进阶</tag>
+         
+        <tag>cms</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/08/23/kali%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2018-08-24T04:33:21.182Z</lastmod>
     <data>
@@ -57,9 +79,9 @@
         <title>WP-Bugku-PHP_encrypt_1(ISCCCTF)</title>
         <pubTime>2018-08-21T09:05:56.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>php</tag>
+         
+        <tag>Web</tag>
          
         <tag>Bugku</tag>
          
