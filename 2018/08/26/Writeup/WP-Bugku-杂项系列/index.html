@@ -161,7 +161,7 @@
 <meta property="og:image" content="https://i.imgur.com/kNUbPHE.png">
 <meta property="og:image" content="https://i.imgur.com/qRFNQhC.png">
 <meta property="og:image" content="https://i.imgur.com/fQDcyNX.png">
-<meta property="og:updated_time" content="2018-08-29T12:48:26.793Z">
+<meta property="og:updated_time" content="2018-08-30T06:12:18.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-杂项系列">
 <meta name="twitter:description" content="这是一张单纯的图片题目地址http://120.24.86.145:8002/misc/1.jpg 将图片保存下来，直接notpad++查看下，发现末尾有一串 Unicode解码后的到key{you are right} 隐写题目地址http://ctf.bugku.com/files/f8da9b5979e89e91d083c7accdea4427/2.rar 一个压缩包，里面是一张.png的图">
@@ -427,8 +427,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-29T20:48:26+08:00">
-                2018-08-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-30T14:12:18+08:00">
+                2018-08-30
               </time>
             
           </span>
@@ -482,7 +482,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,791 字
+                  1,961 字
                 </span>
               
 
@@ -498,7 +498,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -603,6 +603,15 @@
 <p>继续binwalk会发现后面的图片是正常的</p>
 <p>剩下的只有之前的888.jfif有修改的痕迹，<img src="https://i.imgur.com/kNUbPHE.png" alt=""><br>foremost分离出一张.jpg的图片<br>果然在备注中发现了<img src="https://i.imgur.com/qRFNQhC.png" alt=""><br>base64解码后得到silisili</p>
 <p>按名称排序flag{bilibili_silisili_panama}</p>
+<h1 id="流量分析-cnss"><a href="#流量分析-cnss" class="headerlink" title="流量分析(cnss)"></a>流量分析(cnss)</h1><p>题目地址<a href="http://ctf.bugku.com/files/7f9a18ccd16fa1c52f3fad835ad8df8e/1490637625.pcapng" target="_blank" rel="noopener">http://ctf.bugku.com/files/7f9a18ccd16fa1c52f3fad835ad8df8e/1490637625.pcapng</a></p>
+<p>用wireshark打开后分析Tcp数据流 2018-08-30_133920<br>发现<br><a href="http://space.bilibili.com/17190571/" target="_blank" rel="noopener">http://space.bilibili.com/17190571/</a><br>这个用户，那么打开访问一下发现 2018-08-30_134749</p>
+<p>拿去base64解码后发现好像不对啊，上网查了下wp发下好像是被别人搞了</p>
+<p>没办法，总之这道题base64解码两次就ok了</p>
+<p>这是flag<br>cnss{b1libil1_A_gay_wEbsite}</p>
+<h1 id="猫片-安恒"><a href="#猫片-安恒" class="headerlink" title="猫片(安恒)"></a><font color="red">猫片(安恒)</font></h1><p>题目地址<a href="http://ctf.bugku.com/files/9f1bebac6b8282da716720cc99f35bed/png" target="_blank" rel="noopener">http://ctf.bugku.com/files/9f1bebac6b8282da716720cc99f35bed/png</a></p>
+<p>一个名叫png的文件，给他加个.png的后缀，变成一个图片</p>
+<p>扔到binwalk上看下，没有问题</p>
+<p>涉及的东西有点多先放一下<a href="https://blog.csdn.net/x947955250/article/details/81482471" target="_blank" rel="noopener">https://blog.csdn.net/x947955250/article/details/81482471</a></p>
 <h1 id="妹子的陌陌"><a href="#妹子的陌陌" class="headerlink" title="妹子的陌陌"></a>妹子的陌陌</h1><p>题目地址<a href="http://120.24.86.145:8002/misc/momo.jpg" target="_blank" rel="noopener">http://120.24.86.145:8002/misc/momo.jpg</a></p>
 <p>下载后是一张照片binwalk发现有压缩包，改后缀.zip打开有一个.txt文件，需要密码解压，图片上有<code>喜欢我吗.</code>五个字符，密码就是这个</p>
 <p>解压后得到<img src="https://i.imgur.com/fQDcyNX.png" alt=""></p>
@@ -922,7 +931,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是一张单纯的图片"><span class="nav-number">1.</span> <span class="nav-text">这是一张单纯的图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐写"><span class="nav-number">2.</span> <span class="nav-text">隐写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#telnet"><span class="nav-number">3.</span> <span class="nav-text">telnet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#眼见非实-ISCCCTF"><span class="nav-number">4.</span> <span class="nav-text">眼见非实(ISCCCTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#又一张图片，还单纯吗"><span class="nav-number">5.</span> <span class="nav-text">又一张图片，还单纯吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#猜"><span class="nav-number">6.</span> <span class="nav-text">猜</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#宽带信息泄露"><span class="nav-number">7.</span> <span class="nav-text">宽带信息泄露</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐写2"><span class="nav-number">8.</span> <span class="nav-text">隐写2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多种方法解决"><span class="nav-number">9.</span> <span class="nav-text">多种方法解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux"><span class="nav-number">10.</span> <span class="nav-text">linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中国菜刀"><span class="nav-number">11.</span> <span class="nav-text">中国菜刀</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这么多数据包"><span class="nav-number">12.</span> <span class="nav-text">这么多数据包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做个游戏-08067CTF"><span class="nav-number">13.</span> <span class="nav-text">做个游戏(08067CTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#想蹭网先解开密码"><span class="nav-number">14.</span> <span class="nav-text">想蹭网先解开密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux2"><span class="nav-number">15.</span> <span class="nav-text">Linux2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#账号被盗了"><span class="nav-number">16.</span> <span class="nav-text">账号被盗了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#细心的大象"><span class="nav-number">17.</span> <span class="nav-text">细心的大象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爆照-08067CTF"><span class="nav-number">18.</span> <span class="nav-text">爆照(08067CTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#妹子的陌陌"><span class="nav-number">19.</span> <span class="nav-text">妹子的陌陌</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这是一张单纯的图片"><span class="nav-number">1.</span> <span class="nav-text">这是一张单纯的图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐写"><span class="nav-number">2.</span> <span class="nav-text">隐写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#telnet"><span class="nav-number">3.</span> <span class="nav-text">telnet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#眼见非实-ISCCCTF"><span class="nav-number">4.</span> <span class="nav-text">眼见非实(ISCCCTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#又一张图片，还单纯吗"><span class="nav-number">5.</span> <span class="nav-text">又一张图片，还单纯吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#猜"><span class="nav-number">6.</span> <span class="nav-text">猜</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#宽带信息泄露"><span class="nav-number">7.</span> <span class="nav-text">宽带信息泄露</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#隐写2"><span class="nav-number">8.</span> <span class="nav-text">隐写2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多种方法解决"><span class="nav-number">9.</span> <span class="nav-text">多种方法解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux"><span class="nav-number">10.</span> <span class="nav-text">linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中国菜刀"><span class="nav-number">11.</span> <span class="nav-text">中国菜刀</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这么多数据包"><span class="nav-number">12.</span> <span class="nav-text">这么多数据包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做个游戏-08067CTF"><span class="nav-number">13.</span> <span class="nav-text">做个游戏(08067CTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#想蹭网先解开密码"><span class="nav-number">14.</span> <span class="nav-text">想蹭网先解开密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux2"><span class="nav-number">15.</span> <span class="nav-text">Linux2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#账号被盗了"><span class="nav-number">16.</span> <span class="nav-text">账号被盗了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#细心的大象"><span class="nav-number">17.</span> <span class="nav-text">细心的大象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爆照-08067CTF"><span class="nav-number">18.</span> <span class="nav-text">爆照(08067CTF)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量分析-cnss"><span class="nav-number">19.</span> <span class="nav-text">流量分析(cnss)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#猫片-安恒"><span class="nav-number">20.</span> <span class="nav-text">猫片(安恒)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#妹子的陌陌"><span class="nav-number">21.</span> <span class="nav-text">妹子的陌陌</span></a></li></ol></div>
             
 
           </div>
@@ -956,7 +965,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.0k</span>
+    <span title="Site words total count">21.1k</span>
   
 </div>
 
