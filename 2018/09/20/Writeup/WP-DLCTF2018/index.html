@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="DLCTF,web,杂项,密码学,逆向," />
+  <meta name="keywords" content="杂项,DLCTF,web,密码学,逆向," />
 
 
 
@@ -115,7 +115,7 @@
 
 
 <meta name="description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
-<meta name="keywords" content="DLCTF,web,杂项,密码学,逆向">
+<meta name="keywords" content="杂项,DLCTF,web,密码学,逆向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-DLCTF2018">
 <meta property="og:url" content="http://AbelChe.com/2018/09/20/Writeup/WP-DLCTF2018/index.html">
@@ -123,7 +123,7 @@
 <meta property="og:description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/nYZDFcb.png">
-<meta property="og:updated_time" content="2018-09-20T16:24:34.013Z">
+<meta property="og:updated_time" content="2018-09-20T16:25:22.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-DLCTF2018">
 <meta name="twitter:description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
@@ -389,7 +389,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-21T00:24:34+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-21T00:25:22+08:00">
                 2018-09-21
               </time>
             
@@ -488,6 +488,7 @@
 <p>而且该值是用<code>&#39;&#39;</code>引起来的，那么直接构造<code>&#39;;alert(&#39;key&#39;);&#39;</code> post 传入得到flag</p>
 <hr>
 <h2 id="I-DONT-LIKE-MD5"><a href="#I-DONT-LIKE-MD5" class="headerlink" title="I_DONT_LIKE_MD5"></a>I_DONT_LIKE_MD5</h2><p>这道题是明显的md5碰撞，那么直接 GET 传参<code>5[]=1&amp;&amp;m[]=QNKCDZO&amp;&amp;d[]=s878926199a</code><br>进入到新网页，按F12得到flag</p>
+<hr>
 <h2 id="我是来送分的"><a href="#我是来送分的" class="headerlink" title="我是来送分的"></a>我是来送分的</h2><p>根据提示，直接在网站个人信息页面查看源码，查找<code>flag</code></p>
 <hr>
 <h1 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h1><h2 id="听说WEB有送分？"><a href="#听说WEB有送分？" class="headerlink" title="听说WEB有送分？"></a>听说WEB有送分？</h2><p>notepad++打开查找<code>flag</code></p>
@@ -585,11 +586,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/杂项/" rel="tag"># 杂项</a>
+          
             <a href="/tags/DLCTF/" rel="tag"># DLCTF</a>
           
             <a href="/tags/web/" rel="tag"># web</a>
-          
-            <a href="/tags/杂项/" rel="tag"># 杂项</a>
           
             <a href="/tags/密码学/" rel="tag"># 密码学</a>
           
