@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="杂项,DLCTF,web,密码学,逆向," />
+  <meta name="keywords" content="DLCTF,web,杂项,密码学,逆向," />
 
 
 
@@ -115,7 +115,7 @@
 
 
 <meta name="description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
-<meta name="keywords" content="杂项,DLCTF,web,密码学,逆向">
+<meta name="keywords" content="DLCTF,web,杂项,密码学,逆向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-DLCTF2018">
 <meta property="og:url" content="http://AbelChe.com/2018/09/20/Writeup/WP-DLCTF2018/index.html">
@@ -123,7 +123,7 @@
 <meta property="og:description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/nYZDFcb.png">
-<meta property="og:updated_time" content="2018-09-20T16:25:22.698Z">
+<meta property="og:updated_time" content="2018-09-21T04:15:28.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-DLCTF2018">
 <meta name="twitter:description" content="Web网络安全法百度一下，你就知道  漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;中 而且该值是用&amp;#39;&amp;#39">
@@ -389,7 +389,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-21T00:25:22+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-21T12:15:28+08:00">
                 2018-09-21
               </time>
             
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  679 字
+                  825 字
                 </span>
               
 
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -493,7 +493,9 @@
 <hr>
 <h1 id="逆向"><a href="#逆向" class="headerlink" title="逆向"></a>逆向</h1><h2 id="听说WEB有送分？"><a href="#听说WEB有送分？" class="headerlink" title="听说WEB有送分？"></a>听说WEB有送分？</h2><p>notepad++打开查找<code>flag</code></p>
 <hr>
-<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="眼见为实"><a href="#眼见为实" class="headerlink" title="眼见为实"></a>眼见为实</h2><p>打开后发现很长的文本，但是只由0-9，A-F组成，那么有可能是16进制</p>
+<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="basebasebase"><a href="#basebasebase" class="headerlink" title="basebasebase"></a>basebasebase</h2><p>base隐写脚本如下 py27<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">def get_base64_diff_value(s1, s2):</span><br><span class="line">    base64chars = <span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'</span></span><br><span class="line">    <span class="keyword">res</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i in xrange(<span class="built_in">len</span>(s1)):</span><br><span class="line">        <span class="keyword">if</span> s1[i] != s2[i]:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">abs</span>(base64chars.<span class="built_in">index</span>(s1[i]) - base64chars.<span class="built_in">index</span>(s2[i]))</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">res</span></span><br><span class="line"></span><br><span class="line">def solve_stego():</span><br><span class="line"></span><br><span class="line">    with <span class="keyword">open</span>(<span class="string">'./3.txt'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> <span class="keyword">f</span>:</span><br><span class="line">        file_lines = <span class="keyword">f</span>.readlines()</span><br><span class="line"></span><br><span class="line">    bin_str = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">line</span> in file_line<span class="variable">s:</span></span><br><span class="line">        steg_line = <span class="built_in">line</span>.replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line">        norm_line = <span class="built_in">line</span>.replace(<span class="string">'\n'</span>, <span class="string">''</span>).decode(<span class="string">'base64'</span>).encode(<span class="string">'base64'</span>).replace(<span class="string">'\n'</span>, <span class="string">''</span>)</span><br><span class="line">        diff = get_base64_diff_value(steg_line, norm_line)</span><br><span class="line"></span><br><span class="line">        pads_num = steg_line.<span class="built_in">count</span>(<span class="string">'='</span>)</span><br><span class="line">        <span class="keyword">if</span> diff:</span><br><span class="line">            bin_str += bin(diff)[<span class="number">2</span>:].zfill(pads_num * <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            bin_str += <span class="string">'0'</span> * pads_num * <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    res_str = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in xrange(<span class="number">0</span>, <span class="built_in">len</span>(bin_str), <span class="number">8</span>):</span><br><span class="line"></span><br><span class="line">        res_str += chr(<span class="keyword">int</span>(bin_str[i:i+<span class="number">8</span>], <span class="number">2</span>))</span><br><span class="line">    <span class="keyword">print</span> res_str</span><br><span class="line"></span><br><span class="line">solve_stego()</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="眼见为实"><a href="#眼见为实" class="headerlink" title="眼见为实"></a>眼见为实</h2><p>打开后发现很长的文本，但是只由0-9，A-F组成，那么有可能是16进制</p>
 <p>notepad++打开，工具HEX-&gt;ASCII，保存</p>
 <p>记事本打开后发现有一串诡异的字符<code>Z m x h Z 3 t X Z T F j T 2 1 l X 3 Q w X 0 R M T l V D V E Y h I S F 9</code></p>
 <p>去掉空格 base64 解码得到flag</p>
@@ -586,11 +588,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/杂项/" rel="tag"># 杂项</a>
-          
             <a href="/tags/DLCTF/" rel="tag"># DLCTF</a>
           
             <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/杂项/" rel="tag"># 杂项</a>
           
             <a href="/tags/密码学/" rel="tag"># 密码学</a>
           
@@ -833,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-number">1.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络安全法"><span class="nav-number">1.1.</span> <span class="nav-text">网络安全法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞-Top-10"><span class="nav-number">1.2.</span> <span class="nav-text">漏洞 Top_10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-DONT-LIKE-MD5"><span class="nav-number">1.3.</span> <span class="nav-text">I_DONT_LIKE_MD5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我是来送分的"><span class="nav-number">1.4.</span> <span class="nav-text">我是来送分的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逆向"><span class="nav-number">2.</span> <span class="nav-text">逆向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#听说WEB有送分？"><span class="nav-number">2.1.</span> <span class="nav-text">听说WEB有送分？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杂项"><span class="nav-number">3.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#眼见为实"><span class="nav-number">3.1.</span> <span class="nav-text">眼见为实</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流量分析"><span class="nav-number">3.2.</span> <span class="nav-text">流量分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码学"><span class="nav-number">4.</span> <span class="nav-text">密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#嘀嘀嘀"><span class="nav-number">4.1.</span> <span class="nav-text">嘀嘀嘀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸭！这大脸盘子！！！"><span class="nav-number">4.2.</span> <span class="nav-text">鸭！这大脸盘子！！！</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web"><span class="nav-number">1.</span> <span class="nav-text">Web</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络安全法"><span class="nav-number">1.1.</span> <span class="nav-text">网络安全法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞-Top-10"><span class="nav-number">1.2.</span> <span class="nav-text">漏洞 Top_10</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-DONT-LIKE-MD5"><span class="nav-number">1.3.</span> <span class="nav-text">I_DONT_LIKE_MD5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我是来送分的"><span class="nav-number">1.4.</span> <span class="nav-text">我是来送分的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逆向"><span class="nav-number">2.</span> <span class="nav-text">逆向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#听说WEB有送分？"><span class="nav-number">2.1.</span> <span class="nav-text">听说WEB有送分？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杂项"><span class="nav-number">3.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basebasebase"><span class="nav-number">3.1.</span> <span class="nav-text">basebasebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#眼见为实"><span class="nav-number">3.2.</span> <span class="nav-text">眼见为实</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流量分析"><span class="nav-number">3.3.</span> <span class="nav-text">流量分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码学"><span class="nav-number">4.</span> <span class="nav-text">密码学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#嘀嘀嘀"><span class="nav-number">4.1.</span> <span class="nav-text">嘀嘀嘀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸭！这大脸盘子！！！"><span class="nav-number">4.2.</span> <span class="nav-text">鸭！这大脸盘子！！！</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -867,7 +869,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.8k</span>
+    <span title="Site words total count">22.0k</span>
   
 </div>
 

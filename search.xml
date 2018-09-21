@@ -3,14 +3,14 @@
   <entry>
     <title><![CDATA[WP-DLCTF2018]]></title>
     <url>%2F2018%2F09%2F20%2FWriteup%2FWP-DLCTF2018%2F</url>
-    <content type="text"><![CDATA[Web网络安全法百度一下，你就知道 漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&lt;script&gt;&lt;/script&gt;中 而且该值是用&#39;&#39;引起来的，那么直接构造&#39;;alert(&#39;key&#39;);&#39; post 传入得到flag I_DONT_LIKE_MD5这道题是明显的md5碰撞，那么直接 GET 传参5[]=1&amp;&amp;m[]=QNKCDZO&amp;&amp;d[]=s878926199a进入到新网页，按F12得到flag 我是来送分的根据提示，直接在网站个人信息页面查看源码，查找flag 逆向听说WEB有送分？notepad++打开查找flag 杂项眼见为实打开后发现很长的文本，但是只由0-9，A-F组成，那么有可能是16进制 notepad++打开，工具HEX-&gt;ASCII，保存 记事本打开后发现有一串诡异的字符Z m x h Z 3 t X Z T F j T 2 1 l X 3 Q w X 0 R M T l V D V E Y h I S F 9 去掉空格 base64 解码得到flag 流量分析一个160+M的包，wireshark打开 这么大，加载都半天的东西肯定要分析一下， 结合提示，既然是黑客登陆 web 服务器，且有 webshell 过滤 http 协议，从后往前找，先发现了/image/article/a.php，一看这就是马，打开后更加确定 webshell 为 a.php 继续往前找，找到 http协议 login 的包，先找到用户名为”人事”的登陆信息，不太像答案，再往前找发现了 admin 的登陆信息 提交flag，正确 密码学嘀嘀嘀先摩斯密码解密，解密后是以0x开头的文本，HEX-&gt;ASCII解码，得到 unicode 编码的字符串，&amp;#x0035;&amp;#x0041;&amp;#x0036;&amp;#x0044;&amp;#x0037;&amp;#x0038;&amp;#x0036;&amp;#x0038;&amp;#x0035;&amp;#x0041;&amp;#x0033;&amp;#x0033;&amp;#x0037;&amp;#x0033;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0044;&amp;#x0037;&amp;#x0041;&amp;#x0034;&amp;#x0036;&amp;#x0036;&amp;#x0041;&amp;#x0035;&amp;#x0039;&amp;#x0037;&amp;#x0041;&amp;#x0034;&amp;#x0041;&amp;#x0036;&amp;#x0041;&amp;#x0035;&amp;#x0041;&amp;#x0034;&amp;#x0034;&amp;#x0034;&amp;#x0039;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0033;&amp;#x0034;&amp;#x0045;&amp;#x0037;&amp;#x0041;&amp;#x0035;&amp;#x0031;&amp;#x0033;&amp;#x0034;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0035;&amp;#x0033;&amp;#x0030;&amp;#x0034;&amp;#x0045;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0039;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0044;&amp;#x0035;&amp;#x0034;&amp;#x0036;&amp;#x0037;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0045;&amp;#x0035;&amp;#x0034;&amp;#x0035;&amp;#x0031;&amp;#x0037;&amp;#x0038;&amp;#x0034;&amp;#x0044;&amp;#x0035;&amp;#x0037;&amp;#x0034;&amp;#x0041;&amp;#x0036;&amp;#x0038;&amp;#x0034;&amp;#x0044;&amp;#x0034;&amp;#x0038;&amp;#x0033;&amp;#x0030;&amp;#x0033;&amp;#x0044;继续Unicode转中文解码，得到5A6D78685A3373314D7A466A597A4A6A5A4449314D324D334E7A51344D3245304E3249324D5467314E5451784D574A684D48303D又是16进制，转字符串ZmxhZ3s1MzFjYzJjZDI1M2M3NzQ4M2E0N2I2MTg1NTQxMWJhMH0=base64flag{531cc2cd253c77483a47b61855411ba0} 鸭！这大脸盘子！！！下载一张图片，一看就是猪圈，RWEB 下面给的一串字符串 用维吉尼亚密码解密 RWEB 是密钥 得到flagisvigenereandpigpencipher 提交flag{vigenereandpigpencipher}发现不正确， 看到hint有大写字母，尝试flag{VigenereAndPigPenCipher}正确]]></content>
+    <content type="text"><![CDATA[Web网络安全法百度一下，你就知道 漏洞 Top_10进入题目后先正常查询，发现查到7(XSS)的时候有红色字母提示，解读后发现是 alert(key) ，那么就更明确这道题是 XSS 漏洞，只有一个输入框，那么有可能是突破点 bp 抓下包，发现是 post 传输的 id ，在源码中找到传入的 id 值在&lt;script&gt;&lt;/script&gt;中 而且该值是用&#39;&#39;引起来的，那么直接构造&#39;;alert(&#39;key&#39;);&#39; post 传入得到flag I_DONT_LIKE_MD5这道题是明显的md5碰撞，那么直接 GET 传参5[]=1&amp;&amp;m[]=QNKCDZO&amp;&amp;d[]=s878926199a进入到新网页，按F12得到flag 我是来送分的根据提示，直接在网站个人信息页面查看源码，查找flag 逆向听说WEB有送分？notepad++打开查找flag 杂项basebasebasebase隐写脚本如下 py2712345678910111213141516171819202122232425262728293031323334def get_base64_diff_value(s1, s2): base64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' res = 0 for i in xrange(len(s1)): if s1[i] != s2[i]: return abs(base64chars.index(s1[i]) - base64chars.index(s2[i])) return resdef solve_stego(): with open('./3.txt', 'rb') as f: file_lines = f.readlines() bin_str = '' for line in file_lines: steg_line = line.replace('\n', '') norm_line = line.replace('\n', '').decode('base64').encode('base64').replace('\n', '') diff = get_base64_diff_value(steg_line, norm_line) pads_num = steg_line.count('=') if diff: bin_str += bin(diff)[2:].zfill(pads_num * 2) else: bin_str += '0' * pads_num * 2 res_str = '' for i in xrange(0, len(bin_str), 8): res_str += chr(int(bin_str[i:i+8], 2)) print res_strsolve_stego() 眼见为实打开后发现很长的文本，但是只由0-9，A-F组成，那么有可能是16进制 notepad++打开，工具HEX-&gt;ASCII，保存 记事本打开后发现有一串诡异的字符Z m x h Z 3 t X Z T F j T 2 1 l X 3 Q w X 0 R M T l V D V E Y h I S F 9 去掉空格 base64 解码得到flag 流量分析一个160+M的包，wireshark打开 这么大，加载都半天的东西肯定要分析一下， 结合提示，既然是黑客登陆 web 服务器，且有 webshell 过滤 http 协议，从后往前找，先发现了/image/article/a.php，一看这就是马，打开后更加确定 webshell 为 a.php 继续往前找，找到 http协议 login 的包，先找到用户名为”人事”的登陆信息，不太像答案，再往前找发现了 admin 的登陆信息 提交flag，正确 密码学嘀嘀嘀先摩斯密码解密，解密后是以0x开头的文本，HEX-&gt;ASCII解码，得到 unicode 编码的字符串，&amp;#x0035;&amp;#x0041;&amp;#x0036;&amp;#x0044;&amp;#x0037;&amp;#x0038;&amp;#x0036;&amp;#x0038;&amp;#x0035;&amp;#x0041;&amp;#x0033;&amp;#x0033;&amp;#x0037;&amp;#x0033;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0044;&amp;#x0037;&amp;#x0041;&amp;#x0034;&amp;#x0036;&amp;#x0036;&amp;#x0041;&amp;#x0035;&amp;#x0039;&amp;#x0037;&amp;#x0041;&amp;#x0034;&amp;#x0041;&amp;#x0036;&amp;#x0041;&amp;#x0035;&amp;#x0041;&amp;#x0034;&amp;#x0034;&amp;#x0034;&amp;#x0039;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0033;&amp;#x0034;&amp;#x0045;&amp;#x0037;&amp;#x0041;&amp;#x0035;&amp;#x0031;&amp;#x0033;&amp;#x0034;&amp;#x0034;&amp;#x0044;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0035;&amp;#x0033;&amp;#x0030;&amp;#x0034;&amp;#x0045;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0039;&amp;#x0033;&amp;#x0032;&amp;#x0034;&amp;#x0044;&amp;#x0035;&amp;#x0034;&amp;#x0036;&amp;#x0037;&amp;#x0033;&amp;#x0031;&amp;#x0034;&amp;#x0045;&amp;#x0035;&amp;#x0034;&amp;#x0035;&amp;#x0031;&amp;#x0037;&amp;#x0038;&amp;#x0034;&amp;#x0044;&amp;#x0035;&amp;#x0037;&amp;#x0034;&amp;#x0041;&amp;#x0036;&amp;#x0038;&amp;#x0034;&amp;#x0044;&amp;#x0034;&amp;#x0038;&amp;#x0033;&amp;#x0030;&amp;#x0033;&amp;#x0044;继续Unicode转中文解码，得到5A6D78685A3373314D7A466A597A4A6A5A4449314D324D334E7A51344D3245304E3249324D5467314E5451784D574A684D48303D又是16进制，转字符串ZmxhZ3s1MzFjYzJjZDI1M2M3NzQ4M2E0N2I2MTg1NTQxMWJhMH0=base64flag{531cc2cd253c77483a47b61855411ba0} 鸭！这大脸盘子！！！下载一张图片，一看就是猪圈，RWEB 下面给的一串字符串 用维吉尼亚密码解密 RWEB 是密钥 得到flagisvigenereandpigpencipher 提交flag{vigenereandpigpencipher}发现不正确， 看到hint有大写字母，尝试flag{VigenereAndPigPenCipher}正确]]></content>
       <categories>
         <category>WriteUp</category>
       </categories>
       <tags>
-        <tag>杂项</tag>
         <tag>DLCTF</tag>
         <tag>web</tag>
+        <tag>杂项</tag>
         <tag>密码学</tag>
         <tag>逆向</tag>
       </tags>
@@ -399,8 +399,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
@@ -425,8 +425,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
