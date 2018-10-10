@@ -8,9 +8,9 @@
         <category>WriteUp</category>
       </categories>
       <tags>
-        <tag>杂项</tag>
         <tag>DLCTF</tag>
         <tag>web</tag>
+        <tag>杂项</tag>
         <tag>密码学</tag>
         <tag>逆向</tag>
       </tags>
@@ -46,8 +46,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>kali</tag>
       </tags>
   </entry>
@@ -386,8 +386,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>sqlmap</tag>
       </tags>
   </entry>
@@ -400,8 +400,8 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -426,8 +426,8 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -457,8 +457,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>url</tag>
         <tag>HTTP</tag>
         <tag>Javascript</tag>
@@ -469,7 +469,7 @@
   <entry>
     <title><![CDATA[SQL常用语句--增删改查]]></title>
     <url>%2F2018%2F07%2F02%2FSQL%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%2F</url>
-    <content type="text"><![CDATA[查 查全部： select * from &lt;tablename&gt;;条件查询：select &lt;filed&gt; from &lt;tablename&gt; where &lt;field&gt;=&lt;key&gt;;带有函数查询： select count(*) from &lt;tablename&gt;;模糊查询： select &lt;field&gt; from &lt;tablename&gt; where &lt;field&gt; like ‘%value%’; 增 添加库： create database &lt;databasename&gt;;创建新表： create table &lt;tablename&gt; (col1 type1, col2, ...);插入数据： insert into &lt;tablename&gt;(field1,field2……) values(value1,value2………);增加一列： alter table &lt;tablename&gt; add column &lt;colname&gt; &lt;coltype&gt;;添加主键： alter table &lt;tablename&gt; add primary key(col); 改 更新： update &lt;tablename&gt; set &lt;field&gt;=&lt;value&gt; where &lt;条件&gt;; 删 删除库： drop database &lt;databasename&gt;;删除表： delete from &lt;tablename&gt; where &lt;条件&gt;;（会留下日志文件，能被还原修复）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;truncate table &lt;tablename&gt;;（不会留下日志文件，不能被还原修复） 子句： where子句：= , &gt; , &lt; , &lt;&gt;(不等于) , &gt;= , &lt;=order by子句：asc (升序) , desc(降序)]]></content>
+    <content type="text"><![CDATA[查 查全部： select * from &lt;tablename&gt;;条件查询：select &lt;filed&gt; from &lt;tablename&gt; where &lt;field&gt;=&lt;key&gt;;带有函数查询： select count(*) from &lt;tablename&gt;;模糊查询： select &lt;field&gt; from &lt;tablename&gt; where &lt;field&gt; like ‘%value%’; 增 添加库： create database &lt;databasename&gt;;创建新表： create table &lt;tablename&gt; (col1 type1, col2, ...); 主键自增： create table test1(id int primary key auto_increment,name varchar(20))auto_increment=1;插入数据： insert into &lt;tablename&gt;(field1,field2……) values(value1,value2………);增加一列： alter table &lt;tablename&gt; add column &lt;colname&gt; &lt;coltype&gt;;添加主键： alter table &lt;tablename&gt; add primary key(col); 改 更新： update &lt;tablename&gt; set &lt;field&gt;=&lt;value&gt; where &lt;条件&gt;; 删 删除库： drop database &lt;databasename&gt;;删除表： delete from &lt;tablename&gt; where &lt;条件&gt;;（会留下日志文件，能被还原修复）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;truncate table &lt;tablename&gt;;（不会留下日志文件，不能被还原修复） 子句： where子句：= , &gt; , &lt; , &lt;&gt;(不等于) , &gt;= , &lt;=order by子句：asc (升序) , desc(降序)]]></content>
       <categories>
         <category>Learning</category>
       </categories>
