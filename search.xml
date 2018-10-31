@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用shadowsocks(ss)搭建vpn服务(Debian9)]]></title>
+    <url>%2F2018%2F10%2F31%2F%E4%BD%BF%E7%94%A8shadowsocks-ss-%E6%90%AD%E5%BB%BAvpn%E6%9C%8D%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[租云服务器（境外） 充值-&gt;选服务器-&gt;确定-&gt;完成 这里我租的是 Vultr 的服务器配置： Debian9 日本机房 仅仅搭个 VPN ， cpu 、内存、硬盘套餐选个便宜的就行 搭建服务端 ssh连接服务器 12345# wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh# chmod +x shadowsocks-libev-debian.sh# ./shadowsocks-libev-debian.sh 2&gt;&amp;1 | tee shadowsocks-libev-debian.log 最后一步会让设置端口，密码，加密方式等，按步骤来就行 记住你设置的参数，连接会用到 设置完成，VPN 服务端就搭好了 配置客户端 下载 shadowsocks 的客户端，Windows 客户端 下载完打开 ss 开始配置，地址、端口、密码必填，选择你的加密方式，如果开启允许其他设备连接那就把代理端口设置一下 配置完成，右键任务栏的小飞机图标，选择启动系统代理，就能从设备上翻墙了 使用 GOOGLE BBR 加速（可选） 修改系统变量并保存生效 123# echo "net.core.default_qdisc=fq" &gt;&gt; /etc/sysctl.conf# echo "net.ipv4.tcp_congestion_control=bbr" &gt;&gt; /etc/sysctl.conf# sysctl -p 查看内核是否开启 BBR如下显示即为开启 12# sysctl net.ipv4.tcp_available_congestion_controlnet.ipv4.tcp_available_congestion_control = bbr cubic reno 查看BBR是否启动如下显示即为启动 # lsmod | grep bbr tcp_bbr 20480 8 服务器无法连接 Vultr 换服务器就更换 IP ，所以 IP 是循环使用的可能你的服务器就刚好换到被中国墙了的 IP 或者一段时间的使用后你的 IP 被墙了这都很正常，解决方法：把你的服务器删了，重新选择一次就换 IP 了要是还是被墙，那么推荐你去这里逛逛：|`传送门``|]]></content>
+      <categories>
+        <category>VPN</category>
+      </categories>
+      <tags>
+        <tag>shadowsocks</tag>
+        <tag>ss</tag>
+        <tag>VPN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于Github和Coding布置博客的域名问题]]></title>
     <url>%2F2018%2F10%2F30%2F%E5%85%B3%E4%BA%8EGithub%E5%92%8CCoding%E5%B8%83%E7%BD%AE%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%9F%E5%90%8D%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[先讲清本人blog环境: 使用 Github 和 Coding 两个平台，即 abelche.github.io 和 abelche.coding.me阿里云租的两个域名 abelche.com 和 abelche.top 通过自己的域名访问域名解析 在平台中绑定自己的域名 在域名解析中添加记录 CNAME 类型，从你的域名（主机记录）指向平台域名（记录值）即可 统一 urlCoding 平台布置Coding 的布置比较容易 这是 Coding 的配置界面 我这里绑定了两个，有无 www 的，我只想让 url 出现 www.abelche.top 只需要把跳转选上就行 安全证书有就选上吧 Github 平台布置Github 只能绑定一个域名，所以需要我们在 DNS 解析上做点文章 和 Coding 绑定一样，在 Github 上绑定好域名，这里只能绑定一个域名，我想让访问 url 都为 www 我这里添加的是 www.abelche.com 在阿里云域名管理的 DNS 解析额外添加一条记录]]></content>
