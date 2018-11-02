@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[序列化和反序列化]]></title>
+    <url>%2F2018%2F11%2F01%2F%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[使用shadowsocks(ss)搭建vpn服务(Debian9)]]></title>
     <url>%2F2018%2F10%2F31%2F%E4%BD%BF%E7%94%A8shadowsocks-ss-%E6%90%AD%E5%BB%BAvpn%E6%9C%8D%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[租云服务器（境外） 充值-&gt;选服务器-&gt;确定-&gt;完成 这里我租的是 Vultr 的服务器配置： Debian9 日本机房 仅仅搭个 VPN ， cpu 、内存、硬盘套餐选个便宜的就行 搭建服务端 ssh连接服务器 12345# wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev-debian.sh# chmod +x shadowsocks-libev-debian.sh# ./shadowsocks-libev-debian.sh 2&gt;&amp;1 | tee shadowsocks-libev-debian.log 最后一步会让设置端口，密码，加密方式等，按步骤来就行 记住你设置的参数，连接会用到 设置完成，VPN 服务端就搭好了 配置客户端 下载 shadowsocks 的客户端，Windows 客户端 下载完打开 ss 开始配置，地址、端口、密码必填，选择你的加密方式，如果开启允许其他设备连接那就把代理端口设置一下 配置完成，右键任务栏的小飞机图标，选择启动系统代理，就能从设备上翻墙了 使用 GOOGLE BBR 加速（可选） 修改系统变量并保存生效 123# echo "net.core.default_qdisc=fq" &gt;&gt; /etc/sysctl.conf# echo "net.ipv4.tcp_congestion_control=bbr" &gt;&gt; /etc/sysctl.conf# sysctl -p 查看内核是否开启 BBR如下显示即为开启 12# sysctl net.ipv4.tcp_available_congestion_controlnet.ipv4.tcp_available_congestion_control = bbr cubic reno 查看BBR是否启动如下显示即为启动 # lsmod | grep bbr tcp_bbr 20480 8 服务器无法连接 Vultr 换服务器就更换 IP ，所以 IP 是循环使用的可能你的服务器就刚好换到被中国墙了的 IP 或者一段时间的使用后你的 IP 被墙了这都很正常，解决方法：把你的服务器删了，重新选择一次就换 IP 了要是还是被墙，那么推荐你去这里逛逛：|`传送门``|]]></content>
