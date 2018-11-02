@@ -3,7 +3,11 @@
   <entry>
     <title><![CDATA[序列化和反序列化]]></title>
     <url>%2F2018%2F11%2F01%2F%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[什么是序列化&amp;反序列化 序列化： 将数据结构或对象转换成二进制串的过程。 反序列化：将在序列化过程中所生成的二进制串转换成数据结构或者对象的过程。]]></content>
+      <tags>
+        <tag>序列化</tag>
+        <tag>反序列化</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[使用shadowsocks(ss)搭建vpn服务(Debian9)]]></title>
@@ -43,9 +47,9 @@
         <category>WriteUp</category>
       </categories>
       <tags>
-        <tag>杂项</tag>
         <tag>DLCTF</tag>
         <tag>web</tag>
+        <tag>杂项</tag>
         <tag>密码学</tag>
         <tag>逆向</tag>
       </tags>
@@ -81,8 +85,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>kali</tag>
       </tags>
   </entry>
@@ -234,9 +238,9 @@
       </categories>
       <tags>
         <tag>php</tag>
+        <tag>反序列化</tag>
         <tag>web</tag>
         <tag>Bugku</tag>
-        <tag>反序列化</tag>
         <tag>unserialize</tag>
       </tags>
   </entry>
@@ -421,8 +425,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>sqlmap</tag>
       </tags>
   </entry>
@@ -435,8 +439,8 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -461,8 +465,8 @@
       </categories>
       <tags>
         <tag>SQL</tag>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -492,8 +496,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>url</tag>
         <tag>HTTP</tag>
         <tag>Javascript</tag>
