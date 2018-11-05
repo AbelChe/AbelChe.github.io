@@ -127,7 +127,7 @@
 <meta property="og:image" content="https://i.imgur.com/9i2jEZt.png">
 <meta property="og:image" content="https://i.imgur.com/an5GXdp.png">
 <meta property="og:image" content="https://i.imgur.com/MGzmFmO.png">
-<meta property="og:updated_time" content="2018-11-05T09:56:58.135Z">
+<meta property="og:updated_time" content="2018-11-05T09:58:23.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="序列化和反序列化">
 <meta name="twitter:description" content="什么是序列化&amp;amp;反序列化 序列化： 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
@@ -393,7 +393,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-05T17:56:58+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-05T17:58:23+08:00">
                 2018-11-05
               </time>
             
@@ -426,7 +426,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,186 字
+                  1,177 字
                 </span>
               
 
@@ -479,7 +479,7 @@
 <li>将字符串转化成对象叫反序列化</li>
 </ul>
 </blockquote>
-<h2 id="数组系列化使用情况："><a href="#数组系列化使用情况：" class="headerlink" title="数组系列化使用情况："></a>数组系列化使用情况：</h2><font size="4">总之，就是<strong><font color="red">方便数据传输</font></strong>和<strong><font color="red">存储</font></strong></font>
+<font size="4">总之，就是<strong><font color="red">方便数据传输</font></strong>和<strong><font color="red">存储</font></strong></font>
 
 <p><br></p>
 <h1 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h1><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">################建立一个数组###################</span><br><span class="line">$arr1 = [];</span><br><span class="line">for($i=<span class="number">0</span>; $i&lt;<span class="number">5</span>; $i++)</span><br><span class="line">	$arr1[<span class="string">'key'</span>.$i] = <span class="string">'value'</span>.$i;</span><br><span class="line">echo <span class="string">"建立一个数组arr1："</span>;</span><br><span class="line">print_r($arr1);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">################序列化该数组###################</span><br><span class="line">$arr_serialize = serialize($arr1);</span><br><span class="line">echo <span class="string">"arr1序列化后为："</span>;</span><br><span class="line">print_r($arr_serialize);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">###############反序列化后输出##################</span><br><span class="line">$arr_back = unserialize($arr_serialize);</span><br><span class="line">echo <span class="string">"arr_serialize反序列化后为："</span>;</span><br><span class="line">print_r($arr_back);</span><br><span class="line">##############################################</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
@@ -841,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是序列化-amp-反序列化"><span class="nav-number">1.</span> <span class="nav-text">什么是序列化&amp;反序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的方法"><span class="nav-number">2.</span> <span class="nav-text">PHP序列化的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的作用"><span class="nav-number">3.</span> <span class="nav-text">PHP序列化的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象序列化使用情况："><span class="nav-number">3.1.</span> <span class="nav-text">对象序列化使用情况：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组系列化使用情况："><span class="nav-number">3.2.</span> <span class="nav-text">数组系列化使用情况：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例说明"><span class="nav-number">4.</span> <span class="nav-text">实例说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unserialize-反序列化函数漏洞"><span class="nav-number">5.</span> <span class="nav-text">unserialize()反序列化函数漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#魔术方法（Magic-function）"><span class="nav-number">5.1.</span> <span class="nav-text">魔术方法（Magic function）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unserialize-调用-wakeup-魔术方法"><span class="nav-number">5.2.</span> <span class="nav-text">unserialize()调用__wakeup()魔术方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用unserialize-函数漏洞"><span class="nav-number">5.3.</span> <span class="nav-text">利用unserialize()函数漏洞</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是序列化-amp-反序列化"><span class="nav-number">1.</span> <span class="nav-text">什么是序列化&amp;反序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的方法"><span class="nav-number">2.</span> <span class="nav-text">PHP序列化的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的作用"><span class="nav-number">3.</span> <span class="nav-text">PHP序列化的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象序列化使用情况："><span class="nav-number">3.1.</span> <span class="nav-text">对象序列化使用情况：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例说明"><span class="nav-number">4.</span> <span class="nav-text">实例说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unserialize-反序列化函数漏洞"><span class="nav-number">5.</span> <span class="nav-text">unserialize()反序列化函数漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#魔术方法（Magic-function）"><span class="nav-number">5.1.</span> <span class="nav-text">魔术方法（Magic function）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unserialize-调用-wakeup-魔术方法"><span class="nav-number">5.2.</span> <span class="nav-text">unserialize()调用__wakeup()魔术方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用unserialize-函数漏洞"><span class="nav-number">5.3.</span> <span class="nav-text">利用unserialize()函数漏洞</span></a></li></ol></li></ol></div>
             
 
           </div>
