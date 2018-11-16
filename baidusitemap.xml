@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2018/11/16/Centos7-%E6%90%AD%E5%BB%BA-l2tp-vpn/</loc>
+    <lastmod>2018-11-16T07:35:33.868Z</lastmod>
+    <data>
+        <display>
+        <title>Centos7 搭建 l2tp vpn</title>
+        <pubTime>2018-11-16T07:26:40.000Z</pubTime>
+        
+        <tag>vpn</tag>
+         
+        <tag>l2tp</tag>
+         
+         
+           
+             
+              <breadCrumb title="vpn" url="http://AbelChe.com/categories/vpn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2018/11/01/%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</loc>
     <lastmod>2018-11-05T09:58:23.856Z</lastmod>
     <data>
@@ -107,11 +129,11 @@
         <title>WP-DLCTF2018</title>
         <pubTime>2018-09-20T15:25:57.000Z</pubTime>
         
-        <tag>杂项</tag>
-         
         <tag>DLCTF</tag>
          
         <tag>web</tag>
+         
+        <tag>杂项</tag>
          
         <tag>密码学</tag>
          
@@ -177,9 +199,9 @@
         <title>kali渗透常用工具</title>
         <pubTime>2018-08-23T07:47:09.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Web</tag>
+         
+        <tag>笔记</tag>
          
         <tag>kali</tag>
          
@@ -672,9 +694,9 @@
         <title>web基础知识</title>
         <pubTime>2018-07-11T10:55:00.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Web</tag>
+         
+        <tag>笔记</tag>
          
         <tag>url</tag>
          
@@ -883,9 +905,9 @@
         <title>sqlmap常规使用</title>
         <pubTime>2018-08-08T02:21:09.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Web</tag>
+         
+        <tag>笔记</tag>
          
         <tag>sqlmap</tag>
          
@@ -909,9 +931,9 @@
         
         <tag>SQL</tag>
          
-        <tag>笔记</tag>
-         
         <tag>Web</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -933,9 +955,9 @@
         
         <tag>SQL</tag>
          
-        <tag>笔记</tag>
-         
         <tag>Web</tag>
+         
+        <tag>笔记</tag>
          
          
            
