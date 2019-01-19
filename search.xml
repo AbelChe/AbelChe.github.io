@@ -120,9 +120,9 @@
       
         <tags>
             
-            <tag> 域名 </tag>
-            
             <tag> url </tag>
+            
+            <tag> 域名 </tag>
             
             <tag> 域名解析 </tag>
             
@@ -153,11 +153,11 @@
       
         <tags>
             
+            <tag> 杂项 </tag>
+            
             <tag> DLCTF </tag>
             
             <tag> web </tag>
-            
-            <tag> 杂项 </tag>
             
             <tag> 密码学 </tag>
             
@@ -212,9 +212,9 @@
     </entry>
     
     <entry>
-      <title>kali渗透常用工具</title>
-      <link href="/2018/08/23/kali%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
-      <url>/2018/08/23/kali%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</url>
+      <title>kali渗透</title>
+      <link href="/2018/08/23/kali%E6%B8%97%E9%80%8F/"/>
+      <url>/2018/08/23/kali%E6%B8%97%E9%80%8F/</url>
       <content type="html"><![CDATA[<h1 id="本文中所使用工具的原理及方法"><a href="#本文中所使用工具的原理及方法" class="headerlink" title="本文中所使用工具的原理及方法"></a>本文中所使用工具的原理及方法</h1><h2 id="arpspoof工具的arp欺骗"><a href="#arpspoof工具的arp欺骗" class="headerlink" title="arpspoof工具的arp欺骗"></a>arpspoof工具的arp欺骗</h2><h3 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h3><p>地址解析协议(ARP)，ARP(Address Resolution Protocol)，是一个位于TCP/IP协议栈中的网络层。当局域网内计算机间（或者是计算机与网关间）需要通信时，使用ARP协议获取目标IP地址对应的MAC地址，然后计算机间再通过该MAC地址完成数据包发送。ARP欺骗一般目的是把自己伪装成网关，从而欺骗目标机器，使本应发送到真实网关的数据包发送到欺骗者的机器。</p><h3 id="arpspoof工具"><a href="#arpspoof工具" class="headerlink" title="arpspoof工具"></a>arpspoof工具</h3><blockquote><p><strong>功能</strong>： arpspoof通过伪造arp回复包将局域网中主机A（或者所有主机）的网路包重定向到主机B。<br><strong>用法</strong>： <code>arpspoof [-i interface] [-c own|host|both] [-t target] [-r] host</code></p></blockquote><h2 id="driftnet的图片抓取"><a href="#driftnet的图片抓取" class="headerlink" title="driftnet的图片抓取"></a>driftnet的图片抓取</h2><h2 id="ettercap的嗅探"><a href="#ettercap的嗅探" class="headerlink" title="ettercap的嗅探"></a>ettercap的嗅探</h2><h2 id="sslstrip将HTTPS的链接还原为HTTP"><a href="#sslstrip将HTTPS的链接还原为HTTP" class="headerlink" title="sslstrip将HTTPS的链接还原为HTTP"></a>sslstrip将HTTPS的链接还原为HTTP</h2><hr><h1 id="局域网断网工具"><a href="#局域网断网工具" class="headerlink" title="局域网断网工具"></a>局域网断网工具</h1><p>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p><center><br>这里我用我的win10物理机当作目标机，这里可见此时是可以 ping 通 baidu 的<img src="https://i.imgur.com/lxJvcxM.png" alt=""><br>进行arp攻击<code>arpspoof -i 网卡名称 -t 目标机ip 网关</code><img src="https://i.imgur.com/WeNNa3C.png" alt=""><br>发现物理机已经断网了<img src="https://i.imgur.com/60Eq40A.png" alt=""><br><br></center><hr><h1 id="获取内网他人浏览的图片"><a href="#获取内网他人浏览的图片" class="headerlink" title="获取内网他人浏览的图片"></a>获取内网他人浏览的图片</h1><center><br>物理机当作目标机<br>kali 使用 arpspoof 工具 <code>arpspoof -i 网卡名称 -t 目标机ip kali的ip</code><img src="https://i.imgur.com/6omzreG.png" alt=""><br>使用 driftnet 工具 <code>driftnet -i 网卡名称</code> ，然后在目标机上百度搜索图片，可以看到 driftnet 有了反应，获取成功<img src="https://i.imgur.com/JxMztYe.png" alt=""><br></center><hr><h1 id="获取他人账号密码-HTTP"><a href="#获取他人账号密码-HTTP" class="headerlink" title="获取他人账号密码(HTTP)"></a>获取他人账号密码(HTTP)</h1><center><br>物理机当作目标机<br>kali 先打开ip转发 <code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code><a href="https://www.cnblogs.com/happy1983/p/9173100.html" target="_blank" rel="noopener"><font color="red">(了解更多)</font></a><br>arp欺骗 <code>arpspoor -i 网卡名称 -t 目标机ip kali的ip</code><img src="https://i.imgur.com/5DTV5Xp.png" alt=""><br>使用ettercap进行嗅探 <code>ettercap -Tq -i eth0</code>成功启动后<img src="https://i.imgur.com/3bjptT5.png" alt=""><br>在物理机上测试，在http协议的网站输入用户名和密码，发现已经被 ettercap 嗅探到<img src="https://i.imgur.com/jQszzNH.png" alt=""><br></center><hr><h1 id="获取他人账号密码-HTTPS"><a href="#获取他人账号密码-HTTPS" class="headerlink" title="获取他人账号密码(HTTPS)"></a>获取他人账号密码(HTTPS)</h1><p><a href="https://www.cnblogs.com/BloodZero/p/4415483.html" target="_blank" rel="noopener">https://www.cnblogs.com/BloodZero/p/4415483.html</a></p><center><br>先<code>vim /etc/ettercap/etter.conf</code>找到如图段落，将 # 注释删去<img src="https://i.imgur.com/dn3jkrc.png" alt=""><br>配置 <code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code><br>对 HTTPS 嗅探需要在 arp 欺骗 <code>arpspoof -i 网卡名称 -t 目标机ip 网关</code> 和 ettercap 抓包 <code>ettercap -Tq -i eth0</code> 时使用工具 sslstrip <code>sslstrip -a -f -k</code><img src="https://i.imgur.com/CrVfWqL.png" alt=""><br>在目标机上测试，在https站点登陆(正常来说应该会被ettercap抓到，但是由于现在浏览器安全等级很高，直接阻止了建立连接，所以这个实验没有百分之百完成)<br></center><hr><h1 id="会话劫持"><a href="#会话劫持" class="headerlink" title="会话劫持"></a>会话劫持</h1>]]></content>
       
       <categories>
@@ -226,9 +226,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> kali </tag>
             
@@ -879,9 +879,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> sqlmap </tag>
             
@@ -906,9 +906,9 @@
             
             <tag> SQL </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -956,9 +956,9 @@
             
             <tag> SQL </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1015,9 +1015,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Web </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> url </tag>
             
