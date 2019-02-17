@@ -2081,7 +2081,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9fee1d;
+  background: #a3b5ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3430,8 +3430,8 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://source.unsplash.com/1920x1080/daily/?beach");
-  background-color: #ccc;
+  background: url("https://source.unsplash.com/1920x1080/daily/?stars");
+  background-color: #edf1fc;
   opacity: 0.95;
   position: absolute;
   top: 0;
