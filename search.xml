@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ssrf漏洞解析]]></title>
+    <url>%2F2019%2F03%2F17%2Fssrf%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90%2F</url>
+    <content type="text"><![CDATA[SSRF 简介SSRF(Server-Side Request Forgery:服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统）SSRF 形成的原因大都是由于服务端提供了从其他服务器应用获取数据的功能且没有对目标地址做过滤与限制。比如从指定URL地址获取网页文本内容，加载指定地址的图片，下载等等。 攻击者可以利用 SSRF 实现的攻击主要有 5 种： 可以对外网、服务器所在内网、本地进行端口扫描，获取一些服务的 banner 信息 攻击运行在内网或本地的应用程序（比如溢出） 对内网 WEB 应用进行指纹识别，通过访问默认文件实现 攻击内外网的 web 应用，主要是使用 GET 参数就可以实现的攻击（比如 Struts2，sqli 等） 利用 file 协议读取本地文件等 上面的话说的有点抽象，然后说一下网上大佬的理解首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如 ： A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。所以，我们普通用户只可以访问a网站，不能访问b网站。但是我们可以同过a网站做中间人，访问b网站，从而达到攻击b网站需求。正常用户访问网站的流程是：输入A网站URL –&gt; 发送请求 –&gt; A服务器接受请求（没有过滤），并处理 –&gt;返回用户响应【 那网站有个请求是www.baidu.com/xxx.php?image=URL 】那么产生SSRF漏洞的环节在哪里呢？安全的网站应接收请求后，检测请求的合法性产生的原因：服务器端的验证并没有对其请求获取图片的参数（image=）做出严格的过滤以及限制，导致A网站可以从其他服务器的获取数据例如：www.baidu.com/xxx.php?image=www.abc.com/1.jpg如果我们将www.abd.com/1.jpg 换为与该服务器相连的内网服务器地址会产生什么效果呢？如果存在该内网地址就会返回1xx 2xx 之类的状态码，不存在就会其他的状态码终极简析: SSRF漏洞就是通过篡改获取资源的请求发送给服务器，但是服务器并没有检测这个请求是否合法的，然后服务器以他的身份来访问其他服务器的资源。 可能出现的场景 能够对外发起网络请求的地方，就可能存在 SSRF 漏洞 从远程服务器请求资源（Upload from URL，Import &amp; Export RSS Feed） 数据库内置功能（Oracle、MongoDB、MSSQL、Postgres、CouchDB） Webmail 收取其他邮箱邮件（POP3、IMAP、SMTP） 文件处理、编码处理、属性信息处理（ffmpeg、ImageMagic、DOCX、PDF、XML） 可进行利用的协议FILE 读取服务器上任意文件内容 IMAP/IMAPS/POP3SMTP/SMTPS 爆破邮件用户名密码 FTP/FTPS FTP匿名访问、爆破 DICT 操作内网Redis等服务 GOPHER 能够将所有操作转成数据流，并将数据流一次发出去，可以用来探测内网的所有服务的所有漏洞 TFTP UDP协议扩展 常见函数file_get_contents()把文件写入字符串，当把url是内网文件的时候，他会先去把这个文件的内容读出来再写入，导致了文件读取12345678910&lt;?phpif (isset($_POST['url'])) &#123; $content = file_get_contents($_POST['url']); $filename ='./images/'.rand().';img1.jpg'; file_put_contents($filename, $content); echo $_POST['url']; $img = "&lt;img src=\"".$filename."\"/&gt;"; &#125;echo $img;?&gt; fsockopen()打开网络连接或者Unix套接字连接12345678910111213141516&lt;?php$host=$_GET['url'];$fp = fsockopen("$host", 80, $errno, $errstr, 30);if (!$fp) &#123; echo "$errstr ($errno)&lt;br /&gt;\n";&#125; else &#123; $out = "GET / HTTP/1.1\r\n"; $out .= "Host: $host\r\n"; $out .= "Connection: Close\r\n\r\n"; fwrite($fp, $out); while (!feof($fp)) &#123; echo fgets($fp, 128); &#125; fclose($fp);&#125;?&gt; curl_exec()使用 curl 获取到数据使用 file:// 获取到数据123456789101112131415&lt;?php if (isset($_POST['url'])) &#123; $link = $_POST['url']; $curlobj = curl_init(); curl_setopt($curlobj, CURLOPT_POST, 0); curl_setopt($curlobj,CURLOPT_URL,$link); curl_setopt($curlobj, CURLOPT_RETURNTRANSFER, 1); $result=curl_exec($curlobj); curl_close($curlobj); $filename = './'.rand().'.txt'; file_put_contents($filename, $result); echo $result;&#125;?&gt; 利用协议利用 file 协议读取文件利用 dict 协议查看端口利用 gopher 协议反弹shell 常见的过滤方法 对 url 开头进行过滤 对 url 为 ip 格式的连接进行过滤 对 url 结尾进行判定 绕过方法 更改 IP 地址写法 例如192.168.0.18 进制格式：0300.0250.0.116 进制格式：0xC0.0xA8.0.110 进制整数格式：323223552116 进制整数格式：0xC0A80001还有一种特殊的省略模式，例如10.0.0.1这个 IP 可以写成10.1利用 URL 解析问题 在某些情况下，后端程序可能会对访问的 URL 进行解析，对解析出来的 host 地址进行过滤。这时候可能会出现对 URL 参数解析不当，导致可以绕过过滤。 例如： http://www.baidu.com@192.168.0.1/ 与 http://192.168.0.1 请求的都是 192.168.0.1 的内容 可以指向任意 ip 的域名xip.io：http://127.0.0.1.xip.io/ ==&gt; http://127.0.0.1/ 短地址http://dwz.cn/11SMa ==&gt; http://127.0.0.1 利用句号。：127。0。0。1 ==&gt; 127.0.0.1 利用 Enclosed alphanumericsⓔⓧⓐⓜⓟⓛⓔ.ⓒⓞⓜ &gt;&gt;&gt; example.com List: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ ⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛ ⒜ ⒝ ⒞ ⒟ ⒠ ⒡ ⒢ ⒣ ⒤ ⒥ ⒦ ⒧ ⒨ ⒩ ⒪ ⒫ ⒬ ⒭ ⒮ ⒯ ⒰ ⒱ ⒲ ⒳ ⒴ ⒵ Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ ⓐ ⓑ ⓒ ⓓ ⓔ ⓕ ⓖ ⓗ ⓘ ⓙ ⓚ ⓛ ⓜ ⓝ ⓞ ⓟ ⓠ ⓡ ⓢ ⓣ ⓤ ⓥ ⓦ ⓧ ⓨ ⓩ ⓪ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴ ⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾ ⓿ 参考文章：https://xz.aliyun.com/t/2115https://ctf-wiki.github.io/ctf-wiki/web/ssrf/https://www.jianshu.com/p/6bf7700139fahttps://www.jianshu.com/p/d1d1c40f6d4chttps://www.jianshu.com/p/86bb349baac1]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>ssrf</tag>
+        <tag>服务端请求伪造</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基于Rainmeter的B站每日top100桌面推送!!!]]></title>
     <url>%2F2019%2F03%2F01%2F%E5%9F%BA%E4%BA%8ERainmeter%E7%9A%84B%E7%AB%99%E6%AF%8F%E6%97%A5top100%E6%A1%8C%E9%9D%A2%E6%8E%A8%E9%80%81%2F</url>
     <content type="text"><![CDATA[简介最近在使用Rainmeter，将quotes(桌面箴言)改进了一下，他就有了如下功能！ 获取B站每日top100视频信息 将信息随机展示在桌面quote上(随机展示一条信息，标题限制在20字，自动/手动切换) 双击quote可在浏览器中打开该视频长相如下：然后，这是我的桌面(有些东西不太好，就隐藏了) 实现方案先看下quotes目录下的东西： getmessage.py 这个是一个简单的python爬虫，爬取bilibili的top100信息(所以电脑上要有python3环境，还要有requests和re模块)，代码如下:123456789101112131415161718192021222324252627282930import requestsimport reurl = 'https://www.bilibili.com/ranking' # B站top100网址s = requests.Session()r = s.get(url).content.decode('utf-8') # get请求网址用变量r接收text = re.findall(r'&lt;div class="info"&gt;&lt;a href="//www.bilibili.com/video/.*&lt;/a&gt;&lt;!----&gt;', r) # 正则表达式获取到r中所有视频的所有信息用变量text接收with open('ListOfQuotes.txt', 'w+') as f: # 清空文件 f.write('')f.close()for i in range(len(text)): # 遍历text print(i+1, text[i]) videourl = re.findall(r'//www.bilibili.com/video/.*/"', text[i])[0][:-1] # 正则表达式获取到视频的url，用变量videourl接收 videourl = 'https:' + videourl # 拼接url，使用https协议 print(videourl) message = re.findall(r'e"&gt;.*&lt;/a&gt;', text[i])[0][3:-4] # 正则表达式获取到视频的title，用变量message接收 if len(message) &gt; 20: # 控制下title的长度，这里控制在20个字符，如果超过，用......代替 message = message[:20] + '......' print(message) with open('ListOfQuotes.txt', 'a', encoding='gb18030') as f: # 写入文件，一定要注意编码，因为有些up主会用到特殊符号，gbk编码会出问题！utf-8编码会令quotes读取成乱码！！ # gb18030编码是gbk子集，会将特殊符号显示为??而且quotes显示正常！！ f.write('&lt;quote&gt;[' + str(i+1) + ']' + message + '\n') f.write('&lt;author&gt;' + videourl + '\n') f.close() 将run.vbs添加到开启启动里即可实现开机自动获取 然后quotes调用的lua脚本如下12345678910111213141516171819202122232425262728293031function Initialize() CURRENTPATH = SKIN:GetVariable('CURRENTPATH') Quotes = &#123;&#125; Authors = &#123;&#125; i = 0 for line in io.lines(CURRENTPATH..'ListOfQuotes.txt') do if string.sub(line, 1, 7) == '&lt;quote&gt;' then i = i + 1 Quotes[i] = string.sub(line, 8) elseif string.sub(line, 1, 8) == '&lt;author&gt;' then Authors[i] = string.sub(line, 9) else Quotes[i] = Quotes[i]..'#CRLF#'..line end end end --&gt;Initializefunction Update() rand = math.random(1, #Quotes) SKIN:Bang('!SetOption', 'MeterQuote', 'Text', Quotes[rand]) SKIN:Bang('!SetOption', 'MeterAuthor', 'Text', Authors[rand]) local f = assert(io.open(CURRENTPATH..'openurl.bat','w+')) f:write('start ', Authors[rand]) f:close() return 'Quote number: '..rand end --&gt;Update 运行流程 run.vbs调用init.bat，init.bat执行编译getmessage.py脚本； 双击桌面quotes拉起main.vbs，main.vbs调用openurl.bat 刷新quotes时会执行quotes的lua脚本，随机从ListOfQuotes.txt文件中读取一条信息，并将视频地址写入到openurl.bat中]]></content>
@@ -105,9 +118,9 @@
         <category>WriteUp</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>杂项</tag>
         <tag>DLCTF</tag>
+        <tag>web</tag>
         <tag>密码学</tag>
         <tag>逆向</tag>
       </tags>
@@ -143,8 +156,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>kali</tag>
       </tags>
   </entry>
@@ -483,8 +496,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>sqlmap</tag>
       </tags>
   </entry>
@@ -496,9 +509,9 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -522,9 +535,9 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -554,8 +567,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Web</tag>
+        <tag>笔记</tag>
         <tag>url</tag>
         <tag>HTTP</tag>
         <tag>Javascript</tag>
