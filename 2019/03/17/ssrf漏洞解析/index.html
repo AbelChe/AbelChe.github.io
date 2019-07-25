@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="SSRF 简介SSRF(Server-Side Request Forgery:服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统）SSRF 形成的原因大都是由于服务端提供了从其他服务器应用获取数据的功能且没有对目标地址做过滤与限制。比如从指">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T05:04:22.679Z">
+<meta property="og:updated_time" content="2019-07-25T05:48:29.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssrf漏洞解析">
 <meta name="twitter:description" content="SSRF 简介SSRF(Server-Side Request Forgery:服务器端请求伪造) 是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统）SSRF 形成的原因大都是由于服务端提供了从其他服务器应用获取数据的功能且没有对目标地址做过滤与限制。比如从指">
@@ -387,8 +387,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-17T13:04:22+08:00">
-                2019-03-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-25T13:48:29+08:00">
+                2019-07-25
               </time>
             
           </span>
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,489 字
+                  1,494 字
                 </span>
               
 
@@ -498,7 +498,8 @@
 <li>攻击内外网的 web 应用，主要是使用 GET 参数就可以实现的攻击（比如 Struts2，sqli 等）</li>
 <li>利用 file 协议读取本地文件等</li>
 </ol>
-<p>上面的话说的有点抽象，然后说一下网上大佬的理解<br>首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如 ： A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。<br>所以，我们普通用户只可以访问a网站，不能访问b网站。但是我们可以同过a网站做中间人，访问b网站，从而达到攻击b网站需求。<br>正常用户访问网站的流程是：<br>输入A网站URL –&gt; 发送请求 –&gt; A服务器接受请求（没有过滤），并处理 –&gt;返回用户响应<br>【 那网站有个请求是<a href="http://www.baidu.com/xxx.php?image=URL" target="_blank" rel="noopener">www.baidu.com/xxx.php?image=URL</a> 】<br>那么产生SSRF漏洞的环节在哪里呢？安全的网站应接收请求后，检测请求的合法性<br>产生的原因：服务器端的验证并没有对其请求获取图片的参数（image=）做出严格的过滤以及限制，导致A网站可以从其他服务器的获取数据<br>例如：<br><a href="http://www.baidu.com/xxx.php?image=www.abc.com/1.jpg" target="_blank" rel="noopener">www.baidu.com/xxx.php?image=www.abc.com/1.jpg</a><br>如果我们将<a href="http://www.abd.com/1.jpg" target="_blank" rel="noopener">www.abd.com/1.jpg</a> 换为与该服务器相连的内网服务器地址会产生什么效果呢？<br>如果存在该内网地址就会返回1xx 2xx 之类的状态码，不存在就会其他的状态码<br>终极简析: SSRF漏洞就是通过篡改获取资源的请求发送给服务器，但是服务器并没有检测这个请求是否合法的，然后服务器以他的身份来访问其他服务器的资源。</p>
+<p>上面的话说的有点抽象，然后说一下网上大佬的理解</p>
+<h1 id="首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如-：-A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。"><a href="#首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如-：-A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。" class="headerlink" title="首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如 ： A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。"></a>首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如 ： A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。</h1><p>所以，我们普通用户只可以访问a网站，不能访问b网站。但是我们可以同过a网站做中间人，访问b网站，从而达到攻击b网站需求。<br>正常用户访问网站的流程是：<br>输入A网站URL –&gt; 发送请求 –&gt; A服务器接受请求（没有过滤），并处理 –&gt;返回用户响应<br>【 那网站有个请求是<a href="http://www.baidu.com/xxx.php?image=URL" target="_blank" rel="noopener">www.baidu.com/xxx.php?image=URL</a> 】<br>那么产生SSRF漏洞的环节在哪里呢？安全的网站应接收请求后，检测请求的合法性<br>产生的原因：服务器端的验证并没有对其请求获取图片的参数（image=）做出严格的过滤以及限制，导致A网站可以从其他服务器的获取数据<br>例如：<br><a href="http://www.baidu.com/xxx.php?image=www.abc.com/1.jpg" target="_blank" rel="noopener">www.baidu.com/xxx.php?image=www.abc.com/1.jpg</a><br>如果我们将<a href="http://www.abd.com/1.jpg" target="_blank" rel="noopener">www.abd.com/1.jpg</a> 换为与该服务器相连的内网服务器地址会产生什么效果呢？<br>如果存在该内网地址就会返回1xx 2xx 之类的状态码，不存在就会其他的状态码<br>终极简析: SSRF漏洞就是通过篡改获取资源的请求发送给服务器，但是服务器并没有检测这个请求是否合法的，然后服务器以他的身份来访问其他服务器的资源。</p>
 <h1 id="可能出现的场景"><a href="#可能出现的场景" class="headerlink" title="可能出现的场景"></a>可能出现的场景</h1><ul>
 <li>能够对外发起网络请求的地方，就可能存在 SSRF 漏洞</li>
 <li>从远程服务器请求资源（Upload from URL，Import &amp; Export RSS Feed）</li>
@@ -512,24 +513,37 @@ FTP/FTPS                       FTP匿名访问、爆破
 DICT                           操作内网Redis等服务
 GOPHER                         能够将所有操作转成数据流，并将数据流一次发出去，可以用来探测内网的所有服务的所有漏洞
 TFTP                           UDP协议扩展
-</code></pre><h1 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h1><h2 id="file-get-contents"><a href="#file-get-contents" class="headerlink" title="file_get_contents()"></a>file_get_contents()</h2><p>把文件写入字符串，当把url是内网文件的时候，他会先去把这个文件的内容读出来再写入，导致了文件读取<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">'url'</span>])) &#123; </span></span><br><span class="line"><span class="php">    $content = file_get_contents($_POST[<span class="string">'url'</span>]); </span></span><br><span class="line"><span class="php">    $filename =<span class="string">'./images/'</span>.rand().<span class="string">';img1.jpg'</span>; </span></span><br><span class="line"><span class="php">    file_put_contents($filename, $content); </span></span><br><span class="line"><span class="php">    <span class="keyword">echo</span> $_POST[<span class="string">'url'</span>]; </span></span><br><span class="line"><span class="php">    $img = <span class="string">"&lt;img src=\""</span>.$filename.<span class="string">"\"/&gt;"</span>; </span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> $img;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<h2 id="fsockopen"><a href="#fsockopen" class="headerlink" title="fsockopen()"></a>fsockopen()</h2><p>打开网络连接或者Unix套接字连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$host</span>=<span class="variable">$_GET</span>[<span class="string">'url'</span>];</span><br><span class="line"><span class="variable">$fp</span> = fsockopen(<span class="string">"<span class="variable">$host</span>"</span>, 80, <span class="variable">$errno</span>, <span class="variable">$errstr</span>, 30);</span><br><span class="line"><span class="keyword">if</span> (!<span class="variable">$fp</span>) &#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$errstr</span> (<span class="variable">$errno</span>)&lt;br /&gt;\n"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable">$out</span> = <span class="string">"GET / HTTP/1.1\r\n"</span>;</span><br><span class="line">    <span class="variable">$out</span> .= <span class="string">"Host: <span class="variable">$host</span>\r\n"</span>;</span><br><span class="line">    <span class="variable">$out</span> .= <span class="string">"Connection: Close\r\n\r\n"</span>;</span><br><span class="line">    fwrite(<span class="variable">$fp</span>, <span class="variable">$out</span>);</span><br><span class="line">    <span class="keyword">while</span> (!feof(<span class="variable">$fp</span>)) &#123;</span><br><span class="line">        <span class="built_in">echo</span> fgets(<span class="variable">$fp</span>, 128);</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(<span class="variable">$fp</span>);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="curl-exec"><a href="#curl-exec" class="headerlink" title="curl_exec()"></a>curl_exec()</h2><p>使用 curl 获取到数据<br>使用 file:// 获取到数据<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">'url'</span>])) &#123;</span></span><br><span class="line"><span class="php">    $link = $_POST[<span class="string">'url'</span>];</span></span><br><span class="line"><span class="php">    $curlobj = curl_init();</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj, CURLOPT_POST, <span class="number">0</span>);</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj,CURLOPT_URL,$link);</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span></span><br><span class="line"><span class="php">    $result=curl_exec($curlobj);</span></span><br><span class="line"><span class="php">    curl_close($curlobj);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">    $filename = <span class="string">'./'</span>.rand().<span class="string">'.txt'</span>;</span></span><br><span class="line"><span class="php">    file_put_contents($filename, $result); </span></span><br><span class="line"><span class="php">    <span class="keyword">echo</span> $result;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<h1 id="利用协议"><a href="#利用协议" class="headerlink" title="利用协议"></a>利用协议</h1><p>利用 file 协议读取文件<br>利用 dict 协议查看端口<br>利用 gopher 协议反弹shell</p>
+</code></pre><h1 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h1><h2 id="file-get-contents"><a href="#file-get-contents" class="headerlink" title="file_get_contents()"></a>file_get_contents()</h2><p>把文件写入字符串，当把url是内网文件的时候，他会先去把这个文件的内容读出来再写入，导致了文件读取</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">'url'</span>])) &#123; </span></span><br><span class="line"><span class="php">    $content = file_get_contents($_POST[<span class="string">'url'</span>]); </span></span><br><span class="line"><span class="php">    $filename =<span class="string">'./images/'</span>.rand().<span class="string">';img1.jpg'</span>; </span></span><br><span class="line"><span class="php">    file_put_contents($filename, $content); </span></span><br><span class="line"><span class="php">    <span class="keyword">echo</span> $_POST[<span class="string">'url'</span>]; </span></span><br><span class="line"><span class="php">    $img = <span class="string">"&lt;img src=\""</span>.$filename.<span class="string">"\"/&gt;"</span>; </span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> $img;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="fsockopen"><a href="#fsockopen" class="headerlink" title="fsockopen()"></a>fsockopen()</h2><p>打开网络连接或者Unix套接字连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"><span class="variable">$host</span>=<span class="variable">$_GET</span>[<span class="string">'url'</span>];</span><br><span class="line"><span class="variable">$fp</span> = fsockopen(<span class="string">"<span class="variable">$host</span>"</span>, 80, <span class="variable">$errno</span>, <span class="variable">$errstr</span>, 30);</span><br><span class="line"><span class="keyword">if</span> (!<span class="variable">$fp</span>) &#123;</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"<span class="variable">$errstr</span> (<span class="variable">$errno</span>)&lt;br /&gt;\n"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable">$out</span> = <span class="string">"GET / HTTP/1.1\r\n"</span>;</span><br><span class="line">    <span class="variable">$out</span> .= <span class="string">"Host: <span class="variable">$host</span>\r\n"</span>;</span><br><span class="line">    <span class="variable">$out</span> .= <span class="string">"Connection: Close\r\n\r\n"</span>;</span><br><span class="line">    fwrite(<span class="variable">$fp</span>, <span class="variable">$out</span>);</span><br><span class="line">    <span class="keyword">while</span> (!feof(<span class="variable">$fp</span>)) &#123;</span><br><span class="line">        <span class="built_in">echo</span> fgets(<span class="variable">$fp</span>, 128);</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(<span class="variable">$fp</span>);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="curl-exec"><a href="#curl-exec" class="headerlink" title="curl_exec()"></a>curl_exec()</h2><p>使用 curl 获取到数据<br>使用 file:// 获取到数据</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">'url'</span>])) &#123;</span></span><br><span class="line"><span class="php">    $link = $_POST[<span class="string">'url'</span>];</span></span><br><span class="line"><span class="php">    $curlobj = curl_init();</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj, CURLOPT_POST, <span class="number">0</span>);</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj,CURLOPT_URL,$link);</span></span><br><span class="line"><span class="php">    curl_setopt($curlobj, CURLOPT_RETURNTRANSFER, <span class="number">1</span>);</span></span><br><span class="line"><span class="php">    $result=curl_exec($curlobj);</span></span><br><span class="line"><span class="php">    curl_close($curlobj);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">    $filename = <span class="string">'./'</span>.rand().<span class="string">'.txt'</span>;</span></span><br><span class="line"><span class="php">    file_put_contents($filename, $result); </span></span><br><span class="line"><span class="php">    <span class="keyword">echo</span> $result;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="利用协议"><a href="#利用协议" class="headerlink" title="利用协议"></a>利用协议</h1><p>利用 file 协议读取文件<br>利用 dict 协议查看端口<br>利用 gopher 协议反弹shell，攻击数据库</p>
 <h1 id="常见的过滤方法"><a href="#常见的过滤方法" class="headerlink" title="常见的过滤方法"></a>常见的过滤方法</h1><ul>
 <li>对 url 开头进行过滤</li>
 <li>对 url 为 ip 格式的连接进行过滤</li>
 <li>对 url 结尾进行判定</li>
 </ul>
 <h1 id="绕过方法"><a href="#绕过方法" class="headerlink" title="绕过方法"></a>绕过方法</h1><ul>
-<li><p>更改 IP 地址写法 例如192.168.0.1<br>8 进制格式：0300.0250.0.1<br>16 进制格式：0xC0.0xA8.0.1<br>10 进制整数格式：3232235521<br>16 进制整数格式：0xC0A80001<br>还有一种特殊的省略模式，例如10.0.0.1这个 IP 可以写成10.1<br>利用 URL 解析问题 在某些情况下，后端程序可能会对访问的 URL 进行解析，对解析出来的 host 地址进行过滤。这时候可能会出现对 URL 参数解析不当，导致可以绕过过滤。 例如：</p>
+<li><p>更改 IP 地址写法 例如192.168.0.1</p>
+<p>8 进制格式：0300.0250.0.1</p>
+<p>16 进制格式：0xC0.0xA8.0.1</p>
+<p>10 进制整数格式：3232235521</p>
+<p>16 进制整数格式：0xC0A80001</p>
+<p>还有一种特殊的省略模式，例如10.0.0.1这个 IP 可以写成10.1</p>
+<p>利用 URL 解析问题 在某些情况下，后端程序可能会对访问的 URL 进行解析，对解析出来的 host 地址进行过滤。这时候可能会出现对 URL 参数解析不当，导致可以绕过过滤。 例如：</p>
 </li>
 <li><p><a href="http://www.baidu.com@192.168.0.1/" target="_blank" rel="noopener">http://www.baidu.com@192.168.0.1/</a> 与 <a href="http://192.168.0.1" target="_blank" rel="noopener">http://192.168.0.1</a> 请求的都是 192.168.0.1 的内容</p>
 </li>
-<li>可以指向任意 ip 的域名xip.io：<a href="http://127.0.0.1.xip.io/" target="_blank" rel="noopener">http://127.0.0.1.xip.io/</a> ==&gt; <a href="http://127.0.0.1/" target="_blank" rel="noopener">http://127.0.0.1/</a></li>
-<li>短地址<a href="http://dwz.cn/11SMa" target="_blank" rel="noopener">http://dwz.cn/11SMa</a> ==&gt; <a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a></li>
-<li>利用句号。：127。0。0。1 ==&gt; 127.0.0.1</li>
-<li>利用 Enclosed alphanumerics<pre><code>ⓔⓧⓐⓜⓟⓛⓔ.ⓒⓞⓜ  &gt;&gt;&gt;  example.com
+<li><p>可以指向任意 ip 的域名xip.io：<a href="http://127.0.0.1.xip.io/" target="_blank" rel="noopener">http://127.0.0.1.xip.io/</a> ==&gt; <a href="http://127.0.0.1/" target="_blank" rel="noopener">http://127.0.0.1/</a></p>
+</li>
+<li><p>短地址<a href="http://dwz.cn/11SMa" target="_blank" rel="noopener">http://dwz.cn/11SMa</a> ==&gt; <a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a></p>
+</li>
+<li><p>利用句号。：127。0。0。1 ==&gt; 127.0.0.1</p>
+</li>
+<li><p>利用 Enclosed alphanumerics</p>
+<pre><code>ⓔⓧⓐⓜⓟⓛⓔ.ⓒⓞⓜ  &gt;&gt;&gt;  example.com
 List:
 ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ 
 ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ 
@@ -730,7 +744,7 @@ List:
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -741,7 +755,7 @@ List:
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -752,7 +766,7 @@ List:
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -865,7 +879,7 @@ List:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSRF-简介"><span class="nav-number">1.</span> <span class="nav-text">SSRF 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可能出现的场景"><span class="nav-number">2.</span> <span class="nav-text">可能出现的场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可进行利用的协议"><span class="nav-number">3.</span> <span class="nav-text">可进行利用的协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见函数"><span class="nav-number">4.</span> <span class="nav-text">常见函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#file-get-contents"><span class="nav-number">4.1.</span> <span class="nav-text">file_get_contents()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fsockopen"><span class="nav-number">4.2.</span> <span class="nav-text">fsockopen()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#curl-exec"><span class="nav-number">4.3.</span> <span class="nav-text">curl_exec()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用协议"><span class="nav-number">5.</span> <span class="nav-text">利用协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的过滤方法"><span class="nav-number">6.</span> <span class="nav-text">常见的过滤方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绕过方法"><span class="nav-number">7.</span> <span class="nav-text">绕过方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSRF-简介"><span class="nav-number">1.</span> <span class="nav-text">SSRF 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如-：-A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。"><span class="nav-number">2.</span> <span class="nav-text">首先，我们要对目标网站的架构了解，脑子了要有一个架构图。比如 ： A网站，是一个所有人都可以访问的外网网站，B网站是一个他们内部的OA网站。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可能出现的场景"><span class="nav-number">3.</span> <span class="nav-text">可能出现的场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可进行利用的协议"><span class="nav-number">4.</span> <span class="nav-text">可进行利用的协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见函数"><span class="nav-number">5.</span> <span class="nav-text">常见函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#file-get-contents"><span class="nav-number">5.1.</span> <span class="nav-text">file_get_contents()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fsockopen"><span class="nav-number">5.2.</span> <span class="nav-text">fsockopen()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#curl-exec"><span class="nav-number">5.3.</span> <span class="nav-text">curl_exec()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#利用协议"><span class="nav-number">6.</span> <span class="nav-text">利用协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的过滤方法"><span class="nav-number">7.</span> <span class="nav-text">常见的过滤方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绕过方法"><span class="nav-number">8.</span> <span class="nav-text">绕过方法</span></a></li></ol></div>
             
 
           </div>
@@ -899,7 +913,7 @@ List:
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">33.2k</span>
+    <span title="Site words total count">35.2k</span>
   
 </div>
 
