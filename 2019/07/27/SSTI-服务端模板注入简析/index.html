@@ -114,13 +114,13 @@
 
 
 
-<meta name="description" content="推荐文章 [https://portswigger.net/blog/server-side-template-injection]https://portswigger.net/blog/server-side-template-injection) 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection">
+<meta name="description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
 <meta name="keywords" content="SSTI,服务端模板注入,web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSTI 服务端模板注入简析">
 <meta property="og:url" content="http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="推荐文章 [https://portswigger.net/blog/server-side-template-injection]https://portswigger.net/blog/server-side-template-injection) 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection">
+<meta property="og:description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://8ke7rw.sn.files.1drv.com/y4maedzleRsLFxdY5nF7fH88VfDC11rTKHBin0_-Havq7y5z6Ptgod5u_uLfRV1AbFpNIQYOpa0OEMa70_bz0tlETO78KV8ZrSqi9I5dGbTXv7Rem3JU-mZPth3QjkMisOsa_nstR_UQKWjGALwA_k9h3KOfJhnZFNRO6EZ66tBaVCs8CZVaK-CiUqzQgFgeZVd0GEgxCheZsVDOQ6plTqGIw?width=807&height=404&cropmode=none">
 <meta property="og:image" content="https://q6fbrw.sn.files.1drv.com/y4mejS9j8grOQ9skPUeAFuQviqVH03U4Jm629JbS4g1xWcTj4jtDdlcNQqz44K4k5ii-KhOpmuXUZ7LQa5WtJ2bi1PkGqI4AQtg9VkKysHTwnsI64B8U_MbUQPxJ0E3QJixjF_uc7Uuq-wQK_cWKjH25vpqN-WDW0Vj4taUCjlbroVJQO5yAAsvPWcJfmzg2GJyJl5mR7h7prm0c7iEVrNzWQ?width=807&height=225&cropmode=none">
@@ -131,10 +131,10 @@
 <meta property="og:image" content="https://qqfarw.sn.files.1drv.com/y4mIdxNYH1oYncJxtIE5v-fRFeQLkpWyC3RYajOrHIyvd3PpJltEW-KAqloU2F3B3U921-1oCcOPmnlHH9RDgKig-_TNmPPK2fzRKOtJpsaGrl_g9tQypX11SAgSBJI1kqY9bE7JPL5Nf-2FiE-aAMPEslrtYAG19QGkV3S2DGF65MPFRVm7S75-UkxvbZFZlAdabwjDo0CygG_l7ZSB3AIlg?width=1909&height=138&cropmode=none">
 <meta property="og:image" content="https://q6fcrw.sn.files.1drv.com/y4myLNDZak2pCjhPIenf32kI7a3LLRkhH0Ir5BIv4Ffn6A7hmtH7rKKPjLPQ5H-n1Ehzisv7N3J1cZI3HxPSTIOguXF95B3z7i0AYW1DKfqLhEg-u6rZmPuu0Ro6T2tu14uOotDOS96PD-n60n7e4v6uquf8rquH1i5InQPcbnZld8TN1C2_MhZckiTGHFXJOWIakiBMEpaCHvJkF2TaFXVYw?width=640&height=386&cropmode=none">
 <meta property="og:image" content="https://q6farw.sn.files.1drv.com/y4mU28XYNAZtf0cR4k__c2hnFenGREBawUThRvg9Z66f12ZGgEZVVXiZ36jaTDITgiGpeigBlYklGeMGdAdF3jURQF7wZUu4vYHm7W3mC8MBJwkWPuBvVDwfzycHnCjGI3cw-dwI7JaMcb1-ggC_TJJlpN5x91SebR47n9pzx_CijUxd4B9_ScNkJZMeGO-IHN4pSKgvSpbhA1ax8YnYrnzaQ?width=732&height=835&cropmode=none">
-<meta property="og:updated_time" content="2019-07-28T14:53:04.491Z">
+<meta property="og:updated_time" content="2019-07-28T15:05:06.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSTI 服务端模板注入简析">
-<meta name="twitter:description" content="推荐文章 [https://portswigger.net/blog/server-side-template-injection]https://portswigger.net/blog/server-side-template-injection) 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection">
+<meta name="twitter:description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
 <meta name="twitter:image" content="https://8ke7rw.sn.files.1drv.com/y4maedzleRsLFxdY5nF7fH88VfDC11rTKHBin0_-Havq7y5z6Ptgod5u_uLfRV1AbFpNIQYOpa0OEMa70_bz0tlETO78KV8ZrSqi9I5dGbTXv7Rem3JU-mZPth3QjkMisOsa_nstR_UQKWjGALwA_k9h3KOfJhnZFNRO6EZ66tBaVCs8CZVaK-CiUqzQgFgeZVd0GEgxCheZsVDOQ6plTqGIw?width=807&height=404&cropmode=none">
 
 
@@ -285,6 +285,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-友链">
+          <a href="/friends/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-at"></i> <br />
+            
+            友链
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -397,7 +407,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-28T22:53:04+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-28T23:05:06+08:00">
                 2019-07-28
               </time>
             
@@ -462,7 +472,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,808 字
+                  1,800 字
                 </span>
               
 
@@ -500,7 +510,7 @@
 
       
         <p><img src="https://8ke7rw.sn.files.1drv.com/y4maedzleRsLFxdY5nF7fH88VfDC11rTKHBin0_-Havq7y5z6Ptgod5u_uLfRV1AbFpNIQYOpa0OEMa70_bz0tlETO78KV8ZrSqi9I5dGbTXv7Rem3JU-mZPth3QjkMisOsa_nstR_UQKWjGALwA_k9h3KOfJhnZFNRO6EZ66tBaVCs8CZVaK-CiUqzQgFgeZVd0GEgxCheZsVDOQ6plTqGIw?width=807&amp;height=404&amp;cropmode=none" alt=""></p>
-<p>推荐文章 [<a href="https://portswigger.net/blog/server-side-template-injection]https://portswigger.net/blog/server-side-template-injection" target="_blank" rel="noopener">https://portswigger.net/blog/server-side-template-injection]https://portswigger.net/blog/server-side-template-injection</a>)</p>
+<p>推荐文章 <a href="https://portswigger.net/blog/server-side-template-injection" target="_blank" rel="noopener">https://portswigger.net/blog/server-side-template-injection</a></p>
 <p>以 flask+jinja2 的 SSTI 为例分析 SSTI</p>
 <h1 id="SSTI"><a href="#SSTI" class="headerlink" title="SSTI"></a>SSTI</h1><p>SSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么</p>
 <h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实现界面与数据分离，业务代码与逻辑代码的分离，这大大提升了开发效率，良好的设计也使得代码重用变得更加容易。但是往往新的开发都会导致一些安全问题，虽然模板引擎会提供沙箱机制，但同样存在沙箱逃逸技术来绕过。</p>
