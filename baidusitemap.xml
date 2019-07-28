@@ -4,6 +4,69 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2019/07/27/SSTI-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E7%AE%80%E6%9E%90/</loc>
+    <lastmod>2019-07-28T14:53:04.491Z</lastmod>
+    <data>
+        <display>
+        <title>SSTI 服务端模板注入简析</title>
+        <pubTime>2019-07-27T06:45:17.000Z</pubTime>
+        
+        <tag>SSTI</tag>
+         
+        <tag>服务端模板注入</tag>
+         
+        <tag>web</tag>
+         
+         
+           
+             
+              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2019/03/17/ssrf%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2019-07-27T06:55:04.635Z</lastmod>
+    <data>
+        <display>
+        <title>ssrf漏洞解析</title>
+        <pubTime>2019-03-17T02:35:44.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>ssrf</tag>
+         
+        <tag>服务端请求伪造</tag>
+         
+         
+           
+             
+              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://AbelChe.com/2019/07/27/Writeup/WP-TokyoWesterns-CTF-4th-2018-shrine/</loc>
+    <lastmod>2019-07-27T06:52:33.559Z</lastmod>
+    <data>
+        <display>
+        <title>WP-TokyoWesterns CTF 4th 2018 shrine</title>
+        <pubTime>2019-07-27T06:52:33.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2019/07/26/Writeup/WP-HCTF2017-Deserted-place/</loc>
     <lastmod>2019-07-26T11:19:55.649Z</lastmod>
     <data>
@@ -157,30 +220,6 @@
            
              
               <breadCrumb title="工具" url="http://AbelChe.com/categories/%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://AbelChe.com/2019/03/17/ssrf%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90/</loc>
-    <lastmod>2019-07-25T05:48:29.575Z</lastmod>
-    <data>
-        <display>
-        <title>ssrf漏洞解析</title>
-        <pubTime>2019-03-17T02:35:44.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>ssrf</tag>
-         
-        <tag>服务端请求伪造</tag>
-         
-         
-           
-             
-              <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
           
         </display>
     </data>
@@ -459,11 +498,11 @@
         <title>WP-DLCTF2018</title>
         <pubTime>2018-09-20T15:25:57.000Z</pubTime>
         
-        <tag>杂项</tag>
+        <tag>web</tag>
          
         <tag>DLCTF</tag>
          
-        <tag>web</tag>
+        <tag>杂项</tag>
          
         <tag>密码学</tag>
          
@@ -832,9 +871,9 @@
         <title>WP-Bugku-Cookies欺骗</title>
         <pubTime>2018-08-14T07:40:08.000Z</pubTime>
         
-        <tag>脚本</tag>
-         
         <tag>web</tag>
+         
+        <tag>脚本</tag>
          
         <tag>Bugku</tag>
          
@@ -858,9 +897,9 @@
         
         <tag>php</tag>
          
-        <tag>反序列化</tag>
-         
         <tag>web</tag>
+         
+        <tag>反序列化</tag>
          
         <tag>Bugku</tag>
          
@@ -1191,9 +1230,9 @@
         <title>SQL手工注入常用语句</title>
         <pubTime>2018-08-07T08:12:24.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>笔记</tag>
          
         <tag>Web</tag>
          
@@ -1215,9 +1254,9 @@
         <title>常规SQL注入笔记</title>
         <pubTime>2018-07-25T08:49:04.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>SQL</tag>
+         
+        <tag>笔记</tag>
          
         <tag>Web</tag>
          
