@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2019/07/27/Writeup/WP-TokyoWesterns-CTF-4th-2018-shrine/</loc>
+    <lastmod>2019-07-29T04:32:28.213Z</lastmod>
+    <data>
+        <display>
+        <title>WP-TokyoWesterns CTF 4th 2018 shrine</title>
+        <pubTime>2019-07-27T06:52:33.000Z</pubTime>
+        
+        <tag>SSTI</tag>
+         
+        <tag>flask</tag>
+         
+        <tag>jinja2</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2019/07/27/SSTI-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E7%AE%80%E6%9E%90/</loc>
     <lastmod>2019-07-29T04:27:19.234Z</lastmod>
     <data>
@@ -23,30 +47,6 @@
            
              
               <breadCrumb title="Learning" url="http://AbelChe.com/categories/Learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://AbelChe.com/2019/07/27/Writeup/WP-TokyoWesterns-CTF-4th-2018-shrine/</loc>
-    <lastmod>2019-07-29T04:05:17.328Z</lastmod>
-    <data>
-        <display>
-        <title>WP-TokyoWesterns CTF 4th 2018 shrine</title>
-        <pubTime>2019-07-27T06:52:33.000Z</pubTime>
-        
-        <tag>SSTI</tag>
-         
-        <tag>flask</tag>
-         
-        <tag>jinja2</tag>
-         
-         
-           
-             
-              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
           
         </display>
     </data>
@@ -512,9 +512,9 @@
         
         <tag>web</tag>
          
-        <tag>DLCTF</tag>
-         
         <tag>杂项</tag>
+         
+        <tag>DLCTF</tag>
          
         <tag>密码学</tag>
          
