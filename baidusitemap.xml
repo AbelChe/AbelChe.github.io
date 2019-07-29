@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2019/07/29/Writeup/WP-%E7%BD%91%E9%BC%8E%E6%9D%AF-2018-Fakebook/</loc>
+    <lastmod>2019-07-29T08:36:47.934Z</lastmod>
+    <data>
+        <display>
+        <title>WP-网鼎杯 2018 Fakebook</title>
+        <pubTime>2019-07-29T07:32:48.000Z</pubTime>
+        
+        <tag>ssrf</tag>
+         
+        <tag>sql注入</tag>
+         
+        <tag>unserialize</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2019/07/27/Writeup/WP-TokyoWesterns-CTF-4th-2018-shrine/</loc>
-    <lastmod>2019-07-29T04:32:28.213Z</lastmod>
+    <lastmod>2019-07-29T07:38:00.920Z</lastmod>
     <data>
         <display>
         <title>WP-TokyoWesterns CTF 4th 2018 shrine</title>
@@ -913,9 +937,9 @@
          
         <tag>反序列化</tag>
          
-        <tag>Bugku</tag>
-         
         <tag>unserialize</tag>
+         
+        <tag>Bugku</tag>
          
          
            
@@ -959,9 +983,9 @@
         
         <tag>Web</tag>
          
-        <tag>Bugku</tag>
-         
         <tag>sql注入</tag>
+         
+        <tag>Bugku</tag>
          
          
            
@@ -1007,9 +1031,9 @@
         
         <tag>Web</tag>
          
-        <tag>Bugku</tag>
-         
         <tag>sql注入</tag>
+         
+        <tag>Bugku</tag>
          
          
            
@@ -1155,9 +1179,9 @@
         
         <tag>Web</tag>
          
-        <tag>Bugku</tag>
-         
         <tag>sql注入</tag>
+         
+        <tag>Bugku</tag>
          
          
            
