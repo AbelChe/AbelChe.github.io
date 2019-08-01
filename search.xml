@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[WP-2019 强网杯 Web]]></title>
+    <url>%2F2019%2F08%2F01%2FWriteup%2FWP-2019-%E5%BC%BA%E7%BD%91%E6%9D%AF-Web%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[WP-Insomni hacker's Teaser 2019 l33t-hoster]]></title>
     <url>%2F2019%2F07%2F30%2FWriteup%2FWP-Insomni-hacker-s-Teaser-2019-l33t-hoster%2F</url>
     <content type="text"><![CDATA[题目复现https://github.com/Tiaonmmn/insomniteaser_2019_l33t_hoster 1234git clone https://github.com/Tiaonmmn/insomniteaser_2019_l33t_hoster.gitcd insomniteaser_2019_l33t_hoster/docker-compose up -ddocker run -d -p 1000:80 insomniteaser_2019_l33t_hoster:latest 访问 http://[Your IP]:1000 即可 题目解析查看源码获得提示，访问 /?source 得到源码 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475&lt;?phpif (isset($_GET["source"])) die(highlight_file(__FILE__));session_start();if (!isset($_SESSION["home"])) &#123; $_SESSION["home"] = bin2hex(random_bytes(20));&#125;$userdir = "images/&#123;$_SESSION["home"]&#125;/";if (!file_exists($userdir)) &#123; mkdir($userdir);&#125;$disallowed_ext = array( "php", "php3", "php4", "php5", "php7", "pht", "phtm", "phtml", "phar", "phps",);if (isset($_POST["upload"])) &#123; if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) &#123; die("yuuuge fail"); &#125; $tmp_name = $_FILES["image"]["tmp_name"]; $name = $_FILES["image"]["name"]; $parts = explode(".", $name); $ext = array_pop($parts); if (empty($parts[0])) &#123; array_shift($parts); &#125; if (count($parts) === 0) &#123; die("lol filename is empty"); &#125; if (in_array($ext, $disallowed_ext, TRUE)) &#123; die("lol nice try, but im not stupid dude..."); &#125; $image = file_get_contents($tmp_name); if (mb_strpos($image, "&lt;?") !== FALSE) &#123; die("why would you need php in a pic....."); &#125; if (!exif_imagetype($tmp_name)) &#123; die("not an image."); &#125; $image_size = getimagesize($tmp_name); if ($image_size[0] !== 1337 || $image_size[1] !== 1337) &#123; die("lol noob, your pic is not l33t enough"); &#125; $name = implode(".", $parts); move_uploaded_file($tmp_name, $userdir . $name . "." . $ext);&#125;echo "&lt;h3&gt;Your &lt;a href=$userdir&gt;files&lt;/a&gt;:&lt;/h3&gt;&lt;ul&gt;";foreach(glob($userdir . "*") as $file) &#123; echo "&lt;li&gt;&lt;a href='$file'&gt;$file&lt;/a&gt;&lt;/li&gt;";&#125;echo "&lt;/ul&gt;";?&gt;]]></content>
@@ -215,8 +220,8 @@
         <category>blog</category>
       </categories>
       <tags>
-        <tag>url</tag>
         <tag>域名</tag>
+        <tag>url</tag>
         <tag>域名解析</tag>
         <tag>Github</tag>
         <tag>Coding</tag>
@@ -437,8 +442,8 @@
         <category>WriteUp</category>
       </categories>
       <tags>
-        <tag>web</tag>
         <tag>脚本</tag>
+        <tag>web</tag>
         <tag>Bugku</tag>
       </tags>
   </entry>
@@ -731,8 +736,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>C/C++</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>

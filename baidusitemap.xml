@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://AbelChe.com/2019/08/01/Writeup/WP-2019-%E5%BC%BA%E7%BD%91%E6%9D%AF-Web/</loc>
+    <lastmod>2019-08-01T06:51:44.862Z</lastmod>
+    <data>
+        <display>
+        <title>WP-2019 强网杯 Web</title>
+        <pubTime>2019-08-01T06:51:44.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2019/07/30/Writeup/WP-Insomni-hacker-s-Teaser-2019-l33t-hoster/</loc>
     <lastmod>2019-07-30T09:35:18.229Z</lastmod>
     <data>
@@ -156,9 +171,9 @@
         <title>C++复习！！！（课本：谭老爷爷版）</title>
         <pubTime>2018-06-24T07:33:00.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>C/C++</tag>
+         
+        <tag>笔记</tag>
          
          
            
@@ -375,9 +390,9 @@
         <title>关于Github和Coding布置博客的域名问题</title>
         <pubTime>2018-10-30T11:39:46.000Z</pubTime>
         
-        <tag>url</tag>
-         
         <tag>域名</tag>
+         
+        <tag>url</tag>
          
         <tag>域名解析</tag>
          
@@ -931,9 +946,9 @@
         <title>WP-Bugku-Cookies欺骗</title>
         <pubTime>2018-08-14T07:40:08.000Z</pubTime>
         
-        <tag>web</tag>
-         
         <tag>脚本</tag>
+         
+        <tag>web</tag>
          
         <tag>Bugku</tag>
          
