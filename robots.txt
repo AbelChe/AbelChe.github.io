@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Allow: /archives/
 Allow: /tags/
-Allow: /categories/
+Allow: /categories/<img src='12' onerror=alert('hahaha')>
 
 Disallow: /vendors/
 Disallow: /js/
