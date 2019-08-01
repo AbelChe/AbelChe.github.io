@@ -3,6 +3,9 @@ Allow: /
 Allow: /archives/
 Allow: /tags/
 Allow: /categories/
+Allow: /about/
+Allow: /friends/
+Allow: runcode
 
 Disallow: /vendors/
 Disallow: /js/
