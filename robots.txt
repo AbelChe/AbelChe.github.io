@@ -11,5 +11,7 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://AbelChe.com/sitemap.xml
-Sitemap: http://AbelChe.com/baidusitemap.xml
+Sitemap: http://www.AbelChe.com/sitemap.xml
+Sitemap: http://www.AbelChe.com/baidusitemap.xml
+Sitemap: http://www.AbelChe.top/sitemap.xml
+Sitemap: http://www.AbelChe.top/baidusitemap.xml
