@@ -2081,7 +2081,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6cff9f;
+  background: #a4e9ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3429,78 +3429,37 @@ pre .javascript .function {
     margin: 8px 0 0;
   }
 }
-@media screen and (min-width: 960px) {
-  body {
-    background: url("https://wxckvg.sn.files.1drv.com/y4mwDJ8dovW_2ylQzai2VGxNiMTjsS5VvU01PKBnzUj9Wq-WkjltnlBjvq1w7zDxrmpcl4HZljpA4CpsGt_dHlrGH43ccnriDFmCPlQoJztGvFzA7Dlxy85AtMzNmCmOxDNpR_auB4UuZbN0AernkYRt28p0-yujwFfxmphg6Hhqu1cWnZhqIWO7twdKtp5aihpVmnO1C7p6ITw8H0mq70F4A?width=1920&height=1080&cropmode=none");
-    background-color: #edf1fc;
-    opacity: 0.95;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    -o-background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
-    -o-background-size: cover; /* 兼容Opera */
-    zoom: 1;
-  }
-  .main-inner {
-    opacity: 0.95;
-  }
+body {
+  background: url("https://wxckvg.sn.files.1drv.com/y4mwDJ8dovW_2ylQzai2VGxNiMTjsS5VvU01PKBnzUj9Wq-WkjltnlBjvq1w7zDxrmpcl4HZljpA4CpsGt_dHlrGH43ccnriDFmCPlQoJztGvFzA7Dlxy85AtMzNmCmOxDNpR_auB4UuZbN0AernkYRt28p0-yujwFfxmphg6Hhqu1cWnZhqIWO7twdKtp5aihpVmnO1C7p6ITw8H0mq70F4A?width=1920&height=1080&cropmode=none");
+  background-color: #edf1fc;
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
+  -o-background-size: cover; /* 兼容Opera */
+  zoom: 1;
 }
-@media screen and (max-width: 600px) {
-  body {
-    background: url("https://wxcdvg.sn.files.1drv.com/y4mDYHc4zFoEh0OOxdGz1b1rn4XOfibCQfGfgkTG_o51Dj4N2xessKA_6nrQyB4WVsgxh4VJPf5inaACvzZ1cVDR2CwEcoUgdxvhwp0FXhEOSTnVmp0S-6or-1P_tbbGEWx_V4mj4XciVHrU950MiK5ld22DkRJ4kKWaEI5sAfvMoPk1Wt9wzNamuWq0tKWl0HX0kcK8AtJC_8K11o7VklKrA?width=3895&height=5843&cropmode=none");
-    background-color: #edf1fc;
-    opacity: 0.95;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    -o-background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
-    -o-background-size: cover; /* 兼容Opera */
-    zoom: 1;
-  }
-  .main-inner {
-    opacity: 0.95;
-  }
+body:before {
+  content: ' ';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("https://wxckvg.sn.files.1drv.com/y4mwDJ8dovW_2ylQzai2VGxNiMTjsS5VvU01PKBnzUj9Wq-WkjltnlBjvq1w7zDxrmpcl4HZljpA4CpsGt_dHlrGH43ccnriDFmCPlQoJztGvFzA7Dlxy85AtMzNmCmOxDNpR_auB4UuZbN0AernkYRt28p0-yujwFfxmphg6Hhqu1cWnZhqIWO7twdKtp5aihpVmnO1C7p6ITw8H0mq70F4A?width=1920&height=1080&cropmode=none") center 0 no-repeat;
+  background-size: cover;
 }
-@media screen and (min-width: 600px) and (max-width: 960px) {
-  body {
-    background: url("https://wxcjvg.sn.files.1drv.com/y4mEROSz5yJEK7JQmCX1HoRg9x2Flt4pY_vXg9wdmMw0DSuDa1tMt_j5mC61EBSVgHamZb-ySF68ktJa1bOGAVvuotPbx38gfXeWorSBGEH0beQZi3K2bNrlFUV_CYBt3MBFCQDEM4lf2jMm4RMDB_fcX6pHhQRlI-ppYaq_8PoF33Uqx8yqVtEdH27JteMXxMRLEfnzcK57pkPFRo4KQMxcQ?width=5000&height=3161&cropmode=none");
-    background-color: #edf1fc;
-    opacity: 0.95;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    -o-background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
-    -o-background-size: cover; /* 兼容Opera */
-    zoom: 1;
-  }
-  .main-inner {
-    opacity: 0.95;
-  }
+.main-inner {
+  opacity: 0.95;
 }
