@@ -2081,7 +2081,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e4bb8e;
+  background: #6cff9f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3443,6 +3443,8 @@ pre .javascript .function {
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -o-background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
     -o-background-size: cover; /* 兼容Opera */
@@ -3466,6 +3468,8 @@ pre .javascript .function {
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -o-background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
     -o-background-size: cover; /* 兼容Opera */
@@ -3489,6 +3493,8 @@ pre .javascript .function {
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
+    -o-background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
     -o-background-size: cover; /* 兼容Opera */
