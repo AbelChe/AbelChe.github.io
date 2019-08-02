@@ -557,9 +557,9 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 13px;
-  color: #c5c8c6;
-  background: #1d1f21;
+  font-size: 16px;
+  color: #4d4d4c;
+  background: #e6e6e6;
   line-height: 1.6;
 }
 pre,
@@ -572,14 +572,14 @@ code {
   color: #555;
   background: #eee;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 16px;
 }
 pre {
   padding: 10px;
 }
 pre code {
   padding: 0;
-  color: #c5c8c6;
+  color: #4d4d4c;
   background: none;
   text-shadow: none;
 }
@@ -602,7 +602,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #c5c8c6;
+  color: #4d4d4c;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -616,23 +616,23 @@ pre code {
 }
 .highlight figcaption a {
   float: right;
-  color: #c5c8c6;
+  color: #4d4d4c;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #c5c8c6;
+  border-bottom-color: #4d4d4c;
 }
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #888f96;
+  color: #272727;
   text-align: right;
-  background-color: #000;
+  background-color: #f1bfd8;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #1d1f21;
+  background-color: #e6e6e6;
 }
 .highlight .line {
   height: 20px;
@@ -656,10 +656,10 @@ pre .addition {
   background: #800000;
 }
 pre .meta {
-  color: #b294bb;
+  color: #8959a8;
 }
 pre .comment {
-  color: #969896;
+  color: #8e908c;
 }
 pre .variable,
 pre .attribute,
@@ -673,7 +673,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c66;
+  color: #c82829;
 }
 pre .number,
 pre .preprocessor,
@@ -682,7 +682,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #de935f;
+  color: #f5871f;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -695,11 +695,11 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #b5bd68;
+  color: #718c00;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #8abeb7;
+  color: #3e999f;
 }
 pre .function,
 pre .python .decorator,
@@ -709,11 +709,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #81a2be;
+  color: #4271ae;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #b294bb;
+  color: #8959a8;
 }
 .full-image.full-image.full-image.full-image {
   border: none;
@@ -2081,7 +2081,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a4e9ff;
+  background: #ffec2f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2914,6 +2914,7 @@ pre .javascript .function {
   overflow: hidden;
   padding: 0;
   width: 240px;
+  opacity: 0.9;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
@@ -3107,7 +3108,7 @@ pre .javascript .function {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: #f9f9f9;
+  background: #cecece;
   border-bottom-color: #fff;
 }
 .menu .menu-item br {
@@ -3429,27 +3430,13 @@ pre .javascript .function {
     margin: 8px 0 0;
   }
 }
-body {
-  background: url("https://wxckvg.sn.files.1drv.com/y4mwDJ8dovW_2ylQzai2VGxNiMTjsS5VvU01PKBnzUj9Wq-WkjltnlBjvq1w7zDxrmpcl4HZljpA4CpsGt_dHlrGH43ccnriDFmCPlQoJztGvFzA7Dlxy85AtMzNmCmOxDNpR_auB4UuZbN0AernkYRt28p0-yujwFfxmphg6Hhqu1cWnZhqIWO7twdKtp5aihpVmnO1C7p6ITw8H0mq70F4A?width=1920&height=1080&cropmode=none");
-  background-color: #edf1fc;
-  opacity: 0.95;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-background-attachment: fixed;
-  -o-background-attachment: fixed;
-  background-size: cover;
-  -webkit-background-size: cover; /* 兼容Webkit内核浏览器如Chrome和Safari */
-  -o-background-size: cover; /* 兼容Opera */
-  zoom: 1;
+.main-inner {
+  opacity: 0.9;
 }
 body:before {
+  background: url("../images/ipad_background.jpg");
+  background-color: #edf1fc;
+  opacity: 0.9;
   content: ' ';
   position: fixed;
   z-index: -1;
@@ -3457,9 +3444,7 @@ body:before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("https://wxckvg.sn.files.1drv.com/y4mwDJ8dovW_2ylQzai2VGxNiMTjsS5VvU01PKBnzUj9Wq-WkjltnlBjvq1w7zDxrmpcl4HZljpA4CpsGt_dHlrGH43ccnriDFmCPlQoJztGvFzA7Dlxy85AtMzNmCmOxDNpR_auB4UuZbN0AernkYRt28p0-yujwFfxmphg6Hhqu1cWnZhqIWO7twdKtp5aihpVmnO1C7p6ITw8H0mq70F4A?width=1920&height=1080&cropmode=none") center 0 no-repeat;
+  background-repeat: no-repeat;
+  background-position: center 0;
   background-size: cover;
-}
-.main-inner {
-  opacity: 0.95;
 }
