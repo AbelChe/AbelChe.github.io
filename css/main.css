@@ -559,7 +559,7 @@ pre,
   padding: 0;
   font-size: 16px;
   color: #4d4d4c;
-  background: #e6e6e6;
+  background: #f0f0f0;
   line-height: 1.6;
 }
 pre,
@@ -624,15 +624,15 @@ pre code {
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #272727;
+  color: #fff;
   text-align: right;
-  background-color: #f1bfd8;
+  background-color: #336;
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #e6e6e6;
+  background-color: #f0f0f0;
 }
 .highlight .line {
   height: 20px;
@@ -656,10 +656,10 @@ pre .addition {
   background: #800000;
 }
 pre .meta {
-  color: #8959a8;
+  color: #0f0877;
 }
 pre .comment {
-  color: #8e908c;
+  color: #969896;
 }
 pre .variable,
 pre .attribute,
@@ -673,7 +673,15 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c82829;
+  color: #c66;
+}
+pre .tag {
+  background-color: rgba(66,66,66,0.102);
+  border: 1px solid rgba(3,125,18,0.478);
+}
+pre .tag:hover {
+  background-color: rgba(62,62,62,0.188);
+  border: 1px solid rgba(103,157,255,0.251);
 }
 pre .number,
 pre .preprocessor,
@@ -682,7 +690,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #f5871f;
+  color: #de935f;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -695,7 +703,8 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #718c00;
+  color: #1d8a7b;
+  font-weight: bold;
 }
 pre .title,
 pre .css .hexcolor {
@@ -709,11 +718,13 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: #81a2be;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #8959a8;
+  color: #0f0877;
+  font-style: oblique;
+  font-weight: bold;
 }
 .full-image.full-image.full-image.full-image {
   border: none;
@@ -1427,7 +1438,7 @@ pre .javascript .function {
 }
 @media (min-width: 992px) {
   .posts-expand .post-body {
-    text-align: justify;
+    text-align: left;
   }
 }
 .posts-expand .post-body h2,
@@ -2081,7 +2092,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5b50f0;
+  background: #ffd026;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3353,26 +3364,92 @@ pre .javascript .function {
   font-size: 1.7em;
 }
 .post-body h1 {
-  font-size: 1.6em;
-  border-bottom: 1px solid #eee;
+  font-size: 1.9em;
+  border-bottom: 0 dotted #eee;
+  color: #339;
+  background: rgba(21,124,226,0.502);
+  padding-left: 20px;
+  transition: all 0.3s ease;
 }
 .post-body h2 {
   font-size: 1.45em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0px dotted #eee;
+  color: #369;
+  padding-left: 20px;
+  margin-left: 20px;
+  background: rgba(45,137,216,0.42);
+  transition: all 0.3s ease;
+  border-radius: 0 90% 90% 0;
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0px dotted #eee;
+  color: #66c;
+  padding-left: 20px;
+  margin-left: 40px;
+  background: rgba(50,150,197,0.349);
+  transition: all 0.3s ease;
+  border-radius: 0 90% 90% 0;
 }
 .post-body h4 {
   font-size: 1.2em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 0px dotted #eee;
+  color: #36c;
+  padding-left: 20px;
+  margin-left: 60px;
+  background: rgba(108,192,206,0.38);
+  transition: all 0.3s ease;
+  border-radius: 0 90% 90% 0;
 }
 .post-body h5 {
+  border-bottom: 0px dotted #eee;
   font-size: 1.07em;
+  color: #09c;
+  padding-left: 20px;
+  margin-left: 80px;
+  background: rgba(154,222,222,0.478);
+  transition: all 0.3s ease;
+  border-radius: 0 90% 90% 0;
 }
 .post-body h6 {
+  border-bottom: 0px dotted #eee;
   font-size: 1.03em;
+  color: #ac8ddc;
+  padding-left: 20px;
+  margin-left: 100px;
+  background: rgba(102,180,204,0.149);
+  transition: all 0.3s ease;
+  border-radius: 0 90% 90% 0;
+}
+.post-body h1:hover {
+  color: #f66;
+  border-bottom: 9px solid #f66;
+  transition: all 0.3s ease;
+}
+.post-body h2:hover {
+  color: #f66;
+  border-bottom: 9px solid #f66;
+  transition: all 0.3s ease;
+}
+.post-body h3:hover {
+  color: #f66;
+  border-bottom: 9px solid #f66;
+  transition: all 0.3s ease;
+}
+.post-body h4:hover {
+  color: #f66;
+  transition: all 0.3s ease;
+  border-bottom: 9px solid #f66;
+}
+.post-body h5:hover {
+  color: #f66;
+  transition: all 0.3s ease;
+  border-bottom: 9px solid #f66;
+}
+.post-body h6:hover {
+  color: #f66;
+  transition: all 0.3s ease;
+  border-bottom: 9px solid #f66;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
