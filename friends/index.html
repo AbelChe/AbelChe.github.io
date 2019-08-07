@@ -116,18 +116,18 @@
 
 
 
-<meta name="description" content="真正的大佬们       #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 150px;         display: inline-table;         padding: 10px 40px;">
+<meta name="description" content="真正的大佬们       /* #fmain {         width: 700px;         margin: 0 auto;     } */      #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 1">
 <meta name="keywords" content="AbelChe">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AbelChe&#39;s Blog">
 <meta property="og:url" content="http://AbelChe.com/friends/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="真正的大佬们       #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 150px;         display: inline-table;         padding: 10px 40px;">
+<meta property="og:description" content="真正的大佬们       /* #fmain {         width: 700px;         margin: 0 auto;     } */      #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-03T16:40:36.202Z">
+<meta property="og:updated_time" content="2019-08-07T04:42:11.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AbelChe&#39;s Blog">
-<meta name="twitter:description" content="真正的大佬们       #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 150px;         display: inline-table;         padding: 10px 40px;">
+<meta name="twitter:description" content="真正的大佬们       /* #fmain {         width: 700px;         margin: 0 auto;     } */      #fboard {         width: 80%;         margin: 0 auto;     }      .fmember {         width: 1">
 
 
 
@@ -379,6 +379,11 @@
     <title>真正的大佬们</title>
 </head>
 <style>
+    /* #fmain {
+        width: 700px;
+        margin: 0 auto;
+    } */
+
     #fboard {
         width: 80%;
         margin: 0 auto;
@@ -455,31 +460,61 @@
         padding: 0;
         transition: all 0.4s ease;
     }
+
+    @media (max-width: 767px) {
+        
+        #fmain{
+            width: 100%;
+        }
+        .fmember {
+            width: 150px;
+            /* display: inline-table; */
+            padding: 10px 40px;
+            margin: 0 24%;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1264px) {
+        #fmain{
+            width: 100%;
+        }
+        .fmember {
+            width: 150px;
+            /* display: inline-table; */
+            padding: 10px 40px;
+            margin: 0 20%;
+            transition: all 0.3s ease-out;
+        }
+    }
 </style>
 
 <body>
     <center style="font-size: 40px; color: rgba(218, 24, 89, 0.925); font-weight: 900;">真正的<span id="pbig">大</span>佬们
     </center>
     <div>
-        <div id="fboard">
-            <div id="weik1" class="fmember">
-                <div id="fhead"></div>
-                <div class="flink"><span><a href="http://weik1.github.io/" target="_blank" rel="noopener">weik1</a></span></div>
-                <div class="fdetail">魅力男神<br>& web带佬</div>
-            </div>
-            <div id="yunee" class="fmember">
-                <div id="fhead"></div>
-                <div class="flink"><span><a href="http://yuneeone.github.io/" target="_blank" rel="noopener">yunee</a></span></div>
-                <div class="fdetail"><span><span id="yuneedetail" onmouseover="chdetail('小心!ta男女通吃！')" onmouseout="chdetail('King Of Sea')">King Of Sea</span>& web带佬</span></div>
+        <div id="fmain">
+            <div id="fboard">
+                <div id="weik1" class="fmember">
+                    <div id="fhead"></div>
+                    <div class="flink"><span><a href="http://weik1.github.io/" target="_blank" rel="noopener">weik1</a></span></div>
+                    <div class="fdetail">魅力男神<br>& web带佬</div>
+                </div>
+                <div id="yunee" class="fmember">
+                    <div id="fhead"></div>
+                    <div class="flink"><span><a href="http://yuneeone.github.io/" target="_blank" rel="noopener">yunee</a></span></div>
+                    <div class="fdetail"><span><span id="yuneedetail" onmouseover="chdetail('小心!ta男女通吃！')" onmouseout="chdetail('King Of Sea')">King Of Sea</span>& web带佬</span></div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script>
-    function chdetail(data){
+    function chdetail(data) {
         document.getElementById('yuneedetail').innerHTML = data;
     }
 </script>
+
 </html>
         
       </div>
@@ -713,7 +748,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">40.3k</span>
+    <span title="Site words total count">40.4k</span>
   
 </div>
 

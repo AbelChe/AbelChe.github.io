@@ -5,6 +5,26 @@
     
     
   <url>
+    <loc>http://AbelChe.com/2019/08/01/Writeup/WP-2019-%E5%BC%BA%E7%BD%91%E6%9D%AF-Web/</loc>
+    <lastmod>2019-08-04T12:15:30.760Z</lastmod>
+    <data>
+        <display>
+        <title>WP-2019 强网杯 Web</title>
+        <pubTime>2019-08-01T06:51:44.000Z</pubTime>
+        
+        <tag>web</tag>
+         
+         
+           
+             
+              <breadCrumb title="WriteUp" url="http://AbelChe.com/categories/WriteUp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://AbelChe.com/2019/07/27/SSTI-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E7%AE%80%E6%9E%90/</loc>
     <lastmod>2019-08-03T13:28:18.236Z</lastmod>
     <data>
@@ -147,21 +167,6 @@
 
     
     
-    
-  <url>
-    <loc>http://AbelChe.com/2019/08/01/Writeup/WP-2019-%E5%BC%BA%E7%BD%91%E6%9D%AF-Web/</loc>
-    <lastmod>2019-08-01T06:51:44.862Z</lastmod>
-    <data>
-        <display>
-        <title>WP-2019 强网杯 Web</title>
-        <pubTime>2019-08-01T06:51:44.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://AbelChe.com/2019/03/17/ssrf%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90/</loc>
