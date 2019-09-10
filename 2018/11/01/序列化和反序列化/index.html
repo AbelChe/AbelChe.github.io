@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -81,9 +81,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/180x180.png?v=5.1.4">
@@ -103,36 +103,36 @@
 
 
 
-  <meta name="keywords" content="序列化,反序列化," />
+  <meta name="keywords" content="序列化,反序列化,">
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml">
 
 
 
 
 
 
-<meta name="description" content="什么是序列化&amp;amp;反序列化 序列化： 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
+<meta name="description" content="什么是序列化&amp;amp;反序列化 序列化: 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化:将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
 <meta name="keywords" content="序列化,反序列化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="序列化和反序列化">
 <meta property="og:url" content="http://AbelChe.com/2018/11/01/序列化和反序列化/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="什么是序列化&amp;amp;反序列化 序列化： 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
+<meta property="og:description" content="什么是序列化&amp;amp;反序列化 序列化: 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化:将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hnxkvw.sn.files.1drv.com/y4mwGUw-A2V2k_Uu5w-T-Ou8Z3YabDPIF42dF4POXVs1Hbyc8v6Ez65bYZm45qXY1XFPpQp_9H5RjldDUssJfjsRT0rKJh_XdlC21jmvVYuyQ9IVrOAG07dUK1y951w9KvSdKnJu7-bi8halyTaEz59Z7gvExnhYB9ueC-O0Gp9wjzbqm48YGQkvlJbahxxGxA_G6nnWC3YlJKZ-vJ4vTI59Q?width=1022&height=201&cropmode=none">
 <meta property="og:image" content="https://hnxnvw.sn.files.1drv.com/y4mOCAkyMZKdYGn_dUWItGK-X1xd6zG1A6OVRPckNuSP2o3z6XQpizP9oJeCH-SqRfzXn_gEH5bRC9W-3tG1X6bszPqeByolKchltdhOF5Jdy0-fssKIf0lCuIsivVJBk5b9Hia7dQfa8sd4EDsNEOINzk7A6wP7iHmqNAn4l3yc9z8EuCZGUi2uBLroUG42s0fVepckc0Vn26y0nJpAeVw3Q?width=292&height=89&cropmode=none">
 <meta property="og:image" content="https://hnxmvw.sn.files.1drv.com/y4mLO8sjjujtidnCGjcFM7nb8SOxswXTR_aeh2clsSCDT6rInjTXurhjKaAFk4rbizr277KZK56GNdO6m3QAGpGGVOLk1vCVcLar8UFCSN5wGQnpT0XR6pSwI29nqX7Byc4ffbYNoL0M9SkTp6jnmHMCinF7R0vGCh3Bd0tYxyaXsm0hmnSGU04LOylqWsXDBBLPuIkL08WNnFKd6SDdAhLSw?width=345&height=56&cropmode=none">
 <meta property="og:image" content="https://hnxpvw.sn.files.1drv.com/y4mlAB2rR0Ly2OWnhfqw81vPjM3_N7Rplaz4pdwN3P-ZOjhYUqzyHEb7LYHa_WpEY6MugjTJlF5Sc6eKN8XOWEhoCgSu5aqweIoM7cYcOs-lNG1w3jtWSiQq9-cJ8-R4iIg2g0VD2UdiuiZUCsT1wUyuzW_-ksPd3VoEuHVD1SrGuPpbCI1LVDZlWhk1Ttv_bAIzTezKHze1mjYMu-GdcY1dA?width=935&height=124&cropmode=none">
 <meta property="og:image" content="https://k9xnvw.sn.files.1drv.com/y4mA1SrTXYGLV_p2xj1l9ppGgrmV04wk5CzFXZKKS0bCBRpZ3bqOgx0MLzAh9CFDLE5iBpFNimEAYrmivr5CsAJ0BNPjc-7y9D2J40kZgEAlMm2PfkMlecvpqu4wrEkC9GrKDhIrZSUnSmdwvsMZ0Ni-zHR7xdZq1ybodjt2X5BSAqLXKITsplUTtC9mmDY8g36hJ6mH0eed88y35_G578GJg?width=935&height=687&cropmode=none">
-<meta property="og:updated_time" content="2019-04-26T03:07:18.000Z">
+<meta property="og:updated_time" content="2019-08-15T11:02:50.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="序列化和反序列化">
-<meta name="twitter:description" content="什么是序列化&amp;amp;反序列化 序列化： 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
+<meta name="twitter:description" content="什么是序列化&amp;amp;反序列化 序列化: 序列化是将变量转换为可保存或传输的字符串的过程。  反序列化:将在序列化过程中所生成的字符串再转化成原来的变量使用。   PHP序列化的方法 PHP最初通过内置的serialize()和unserialize()函数来实现序列化。serialize()的参数可以是resource类型外的所有变量类型，最常见的是用来序列化对象，unseialize()将se">
 <meta name="twitter:image" content="https://hnxkvw.sn.files.1drv.com/y4mwGUw-A2V2k_Uu5w-T-Ou8Z3YabDPIF42dF4POXVs1Hbyc8v6Ez65bYZm45qXY1XFPpQp_9H5RjldDUssJfjsRT0rKJh_XdlC21jmvVYuyQ9IVrOAG07dUK1y951w9KvSdKnJu7-bi8halyTaEz59Z7gvExnhYB9ueC-O0Gp9wjzbqm48YGQkvlJbahxxGxA_G6nnWC3YlJKZ-vJ4vTI59Q?width=1022&height=201&cropmode=none">
 
 
@@ -163,7 +163,7 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/2018/11/01/序列化和反序列化/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/11/01/序列化和反序列化/">
 
 
 
@@ -197,7 +197,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">AbelChe's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -227,7 +227,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -237,7 +237,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -247,7 +247,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -257,7 +257,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -267,7 +267,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -277,7 +277,7 @@
         <li class="menu-item menu-item-在线运行">
           <a href="/runcode/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br>
             
             在线运行
           </a>
@@ -287,7 +287,7 @@
         <li class="menu-item menu-item-友链">
           <a href="/friends/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-at"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-at"></i> <br>
             
             友链
           </a>
@@ -297,7 +297,7 @@
         <li class="menu-item menu-item-sitemap">
           <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
             站点地图
           </a>
@@ -310,7 +310,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -331,9 +331,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -345,7 +343,7 @@
   
 </nav>
 
-
+<link rel="manifest" href="/manifest.json">
 
  </div>
     </header>
@@ -374,7 +372,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AbelChe">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/images/head.png">
     </span>
 
@@ -415,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-26T11:07:18+08:00">
-                2019-04-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-15T19:02:50+08:00">
+                2019-08-15
               </time>
             
           </span>
@@ -443,7 +441,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -496,34 +494,37 @@
 
       
         <h1 id="什么是序列化-amp-反序列化"><a href="#什么是序列化-amp-反序列化" class="headerlink" title="什么是序列化&amp;反序列化"></a>什么是序列化&amp;反序列化</h1><ul>
-<li><p>序列化： 序列化是将变量转换为可保存或传输的字符串的过程。</p>
+<li><p>序列化: 序列化是将变量转换为可保存或传输的字符串的过程。</p>
 </li>
-<li><p>反序列化：将在序列化过程中所生成的字符串再转化成原来的变量使用。</p>
+<li><p>反序列化:将在序列化过程中所生成的字符串再转化成原来的变量使用。</p>
 </li>
 </ul>
 <h1 id="PHP序列化的方法"><a href="#PHP序列化的方法" class="headerlink" title="PHP序列化的方法"></a>PHP序列化的方法</h1><blockquote>
 <p>PHP最初通过内置的<code>serialize()</code>和<code>unserialize()</code>函数来实现序列化。<code>serialize()</code>的参数可以是<code>resource</code>类型外的所有变量类型，最常见的是用来序列化对象，<code>unseialize()</code>将<code>serialize</code>的返回结果作为参数，进行反序列化，得到原对象<br>对不受信任的数据上使用内置的<code>unserialize()</code>函数时，通常是有风险的。<br>对于对象有两种“魔术方法”，<code>__sleep()</code>和<code>__wakeup()</code>，可以在类别中实现。而会分别从<code>serialize()</code>和<code>unserialize()</code>中调用，对应于清理和恢复对象的功能。例如，在序列化时可能需要关闭数据库连线，并在反序列化时恢复连线；这个功能可在这两种魔术方法中处理。它们也允许对象选择哪些属性可被序列化。<br>从PHP 5.1开始有面向对象的序列化机制，即为<code>Serializable</code>接口。</p>
 </blockquote>
-<h1 id="PHP序列化的作用"><a href="#PHP序列化的作用" class="headerlink" title="PHP序列化的作用"></a>PHP序列化的作用</h1><h2 id="对象序列化使用情况："><a href="#对象序列化使用情况：" class="headerlink" title="对象序列化使用情况："></a>对象序列化使用情况：</h2><blockquote>
+<h1 id="PHP序列化的作用"><a href="#PHP序列化的作用" class="headerlink" title="PHP序列化的作用"></a>PHP序列化的作用</h1><h2 id="对象序列化使用情况"><a href="#对象序列化使用情况" class="headerlink" title="对象序列化使用情况:"></a>对象序列化使用情况:</h2><blockquote>
 <ul>
 <li>对象的创建的时候被存储到内存里，在解析的时候被销毁，如果机器重启，那么对象也将被销毁在新建。想要保存对象或者将对象传给另一台机器，就需要将对象序列化；或者在需要存储数据到mysql等数据库中时需要序列化。</li>
 <li>将对象转化成字符串叫序列化</li>
 <li>将字符串转化成对象叫反序列化</li>
 </ul>
 </blockquote>
-<font size="4">总之，就是<strong><font color="red">方便数据传输</font></strong>和<strong><font color="red">存储</font></strong></font>
+<p><font size="4">总之，就是<strong><font color="red">方便数据传输</font></strong>和<strong><font color="red">存储</font></strong></font></p>
+<br>
+# 实例说明
 
-<p><br></p>
-<h1 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h1><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">################建立一个数组###################</span><br><span class="line">$arr1 = [];</span><br><span class="line">for($i=<span class="number">0</span>; $i&lt;<span class="number">5</span>; $i++)</span><br><span class="line">	$arr1[<span class="string">'key'</span>.$i] = <span class="string">'value'</span>.$i;</span><br><span class="line">echo <span class="string">"建立一个数组arr1："</span>;</span><br><span class="line">print_r($arr1);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">################序列化该数组###################</span><br><span class="line">$arr_serialize = serialize($arr1);</span><br><span class="line">echo <span class="string">"arr1序列化后为："</span>;</span><br><span class="line">print_r($arr_serialize);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">###############反序列化后输出##################</span><br><span class="line">$arr_back = unserialize($arr_serialize);</span><br><span class="line">echo <span class="string">"arr_serialize反序列化后为："</span>;</span><br><span class="line">print_r($arr_back);</span><br><span class="line">##############################################</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>输出结果如下<img src="https://hnxkvw.sn.files.1drv.com/y4mwGUw-A2V2k_Uu5w-T-Ou8Z3YabDPIF42dF4POXVs1Hbyc8v6Ez65bYZm45qXY1XFPpQp_9H5RjldDUssJfjsRT0rKJh_XdlC21jmvVYuyQ9IVrOAG07dUK1y951w9KvSdKnJu7-bi8halyTaEz59Z7gvExnhYB9ueC-O0Gp9wjzbqm48YGQkvlJbahxxGxA_G6nnWC3YlJKZ-vJ4vTI59Q?width=1022&amp;height=201&amp;cropmode=none" alt=""></p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">################建立一个数组###################</span><br><span class="line">$arr1 = [];</span><br><span class="line">for($i=<span class="number">0</span>; $i&lt;<span class="number">5</span>; $i++)</span><br><span class="line">	$arr1[<span class="string">'key'</span>.$i] = <span class="string">'value'</span>.$i;</span><br><span class="line">echo <span class="string">"建立一个数组arr1:"</span>;</span><br><span class="line">print_r($arr1);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">################序列化该数组###################</span><br><span class="line">$arr_serialize = serialize($arr1);</span><br><span class="line">echo <span class="string">"arr1序列化后为:"</span>;</span><br><span class="line">print_r($arr_serialize);</span><br><span class="line">echo <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span><br><span class="line">##############################################</span><br><span class="line"></span><br><span class="line">###############反序列化后输出##################</span><br><span class="line">$arr_back = unserialize($arr_serialize);</span><br><span class="line">echo <span class="string">"arr_serialize反序列化后为:"</span>;</span><br><span class="line">print_r($arr_back);</span><br><span class="line">##############################################</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果如下<img src="https://hnxkvw.sn.files.1drv.com/y4mwGUw-A2V2k_Uu5w-T-Ou8Z3YabDPIF42dF4POXVs1Hbyc8v6Ez65bYZm45qXY1XFPpQp_9H5RjldDUssJfjsRT0rKJh_XdlC21jmvVYuyQ9IVrOAG07dUK1y951w9KvSdKnJu7-bi8halyTaEz59Z7gvExnhYB9ueC-O0Gp9wjzbqm48YGQkvlJbahxxGxA_G6nnWC3YlJKZ-vJ4vTI59Q?width=1022&height=201&cropmode=none" alt></p>
 <p>注意这里序列化后的开头处是 <code>a</code> </p>
 <p>再给出一段代码</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;			<span class="comment">#这里定义一个类</span></span></span><br><span class="line"><span class="php">	<span class="keyword">var</span> $value = <span class="string">'abc123'</span>;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">$obj = <span class="keyword">new</span> test;	<span class="comment">#new一个对象obj出来</span></span></span><br><span class="line"><span class="php">$obj_serialize = serialize($obj); <span class="comment">#将obj序列化</span></span></span><br><span class="line"><span class="php">print_r($obj_serialize);</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;"</span>;</span></span><br><span class="line"><span class="php">$obj_back = unserialize($obj_serialize); <span class="comment">#反序列化obj_serialize</span></span></span><br><span class="line"><span class="php">print_r($obj_back);</span></span><br><span class="line"><span class="php"> <span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>输出结果为：<img src="https://hnxnvw.sn.files.1drv.com/y4mOCAkyMZKdYGn_dUWItGK-X1xd6zG1A6OVRPckNuSP2o3z6XQpizP9oJeCH-SqRfzXn_gEH5bRC9W-3tG1X6bszPqeByolKchltdhOF5Jdy0-fssKIf0lCuIsivVJBk5b9Hia7dQfa8sd4EDsNEOINzk7A6wP7iHmqNAn4l3yc9z8EuCZGUi2uBLroUG42s0fVepckc0Vn26y0nJpAeVw3Q?width=292&amp;height=89&amp;cropmode=none" alt=""></p>
+
+<p>输出结果为:<img src="https://hnxnvw.sn.files.1drv.com/y4mOCAkyMZKdYGn_dUWItGK-X1xd6zG1A6OVRPckNuSP2o3z6XQpizP9oJeCH-SqRfzXn_gEH5bRC9W-3tG1X6bszPqeByolKchltdhOF5Jdy0-fssKIf0lCuIsivVJBk5b9Hia7dQfa8sd4EDsNEOINzk7A6wP7iHmqNAn4l3yc9z8EuCZGUi2uBLroUG42s0fVepckc0Vn26y0nJpAeVw3Q?width=292&height=89&cropmode=none" alt></p>
 <ul>
 <li>发现不同之处</li>
 <li>当一个数组序列化时，以<code>a</code> 为标志，对象序列化是以 <code>O</code> 为标志</li>
-<li>由此可以解读 PHP 序列化：<blockquote>
+<li>由此可以解读 PHP 序列化:<blockquote>
 <p>a 代表的是 array 数组，5代表变量名称有几个字符， s 代表 string字符串类型，4 为 几个字符，后面的是字符串本身……<br>O 代表 object 对象；4代表的是序列化的对象名称有几个字符；对象名称；1为对象有一个值……</p>
 </blockquote>
 </li>
@@ -532,33 +533,37 @@
 <p>有前面的铺垫，我们可知道序列化得到的字符串是可解读的，那么如果精心构造一个字符串传给unserialize()进行反序列化，就可以控制到我们想控制的东西</p>
 </blockquote>
 <ul>
-<li><p>前面提到过，当 PHP 调用<code>serizlize()</code>和<code>unserialize()</code>函数时，会调用<code>__sleep()</code>和<code>__wakeup()</code>两个魔术方法（Magic function）</p>
+<li><p>前面提到过，当 PHP 调用<code>serizlize()</code>和<code>unserialize()</code>函数时，会调用<code>__sleep()</code>和<code>__wakeup()</code>两个魔术方法(Magic function)</p>
 </li>
-<li><p>先介绍下魔术方法：</p>
+<li><p>先介绍下魔术方法:</p>
 </li>
 </ul>
-<h2 id="魔术方法（Magic-function）"><a href="#魔术方法（Magic-function）" class="headerlink" title="魔术方法（Magic function）"></a>魔术方法（Magic function）</h2><p>在命名自己的类方法时不能使用这些方法名，除非是想用其魔术功能。<br><a href="https://secure.php.net/manual/zh/language.oop5.magic.php" target="_blank" rel="noopener">PHP官方文档-魔术方法</a><br><a href="http://www.php.cn/php-weizijiaocheng-406955.html" target="_blank" rel="noopener">PHP中文网-魔术方法</a></p>
+<h2 id="魔术方法-Magic-function"><a href="#魔术方法-Magic-function" class="headerlink" title="魔术方法(Magic function)"></a>魔术方法(Magic function)</h2><p>在命名自己的类方法时不能使用这些方法名，除非是想用其魔术功能。<br><a href="https://secure.php.net/manual/zh/language.oop5.magic.php" target="_blank" rel="noopener">PHP官方文档-魔术方法</a><br><a href="http://www.php.cn/php-weizijiaocheng-406955.html" target="_blank" rel="noopener">PHP中文网-魔术方法</a></p>
 <p>利用反序列化漏洞</p>
 <h2 id="unserialize-调用-wakeup-魔术方法"><a href="#unserialize-调用-wakeup-魔术方法" class="headerlink" title="unserialize()调用__wakeup()魔术方法"></a><code>unserialize()</code>调用<code>__wakeup()</code>魔术方法</h2><ul>
-<li><p>一个例子：</p>
+<li><p>一个例子:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> </span></span><br><span class="line"><span class="php"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;			<span class="comment">#这里定义一个类</span></span></span><br><span class="line"><span class="php">	<span class="keyword">var</span> $value = <span class="string">'abc123'</span>;</span></span><br><span class="line"><span class="php">	<span class="function"><span class="keyword">function</span> <span class="title">__wakeup</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="php">		<span class="keyword">echo</span> <span class="string">"__wakeup&lt;/br&gt;"</span>;</span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php">$demo = unserialize(<span class="string">'O:4:"test":1:&#123;s:5:"value";s:6:"abc123";&#125;'</span>);</span></span><br><span class="line"><span class="php"><span class="comment">#O:4:"test":1:&#123;s:5:"value";s:6:"abc123";&#125;是序列化test-&gt;value的值</span></span></span><br><span class="line"><span class="php">print_r($demo);</span></span><br><span class="line"><span class="php"> <span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>结果如下：<br>明显<code>unserialize()</code>调用了<code>__wakeup()</code><br><img src="https://hnxmvw.sn.files.1drv.com/y4mLO8sjjujtidnCGjcFM7nb8SOxswXTR_aeh2clsSCDT6rInjTXurhjKaAFk4rbizr277KZK56GNdO6m3QAGpGGVOLk1vCVcLar8UFCSN5wGQnpT0XR6pSwI29nqX7Byc4ffbYNoL0M9SkTp6jnmHMCinF7R0vGCh3Bd0tYxyaXsm0hmnSGU04LOylqWsXDBBLPuIkL08WNnFKd6SDdAhLSw?width=345&amp;height=56&amp;cropmode=none" alt=""></p>
+<li><p>结果如下:<br>明显<code>unserialize()</code>调用了<code>__wakeup()</code><br><img src="https://hnxmvw.sn.files.1drv.com/y4mLO8sjjujtidnCGjcFM7nb8SOxswXTR_aeh2clsSCDT6rInjTXurhjKaAFk4rbizr277KZK56GNdO6m3QAGpGGVOLk1vCVcLar8UFCSN5wGQnpT0XR6pSwI29nqX7Byc4ffbYNoL0M9SkTp6jnmHMCinF7R0vGCh3Bd0tYxyaXsm0hmnSGU04LOylqWsXDBBLPuIkL08WNnFKd6SDdAhLSw?width=345&height=56&cropmode=none" alt></p>
 </li>
 </ul>
 <h2 id="利用unserialize-函数漏洞"><a href="#利用unserialize-函数漏洞" class="headerlink" title="利用unserialize()函数漏洞"></a>利用unserialize()函数漏洞</h2><ul>
-<li>环境：</li>
+<li>环境:</li>
 <li>index.php和shell.php</li>
 </ul>
-<p>index.php<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span></span><br><span class="line"><span class="php">	<span class="keyword">var</span> $value = <span class="string">'123'</span>;</span></span><br><span class="line"><span class="php">	<span class="function"><span class="keyword">function</span> <span class="title">__wakeup</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="php">		$fp = fopen(<span class="string">"shell.php"</span>,<span class="string">"w"</span>) ;</span></span><br><span class="line"><span class="php">		fwrite($fp,<span class="keyword">$this</span>-&gt;value);</span></span><br><span class="line"><span class="php">		fclose($fp);</span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php">$get = $_GET[<span class="string">'getvalue'</span>];</span></span><br><span class="line"><span class="php">unserialize($get);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>index.php</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span></span><br><span class="line"><span class="php">	<span class="keyword">var</span> $value = <span class="string">'123'</span>;</span></span><br><span class="line"><span class="php">	<span class="function"><span class="keyword">function</span> <span class="title">__wakeup</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="php">		$fp = fopen(<span class="string">"shell.php"</span>,<span class="string">"w"</span>) ;</span></span><br><span class="line"><span class="php">		fwrite($fp,<span class="keyword">$this</span>-&gt;value);</span></span><br><span class="line"><span class="php">		fclose($fp);</span></span><br><span class="line"><span class="php">	&#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php">$get = $_GET[<span class="string">'getvalue'</span>];</span></span><br><span class="line"><span class="php">unserialize($get);</span></span><br><span class="line"><span class="php"></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>我们可以控制序列化的字符串达到利用<code>__wakeup()</code>函数的目的</li>
 <li>这里构造一个包含有<code>phpinfo();</code>的字符串</li>
 </ul>
-<p>PHP脚本如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> $value = <span class="string">'123'</span>;</span><br><span class="line">&#125;</span><br><span class="line">$obj = <span class="keyword">new</span> test;</span><br><span class="line">$obj-&gt;value = <span class="string">"&lt;?php phpinfo(); ?&gt;"</span>;</span><br><span class="line">$temp = serialize($obj);</span><br><span class="line">print_r($temp);</span><br><span class="line"> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>PHP脚本如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> $value = <span class="string">'123'</span>;</span><br><span class="line">&#125;</span><br><span class="line">$obj = <span class="keyword">new</span> test;</span><br><span class="line">$obj-&gt;value = <span class="string">"&lt;?php phpinfo(); ?&gt;"</span>;</span><br><span class="line">$temp = serialize($obj);</span><br><span class="line">print_r($temp);</span><br><span class="line"> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>运行后得到<br><code>O:4:&quot;test&quot;:1:{s:5:&quot;value&quot;;s:19:&quot;&lt;?php phpinfo(); ?&gt;&quot;;}</code></p>
-<p>将其传入漏洞站点<br><img src="https://hnxpvw.sn.files.1drv.com/y4mlAB2rR0Ly2OWnhfqw81vPjM3_N7Rplaz4pdwN3P-ZOjhYUqzyHEb7LYHa_WpEY6MugjTJlF5Sc6eKN8XOWEhoCgSu5aqweIoM7cYcOs-lNG1w3jtWSiQq9-cJ8-R4iIg2g0VD2UdiuiZUCsT1wUyuzW_-ksPd3VoEuHVD1SrGuPpbCI1LVDZlWhk1Ttv_bAIzTezKHze1mjYMu-GdcY1dA?width=935&amp;height=124&amp;cropmode=none" alt=""></p>
-<p>打开shell.php发现成功写入<code>&lt;?php phpinfo(); ?&gt;</code> 并解析成功<br><img src="https://k9xnvw.sn.files.1drv.com/y4mA1SrTXYGLV_p2xj1l9ppGgrmV04wk5CzFXZKKS0bCBRpZ3bqOgx0MLzAh9CFDLE5iBpFNimEAYrmivr5CsAJ0BNPjc-7y9D2J40kZgEAlMm2PfkMlecvpqu4wrEkC9GrKDhIrZSUnSmdwvsMZ0Ni-zHR7xdZq1ybodjt2X5BSAqLXKITsplUTtC9mmDY8g36hJ6mH0eed88y35_G578GJg?width=935&amp;height=687&amp;cropmode=none" alt=""></p>
+<p>将其传入漏洞站点<br><img src="https://hnxpvw.sn.files.1drv.com/y4mlAB2rR0Ly2OWnhfqw81vPjM3_N7Rplaz4pdwN3P-ZOjhYUqzyHEb7LYHa_WpEY6MugjTJlF5Sc6eKN8XOWEhoCgSu5aqweIoM7cYcOs-lNG1w3jtWSiQq9-cJ8-R4iIg2g0VD2UdiuiZUCsT1wUyuzW_-ksPd3VoEuHVD1SrGuPpbCI1LVDZlWhk1Ttv_bAIzTezKHze1mjYMu-GdcY1dA?width=935&height=124&cropmode=none" alt></p>
+<p>打开shell.php发现成功写入<code>&lt;?php phpinfo(); ?&gt;</code> 并解析成功<br><img src="https://k9xnvw.sn.files.1drv.com/y4mA1SrTXYGLV_p2xj1l9ppGgrmV04wk5CzFXZKKS0bCBRpZ3bqOgx0MLzAh9CFDLE5iBpFNimEAYrmivr5CsAJ0BNPjc-7y9D2J40kZgEAlMm2PfkMlecvpqu4wrEkC9GrKDhIrZSUnSmdwvsMZ0Ni-zHR7xdZq1ybodjt2X5BSAqLXKITsplUTtC9mmDY8g36hJ6mH0eed88y35_G578GJg?width=935&height=687&cropmode=none" alt></p>
 <hr>
 
       
@@ -570,7 +575,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;">
     <div>扫码加微信</div>
 </div>
 
@@ -588,14 +593,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -730,9 +735,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <a href="/"><img class="site-author-image" itemprop="image"
-                src="/uploads/images/head.png"
-                alt="AbelChe" /></a>
+              <a href="/"><img class="site-author-image" itemprop="image" src="/uploads/images/head.png" alt="AbelChe"></a>
             
               <a href="/"><p class="site-author-name" itemprop="name">AbelChe</p></a>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -745,7 +748,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -767,7 +770,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -836,7 +839,7 @@
           
             <div class="cc-license motion-element" itemprop="license">
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
               </a>
             </div>
           
@@ -893,7 +896,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是序列化-amp-反序列化"><span class="nav-number">1.</span> <span class="nav-text">什么是序列化&amp;反序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的方法"><span class="nav-number">2.</span> <span class="nav-text">PHP序列化的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的作用"><span class="nav-number">3.</span> <span class="nav-text">PHP序列化的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象序列化使用情况："><span class="nav-number">3.1.</span> <span class="nav-text">对象序列化使用情况：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实例说明"><span class="nav-number">4.</span> <span class="nav-text">实例说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unserialize-反序列化函数漏洞"><span class="nav-number">5.</span> <span class="nav-text">unserialize()反序列化函数漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#魔术方法（Magic-function）"><span class="nav-number">5.1.</span> <span class="nav-text">魔术方法（Magic function）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unserialize-调用-wakeup-魔术方法"><span class="nav-number">5.2.</span> <span class="nav-text">unserialize()调用__wakeup()魔术方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用unserialize-函数漏洞"><span class="nav-number">5.3.</span> <span class="nav-text">利用unserialize()函数漏洞</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是序列化-amp-反序列化"><span class="nav-number">1.</span> <span class="nav-text">什么是序列化&amp;反序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的方法"><span class="nav-number">2.</span> <span class="nav-text">PHP序列化的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP序列化的作用"><span class="nav-number">3.</span> <span class="nav-text">PHP序列化的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对象序列化使用情况"><span class="nav-number">3.1.</span> <span class="nav-text">对象序列化使用情况:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unserialize-反序列化函数漏洞"><span class="nav-number">4.</span> <span class="nav-text">unserialize()反序列化函数漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#魔术方法-Magic-function"><span class="nav-number">4.1.</span> <span class="nav-text">魔术方法(Magic function)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unserialize-调用-wakeup-魔术方法"><span class="nav-number">4.2.</span> <span class="nav-text">unserialize()调用__wakeup()魔术方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用unserialize-函数漏洞"><span class="nav-number">4.3.</span> <span class="nav-text">利用unserialize()函数漏洞</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -927,7 +930,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">40.4k</span>
+    <span title="Site words total count">41.1k</span>
   
 </div>
 

@@ -6,10 +6,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -27,8 +27,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -81,9 +81,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/180x180.png?v=5.1.4">
@@ -103,32 +103,32 @@
 
 
 
-  <meta name="keywords" content="Bugku,MD5," />
+  <meta name="keywords" content="Bugku,MD5,">
 
 
 
 
 
-  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="AbelChe's Blog" type="application/atom+xml">
 
 
 
 
 
 
-<meta name="description" content="题目地址：http://120.24.86.145:9009/md5.php md5 collision（MD5碰撞）：本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
+<meta name="description" content="题目地址:http://120.24.86.145:9009/md5.php md5 collision(MD5碰撞):本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
 <meta name="keywords" content="Bugku,MD5">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-Bugku-md5 collision(NUPT_CTF)">
 <meta property="og:url" content="http://AbelChe.com/2018/08/09/Writeup/bugkuWeb/WP-Bugku-md5-collision-NUPT-CTF/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="题目地址：http://120.24.86.145:9009/md5.php md5 collision（MD5碰撞）：本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
+<meta property="og:description" content="题目地址:http://120.24.86.145:9009/md5.php md5 collision(MD5碰撞):本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/DkQe2JO.png">
-<meta property="og:updated_time" content="2018-08-09T06:45:24.000Z">
+<meta property="og:updated_time" content="2019-08-15T11:02:50.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-Bugku-md5 collision(NUPT_CTF)">
-<meta name="twitter:description" content="题目地址：http://120.24.86.145:9009/md5.php md5 collision（MD5碰撞）：本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
+<meta name="twitter:description" content="题目地址:http://120.24.86.145:9009/md5.php md5 collision(MD5碰撞):本段转自https://www.jianshu.com/p/2791e2fdadfd  MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。">
 <meta name="twitter:image" content="https://i.imgur.com/DkQe2JO.png">
 
 
@@ -159,7 +159,7 @@
 
 
 
-  <link rel="canonical" href="http://AbelChe.com/2018/08/09/Writeup/bugkuWeb/WP-Bugku-md5-collision-NUPT-CTF/"/>
+  <link rel="canonical" href="http://AbelChe.com/2018/08/09/Writeup/bugkuWeb/WP-Bugku-md5-collision-NUPT-CTF/">
 
 
 
@@ -193,7 +193,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">AbelChe's Blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -223,7 +223,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -233,7 +233,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
           </a>
@@ -243,7 +243,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -253,7 +253,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -263,7 +263,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -273,7 +273,7 @@
         <li class="menu-item menu-item-在线运行">
           <a href="/runcode/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br>
             
             在线运行
           </a>
@@ -283,7 +283,7 @@
         <li class="menu-item menu-item-友链">
           <a href="/friends/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-at"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-at"></i> <br>
             
             友链
           </a>
@@ -293,7 +293,7 @@
         <li class="menu-item menu-item-sitemap">
           <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
             站点地图
           </a>
@@ -306,7 +306,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -327,9 +327,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -341,7 +339,7 @@
   
 </nav>
 
-
+<link rel="manifest" href="/manifest.json">
 
  </div>
     </header>
@@ -370,7 +368,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AbelChe">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/images/head.png">
     </span>
 
@@ -411,14 +409,14 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-09T14:45:24+08:00">
-                2018-08-09
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-15T19:02:50+08:00">
+                2019-08-15
               </time>
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -461,7 +459,7 @@
           
             <span class="post-meta-divider">|</span>
             <span class="page-pv"><i class="fa fa-file-o"></i> 阅读数
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -513,14 +511,16 @@
       
 
       
-        <p>题目地址：<a href="http://120.24.86.145:9009/md5.php" target="_blank" rel="noopener">http://120.24.86.145:9009/md5.php</a></p>
-<p>md5 collision（MD5碰撞）：本段转自<a href="https://www.jianshu.com/p/2791e2fdadfd" target="_blank" rel="noopener">https://www.jianshu.com/p/2791e2fdadfd</a></p>
+        <p>题目地址:<a href="http://120.24.86.145:9009/md5.php" target="_blank" rel="noopener">http://120.24.86.145:9009/md5.php</a></p>
+<p>md5 collision(MD5碰撞):本段转自<a href="https://www.jianshu.com/p/2791e2fdadfd" target="_blank" rel="noopener">https://www.jianshu.com/p/2791e2fdadfd</a></p>
 <ul>
 <li>MD5摘要算法可以从多个字节组成的串中计算出由32个字节构成的“特征串”，对于超过32字节的串来说，MD5计算得出的值必然是其一个子集，所以必然存在不同的串能够得出相同MD5值的情况，即碰撞。</li>
-<li>在PHP中的MD5中的0e的比较：PHP在处理哈希字符串时，会利用“！=”或“==”来对哈希值进行比较，它把每一个以“0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以“0E”开头的，那么PHP将会认为他们相同，都是0。</li>
+<li>在PHP中的MD5中的0e的比较:PHP在处理哈希字符串时，会利用“！=”或“==”来对哈希值进行比较，它把每一个以“0E”开头的哈希值都解释为0，所以如果两个不同的密码经过哈希以后，其哈希值都是以“0E”开头的，那么PHP将会认为他们相同，都是0。</li>
 </ul>
-<p>这里给出常用的0e开头的MD5：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">QNKCDZO</span><br><span class="line"><span class="number">0</span>e830400451993494058<span class="number">024219903391</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1184209335a</span><br><span class="line"><span class="number">0</span>e072485820392773389<span class="number">523109082030</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s532378020a</span><br><span class="line"><span class="number">0</span>e220463095855511507<span class="number">588041205815</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br></pre></td></tr></table></figure></p>
-<p>抓包测试得到flag{md5_collision_is_easy}<br><img src="https://i.imgur.com/DkQe2JO.png" alt=""></p>
+<p>这里给出常用的0e开头的MD5:</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">QNKCDZO</span><br><span class="line"><span class="number">0</span>e830400451993494058<span class="number">024219903391</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1184209335a</span><br><span class="line"><span class="number">0</span>e072485820392773389<span class="number">523109082030</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s155964671a</span><br><span class="line"><span class="number">0</span>e342768416822451524<span class="number">974117254469</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s532378020a</span><br><span class="line"><span class="number">0</span>e220463095855511507<span class="number">588041205815</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s214587387a</span><br><span class="line"><span class="number">0</span>e8482404488305379244<span class="number">65865611904</span></span><br><span class="line"></span><br><span class="line">s1502113478a</span><br><span class="line"><span class="number">0</span>e8615801632915612474<span class="number">04381396064</span></span><br><span class="line"></span><br><span class="line">s1091221200a</span><br><span class="line"><span class="number">0</span>e9406242178565615578<span class="number">16327384675</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s1885207154a</span><br><span class="line"><span class="number">0</span>e5093672134182067008<span class="number">42008763514</span></span><br><span class="line"></span><br><span class="line">s1836677006a</span><br><span class="line"><span class="number">0</span>e4810364908676611132<span class="number">60034900752</span></span><br><span class="line"></span><br><span class="line">s1665632922a</span><br><span class="line"><span class="number">0</span>e731198061491163073<span class="number">197128363787</span></span><br><span class="line"></span><br><span class="line">s878926199a</span><br><span class="line"><span class="number">0</span>e5459932745177090343<span class="number">28855841020</span></span><br></pre></td></tr></table></figure>
+
+<p>抓包测试得到flag{md5_collision_is_easy}<br><img src="https://i.imgur.com/DkQe2JO.png" alt></p>
 <hr>
 
       
@@ -532,7 +532,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/images/wechatQR_2.JPG" alt="AbelChe wechat" style="width: 200px; max-width: 100%;">
     <div>扫码加微信</div>
 </div>
 
@@ -550,14 +550,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="AbelChe 微信支付">
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.png" alt="AbelChe 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -683,9 +683,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <a href="/"><img class="site-author-image" itemprop="image"
-                src="/uploads/images/head.png"
-                alt="AbelChe" /></a>
+              <a href="/"><img class="site-author-image" itemprop="image" src="/uploads/images/head.png" alt="AbelChe"></a>
             
               <a href="/"><p class="site-author-name" itemprop="name">AbelChe</p></a>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -698,7 +696,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -720,7 +718,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -789,7 +787,7 @@
           
             <div class="cc-license motion-element" itemprop="license">
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
               </a>
             </div>
           
@@ -864,7 +862,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">40.4k</span>
+    <span title="Site words total count">41.1k</span>
   
 </div>
 
