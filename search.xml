@@ -36,7 +36,7 @@
   <entry>
     <title><![CDATA[WP-CSAW CTF Qualification Round 2016 wtf.sh]]></title>
     <url>%2F2019%2F08%2F22%2FWriteup%2FWP-CSAW-CTF-Qualification-Round-2016-wtf-sh%2F</url>
-    <content type="text"><![CDATA[在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag1 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的 在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码 明显这不是一个常见的 php, python, java, go 等语言的 web 应用。结合题目wtf.sh, 这是一个linux系统上靠shell脚本跑起来的web应用 搜索flag找到如下代码 html解码下得到如下代码: 12345678910111213141516171819202122$ # vim: ft=wtf$ source user_functions.sh&lt;html&gt;&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="/css/std.css" &gt;&lt;/head&gt;$ if contains 'user' $&#123;!URL_PARAMS[@]&#125; &amp;&amp; file_exists "users/$&#123;URL_PARAMS['user']&#125;"$ then$ local username=$(head -n 1 users/$&#123;URL_PARAMS['user']&#125;);$ echo "&lt;h3&gt;$&#123;username&#125;'s posts:&lt;/h3&gt;";$ echo "&lt;ol&gt;";$ get_users_posts "$&#123;username&#125;" | while read -r post; do$ post_slug=$(awk -F/ '&#123;print $2 "#" $3&#125;' &lt;&lt;&lt; "$&#123;post&#125;");$ echo "&lt;li&gt;&lt;a href=\"/post.wtf?post=$&#123;post_slug&#125;\"&gt;$(nth_line 2 "$&#123;post&#125;" | htmlentities)&lt;/a&gt;&lt;/li&gt;";$ done $ echo "&lt;/ol&gt;";$ if is_logged_in &amp;&amp; [[ "$&#123;COOKIES['USERNAME']&#125;" = 'admin' ]] &amp;&amp; [[ $&#123;username&#125; = 'admin' ]]$ then$ get_flag1$ fi$ fi&lt;/html&gt; 发现只要以admin身份登录就能够得到flag1 以admin身份登录继续扫目录，发现?post=../users目录下存放了user的token和加密的密码]]></content>
+    <content type="text"><![CDATA[在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的 在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码 明显这不是一个常见的 php, python, java, go 等语言的 web 应用。结合题目wtf.sh, 这是一个shell脚本跑起来的web应用 搜索flag找到如下代码 html解码下得到如下代码: 12345678910111213141516171819202122$ # vim: ft=wtf$ source user_functions.sh&lt;html&gt;&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="/css/std.css" &gt;&lt;/head&gt;$ if contains 'user' $&#123;!URL_PARAMS[@]&#125; &amp;&amp; file_exists "users/$&#123;URL_PARAMS['user']&#125;"$ then$ local username=$(head -n 1 users/$&#123;URL_PARAMS['user']&#125;);$ echo "&lt;h3&gt;$&#123;username&#125;'s posts:&lt;/h3&gt;";$ echo "&lt;ol&gt;";$ get_users_posts "$&#123;username&#125;" | while read -r post; do$ post_slug=$(awk -F/ '&#123;print $2 "#" $3&#125;' &lt;&lt;&lt; "$&#123;post&#125;");$ echo "&lt;li&gt;&lt;a href=\"/post.wtf?post=$&#123;post_slug&#125;\"&gt;$(nth_line 2 "$&#123;post&#125;" | htmlentities)&lt;/a&gt;&lt;/li&gt;";$ done $ echo "&lt;/ol&gt;";$ if is_logged_in &amp;&amp; [[ "$&#123;COOKIES['USERNAME']&#125;" = 'admin' ]] &amp;&amp; [[ $&#123;username&#125; = 'admin' ]]$ then$ get_flag1$ fi$ fi&lt;/html&gt; 发现只要以admin身份登录就能够得到flag1 以admin身份登录继续扫目录，发现?post=../users目录下存放了user的token和加密的密码 修改 COOKIE 为 admin 的信息，得到第一部分 flag 第二部分 flag]]></content>
       <categories>
         <category>WriteUp</category>
       </categories>
@@ -678,8 +678,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>SQL</tag>
         <tag>笔记</tag>
+        <tag>SQL</tag>
         <tag>Web</tag>
       </tags>
   </entry>
@@ -704,8 +704,8 @@
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>SQL</tag>
         <tag>笔记</tag>
+        <tag>SQL</tag>
         <tag>Web</tag>
       </tags>
   </entry>

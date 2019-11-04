@@ -116,23 +116,24 @@
 
 
 
-<meta name="description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag1 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等">
+<meta name="description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等语">
 <meta name="keywords" content="神仙题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WP-CSAW CTF Qualification Round 2016 wtf.sh">
 <meta property="og:url" content="http://AbelChe.com/2019/08/22/Writeup/WP-CSAW-CTF-Qualification-Round-2016-wtf-sh/index.html">
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
-<meta property="og:description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag1 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等">
+<meta property="og:description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等语">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tnekvq.sn.files.1drv.com/y4mj9aRWimSeLPR569d0TDjc5XW_7l_P3BCzO8g6odRTrXcWVcCGd3_h1PzGebj9N6_Jwt9H-UH_mjvAysyo7Oh9YuFlg5j964ecINwfT8udKY5GMmw5k4GIEzWg5cd4E9dIlHJAOw1WXAKbEnDPTqjvK1VqjdA4MTQKL9jGhp6FHq4_nMsDImZkVKm_ls1n-eRPX3Gx-MqSi8R8pdjeYorpg?width=1044&height=472&cropmode=none">
 <meta property="og:image" content="https://tnejvq.sn.files.1drv.com/y4mTD1IGSEi0da08UlfcL-bH5hkYBveDGwt2eoFSZbRov921-MsCesX-P3M1iApDbjtGKCheMf86zXBPU5tHQNBj0PX962m4ZmqfN3gMooagLtJi6zlDzrOnWH-EGALYAsBVdGZxnMu_v6PAW6kwXrD-Bp1EX0_latd2LxYyKJZAH4AvaBnU0VZYBOhM6PvbyS6hf-Yq9ygvOrjWgwZpKSVRw?width=644&height=140&cropmode=none">
 <meta property="og:image" content="https://tnewvq.sn.files.1drv.com/y4m71QcRTrxqArk8FRd6Hscd5GflS_1xjJxc2aen9jgVW1XoHFZ4vg4DX2QkN3ZQWRH0H4naJhnmcb8NmxocfjVtXiVnPJc21yCpLNgcCMkXx0tgkBeyYBL6nB1oDMbpjXTeEBdddXGGCxiCYW9wi35lUznH2ylo4brMFlFFv2NCb7U9CVmDL09WPHRquLBTu2cp1AZrKdQG2vk7iWjGdjbVg?width=1044&height=755&cropmode=none">
 <meta property="og:image" content="https://tnevvq.sn.files.1drv.com/y4m16PeAP-_6_woZPDYdgC9v5-CSTHebCb1GxkAehZW73XUyNwrFhEFkCrw09zpIzTDe4ajyc7e1TXkpF2v7GrRnJ_oZvqTSkx7VUYpyylVRlkqYRP7IUk5wtlG2Kw_nChTdSRCqfPPdMAuCWhXOOl_9NbNc0f1L5pff15KdExuhKADZqlMp7gjBmfwUiUxb9VtwyI538P4hjAtT4zoYSlvWw?width=1117&height=416&cropmode=none">
 <meta property="og:image" content="https://txeevq.sn.files.1drv.com/y4m-vmlSSl2kBoJcSiVroQD5BLlSql_A5TyWKn-kzPIu72SoWhW4f-_M9tAvHL64TQ-B31bSgcSxRngV2rLUh0Ha6QatXw-_rfLKK106n3C582kBswbHHzOihTjMLltSjraJsFv-8yWxyqIZ-vP6vopIgRcDXejiM3sR51M_csPHH09CjZ8Ls2EUBwK_r35UX8g8YL7ASuhEgMqEiV2zb3OhA?width=1846&height=839&cropmode=none">
-<meta property="og:updated_time" content="2019-08-22T11:12:51.587Z">
+<meta property="og:image" content="https://qdrzta.sn.files.1drv.com/y4mJ4NNSqk7HwuFE7tQLWz0vQdQQLbrSljNlMvnreUrwRZRZcvAdlYHoTfBTUD7FajMxoTks0AXbrjc7C9wAi9-vlypvYYmzOwX0Bs-uZhle4TLsSC9GmencUD14MOOaZsTGyY1SVedgNNEl5lbJbnvs-gEyVYMfaXrRUX5pcIJ9WQRiJEjXxOontojdnzKorx7NHHejh1y7pg0xbuKSeM5OQ?width=1777&height=1019&cropmode=none">
+<meta property="og:updated_time" content="2019-10-14T08:12:47.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WP-CSAW CTF Qualification Round 2016 wtf.sh">
-<meta name="twitter:description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag1 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等">
+<meta name="twitter:description" content="在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍 第一部分 flag 首先能看到这是一个有注册，登录的功能基本齐全的论坛系统 找源码随便点一个文章链接，可以看到是通过参数post选择文章的  在post参数身上进行测试，程序对post的值过滤不严，有目录穿越漏洞，访问post.wtf?post=../能够读取到源码  明显这不是一个常见的 php, python, java, go 等语">
 <meta name="twitter:image" content="https://tnekvq.sn.files.1drv.com/y4mj9aRWimSeLPR569d0TDjc5XW_7l_P3BCzO8g6odRTrXcWVcCGd3_h1PzGebj9N6_Jwt9H-UH_mjvAysyo7Oh9YuFlg5j964ecINwfT8udKY5GMmw5k4GIEzWg5cd4E9dIlHJAOw1WXAKbEnDPTqjvK1VqjdA4MTQKL9jGhp6FHq4_nMsDImZkVKm_ls1n-eRPX3Gx-MqSi8R8pdjeYorpg?width=1044&height=472&cropmode=none">
 
 
@@ -413,8 +414,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-22T19:12:51+08:00">
-                2019-08-22
+              <time title="更新于" itemprop="dateModified" datetime="2019-10-14T16:12:47+08:00">
+                2019-10-14
               </time>
             
           </span>
@@ -478,7 +479,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  335 字
+                  351 字
                 </span>
               
 
@@ -516,13 +517,13 @@
 
       
         <p>在XCTF上刷题，刷到了这道神仙题，顺着别人的wp做了一遍</p>
-<h1 id="第一部分-flag1"><a href="#第一部分-flag1" class="headerlink" title="第一部分 flag1"></a>第一部分 flag1</h1><p><img src="https://tnekvq.sn.files.1drv.com/y4mj9aRWimSeLPR569d0TDjc5XW_7l_P3BCzO8g6odRTrXcWVcCGd3_h1PzGebj9N6_Jwt9H-UH_mjvAysyo7Oh9YuFlg5j964ecINwfT8udKY5GMmw5k4GIEzWg5cd4E9dIlHJAOw1WXAKbEnDPTqjvK1VqjdA4MTQKL9jGhp6FHq4_nMsDImZkVKm_ls1n-eRPX3Gx-MqSi8R8pdjeYorpg?width=1044&height=472&cropmode=none" alt></p>
+<h1 id="第一部分-flag"><a href="#第一部分-flag" class="headerlink" title="第一部分 flag"></a>第一部分 flag</h1><p><img src="https://tnekvq.sn.files.1drv.com/y4mj9aRWimSeLPR569d0TDjc5XW_7l_P3BCzO8g6odRTrXcWVcCGd3_h1PzGebj9N6_Jwt9H-UH_mjvAysyo7Oh9YuFlg5j964ecINwfT8udKY5GMmw5k4GIEzWg5cd4E9dIlHJAOw1WXAKbEnDPTqjvK1VqjdA4MTQKL9jGhp6FHq4_nMsDImZkVKm_ls1n-eRPX3Gx-MqSi8R8pdjeYorpg?width=1044&height=472&cropmode=none" alt></p>
 <p>首先能看到这是一个有注册，登录的功能基本齐全的论坛系统</p>
 <h2 id="找源码"><a href="#找源码" class="headerlink" title="找源码"></a>找源码</h2><p>随便点一个文章链接，可以看到是通过参数<code>post</code>选择文章的</p>
 <p><img src="https://tnejvq.sn.files.1drv.com/y4mTD1IGSEi0da08UlfcL-bH5hkYBveDGwt2eoFSZbRov921-MsCesX-P3M1iApDbjtGKCheMf86zXBPU5tHQNBj0PX962m4ZmqfN3gMooagLtJi6zlDzrOnWH-EGALYAsBVdGZxnMu_v6PAW6kwXrD-Bp1EX0_latd2LxYyKJZAH4AvaBnU0VZYBOhM6PvbyS6hf-Yq9ygvOrjWgwZpKSVRw?width=644&height=140&cropmode=none" alt></p>
 <p>在<code>post</code>参数身上进行测试，程序对<code>post</code>的值过滤不严，有目录穿越漏洞，访问<code>post.wtf?post=../</code>能够读取到源码</p>
 <p><img src="https://tnewvq.sn.files.1drv.com/y4m71QcRTrxqArk8FRd6Hscd5GflS_1xjJxc2aen9jgVW1XoHFZ4vg4DX2QkN3ZQWRH0H4naJhnmcb8NmxocfjVtXiVnPJc21yCpLNgcCMkXx0tgkBeyYBL6nB1oDMbpjXTeEBdddXGGCxiCYW9wi35lUznH2ylo4brMFlFFv2NCb7U9CVmDL09WPHRquLBTu2cp1AZrKdQG2vk7iWjGdjbVg?width=1044&height=755&cropmode=none" alt></p>
-<p>明显这不是一个常见的 php, python, java, go 等语言的 web 应用。结合题目wtf.sh, 这是一个linux系统上靠shell脚本跑起来的web应用</p>
+<p>明显这不是一个常见的 php, python, java, go 等语言的 web 应用。结合题目wtf.sh, 这是一个shell脚本跑起来的web应用</p>
 <p>搜索flag找到如下代码</p>
 <p><img src="https://tnevvq.sn.files.1drv.com/y4m16PeAP-_6_woZPDYdgC9v5-CSTHebCb1GxkAehZW73XUyNwrFhEFkCrw09zpIzTDe4ajyc7e1TXkpF2v7GrRnJ_oZvqTSkx7VUYpyylVRlkqYRP7IUk5wtlG2Kw_nChTdSRCqfPPdMAuCWhXOOl_9NbNc0f1L5pff15KdExuhKADZqlMp7gjBmfwUiUxb9VtwyI538P4hjAtT4zoYSlvWw?width=1117&height=416&cropmode=none" alt></p>
 <p>html解码下得到如下代码:</p>
@@ -531,7 +532,9 @@
 <p>发现只要以admin身份登录就能够得到flag1</p>
 <h2 id="以admin身份登录"><a href="#以admin身份登录" class="headerlink" title="以admin身份登录"></a>以admin身份登录</h2><p>继续扫目录，发现<code>?post=../users</code>目录下存放了user的token和加密的密码</p>
 <p><img src="https://txeevq.sn.files.1drv.com/y4m-vmlSSl2kBoJcSiVroQD5BLlSql_A5TyWKn-kzPIu72SoWhW4f-_M9tAvHL64TQ-B31bSgcSxRngV2rLUh0Ha6QatXw-_rfLKK106n3C582kBswbHHzOihTjMLltSjraJsFv-8yWxyqIZ-vP6vopIgRcDXejiM3sR51M_csPHH09CjZ8Ls2EUBwK_r35UX8g8YL7ASuhEgMqEiV2zb3OhA?width=1846&height=839&cropmode=none" alt></p>
-
+<p>修改 COOKIE 为 admin 的信息，得到第一部分 flag</p>
+<p><img src="https://qdrzta.sn.files.1drv.com/y4mJ4NNSqk7HwuFE7tQLWz0vQdQQLbrSljNlMvnreUrwRZRZcvAdlYHoTfBTUD7FajMxoTks0AXbrjc7C9wAi9-vlypvYYmzOwX0Bs-uZhle4TLsSC9GmencUD14MOOaZsTGyY1SVedgNNEl5lbJbnvs-gEyVYMfaXrRUX5pcIJ9WQRiJEjXxOontojdnzKorx7NHHejh1y7pg0xbuKSeM5OQ?width=1777&height=1019&cropmode=none" alt></p>
+<h1 id="第二部分-flag"><a href="#第二部分-flag" class="headerlink" title="第二部分 flag"></a>第二部分 flag</h1>
       
     </div>
     
@@ -860,7 +863,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一部分-flag1"><span class="nav-number">1.</span> <span class="nav-text">第一部分 flag1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#找源码"><span class="nav-number">1.1.</span> <span class="nav-text">找源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以admin身份登录"><span class="nav-number">1.2.</span> <span class="nav-text">以admin身份登录</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一部分-flag"><span class="nav-number">1.</span> <span class="nav-text">第一部分 flag</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#找源码"><span class="nav-number">1.1.</span> <span class="nav-text">找源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以admin身份登录"><span class="nav-number">1.2.</span> <span class="nav-text">以admin身份登录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二部分-flag"><span class="nav-number">2.</span> <span class="nav-text">第二部分 flag</span></a></li></ol></div>
             
 
           </div>
