@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[大菜鸡的填坑日记]]></title>
+    <url>%2F2019%2F11%2F04%2F%E5%A4%A7%E8%8F%9C%E9%B8%A1%E7%9A%84%E5%A1%AB%E5%9D%91%E6%97%A5%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[LAMP 环境下 php 的 session 无法保存，无法读取 更新时间 2019-11-04 相关环境 centos 7 PHP 7.1.22 坑の描述 项目登陆功能使用到session，但是session无法生成，session_start();执行后没有生成 session 文件。 php.ini配置 成功执行到session_start() 没有 session 文件 填坑 linux上的环境，出了问题猜测是权限的问题，查看下/var/lib/php/session的文件夹权限 想到前阵为了测试修改了 apache 的启动用户 于是将 apache 的启动用户修改回 apache，重启服务后问题解决]]></content>
+      <categories>
+        <category>坑</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PWN刷题记录-Bugku]]></title>
     <url>%2F2019%2F10%2F08%2FPWN%E7%88%B7%E7%88%B7%E7%9A%84%E6%97%A5%E5%B8%B8%2FPWN%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95-Bugku%2F</url>
     <content type="text"></content>
@@ -102,9 +114,9 @@
         <category>Learning</category>
       </categories>
       <tags>
+        <tag>web</tag>
         <tag>SSTI</tag>
         <tag>服务端模板注入</tag>
-        <tag>web</tag>
         <tag>python 沙箱逃逸</tag>
       </tags>
   </entry>
@@ -478,8 +490,8 @@
       </categories>
       <tags>
         <tag>php</tag>
-        <tag>反序列化</tag>
         <tag>web</tag>
+        <tag>反序列化</tag>
         <tag>unserialize</tag>
         <tag>Bugku</tag>
       </tags>
