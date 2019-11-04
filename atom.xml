@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://AbelChe.com/"/>
-  <updated>2019-11-04T06:29:48.215Z</updated>
+  <updated>2019-11-04T06:41:52.531Z</updated>
   <id>http://AbelChe.com/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="http://AbelChe.com/2019/11/04/%E5%A4%A7%E8%8F%9C%E9%B8%A1%E7%9A%84%E5%A1%AB%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
     <id>http://AbelChe.com/2019/11/04/大菜鸡的填坑日记/</id>
     <published>2019-11-04T04:57:28.000Z</published>
-    <updated>2019-11-04T06:29:48.215Z</updated>
+    <updated>2019-11-04T06:41:52.531Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="LAMP-环境下-php-的-session-无法保存，无法读取"><a href="#LAMP-环境下-php-的-session-无法保存，无法读取" class="headerlink" title="LAMP 环境下 php 的 session 无法保存，无法读取"></a>LAMP 环境下 php 的 session 无法保存，无法读取</h1><ul><li><p>更新时间</p><ul><li>2019-11-04</li></ul></li><li><p>相关环境</p><ul><li>centos 7</li><li>PHP 7.1.22</li></ul></li><li><p>坑の描述</p><blockquote><p>项目登陆功能使用到session，但是session无法生成，<code>session_start();</code>执行后没有生成 session 文件。</p><ul><li>php.ini配置</li></ul><p><img src="https://prhpha.sn.files.1drv.com/y4mMLFaKr__JB8WHbjPq_hKbDeAiqod3sxuu8OBpVZi7rqzgnt_Sj4X4pjs5atTwynhuRp8IvckL8ONWyyXUeTtZd_VDsu1PX-4U5X6PLE1HyKcRiRoZlQpA31vMdGWgedX1AKFaM9K8FUImxBj56wiZFi6lrsFhOK3PD-had7Jlb4R91NOp5T3xON1eDR4mp2KGjxG_eR0B_mmCGuJaFv3AQ?width=673&height=148&cropmode=none" alt></p><ul><li>成功执行到<code>session_start()</code></li></ul><p><img src="https://zxmqbw.sn.files.1drv.com/y4mTcdMyXY1Fr6Ue7bjtzJIe0AUXq3CGTHQerodv-ZyLfK51S59qelf0y6fN9nO9tRa11qSLXpA9eCG41GXGLaWttq6Am1A8t-TPg0bARrJshqRHeVLU1xEHPBHhVJRnX3dh0FuQB15qLjl2sFW3wdZ8efIOxmyczMmSa2YckmAAmC-HlY71eyARuz8FmlGuV8g2BeoscDz9cvUxL_uRdJk3g?width=510&height=295&cropmode=none" alt></p><ul><li>没有 session 文件</li></ul><p><img src="https://mvpcza.sn.files.1drv.com/y4mmiP_vk8jGH2CeQNG-xgll8uiY1pIqAajgxStHYA4r3yA9UY7O3okICCUM7ioM5rYR2ZuKbfmJZvZR-ctIjzo93C1osNc5SUTLUUrh-KySB6S_ohjNeg9BBjv4i06z71C3xysYDKnTt19wVkkUuLX1Ahd3qmlv8FOCOwGxxQCCNuDRqdVQ_8LaeoHeD5n12ryqRqYOX1RqbUEvVi90B9uxg?width=335&height=79&cropmode=none" alt></p></blockquote></li><li><p>填坑</p><ol><li><p>linux上的环境，出了问题猜测是权限的问题，查看下<code>/var/lib/php/session</code>的文件夹权限</p><p><img src="https://cqtb4q.sn.files.1drv.com/y4mvj6fUPDrmALj7gG4RzZ1WqB8whVIcKqz6zmOjg3AbwSEqUjC7o4TnY3Ed3pwryFqwb-yb3xLCxCMHuqoI2ZnEf6i1WFXgb5bHebS3nk_jzi_wXcEa9T-c974GNYfnVyXdZ2NX_C0OTj2rvU6oCLMnT65uMJB2WmJoe9oziMO8nWSkqY4UZJeF7_nXNL6Xn921UlmABg2qheRZPAzC4iSwQ?width=475&height=121&cropmode=none" alt></p></li><li><p>想到前阵为了测试修改了 apache 的启动用户</p></li><li><p>于是将 apache 的启动用户修改回 apache，重启服务后问题解决</p><p><img src="https://2wg4yq.sn.files.1drv.com/y4mNaY6-yuaxeVFGI2I7FYoUjQiPnZmwpdSFpw6wz7anlJNA7evkcp_b-KjTyrDpig2acbaWsNEDvP1KnyEX-mAhyyqNSat4X0nC3G8kgXgpJCAETFJzuFGUORBPImLflaXdlcVXO-s38sgW8UrVvJPLwYX79bY9e81nLLWVomdDr3883EOWxQ-LngZzEHC_7DzMNDYi9RXFSkBWVMIRkOe5Q?width=659&height=175&cropmode=none" alt></p></li></ol></li></ul>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="LAMP-环境下-php-的-session-无法保存，无法读取"><a href="#LAMP-环境下-php-的-session-无法保存，无法读取" class="headerlink" title="LAMP 环境下 php 的 session 无法保存，无法读取"></a>LAMP 环境下 php 的 session 无法保存，无法读取</h1><ul><li><p>更新时间</p><ul><li>2019-11-04</li></ul></li><li><p>相关环境</p><ul><li>centos 7</li><li>PHP 7.1.22</li></ul></li><li><p>坑の描述</p><blockquote><p>项目登陆功能使用到session，但是session无法生成，<code>session_start();</code>执行后没有生成 session 文件。</p><ul><li>php.ini配置</li></ul><p><img src="https://prhpha.sn.files.1drv.com/y4mMLFaKr__JB8WHbjPq_hKbDeAiqod3sxuu8OBpVZi7rqzgnt_Sj4X4pjs5atTwynhuRp8IvckL8ONWyyXUeTtZd_VDsu1PX-4U5X6PLE1HyKcRiRoZlQpA31vMdGWgedX1AKFaM9K8FUImxBj56wiZFi6lrsFhOK3PD-had7Jlb4R91NOp5T3xON1eDR4mp2KGjxG_eR0B_mmCGuJaFv3AQ?width=673&height=148&cropmode=none" alt></p><ul><li>成功执行到<code>session_start()</code></li></ul><p><img src="https://zxmqbw.sn.files.1drv.com/y4mTcdMyXY1Fr6Ue7bjtzJIe0AUXq3CGTHQerodv-ZyLfK51S59qelf0y6fN9nO9tRa11qSLXpA9eCG41GXGLaWttq6Am1A8t-TPg0bARrJshqRHeVLU1xEHPBHhVJRnX3dh0FuQB15qLjl2sFW3wdZ8efIOxmyczMmSa2YckmAAmC-HlY71eyARuz8FmlGuV8g2BeoscDz9cvUxL_uRdJk3g?width=510&height=295&cropmode=none" alt></p><ul><li>没有 session 文件</li></ul><p><img src="https://mvpcza.sn.files.1drv.com/y4mmiP_vk8jGH2CeQNG-xgll8uiY1pIqAajgxStHYA4r3yA9UY7O3okICCUM7ioM5rYR2ZuKbfmJZvZR-ctIjzo93C1osNc5SUTLUUrh-KySB6S_ohjNeg9BBjv4i06z71C3xysYDKnTt19wVkkUuLX1Ahd3qmlv8FOCOwGxxQCCNuDRqdVQ_8LaeoHeD5n12ryqRqYOX1RqbUEvVi90B9uxg?width=335&height=79&cropmode=none" alt></p></blockquote></li><li><p>填坑</p><ol><li><p>linux上的环境，出了问题猜测是权限的问题，查看下<code>/var/lib/php/session</code>的文件夹权限</p><p><img src="https://cqtb4q.sn.files.1drv.com/y4mvj6fUPDrmALj7gG4RzZ1WqB8whVIcKqz6zmOjg3AbwSEqUjC7o4TnY3Ed3pwryFqwb-yb3xLCxCMHuqoI2ZnEf6i1WFXgb5bHebS3nk_jzi_wXcEa9T-c974GNYfnVyXdZ2NX_C0OTj2rvU6oCLMnT65uMJB2WmJoe9oziMO8nWSkqY4UZJeF7_nXNL6Xn921UlmABg2qheRZPAzC4iSwQ?width=475&height=121&cropmode=none" alt></p></li><li><p>想到前阵为了测试修改了 apache 的启动用户</p></li><li><p>于是将 apache 的启动用户修改回 apache，重启服务后问题解决</p><p><img src="https://2wg4yq.sn.files.1drv.com/y4mNaY6-yuaxeVFGI2I7FYoUjQiPnZmwpdSFpw6wz7anlJNA7evkcp_b-KjTyrDpig2acbaWsNEDvP1KnyEX-mAhyyqNSat4X0nC3G8kgXgpJCAETFJzuFGUORBPImLflaXdlcVXO-s38sgW8UrVvJPLwYX79bY9e81nLLWVomdDr3883EOWxQ-LngZzEHC_7DzMNDYi9RXFSkBWVMIRkOe5Q?width=659&height=175&cropmode=none" alt></p></li></ol></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;LAMP-环境下-php-的-session-无法保存，无法读取&quot;&gt;&lt;a href=&quot;#LAMP-环境下-php-的-session-无法保存，无法读取&quot; class=&quot;headerlink&quot; title=&quot;LAMP 环境下 php 的 session 无法保存，
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;h1 id=&quot;LAMP-环境下-php-的-session-无法保存，无法读取&quot;&gt;&lt;a href=&quot;#LAMP-环境下-php-的-session-无法保存，无法读取&quot; class=&quot;headerlink&quot; title=&quot;LAMP 环境下 
       
     
     </summary>
