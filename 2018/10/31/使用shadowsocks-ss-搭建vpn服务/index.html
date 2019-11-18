@@ -539,15 +539,15 @@
 <p>配置完成，右键任务栏的小飞机图标，选择启动系统代理，就能从设备上翻墙了</p>
 <h2 id="使用-GOOGLE-BBR-加速-可选"><a href="#使用-GOOGLE-BBR-加速-可选" class="headerlink" title="使用 GOOGLE BBR 加速(可选)"></a>使用 GOOGLE BBR 加速(可选)</h2><ol>
 <li><p>修改系统变量并保存生效</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"net.core.default_qdisc=fq"</span> <span class="meta">&gt;&gt; </span>/etc/sysctl.conf</span><br><span class="line">echo <span class="string">"net.ipv4.tcp_congestion_control=bbr"</span> <span class="meta">&gt;&gt; </span>/etc/sysctl.conf</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">"net.core.default_qdisc=fq"</span> &gt;&gt; <span class="string">/etc/sysctl.conf</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"net.ipv4.tcp_congestion_control=bbr"</span> &gt;&gt; <span class="string">/etc/sysctl.conf</span></span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看内核是否开启 BBR</p>
 <p>如下显示即为开启</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sysctl <span class="built_in">net</span>.ipv4.tcp_available_congestion_control</span><br><span class="line"><span class="built_in">net</span>.ipv4.tcp_available_congestion_control = bbr cubic reno</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sysctl net.ipv4.tcp_available_congestion_control</span></span><br><span class="line"><span class="attr">net.ipv4.tcp_available_congestion_control</span> = bbr cubic re<span class="literal">no</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看BBR是否启动</p>
 <p>如下显示即为启动</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># lsmod | grep bbr</span><br><span class="line">tcp_bbr                <span class="number">20480</span>  <span class="number">8</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># lsmod | grep bbr</span></span><br><span class="line"><span class="string">tcp_bbr</span>                <span class="number">20480</span>  <span class="number">8</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
@@ -558,7 +558,7 @@
 </ul>
 <p>重启服务器</p>
 <p><code>lsmod | grep bbr</code>查看bbr状态</p>
-<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ./shadowsocks-all.sh uninstall</span></span><br></pre></td></tr></table></figure>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># ./shadowsocks-all.sh uninstall</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="服务器无法连接"><a href="#服务器无法连接" class="headerlink" title="服务器无法连接"></a>服务器无法连接</h2><blockquote>
 <p>Vultr 换服务器就更换 IP ，所以 IP 是循环使用的<br>可能你的服务器就刚好换到被中国墙了的 IP 或者一段时间的使用后你的 IP 被墙了<br>这都很正常，解决方法:<br>把你的服务器删了，重新选择一次就换 IP 了<br>要是还是被墙，那么推荐你去这里逛逛:<a href="http://www.cwl.gov.cn/" target="_blank" rel="noopener">|`传送门``|</a></p>
@@ -748,7 +748,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -770,7 +770,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -930,7 +930,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

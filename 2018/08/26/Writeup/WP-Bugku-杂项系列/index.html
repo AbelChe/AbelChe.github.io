@@ -582,7 +582,7 @@
 <h1 id="隐写2"><a href="#隐写2" class="headerlink" title="隐写2"></a>隐写2</h1><p>题目地址<a href="http://ctf.bugku.com/files/af49803469dfdabb80acf562f9381335/Welcome_.jpg" target="_blank" rel="noopener">http://ctf.bugku.com/files/af49803469dfdabb80acf562f9381335/Welcome_.jpg</a></p>
 <p>把这张傻子图扔到binwalk上<img src="https://i.imgur.com/4HfLLeH.png" alt><br>foremost分开，有一个压缩包，里面有一个加密的压缩包和一张图片<img src="https://i.imgur.com/E1VlWV1.png" alt><br>分析提示，三个数，一个国王，一个女神，一个骑士，又说斗地主……那不就….还是直接暴力破解吧</p>
 <p>先做个字典000~999,写了个垃圾的py(但是能用啊)</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">filename = <span class="string">"num.txt"</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> z <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">"a"</span>) <span class="keyword">as</span> file_obj:</span><br><span class="line">                file_obj.<span class="built_in">write</span>(str(x)+str(y)+str(z)+<span class="string">'\n'</span>)</span><br><span class="line">file_obj.<span class="built_in">close</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">filename</span> = <span class="string">"num.txt"</span></span><br><span class="line">for <span class="meta">x</span> <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">    for y <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">        for z <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">            with<span class="meta"> open(</span><span class="meta">filename</span>, <span class="string">"a"</span>) <span class="meta">as</span> file_obj:</span><br><span class="line">                file_obj.write(str(<span class="meta">x</span>)+str(y)+str(z)+<span class="string">'\n'</span>)</span><br><span class="line">file_obj<span class="meta">.close(</span>)</span><br></pre></td></tr></table></figure>
 
 <p>暴力破解，试了好多，终于找到一个速度快又好用的工具<a href="http://dl-t1.wmzhe.com/15/15056/Advanced%20Archive%20Password%20Recovery%204.54.exe" target="_blank" rel="noopener">Advanced Archive Password Recovery</a><br>密码871<img src="https://i.imgur.com/TBEoJSQ.png" alt></p>
 <p>拿到图片，notpad++打开得到f1@g{eTB1IEFyZSBhIGhAY2tlciE=}</p>
@@ -611,7 +611,7 @@
 <h1 id="想蹭网先解开密码"><a href="#想蹭网先解开密码" class="headerlink" title="想蹭网先解开密码"></a>想蹭网先解开密码</h1><p>题目地址<a href="http://ctf.bugku.com/files/77decd384a172b9a2294e6c6acfd48cc/wifi.cap" target="_blank" rel="noopener">http://ctf.bugku.com/files/77decd384a172b9a2294e6c6acfd48cc/wifi.cap</a></p>
 <p>文件是.cap，扔到wireshark里看一下，基本上都是802.11协议的包，WiFi认证过程重点在WPA的四次握手包，也就是eapol协议的包，过滤一下<img src="https://i.imgur.com/uhxthkv.png" alt></p>
 <p>aircrack-ng 进行破解<br>先生成字典</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">filename = <span class="string">"num.txt"</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> z <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">            <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">                <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">"a"</span>) <span class="keyword">as</span> file_obj:</span><br><span class="line">                    file_obj.<span class="built_in">write</span>(<span class="string">'1391040'</span>+str(x)+str(y)+str(z)+str(n)+<span class="string">'\n'</span>)</span><br><span class="line">file_obj.<span class="built_in">close</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">filename</span> = <span class="string">"num.txt"</span></span><br><span class="line">for <span class="meta">x</span> <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">    for y <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">        for z <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">            for n <span class="meta">in</span><span class="meta"> range(</span>10):</span><br><span class="line">                with<span class="meta"> open(</span><span class="meta">filename</span>, <span class="string">"a"</span>) <span class="meta">as</span> file_obj:</span><br><span class="line">                    file_obj.write(<span class="string">'1391040'</span>+str(<span class="meta">x</span>)+str(y)+str(z)+str(n)+<span class="string">'\n'</span>)</span><br><span class="line">file_obj<span class="meta">.close(</span>)</span><br></pre></td></tr></table></figure>
 
 <p><code>aircrack-ng -w num.txt wifi.cap</code>开始破解</p>
 <p><img src="https://i.imgur.com/Qk5Eju4.png" alt></p>
@@ -837,7 +837,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -859,7 +859,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1019,7 +1019,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 

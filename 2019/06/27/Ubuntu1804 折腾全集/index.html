@@ -520,7 +520,7 @@
 <p>如果你是 Nvidia 用户，那么恭喜你，你会发现重启电脑进入系统卡死在 logo 页面死活进不去系统<br>这是因为 linux 系统的 nauveau 开源显卡驱动的原因，解决方案如下:<br>引导时先选到进入系统的选项，按 e 键，找到倒数第二行的 quiet splash ，在后面添加 acpi_osi=linux nomodeset(splash后面别忘了加个空格哈) 再按 ctrl+x 引导即可进入系统。<br>进入系统后打开软件更新器，找到附加驱动，它会检测你合适的官方驱动，找一个稳定的安装就行了。</p>
 </blockquote>
 <h1 id="优化你的-Ubuntu"><a href="#优化你的-Ubuntu" class="headerlink" title="优化你的 Ubuntu"></a>优化你的 Ubuntu</h1><h2 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h2><p>国内用户第一件事一定要换源！换源！换源！<br>先备份一下默认源</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/apt/sources<span class="selector-class">.list</span> /etc/apt/sources<span class="selector-class">.list</span><span class="selector-class">.bak</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="regexp">/etc/</span>apt<span class="regexp">/sources.list /</span>etc<span class="regexp">/apt/</span>sources.list.bak</span><br></pre></td></tr></table></figure>
 
 <p>然后用下面的源替换掉原来的源</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">vi</span> /etc/apt/sources.<span class="keyword">list</span></span><br></pre></td></tr></table></figure>
@@ -750,7 +750,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">66</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -772,7 +772,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-count">83</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -932,7 +932,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">42.9k</span>
+    <span title="Site words total count">43.4k</span>
   
 </div>
 
