@@ -145,6 +145,32 @@
 </ol>
 </li>
 </ul>
+<h1 id="php-读取不到-tmp-目录下文件"><a href="#php-读取不到-tmp-目录下文件" class="headerlink" title="php 读取不到 /tmp/ 目录下文件"></a>php 读取不到 /tmp/ 目录下文件</h1><ul>
+<li>更新时间<ul>
+<li>2019-12-16</li>
+</ul>
+</li>
+<li>相关环境<ul>
+<li>centos8</li>
+<li>php</li>
+<li>apache</li>
+</ul>
+</li>
+<li>坑の描述<ul>
+<li>想用 php 读取 /tmp/ 下的文件，结果读取不到</li>
+</ul>
+</li>
+<li>填坑<ul>
+<li>systemd 服务会将的 /tmp/ 目录重定向到另外一个目录</li>
+<li>修改 /lib/systemd/system/httpd.service 下相关服务的配置文件</li>
+<li>PrivateTmp属性为false时，tmp目录不做映射，为true，会将tmp映射到一个新的目录</li>
+</ul>
+</li>
+<li>参考文章<ul>
+<li><a href="https://blog.csdn.net/esion23011/article/details/77885692" target="_blank" rel="noopener">https://blog.csdn.net/esion23011/article/details/77885692</a></li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>坑</category>
@@ -2483,8 +2509,8 @@ http://120.24.86.145:8010/?s=print_r(glob(&quot;*.*&quot;))</code></pre><p>scand
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
@@ -2680,8 +2706,8 @@ mysql中的information_schema 结构用来存储数据库系统信息
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
