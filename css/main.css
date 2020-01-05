@@ -2092,7 +2092,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #85ad1b;
+  background: #ff47c6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3510,7 +3510,7 @@ pre .javascript .function {
   opacity: 0.9;
 }
 body:before {
-  background: url("../images/ipad_background.jpg");
+  background: url("../../uploads/images/background.jpg");
   background-color: #edf1fc;
   opacity: 0.9;
   content: ' ';
