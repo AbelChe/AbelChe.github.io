@@ -135,7 +135,7 @@
 <meta property="og:image" content="https://idwana.sn.files.1drv.com/y4mrdKuFMljoYMuYuO8CKeo20lB8UrA86g8FpNKEc0wWBc1iMwy-Hb7ND6zrAHsBjlmBc5BkouVaF5Bxu48XXWYfUSO-UK1fJFG9h2HpfLIXbtbeGYcjoIZE8z2r61eal2yZ6g0exw2fGBGXu6ltnCLStqX8Jqyjq_0z36psC0uXiC-ZUr_yAPq1r2g2OkSAFvEvCXugE2RT0DO875z9o3aFA?width=929&height=55&cropmode=none">
 <meta property="og:image" content="https://idvqna.sn.files.1drv.com/y4muF8KS1p6wZ8RA4WpqJmifTqHLsKRnkSIQaiVzUyj4ZLBmcAv-fvSSOyIoPAON6ZMWLfzA_jOYqfI0BP-TaeG0ozVDPdhvTCkYT8e8U8cVfQ2-JQNv6gW2CPVwx8bJtKpjoEOMZvNQzOhBynslzWuFStZIPM-cvecTzBp8rfsa-UANsn5ftVQKWhSeiPItxMz1sM9E1y-cyHkEYpxtohjRQ?width=929&height=187&cropmode=none">
 <meta property="og:image" content="https://inwhna.sn.files.1drv.com/y4m92EXHtVaB8JyILEUDTPWm495hKWotIpRWWhnWn1U0DPEoLBmb67JLMinzG9b82HjH64VEyqD9-mo0h9TlOeH0E3a_yskgqLNQsyhTDqNxM0mSnZJtMcUiLaCbzu02pgYC3ymC23a8KXP_lGwJJ8IG66_Yw10GFcs_dZgHpu2Gni5RgA-Dp2YiUwF8jKuZzcNytOYQR_bA49PmC9-liOSFQ?width=974&height=998&cropmode=none">
-<meta property="og:updated_time" content="2019-11-17T09:15:12.093Z">
+<meta property="og:updated_time" content="2020-04-06T17:27:20.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kali渗透">
 <meta name="twitter:description" content="本文中所使用工具的原理及方法arpspoof工具的arp欺骗ARP地址解析协议(ARP)，ARP(Address Resolution Protocol)，是一个位于TCP/IP协议栈中的网络层。当局域网内计算机间(或者是计算机与网关间)需要通信时，使用ARP协议获取目标IP地址对应的MAC地址，然后计算机间再通过该MAC地址完成数据包发送。ARP欺骗一般目的是把自己伪装成网关，从而欺骗目标机器，">
@@ -420,8 +420,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-17T17:15:12+08:00">
-                2019-11-17
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-07T01:27:20+08:00">
+                2020-04-07
               </time>
             
           </span>
@@ -485,7 +485,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  691 字
+                  679 字
                 </span>
               
 
@@ -532,9 +532,9 @@
 <hr>
 <h1 id="获取内网他人浏览的图片"><a href="#获取内网他人浏览的图片" class="headerlink" title="获取内网他人浏览的图片"></a>获取内网他人浏览的图片</h1><p>物理机当作目标机<br>kali 使用 arpspoof 工具 <code>arpspoof -i 网卡名称 -t 目标机ip kali的ip</code><img src="https://inwena.sn.files.1drv.com/y4mvOQO7o2jwaX3uS-bszsyleJChAMKcJYS2F3wQbxI_A8sRrt3SKrNdh6icxVH_iYIBK5djv9Jot_cusHORly44T7A5qud72A3keEGOZcVAp-yzM3WpckTLeKcTlOhgCMQO6Ebzclk2Fj80sEw_CXwet3jxPZH05AGfUSKmvoZausxZfG7pXFbPdE-EFkoMd5J9G06HZDRQ7hszy9EdxGIOQ?width=797&height=74&cropmode=none" alt><br>使用 driftnet 工具 <code>driftnet -i 网卡名称</code> ，然后在目标机上百度搜索图片，可以看到 driftnet 有了反应，获取成功<img src="https://h9wfna.sn.files.1drv.com/y4maEJImx-z7BWuJwvDnx2bgAGCpSmnFBOhOhhsK7sKqP4Zfyr2V0ZA0TOrVp8U5EPl76GwyiYVbdSBgN2JTphARbR6kwrTulPdv7yNxTGC1xr-dqgaoFzyp1oupT9UlXYGOcdF1ZK55VvZCA4Vf_UhSAUzTbSsNwTrVirZHvl7wh-VFstxKJoy_nRzN1VfeqUyUABuMtjDIUs3ZmgIDL1Tyg?width=869&height=428&cropmode=none" alt></p>
 <hr>
-<h1 id="获取他人账号密码-HTTP"><a href="#获取他人账号密码-HTTP" class="headerlink" title="获取他人账号密码(HTTP)"></a>获取他人账号密码(HTTP)</h1><p>物理机当作目标机<br>kali 先打开ip转发 <code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code><br><a href="https://www.cnblogs.com/happy1983/p/9173100.html" target="_blank" rel="noopener"><font color="red">(了解更多)</font></a><br><img src="https://inwdna.sn.files.1drv.com/y4meq8gRatXM3KriKTzj0KnmJcDXxIyKbhF6marFEMB7nfenGJRKgABe1788elBGjYnNGB9CI7AXKWFVepOSnlY4md1P4fvq3439NeXfln-KL6hHCl8D4a4-f_hwnWNRHPazX1jstKZxv_EGD4jx3uWe0Y-64PbQJzXzI0kr8dSr6boiThh3LIj8I6O7gy1aNZdj7r-RgYwIw30vhP_7QbqbA?width=1252&height=474&cropmode=none" width="1252" height="474"><br>arp欺骗 <code>arpspoor -i 网卡名称 -t 目标机ip kali的ip</code><img src="https://inwgna.sn.files.1drv.com/y4mnINHx8EKB1wnCCkSR5BpYn7NRZ_AWSgEgSceDtSKSHPhVliifwCU7im2INKDBpPTjfB2z6rPABrI7qdDA7ZE4Y-jwJB7uNjIHM_no2u5t-Ym5CDjB1_v_IZ0DAwQpBi-Y_PhMcy2vUZuZRfQ9TEJH6X7Tm5tFiWIBSBXl92JqcumfAMIvHrUPnSoqdkQIAANpJJfg1TBUaKsQCUjlQxW0Q?width=798&height=81&cropmode=none" alt><br>使用ettercap进行嗅探 <code>ettercap -Tq -i eth0</code>成功启动后<img src="https://inwina.sn.files.1drv.com/y4mk4bWHenzmqVaF-g6FvKpc7YEetQ_LDdazXXeja7SrN3YZVKpXTdCmjKaL1crn_KUlZ1fyZet-1w-lz0BXr3n0s9yJVyzTv9B_n3wfghdDj9XqqJ4hfxtdsHEq4C8dGQJzYCFHkU1jakt5DNwDJxR7HzAxF7q6Cb3J57GWgIIeaSp7fm5f1KOpy_IilZCs8_mvYv6_RTN0uhzOdUb-w9-0Q?width=853&height=572&cropmode=none" alt><br>在物理机上测试，在http协议的网站输入用户名和密码，发现已经被 ettercap 嗅探到<img src="https://idwana.sn.files.1drv.com/y4mrdKuFMljoYMuYuO8CKeo20lB8UrA86g8FpNKEc0wWBc1iMwy-Hb7ND6zrAHsBjlmBc5BkouVaF5Bxu48XXWYfUSO-UK1fJFG9h2HpfLIXbtbeGYcjoIZE8z2r61eal2yZ6g0exw2fGBGXu6ltnCLStqX8Jqyjq_0z36psC0uXiC-ZUr_yAPq1r2g2OkSAFvEvCXugE2RT0DO875z9o3aFA?width=929&height=55&cropmode=none" alt></p>
+<h1 id="窃听-HTTP"><a href="#窃听-HTTP" class="headerlink" title="窃听(HTTP)"></a>窃听(HTTP)</h1><p>物理机当作目标机<br>kali 先打开ip转发 <code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code><br><a href="https://www.cnblogs.com/happy1983/p/9173100.html" target="_blank" rel="noopener"><font color="red">(了解更多)</font></a><br><img src="https://inwdna.sn.files.1drv.com/y4meq8gRatXM3KriKTzj0KnmJcDXxIyKbhF6marFEMB7nfenGJRKgABe1788elBGjYnNGB9CI7AXKWFVepOSnlY4md1P4fvq3439NeXfln-KL6hHCl8D4a4-f_hwnWNRHPazX1jstKZxv_EGD4jx3uWe0Y-64PbQJzXzI0kr8dSr6boiThh3LIj8I6O7gy1aNZdj7r-RgYwIw30vhP_7QbqbA?width=1252&height=474&cropmode=none" width="1252" height="474"><br>arp欺骗 <code>arpspoor -i 网卡名称 -t 目标机ip kali的ip</code><img src="https://inwgna.sn.files.1drv.com/y4mnINHx8EKB1wnCCkSR5BpYn7NRZ_AWSgEgSceDtSKSHPhVliifwCU7im2INKDBpPTjfB2z6rPABrI7qdDA7ZE4Y-jwJB7uNjIHM_no2u5t-Ym5CDjB1_v_IZ0DAwQpBi-Y_PhMcy2vUZuZRfQ9TEJH6X7Tm5tFiWIBSBXl92JqcumfAMIvHrUPnSoqdkQIAANpJJfg1TBUaKsQCUjlQxW0Q?width=798&height=81&cropmode=none" alt><br>使用ettercap进行嗅探 <code>ettercap -Tq -i eth0</code>成功启动后<img src="https://inwina.sn.files.1drv.com/y4mk4bWHenzmqVaF-g6FvKpc7YEetQ_LDdazXXeja7SrN3YZVKpXTdCmjKaL1crn_KUlZ1fyZet-1w-lz0BXr3n0s9yJVyzTv9B_n3wfghdDj9XqqJ4hfxtdsHEq4C8dGQJzYCFHkU1jakt5DNwDJxR7HzAxF7q6Cb3J57GWgIIeaSp7fm5f1KOpy_IilZCs8_mvYv6_RTN0uhzOdUb-w9-0Q?width=853&height=572&cropmode=none" alt><br>在物理机上测试，在http协议的网站输入用户名和密码，发现已经被 ettercap 嗅探到<img src="https://idwana.sn.files.1drv.com/y4mrdKuFMljoYMuYuO8CKeo20lB8UrA86g8FpNKEc0wWBc1iMwy-Hb7ND6zrAHsBjlmBc5BkouVaF5Bxu48XXWYfUSO-UK1fJFG9h2HpfLIXbtbeGYcjoIZE8z2r61eal2yZ6g0exw2fGBGXu6ltnCLStqX8Jqyjq_0z36psC0uXiC-ZUr_yAPq1r2g2OkSAFvEvCXugE2RT0DO875z9o3aFA?width=929&height=55&cropmode=none" alt></p>
 <hr>
-<h1 id="获取他人账号密码-HTTPS"><a href="#获取他人账号密码-HTTPS" class="headerlink" title="获取他人账号密码(HTTPS)"></a>获取他人账号密码(HTTPS)</h1><p><a href="https://www.cnblogs.com/BloodZero/p/4415483.html" target="_blank" rel="noopener">https://www.cnblogs.com/BloodZero/p/4415483.html</a></p>
+<h1 id="窃听-HTTPS"><a href="#窃听-HTTPS" class="headerlink" title="窃听(HTTPS)"></a>窃听(HTTPS)</h1><p><a href="https://www.cnblogs.com/BloodZero/p/4415483.html" target="_blank" rel="noopener">https://www.cnblogs.com/BloodZero/p/4415483.html</a></p>
 <p>先<code>vim /etc/ettercap/etter.conf</code>找到如图段落，将 # 注释删去<img src="https://idvqna.sn.files.1drv.com/y4muF8KS1p6wZ8RA4WpqJmifTqHLsKRnkSIQaiVzUyj4ZLBmcAv-fvSSOyIoPAON6ZMWLfzA_jOYqfI0BP-TaeG0ozVDPdhvTCkYT8e8U8cVfQ2-JQNv6gW2CPVwx8bJtKpjoEOMZvNQzOhBynslzWuFStZIPM-cvecTzBp8rfsa-UANsn5ftVQKWhSeiPItxMz1sM9E1y-cyHkEYpxtohjRQ?width=929&height=187&cropmode=none" alt><br>配置 <code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code><br>对 HTTPS 嗅探需要在 arp 欺骗 <code>arpspoof -i 网卡名称 -t 目标机ip 网关</code> 和 ettercap 抓包 <code>ettercap -Tq -i eth0</code> 时使用工具 sslstrip <code>sslstrip -a -f -k</code><img src="https://inwhna.sn.files.1drv.com/y4m92EXHtVaB8JyILEUDTPWm495hKWotIpRWWhnWn1U0DPEoLBmb67JLMinzG9b82HjH64VEyqD9-mo0h9TlOeH0E3a_yskgqLNQsyhTDqNxM0mSnZJtMcUiLaCbzu02pgYC3ymC23a8KXP_lGwJJ8IG66_Yw10GFcs_dZgHpu2Gni5RgA-Dp2YiUwF8jKuZzcNytOYQR_bA49PmC9-liOSFQ?width=974&height=998&cropmode=none" alt><br>在目标机上测试，在https站点登陆(正常来说应该会被ettercap抓到，但是由于现在浏览器安全等级很高，直接阻止了建立连接，所以这个实验没有百分之百完成)</p>
 <hr>
 <h1 id="会话劫持"><a href="#会话劫持" class="headerlink" title="会话劫持"></a>会话劫持</h1>
@@ -722,7 +722,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -870,7 +870,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本文中所使用工具的原理及方法"><span class="nav-number">1.</span> <span class="nav-text">本文中所使用工具的原理及方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arpspoof工具的arp欺骗"><span class="nav-number">1.1.</span> <span class="nav-text">arpspoof工具的arp欺骗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP"><span class="nav-number">1.1.1.</span> <span class="nav-text">ARP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arpspoof工具"><span class="nav-number">1.1.2.</span> <span class="nav-text">arpspoof工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#driftnet的图片抓取"><span class="nav-number">1.2.</span> <span class="nav-text">driftnet的图片抓取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ettercap的嗅探"><span class="nav-number">1.3.</span> <span class="nav-text">ettercap的嗅探</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sslstrip将HTTPS的链接还原为HTTP"><span class="nav-number">1.4.</span> <span class="nav-text">sslstrip将HTTPS的链接还原为HTTP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局域网断网工具"><span class="nav-number">2.</span> <span class="nav-text">局域网断网工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取内网他人浏览的图片"><span class="nav-number">3.</span> <span class="nav-text">获取内网他人浏览的图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取他人账号密码-HTTP"><span class="nav-number">4.</span> <span class="nav-text">获取他人账号密码(HTTP)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取他人账号密码-HTTPS"><span class="nav-number">5.</span> <span class="nav-text">获取他人账号密码(HTTPS)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#会话劫持"><span class="nav-number">6.</span> <span class="nav-text">会话劫持</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本文中所使用工具的原理及方法"><span class="nav-number">1.</span> <span class="nav-text">本文中所使用工具的原理及方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arpspoof工具的arp欺骗"><span class="nav-number">1.1.</span> <span class="nav-text">arpspoof工具的arp欺骗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP"><span class="nav-number">1.1.1.</span> <span class="nav-text">ARP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arpspoof工具"><span class="nav-number">1.1.2.</span> <span class="nav-text">arpspoof工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#driftnet的图片抓取"><span class="nav-number">1.2.</span> <span class="nav-text">driftnet的图片抓取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ettercap的嗅探"><span class="nav-number">1.3.</span> <span class="nav-text">ettercap的嗅探</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sslstrip将HTTPS的链接还原为HTTP"><span class="nav-number">1.4.</span> <span class="nav-text">sslstrip将HTTPS的链接还原为HTTP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局域网断网工具"><span class="nav-number">2.</span> <span class="nav-text">局域网断网工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取内网他人浏览的图片"><span class="nav-number">3.</span> <span class="nav-text">获取内网他人浏览的图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窃听-HTTP"><span class="nav-number">4.</span> <span class="nav-text">窃听(HTTP)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窃听-HTTPS"><span class="nav-number">5.</span> <span class="nav-text">窃听(HTTPS)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#会话劫持"><span class="nav-number">6.</span> <span class="nav-text">会话劫持</span></a></li></ol></div>
             
 
           </div>
@@ -904,7 +904,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">44.0k</span>
+    <span title="Site words total count">44.2k</span>
   
 </div>
 

@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="AbelChe&#39;s Blog">
 <meta property="og:description" content="文章来源:暗组 判断数据库类型:Access:and (select id from MSysAccessObjects) &amp;gt;0 返回正常说明是access MSSQL:and (select id from sysobjects) &amp;gt;0 返回正常说明是mssql MySQL:and length(user())&amp;gt;0    返回正常说明是MySQL mysql: 1.判断版本 a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-15T11:02:02.457Z">
+<meta property="og:updated_time" content="2020-04-06T17:25:33.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL手工注入常用语句">
 <meta name="twitter:description" content="文章来源:暗组 判断数据库类型:Access:and (select id from MSysAccessObjects) &amp;gt;0 返回正常说明是access MSSQL:and (select id from sysobjects) &amp;gt;0 返回正常说明是mssql MySQL:and length(user())&amp;gt;0    返回正常说明是MySQL mysql: 1.判断版本 a">
@@ -408,8 +408,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-15T19:02:02+08:00">
-                2019-08-15
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-07T01:25:33+08:00">
+                2020-04-07
               </time>
             
           </span>
@@ -473,7 +473,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  973 字
+                  967 字
                 </span>
               
 
@@ -526,7 +526,7 @@
 <p>SELECT database()  查询当前连接的数据库</p>
 <p>select @@version_compile_os 查询当前操作系统</p>
 <p>select @@datadir    查询读取数据库路径<br>select @@basedir    查询MYSQL安装路径</p>
-<p>———————-淫荡的分割线———————————————</p>
+<hr>
 <p>去掉limit 1,1为查询出所有行，第一个数字代表查询第几个，第二个数字代表一次查询出的数量<br>第一个数字从1开始递增，查询到3时浏览器返回错误，说明存在2个库/表。</p>
 <p>10、查数据库数量<br>union select cuncat(schema_name,0x3A)  from information_schema.schemata limit 1,1</p>
 <p>11、查询表<br>union select table_name from information_schema.tables where table_schema =库名 limit 1,1</p>
@@ -732,7 +732,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">67</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -898,7 +898,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">44.0k</span>
+    <span title="Site words total count">44.2k</span>
   
 </div>
 
