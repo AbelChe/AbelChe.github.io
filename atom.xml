@@ -64,30 +64,6 @@
   </entry>
   
   <entry>
-    <title>大菜鸡的备忘录（其他类）</title>
-    <link href="http://AbelChe.com/2019/11/16/%E5%A4%A7%E8%8F%9C%E9%B8%A1%E7%9A%84%E5%A4%87%E5%BF%98%E5%BD%95%EF%BC%88%E5%85%B6%E4%BB%96%EF%BC%89/"/>
-    <id>http://AbelChe.com/2019/11/16/大菜鸡的备忘录（其他）/</id>
-    <published>2019-11-16T07:54:53.000Z</published>
-    <updated>2020-04-06T17:39:11.029Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="php-的各种标识"><a href="#php-的各种标识" class="headerlink" title="php 的各种标识"></a>php 的各种标识</h1><h2 id="常见（主流）"><a href="#常见（主流）" class="headerlink" title="常见（主流）"></a>常见（主流）</h2><p><code>&lt;?php phpinfo();?&gt;</code></p><h2 id="不推荐使用"><a href="#不推荐使用" class="headerlink" title="不推荐使用"></a>不推荐使用</h2><ul><li><code>&lt;? phpinfo()?&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code>（需要开启短标签支持，short_open_tag设置为on）<a id="more"></a></li><li><code>&lt;?= $o ?&gt;</code> 等价于 <code>&lt;?php echo $o ?&gt;</code>，<code>&lt;?= phpinfo()?&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code>（需要开启短标签支持，short_open_tag设置为on）</li><li><code>&lt;script language=&quot;php&quot;&gt;phpinfo();&lt;/script&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code> (在php7已经废除)</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;php-的各种标识&quot;&gt;&lt;a href=&quot;#php-的各种标识&quot; class=&quot;headerlink&quot; title=&quot;php 的各种标识&quot;&gt;&lt;/a&gt;php 的各种标识&lt;/h1&gt;&lt;h2 id=&quot;常见（主流）&quot;&gt;&lt;a href=&quot;#常见（主流）&quot; class=&quot;headerlink&quot; title=&quot;常见（主流）&quot;&gt;&lt;/a&gt;常见（主流）&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;?php phpinfo();?&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;不推荐使用&quot;&gt;&lt;a href=&quot;#不推荐使用&quot; class=&quot;headerlink&quot; title=&quot;不推荐使用&quot;&gt;&lt;/a&gt;不推荐使用&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;? phpinfo()?&amp;gt;&lt;/code&gt;等价于&lt;code&gt;&amp;lt;?php phpinfo()?&amp;gt;&lt;/code&gt;（需要开启短标签支持，short_open_tag设置为on）
-    
-    </summary>
-    
-      <category term="Learning" scheme="http://AbelChe.com/categories/Learning/"/>
-    
-    
-      <category term="备忘" scheme="http://AbelChe.com/tags/%E5%A4%87%E5%BF%98/"/>
-    
-  </entry>
-  
-  <entry>
     <title>大菜鸡的备忘录（安全类）</title>
     <link href="http://AbelChe.com/2019/11/16/%E5%A4%A7%E8%8F%9C%E9%B8%A1%E7%9A%84%E5%A4%87%E5%BF%98%E5%BD%95%EF%BC%88%E5%AE%89%E5%85%A8%EF%BC%89/"/>
     <id>http://AbelChe.com/2019/11/16/大菜鸡的备忘录（安全）/</id>
@@ -106,6 +82,30 @@
 &lt;li&gt;命令执行：system(), exec(), shell_exec(), passthru() ,pcntl_exec(), popen(),proc_open()&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;常见（主流）&quot;&gt;&lt;a href=&quot;#常见（主流）&quot; class=&quot;headerlink&quot; title=&quot;常见（主流）&quot;&gt;&lt;/a&gt;常见（主流）&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;?php phpinfo();?&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;不推荐使用&quot;&gt;&lt;a href=&quot;#不推荐使用&quot; class=&quot;headerlink&quot; title=&quot;不推荐使用&quot;&gt;&lt;/a&gt;不推荐使用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;? phpinfo()?&amp;gt;&lt;/code&gt;等价于&lt;code&gt;&amp;lt;?php phpinfo()?&amp;gt;&lt;/code&gt;（需要开启短标签支持，short_open_tag设置为on）
+    
+    </summary>
+    
+      <category term="Learning" scheme="http://AbelChe.com/categories/Learning/"/>
+    
+    
+      <category term="备忘" scheme="http://AbelChe.com/tags/%E5%A4%87%E5%BF%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大菜鸡的备忘录（其他类）</title>
+    <link href="http://AbelChe.com/2019/11/16/%E5%A4%A7%E8%8F%9C%E9%B8%A1%E7%9A%84%E5%A4%87%E5%BF%98%E5%BD%95%EF%BC%88%E5%85%B6%E4%BB%96%EF%BC%89/"/>
+    <id>http://AbelChe.com/2019/11/16/大菜鸡的备忘录（其他）/</id>
+    <published>2019-11-16T07:54:53.000Z</published>
+    <updated>2020-04-06T17:39:11.029Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="php-的各种标识"><a href="#php-的各种标识" class="headerlink" title="php 的各种标识"></a>php 的各种标识</h1><h2 id="常见（主流）"><a href="#常见（主流）" class="headerlink" title="常见（主流）"></a>常见（主流）</h2><p><code>&lt;?php phpinfo();?&gt;</code></p><h2 id="不推荐使用"><a href="#不推荐使用" class="headerlink" title="不推荐使用"></a>不推荐使用</h2><ul><li><code>&lt;? phpinfo()?&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code>（需要开启短标签支持，short_open_tag设置为on）<a id="more"></a></li><li><code>&lt;?= $o ?&gt;</code> 等价于 <code>&lt;?php echo $o ?&gt;</code>，<code>&lt;?= phpinfo()?&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code>（需要开启短标签支持，short_open_tag设置为on）</li><li><code>&lt;script language=&quot;php&quot;&gt;phpinfo();&lt;/script&gt;</code>等价于<code>&lt;?php phpinfo()?&gt;</code> (在php7已经废除)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;php-的各种标识&quot;&gt;&lt;a href=&quot;#php-的各种标识&quot; class=&quot;headerlink&quot; title=&quot;php 的各种标识&quot;&gt;&lt;/a&gt;php 的各种标识&lt;/h1&gt;&lt;h2 id=&quot;常见（主流）&quot;&gt;&lt;a href=&quot;#常见（主流）&quot; class=&quot;headerlink&quot; title=&quot;常见（主流）&quot;&gt;&lt;/a&gt;常见（主流）&lt;/h2&gt;&lt;p&gt;&lt;code&gt;&amp;lt;?php phpinfo();?&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&quot;不推荐使用&quot;&gt;&lt;a href=&quot;#不推荐使用&quot; class=&quot;headerlink&quot; title=&quot;不推荐使用&quot;&gt;&lt;/a&gt;不推荐使用&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;? phpinfo()?&amp;gt;&lt;/code&gt;等价于&lt;code&gt;&amp;lt;?php phpinfo()?&amp;gt;&lt;/code&gt;（需要开启短标签支持，short_open_tag设置为on）
     
