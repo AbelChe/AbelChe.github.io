@@ -2551,8 +2551,8 @@ http://120.24.86.145:8010/?s=print_r(glob(&quot;*.*&quot;))</code></pre><p>scand
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
@@ -2748,8 +2748,8 @@ mysql中的information_schema 结构用来存储数据库系统信息
         <category>Learning</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>SQL</tag>
+        <tag>笔记</tag>
         <tag>Web</tag>
       </tags>
   </entry>
